@@ -4,7 +4,6 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const TerserPlugin = require('terser-webpack-plugin');
 const NODE_ENV = process.env.NODE_ENV;
 const setPath = function (folderName) {
     return path.join(__dirname, folderName);
@@ -21,8 +20,6 @@ module.exports = {
         minimizer: [new OptimizeCssAssetsPlugin({
             cssProcessorOptions: { discardComments: { removeAll: true } },
             canPrint: true
-        }), new TerserPlugin({
-            sourceMap: true,
         })],
         splitChunks: {
             chunks: "all", //Taken from https://gist.github.com/sokra/1522d586b8e5c0f5072d7565c2bee693
@@ -44,7 +41,7 @@ module.exports = {
         noInfo: false
     },
     entry: {
-        index: './src/index.ts',
+        index: './src/index.tsx',
         //styles: './src/styles.ts',
     },
     module: {
@@ -82,6 +79,10 @@ module.exports = {
         filename: 'cui-light-docs.[name].js',
         path: path.resolve(__dirname, 'dist'),
     },
+    // externals: {
+    //     "react": "React",
+    //     "react-dom": "ReactDOM"
+    // },
     plugins: [
         new CleanWebpackPlugin(),
         new HtmlWebpackPlugin({

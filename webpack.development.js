@@ -7,5 +7,9 @@ module.exports = merge(common, {
     devServer: {
         historyApiFallback: true,
         noInfo: false
-    }
+    },
+    // externals: {
+    //     "react": "React",
+    //     "react-dom": "ReactDOM"
+    // },
 });
