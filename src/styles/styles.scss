@@ -1,7 +1,7 @@
 $prefix : 'cui' !default;
 
 @use "../../node_modules/cui-styles/styles/variables"as variables with($prefix: $prefix);
-@use "../../node_modules/cui-styles/styles/core/root"as root with($prefix     : $prefix);
+@use "../../node_modules/cui-styles/styles/root"as root with($prefix          : $prefix);
 @use '../../node_modules/cui-styles/styles/core/head'as head;
 @use '../../node_modules/cui-styles/styles/core/body'as body;
 @use '../../node_modules/cui-styles/styles/dark'as dark;
@@ -9,6 +9,7 @@ $prefix : 'cui' !default;
 @use '../../node_modules/cui-styles/styles/commons'as commons;
 @use '../../node_modules/cui-styles/styles/base'as base;
 @use '../../node_modules/cui-styles/styles/components'as components;
+@use "../../node_modules/cui-styles/styles/mixins"as mixins;
 
 :root {
     @include root.variables;
@@ -39,6 +40,44 @@ body {
     svg {
         width : variables.$font-xlarge;
         height: variables.$font-xlarge;
+    }
+}
+
+.home-main-container {
+    height: calc(100vh - 100px);
+}
+
+.app-home-logo {
+    svg {
+        width : 200px;
+        height: 200px;
+    }
+}
+
+.limited-content-width {
+    width: 100% !important;
+}
+
+@include mixins.media-screen-min-xlarge {
+    .limited-content-width {
+        width: 1800px !important;
+    }
+}
+
+
+
+ul.hashtags {
+    list-style: none;
+    margin    : 0px;
+    padding   : 0px;
+
+    li {
+        display     : inline-block;
+        margin-right: variables.$margin-global;
+
+        &:last-child {
+            margin-right: 0px;
+        }
     }
 }
 

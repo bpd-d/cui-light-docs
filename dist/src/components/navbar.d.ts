@@ -1,8 +1,9 @@
-import * as React from "react";
+/// <reference types="react" />
+export interface NavbarState {
+    currentSite: string;
+}
 export interface NavbarProps {
     site?: string;
+    location?: any;
 }
-export declare class Navbar extends React.Component<NavbarProps, {}> {
-    constructor(props: NavbarProps);
-    render(): JSX.Element;
-}
+export declare function Navbar(props: NavbarProps): JSX.Element;

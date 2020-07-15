@@ -6,5 +6,6 @@ export interface AppState {
 }
 export declare class App extends React.Component<AppProps, AppState> {
     constructor(props: AppProps);
+    componentDidUpdate(): void;
     render(): JSX.Element;
 }
