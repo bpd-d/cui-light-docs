@@ -44,7 +44,7 @@ body {
 }
 
 .home-main-container {
-    height: calc(100vh - 100px);
+    height: calc(100vh - 200px);
 }
 
 .app-home-logo {
@@ -58,9 +58,9 @@ body {
     width: 100% !important;
 }
 
-@include mixins.media-screen-min-xlarge {
+@include mixins.media-screen-min-large {
     .limited-content-width {
-        width: 1800px !important;
+        width: 1000px !important;
     }
 }
 

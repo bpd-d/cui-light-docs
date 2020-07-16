@@ -48,6 +48,17 @@ export class App extends React.Component<AppProps, AppState> {
                     </Switch>
                 </div>
                 <div className="info-bar">
+                    <div className="cui-inline cui-drop-trigger">
+                        <a className="cui-button cui-default cui-rounded cui-margin-small-right">Github</a>
+                        <div className="cui-drop cui-dropdown cui-drop-top-right cui-drop-hover">
+                            <ul className="cui-drop-nav">
+                                <li><a href="https://github.com/bpd-d/cui-light">cUI Light</a></li>
+                                <li><a href="https://github.com/bpd-d/cui-styles">cUI Styles</a></li>
+                                <li><a href="https://github.com/bpd-d/cui-icons">cUI Icons</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
                     <button className="cui-icon-button cui-default" cui-icon="info" cui-open="target: #beta-info-dialog; action: .cui-dialog-default-in; timeout: 500"></button>
                 </div>
                 <div className="cui-dialog" id="beta-info-dialog">

@@ -10,7 +10,7 @@ export interface OverviewSegmentProps {
 export function OverviewSegmentComponent(props: OverviewSegmentProps) {
     let classIcon = `cui-width-1-4 cui-flex-center cui-order-1 ${props.even ? "cui-order-1--s" : "cui-order-2--s"}`;
     let classText = `cui-width-3-4 cui-order-2 ${props.even ? "cui-order-2--s" : "cui-order-1--s"}`;
-    let classSection = `cui-section  cui-height-viewport-1-2  cui-width-1-1 cui-flex-center ${props.even ? "" : "cui-background-shade"}`
+    let classSection = `cui-section cui-height-viewport-1-1 cui-height-viewport-1-3--s  cui-width-1-1 cui-flex-center ${props.even ? "" : "cui-background-shade"}`
     return (
         <div className={classSection}>
             <div className="limited-content-width cui-flex-grid">
@@ -19,7 +19,6 @@ export function OverviewSegmentComponent(props: OverviewSegmentProps) {
                 </div>
                 <div className={classText}>
                     <h1 className="cui-h1">{props.title}</h1>
-                    <span className="">{props.even ? "Is even" : "Is odd"}</span>
                     <p>{props.description}</p>
                 </div>
             </div>

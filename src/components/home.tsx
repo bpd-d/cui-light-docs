@@ -19,7 +19,7 @@ export class Home extends React.Component<any, {}> {
                 </div>
                 <div className="cui-width-2-3">
                     <div className="">
-                        <h1 className="cui-h1 cui-margin-top cui-margin-bottom">Modern, fast and responsive <span className="cui-text-bold">UI</span> framework for the <span className="cui-text-bold">Web</span></h1>
+                        <h1 className="cui-h1 cui-margin-top cui-margin-bottom cui-text-center cui-text-left--s">Modern, fast and responsive <span className="cui-text-bold">UI</span> framework for the <span className="cui-text-bold">Web</span></h1>
                         <div className="cui-text-muted">
                             <ul className="hashtags">
                                 <li>#Responsive</li>
