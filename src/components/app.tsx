@@ -48,8 +48,8 @@ export class App extends React.Component<AppProps, AppState> {
                     </Switch>
                 </div>
                 <div className="info-bar">
-                    <div className="cui-inline cui-drop-trigger">
-                        <a className="cui-button cui-default cui-rounded cui-margin-small-right">Github</a>
+                    <div className="cui-inline-block cui-drop-trigger">
+                        <a className="cui-button cui-background-default cui-default cui-rounded cui-margin-small-right">Github</a>
                         <div className="cui-drop cui-dropdown cui-drop-top-right cui-drop-hover">
                             <ul className="cui-drop-nav">
                                 <li><a href="https://github.com/bpd-d/cui-light">cUI Light</a></li>

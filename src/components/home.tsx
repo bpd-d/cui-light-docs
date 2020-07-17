@@ -32,7 +32,7 @@ export class Home extends React.Component<any, {}> {
                                 <li>#Dark Mode</li>
                             </ul>
                         </div>
-                        <div className="cui-margin-top">
+                        <div className="cui-margin-top cui-flex cui-center cui-left--m">
                             <Link to="/overview" className="cui-button cui-default cui-rounded">Learn more</Link>
                             <Link to="/start" className="cui-margin-small-left cui-button cui-accent cui-rounded">Get started</Link>
                         </div>

@@ -28,15 +28,19 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="2.8"
-     inkscape:cx="135.97508"
-     inkscape:cy="117.36942"
+     inkscape:zoom="1.979899"
+     inkscape:cx="357.69544"
+     inkscape:cy="147.56916"
      inkscape:document-units="px"
      inkscape:current-layer="svg8"
      inkscape:document-rotation="0"
-     showgrid="false"
+     showgrid="true"
      units="px"
-     inkscape:showpageshadow="false" />
+     inkscape:showpageshadow="false">
+    <inkscape:grid
+       id="grid838"
+       type="xygrid" />
+  </sodipodi:namedview>
   <metadata
      id="metadata5">
     <rdf:RDF>
@@ -45,7 +49,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -58,7 +62,8 @@
   <path
      id="path999"
      d="m 153.65753,37.44829 -26.35678,45.651282 36.41499,21.024198"
-     style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+     style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     class="cui-accent" />
   <path
      id="path1003"
      d="M 11.535353,76.093062 H 60.122551"
@@ -76,15 +81,13 @@
      d="M 11.535353,64.392127 H 64.181747"
      style="fill:none;stroke:#000000;stroke-width:1.99999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
   <path
+     class="cui-accent"
      id="path1019"
-     d="M 13.131983,173.74624 H 186.62568"
-     style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none" />
+     d="M 11.506303,175 H 185"
+     style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
   <path
-     id="path1027"
-     d="m 179.22997,181.15051 8.03571,-8.03571"
-     style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
-  <path
-     style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-     d="m 179.2746,166.46301 8.03572,8.03571"
-     id="path1029" />
+     class="cui-accent"
+     id="path840"
+     d="M 177.92894,182.07107 185,175 l -7.07106,-7.07107"
+     style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
 </svg>
