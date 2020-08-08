@@ -22,13 +22,13 @@ export function Navbar(props: NavbarProps) {
         })
     }, [currentLocation])
     return (
-        <nav className="cui-navbar cui-transparent">
+        <nav className="cui-navbar cui-transparent cui-sticky">
             <div className="cui-navbar-left cui-flex cui-middle cui-between" id="navbar-left">
                 <ul>
                     <li><Link className="cui-icon app-icon" cui-icon="app_icon" to="/"></Link></li>
                     <li><span>{state.currentSite}</span></li>
                 </ul>
-                <a href="" className="cui-icon cui-padding " cui-icon="menu" cui-open="target: #app-offcanvas; action: .cui-offcanvas-default-right-in; timeout: 500"></a>
+                <a className="cui-icon cui-padding cui-button cui-hidden--m" cui-icon="menu" cui-open="target: #app-offcanvas"></a>
             </div>
 
             <ul className="cui-navbar-right cui-visible--m">
@@ -36,6 +36,7 @@ export function Navbar(props: NavbarProps) {
                 <li><NavbarLink class="cui-navbar-item" url="/overview" name="Oveview" /></li>
                 <li><NavbarLink class="cui-navbar-item" url="/start" name="Getting started" /></li>
                 <li><NavbarLink class="cui-navbar-item" url="/docs" name="Documentation" /></li>
+                <li><NavbarLink class="cui-navbar-item" url="/icon" name="Icons" /></li>
                 <li><Link to="/download" className="cui-button cui-accent cui-rounded">Download</Link></li>
             </ul>
         </nav>

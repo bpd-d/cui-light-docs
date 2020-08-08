@@ -1,12 +1,10 @@
 import * as React from "react";
-import { OverviewSegmentComponent } from "./partials/overview";
+import { OverviewSegmentComponent } from "../partials/overview";
 
 export interface OverviewProps {
     site?: string;
 }
 
-// 'HelloProps' describes the shape of props.
-// State is never set so we use the '{}' type.
 export class Overview extends React.Component<any, {}> {
     list: any = [
         {
