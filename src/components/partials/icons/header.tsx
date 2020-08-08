@@ -26,7 +26,7 @@ export function CuiIconsComponentHeader(props: CuiIconsComponentHeaderProps) {
         <div className="cui-flex cui-between cui-middle cui-container">
             <CuiIconsHeaderTitle text={props.filter.filter} />
             <div className="cui-flex">
-                <div className="cui-form cui-inline cui-inline-block ">
+                <div className="cui-form cui-inline cui-inline-block cui-">
                     <label htmlFor="filter" className="cui-form-label cui-margin-small-right">Filter</label>
                     <input className="cui-input" type="text" placeholder="Filter" value={props.filter.filter} onChange={onInputChange} />
                 </div>
