@@ -1,18 +1,14 @@
 import * as React from "react";
+import { useParams } from "react-router-dom";
 
 export interface DocsProps {
     site?: string;
 }
 
-// 'HelloProps' describes the shape of props.
-// State is never set so we use the '{}' type.
-export class Docs extends React.Component<any, {}> {
-    constructor(props: any) {
-        super(props);
-    }
-    render() {
-        return <div className="">
-            Docs
-        </div>;
-    }
+export function DocsComponent(args: DocsProps) {
+    const { id } = useParams();
+
+    return <div className="">
+        Docs {id}
+    </div>;
 }

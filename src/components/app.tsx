@@ -3,7 +3,7 @@ import * as ReactDOM from "react-dom";
 import { Navbar } from "./navbar";
 import { Router, Switch, Route, BrowserRouter, useLocation } from "react-router-dom";
 import { Home } from "./main/home";
-import { Docs } from "./main/docs";
+import { DocsComponent } from "./main/docs";
 import { Overview } from "./main/overview";
 import { OffCanvas } from "./offcanvas";
 import { ErrorRoute } from "./error";
@@ -37,9 +37,11 @@ export class App extends React.Component<AppProps, AppState> {
                 <Navbar site={this.state.currentSite} />
                 <div className="layout-content">
                     <Switch>
+                        <Route path="/start/:id" component={GettingStarted}></Route>
                         <Route path="/start" component={GettingStarted}></Route>
                         <Route path="/overview" component={Overview}></Route>
-                        <Route path="/docs" component={Docs}></Route>
+                        <Route path="/docs/:id" component={DocsComponent}></Route>
+                        <Route path="/docs" component={DocsComponent}></Route>
                         <Route path="/download" component={Download}></Route>
                         <Route path="/icon" component={IconsComponent}></Route>
                         <Route path="/test/:id" component={TestComponent}></Route>

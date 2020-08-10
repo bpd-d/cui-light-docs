@@ -55,6 +55,24 @@ body {
     }
 }
 
+.off-canvas-layout {
+
+    .off-canvas-header {
+        height: 5vh;
+    }
+
+    .off-canvas-content {
+        height    : 80vh;
+        overflow-y: auto;
+    }
+
+    .off-canvas-footer {
+        height: 10vh;
+    }
+
+}
+
+
 .navbar-background-accent {
     background-color: variables.$component-background-accent !important;
 }
