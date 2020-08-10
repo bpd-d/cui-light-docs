@@ -2,13 +2,13 @@ import * as React from "react";
 import * as ReactDOM from "react-dom";
 import './styles/styles.scss';
 import { App } from "./components/app";
-import { CuiInit, CuiInitData, CuiSetupInit } from "../node_modules/cui-light/dist/index";
+import { CuiInit, CuiInitData, CuiSetupInit, CuiInstance } from "../node_modules/cui-light/dist/index";
 
 import { CuiIconsPack } from '../node_modules/bpd-cui-icons/index'
 declare global {
     interface Window {
         cuiInit: CuiInit;
-        $cui: any;
+        $cui: CuiInstance;
     }
 }
 // let app_icons = {

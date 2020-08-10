@@ -43,29 +43,21 @@ body {
     }
 }
 
-// .app-overview-decoration {
-//     position: relative;
+.layout-main {
+    .layout-navigation {
+        height: 60px;
+    }
 
-//     &:before {
-//         content         : "";
-//         position        : absolute;
-//         background-color: variables.$component-background-shade;
-//         width           : 100vw;
-//         height          : 100vh;
-//         top             : 0;
-//         right           : 0;
-//         clip-path       : polygon(0 0, 100% 0, 33% 100%, 0% 100%);
-//         z-index         : -1;
-//     }
+    .layout-content {
+        height    : calc(100vh - 60px);
+        max-height: calc(100vh - 60px);
+        overflow-y: auto;
+    }
+}
 
-//     &.app-overview-decoration-odd {
-//         &:before {
-//             top      : 0;
-//             left     : 0;
-//             clip-path: polygon(66% 0, 100% 0, 100% 100%, 0% 100%);
-//         }
-//     }
-// }
+.navbar-background-accent {
+    background-color: variables.$component-background-accent !important;
+}
 
 .app-overview-icon-border {
     position: relative;

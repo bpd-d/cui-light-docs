@@ -33,9 +33,9 @@ export class App extends React.Component<AppProps, AppState> {
 
     render() {
         return <BrowserRouter>
-            <div className="" cui-offset="offsetY: 80; action: .navbar-bg-offset; root: y; target: .cui-navbar">
+            <div className="layout-main">
                 <Navbar site={this.state.currentSite} />
-                <div className="">
+                <div className="layout-content">
                     <Switch>
                         <Route path="/start" component={GettingStarted}></Route>
                         <Route path="/overview" component={Overview}></Route>

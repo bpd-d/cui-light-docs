@@ -1,6 +1,7 @@
 import * as React from "react";
 import { NavbarLink } from "./partials/navbarlink";
 import { Link } from "react-router-dom";
+import { ElementManager } from "../../node_modules/cui-light/dist/index";
 
 export interface OffCanvasProps {
 }
@@ -8,9 +9,12 @@ export interface OffCanvasProps {
 // 'HelloProps' describes the shape of props.
 // State is never set so we use the '{}' type.
 export class OffCanvas extends React.Component<OffCanvasProps, {}> {
+    offcanvas: ElementManager;
     constructor(props: OffCanvasProps) {
         super(props);
+
     }
+
     render() {
         return <div className="cui-off-canvas" id="app-offcanvas" cui-off-canvas="escClose: y; outClose: y">
             <div className="cui-off-canvas-container cui-section">
