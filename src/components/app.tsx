@@ -37,15 +37,14 @@ export class App extends React.Component<AppProps, AppState> {
                 <Navbar site={this.state.currentSite} />
                 <div className="layout-content">
                     <Switch>
+                        <Route path="/docs/components/:id" component={DocsComponent}></Route>
                         <Route path="/start/:id" component={GettingStarted}></Route>
                         <Route path="/start" component={GettingStarted}></Route>
                         <Route path="/overview" component={Overview}></Route>
-                        <Route path="/docs/:id" component={DocsComponent}></Route>
                         <Route path="/docs" component={DocsComponent}></Route>
                         <Route path="/download" component={Download}></Route>
                         <Route path="/icon" component={IconsComponent}></Route>
-                        <Route path="/test/:id" component={TestComponent}></Route>
-                        <Route exact path="/" component={Home}></Route>
+                        <Route path="/" component={Home}></Route>
                         <Route>
                             <ErrorRoute />
                         </Route>

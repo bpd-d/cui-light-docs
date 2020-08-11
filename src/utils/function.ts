@@ -48,3 +48,37 @@ export async function copyText(value: string): Promise<string> {
     }
     return window.navigator && window.navigator.clipboard ? copyTextNew(value) : copyTextOld(value);
 }
+
+export function* count() {
+    let idx = 0;
+    while (true) {
+        let reset = yield idx++;
+        if (reset || idx > 200000) {
+            idx = 0
+        }
+    }
+}
+
+export function enumerate(callback: (key: string, value: any) => void, obj: any): void {
+    if (!obj) {
+        return;
+    }
+    for (let key in obj) {
+        if (obj.hasOwnProperty(key)) {
+            callback(key, obj[key]);
+        }
+    }
+}
+
+export function getKeysFromObject(obj: any): string[] {
+    let list: string[] = [];
+    if (!obj) {
+        return list;
+    }
+    for (let key in obj) {
+        if (obj.hasOwnProperty(key)) {
+            list.push(key);
+        }
+    }
+    return list;
+}

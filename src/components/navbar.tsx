@@ -1,5 +1,4 @@
 import * as React from "react";
-import * as ReactDOM from "react-dom";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import { NavbarLink } from "./partials/navbarlink";
 
@@ -25,7 +24,7 @@ export function Navbar(props: NavbarProps) {
     }, [currentLocation])
     return (
         <nav className={"cui-navbar cui-transparent cui-sticky layout-navigation" + navbarBgClass}>
-            <div className="cui-navbar-left cui-flex cui-middle cui-between" id="navbar-left">
+            <div className="cui-navbar-left cui-width-1-1 cui-width-auto--m cui-flex cui-middle cui-between" id="navbar-left">
                 <ul>
                     {state.currentSite && <li><Link className="cui-icon app-icon" cui-icon="app_icon" to="/"></Link></li>}
                     <li><span>{state.currentSite}</span></li>

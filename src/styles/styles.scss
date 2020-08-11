@@ -55,6 +55,12 @@ body {
     }
 }
 
+.layout-docs {
+    display: block;
+
+}
+
+
 .off-canvas-layout {
 
     .off-canvas-header {
@@ -69,7 +75,6 @@ body {
     .off-canvas-footer {
         height: 10vh;
     }
-
 }
 
 
@@ -121,6 +126,12 @@ body {
 @include mixins.media-screen-min-large {
     .limited-content-width {
         width: 1000px !important;
+    }
+
+    .layout-docs {
+        display              : grid;
+        grid-template-columns: 1fr 1000px 1fr;
+        grid-template-rows   : 100%;
     }
 }
 

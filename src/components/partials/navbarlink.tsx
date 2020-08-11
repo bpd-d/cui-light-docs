@@ -4,17 +4,21 @@ import { NavLink } from "react-router-dom";
 export interface NavbarLinkProps {
     url: string;
     name: string;
+    shouldClose?: boolean;
     class?: string;
 }
 
 export class NavbarLink extends React.Component<NavbarLinkProps, {}> {
     constructor(props: NavbarLinkProps) {
         super(props);
+        this.onClick = this.onClick.bind(this);
     }
 
     onClick() {
-        let offcanvas = window.$cui.get("#app-offcanvas");
-        offcanvas.emit('close');
+        if (this.props.shouldClose) {
+            let offcanvas = window.$cui.get("#app-offcanvas");
+            offcanvas.emit('close');
+        }
     }
 
     render() {
