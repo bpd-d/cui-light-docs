@@ -3,4 +3,3 @@
   to = "/"
   status = 200
   force = false
-  query = {path = ":path"}
