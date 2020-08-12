@@ -26,11 +26,11 @@ export class OffCanvas extends React.Component<OffCanvasProps, {}> {
             }
         }, cuiComponents)
         return <div className="cui-off-canvas" id="app-offcanvas" cui-off-canvas="escClose: y; outClose: y">
-            <div className="cui-off-canvas-container cui-section off-canvas-layout">
-                <div className="cui-flex cui-middle cui-right off-canvas-header">
+            <div className="cui-off-canvas-container cui-card off-canvas-layout">
+                <div className="cui-card-header cui-flex cui-middle cui-right">
                     <a href="#" className="cui-icon" cui-icon="close" cui-close=""></a>
                 </div>
-                <div className="off-canvas-content">
+                <div className="off-canvas-content cui-card-body">
 
                     <div className="cui-width-1-1">
                         <h3 className="cui-h3">Menu</h3>
@@ -49,7 +49,7 @@ export class OffCanvas extends React.Component<OffCanvasProps, {}> {
                         <CuiDocsNavigation shouldClose={true} sort={true} />
                     </div>
                 </div>
-                <div className="cui-flex-center off-canvas-footer">
+                <div className="cui-flex-center cui-card-footer">
                     <Link to="/download" className="cui-button cui-accent cui-rounded">Download</Link>
                 </div>
             </div>
