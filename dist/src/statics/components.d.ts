@@ -1,6 +1,7 @@
 export interface CuiDocsComponentDef {
     name: string;
     uri: string;
+    desription: string;
 }
 export interface CuiDocsComponents {
     [id: string]: CuiDocsComponentDef;

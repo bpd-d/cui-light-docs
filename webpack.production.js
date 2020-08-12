@@ -21,6 +21,7 @@ module.exports = merge(common, {
         new CopyPlugin({
             patterns: [
                 { from: path.resolve(__dirname, 'assets'), to: `${path.resolve(__dirname, 'dist')}/assets` },
+                { from: "netlify.toml", to: `${path.resolve(__dirname, 'dist')}` },
             ],
         }),
     ]

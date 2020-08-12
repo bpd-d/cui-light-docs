@@ -4,9 +4,11 @@ import { GLOBAL_COUNTER } from "../../statics/common";
 export type CuiPreviewType = 'aside' | "tabbed";
 
 export interface CodePreviewProps {
-    code: any;
+    code: JSX.Element;
     //  identification: string;
     element: JSX.Element;
+    js?: JSX.Element;
+    height?: string;
 }
 
 export function CodePreviewAside(props: CodePreviewProps) {
@@ -29,17 +31,23 @@ export function CodePreviewTabbed(props: CodePreviewProps) {
         <div className="">
             <ul className="cui-tab" cui-switcher={"target: #" + switchId} id={tabId}>
                 <li><a href="#">Preview</a></li>
-                <li><a href="#">Code</a></li>
+                {props.code && <li> <a href="#">HTML</a></li>}
+                {props.js && <li> <a href="#">Code</a></li>}
             </ul>
-            <ul className="cui-switch cui-margin-small-top" cui-switch={`links: #${tabId} > li `} id={switchId}>
+            <ul className="cui-switch cui-margin-top" cui-switch={`links: #${tabId} > li`} id={switchId}>
                 <li className="cui-active"><div>{props.element}</div></li>
-                <li>
-                    <div className="">
-                        <pre>{props.code}</pre>
+                {props.code && <li>
+                    <div className="cui-code cui-format cui-line-counter">
+                        {props.code}
                     </div>
-                </li>
+                </li>}
+                {props.js && <li>
+                    <div className="cui-code cui-format cui-line-counter">
+                        {props.js}
+                    </div>
+                </li>}
             </ul>
-        </div>
+        </div >
     )
 }
 
@@ -49,7 +57,7 @@ export function ExamplePreview(props: CodePreviewProps, type: CuiPreviewType) {
         case "aside":
             return <CodePreviewAside code={props.code} element={props.element} />;
         default:
-            return <CodePreviewTabbed code={props.code} element={props.element} />;
+            return <CodePreviewTabbed code={props.code} element={props.element} height={props.height} />;
     }
 
 }

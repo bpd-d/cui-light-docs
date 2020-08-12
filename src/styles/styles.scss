@@ -60,7 +60,6 @@ body {
 
 }
 
-
 .off-canvas-layout {
 
     .off-canvas-header {
@@ -80,6 +79,17 @@ body {
 
 .navbar-background-accent {
     background-color: variables.$component-background-accent !important;
+}
+
+.style-class {
+    display    : inline-block;
+    font-weight: variables.$text-weight-bold;
+    color      : variables.$component-background-accent;
+}
+
+.style-element {
+    display    : inline-block;
+    font-weight: variables.$text-weight-semi-bold;
 }
 
 .app-overview-icon-border {
