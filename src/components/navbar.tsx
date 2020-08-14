@@ -35,7 +35,6 @@ export function Navbar(props: NavbarProps) {
             <ul className="cui-navbar-right cui-visible--m">
                 <li><NavbarLink class="cui-navbar-item" url="/" name="Home" /></li>
                 <li><NavbarLink class="cui-navbar-item" url="/overview" name="Oveview" /></li>
-                <li><NavbarLink class="cui-navbar-item" url="/start" name="Getting started" /></li>
                 <li><NavbarLink class="cui-navbar-item" url="/docs" name="Documentation" /></li>
                 <li><NavbarLink class="cui-navbar-item" url="/icon" name="Icons" /></li>
                 <li><Link to="/download" className={"cui-button cui-rounded " + downloadBtnCls}>Download</Link></li>

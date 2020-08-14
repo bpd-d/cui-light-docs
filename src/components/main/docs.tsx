@@ -1,40 +1,31 @@
 import * as React from "react";
 import { useParams } from "react-router-dom";
-import { CuiDocsComponentButton } from "../docs/components/button";
-import { capitalize } from "../../utils/function";
-import { cuiComponents, CuiDocsComponentDef } from "../../statics/components";
-import { getComponentElement } from "../docs/components/index";
+import { cuiComponents, CuiDocsComponentDef } from "../../statics/components/base";
 import { CuiDocsNavigation } from "../docs/navigation";
+import DocsHeader from "../partials/components/header";
+import { CuiDocsPage } from "../docs/base";
+import { CuiDocsAside } from "../docs/aside";
 
 export interface DocsProps {
     site?: string;
 }
 
 export interface DocsComponentState {
-    title: string;
-    description: string;
-    element: JSX.Element;
+    component: CuiDocsComponentDef;
 }
 
 export function DocsComponent(args: DocsProps) {
     const { id } = useParams();
     const [state, setState] = React.useState<DocsComponentState>({
-        title: "",
-        description: "",
-        element: null
+        component: null
     });
 
-    function setElement(component: CuiDocsComponentDef, element: JSX.Element) {
-        setState({
-            title: component.name,
-            description: component.desription,
-            element: element
-        })
-    }
     React.useEffect(() => {
         let component = cuiComponents[id];
         if (component) {
-            setElement(component, getComponentElement(id))
+            setState({
+                component: component
+            })
         }
 
     }, [id])
@@ -45,11 +36,21 @@ export function DocsComponent(args: DocsProps) {
             </div>
             <h3 className="cui-h3">Components</h3>
             <CuiDocsNavigation sort={true} /></div>
-        {state.element ?
-            (<article><h1 className="cui-article-title">{state.title}</h1>
-                <p className="cui-article-description">{state.description}</p>
-                {state.element}</article>) :
-            (<div>Document not found</div>)
+        {state.component ?
+            (<article>
+                <DocsHeader title={state.component.name} description={state.component.description} />
+                <CuiDocsPage script={state.component.script} />
+            </article>) :
+            (<CuiDocsComponentNotFound />)
         }
+        {<CuiDocsAside name={id} sections={state.component && state.component.script ? state.component.script.sections.map(sec => {
+            return sec.name;
+        }) : []} />}
     </div>;
+}
+
+export function CuiDocsComponentNotFound() {
+    return (<div className="cui-container cui-center cui-height-viewport-1-2">
+        <h2 className="cui-h2 cui-text-error">Page has not been found</h2>
+    </div>);
 }

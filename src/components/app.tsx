@@ -8,7 +8,6 @@ import { Overview } from "./main/overview";
 import { OffCanvas } from "./offcanvas";
 import { ErrorRoute } from "./error";
 import { TestComponent } from "./test";
-import { GettingStarted } from "./main/start";
 import { Download } from "./main/download";
 import { IconsComponent } from "./main/icons";
 
@@ -38,8 +37,6 @@ export class App extends React.Component<AppProps, AppState> {
                 <div className="layout-content">
                     <Switch>
                         <Route path="/docs/components/:id" component={DocsComponent}></Route>
-                        <Route path="/start/:id" component={GettingStarted}></Route>
-                        <Route path="/start" component={GettingStarted}></Route>
                         <Route path="/overview" component={Overview}></Route>
                         <Route path="/docs" component={DocsComponent}></Route>
                         <Route path="/download" component={Download}></Route>

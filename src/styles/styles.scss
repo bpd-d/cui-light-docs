@@ -60,6 +60,10 @@ body {
 
 }
 
+.preview-wrapper {
+    border: 1px solid transparent;
+}
+
 .off-canvas-layout {
 
     .off-canvas-header {
@@ -76,6 +80,12 @@ body {
     }
 }
 
+.aside-card {
+    top      : 30vh !important;
+    min-width: 150px;
+    max-width: 300px;
+    margin   : 0 auto;
+}
 
 .navbar-background-accent {
     background-color: variables.$component-background-accent !important;
@@ -140,11 +150,26 @@ body {
 
     .layout-docs {
         display              : grid;
+        grid-template-columns: 1fr 800px 1fr;
+        grid-template-rows   : 100%;
+    }
+}
+
+@include mixins.media-screen-min-xlarge {
+    .limited-content-width {
+        width: 1000px !important;
+    }
+
+    .layout-docs {
+        display              : grid;
         grid-template-columns: 1fr 1000px 1fr;
         grid-template-rows   : 100%;
     }
 }
 
+.container-wrap-around {
+    border: 1px solid variables.$component-color-muted;
+}
 
 
 ul.hashtags {

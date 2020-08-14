@@ -2,7 +2,7 @@ import * as React from "react";
 import { NavbarLink } from "./partials/navbarlink";
 import { Link } from "react-router-dom";
 import { ElementManager } from "../../node_modules/cui-light/dist/index";
-import { cuiComponents } from "../statics/components";
+import { cuiComponents } from "../statics/components/base";
 import { enumerate } from "../utils/function";
 import { CuiDocsNavigation } from "./docs/navigation";
 
@@ -39,13 +39,7 @@ export class OffCanvas extends React.Component<OffCanvasProps, {}> {
                             <li><NavbarLink url="/overview" name="Overview" shouldClose={true} /></li>
                             <li><NavbarLink url="/icon" name="Icons" shouldClose={true} /></li>
                         </ul>
-                        <h3 className="cui-h3">Getting started</h3>
-                        <ul className="cui-list cui-interactive cui-margin-top">
-                            <li><NavbarLink url="/start" name="Begin" /></li>
-                            <li><NavbarLink url="/start/css" name="Styles" /></li>
-                            <li><NavbarLink url="/start/js" name="Javascript" /></li>
-                        </ul>
-                        <h3 className="cui-h3">Components</h3>
+                        <h3 className="cui-h3">Documentation</h3>
                         <CuiDocsNavigation shouldClose={true} sort={true} />
                     </div>
                 </div>
