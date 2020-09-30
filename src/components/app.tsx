@@ -38,7 +38,7 @@ export class App extends React.Component<AppProps, AppState> {
                     <Switch>
                         <Route path="/docs/components/:id" component={DocsComponent}></Route>
                         <Route path="/overview" component={Overview}></Route>
-                        <Route path="/docs" component={DocsComponent}></Route>
+                        {/* <Route path="/docs" component={DocsComponent}></Route> */}
                         <Route path="/download" component={Download}></Route>
                         <Route path="/icon" component={IconsComponent}></Route>
                         <Route path="/" component={Home}></Route>

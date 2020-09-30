@@ -9,6 +9,6 @@ export function CuiIconsHeaderTitle(props: CuiIconsHeaderTitleProps) {
     const result = <span>Results for: <span className="cui-text-italic">{props.text}</span></span>;
     const title = isText ? result : "";
     return (
-        <h2 className="cui-h2">{title}</h2>
+        <h2 className="cui-h2 cui-margin-remove">{title}</h2>
     )
 }

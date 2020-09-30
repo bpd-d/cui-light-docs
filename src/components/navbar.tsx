@@ -14,7 +14,7 @@ export interface NavbarProps {
 export function Navbar(props: NavbarProps) {
     const currentLocation = useLocation();
     const [state, setState] = React.useState<NavbarState>({ currentSite: "" });
-    const navbarBgClass = state.currentSite ? " navbar-background-accent cui-dark" : ""
+    const navbarBgClass = state.currentSite ? "navbar-background-accent cui-dark" : "cui-transparent"
     const downloadBtnCls = state.currentSite ? "cui-shade" : "cui-accent"
     React.useEffect(() => {
         let split = currentLocation.pathname.split('/');
@@ -23,7 +23,7 @@ export function Navbar(props: NavbarProps) {
         })
     }, [currentLocation])
     return (
-        <nav className={"cui-navbar cui-transparent cui-sticky layout-navigation" + navbarBgClass}>
+        <nav className={"cui-navbar cui-sticky layout-navigation " + navbarBgClass}>
             <div className="cui-navbar-left cui-width-1-1 cui-width-auto--m cui-flex cui-middle cui-between" id="navbar-left">
                 <ul>
                     {state.currentSite && <li><Link className="cui-icon app-icon" cui-icon="app_icon" to="/"></Link></li>}
@@ -35,7 +35,7 @@ export function Navbar(props: NavbarProps) {
             <ul className="cui-navbar-right cui-visible--m">
                 <li><NavbarLink class="cui-navbar-item" url="/" name="Home" /></li>
                 <li><NavbarLink class="cui-navbar-item" url="/overview" name="Oveview" /></li>
-                <li><NavbarLink class="cui-navbar-item" url="/docs" name="Documentation" /></li>
+                <li><NavbarLink class="cui-navbar-item" url="/docs/components/introduction" name="Documentation" /></li>
                 <li><NavbarLink class="cui-navbar-item" url="/icon" name="Icons" /></li>
                 <li><Link to="/download" className={"cui-button cui-rounded " + downloadBtnCls}>Download</Link></li>
             </ul>

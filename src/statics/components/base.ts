@@ -3,6 +3,9 @@ import { BreadrumbScript } from "./breadcrumb"
 import { CuiDocsSectionScript } from "./section"
 import { CuiDocsContainerScript } from "./container"
 import { CuiDocsComponentButtonScript } from "./button"
+import { CuiDocsComponentBadge } from "./badge"
+import { Introduction } from "./intro"
+import { CuiDocsBannerScript } from "./banner"
 
 export const COMPONENTS = {
     container: "container",
@@ -31,6 +34,8 @@ export const cuiComponents: CuiDocsComponents = {
     "button": { name: "Button", uri: "/docs/components/button", description: "Lots of styled options for buttons", script: CuiDocsComponentButtonScript },
     "card": { name: "Card", uri: "/docs/components/card", description: "Creates nice looking cards with ease" },
     "breadcrumb": { name: "Breadcrumb", uri: "/docs/components/breadcrumb", description: "Makes subpage navigation more accessible", script: BreadrumbScript },
-    "badge": { name: "Badge", uri: "/docs/components/badge", description: "Provides pretty indicators to other elements" },
-    "accordion": { name: "Accordion", uri: "/docs/components/accordion", description: "Helps to display a grouped data" }
+    "badge": { name: "Badge", uri: "/docs/components/badge", description: "Provides pretty indicators to other elements", script: CuiDocsComponentBadge },
+    "accordion": { name: "Accordion", uri: "/docs/components/accordion", description: "Helps to display a grouped data" },
+    "introduction": { name: "Introduction", uri: "/docs/components/introduction", description: "This is introduction", script: Introduction },
+    "banner": { name: "Banner", uri: "/docs/components/banner", description: "Display messages on the page", script: CuiDocsBannerScript }
 }

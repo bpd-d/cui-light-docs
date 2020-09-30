@@ -7,6 +7,7 @@ export interface ScriptSection {
     description: React.ReactNode;
     example?: JSX.Element;
     additions?: React.ReactNode;
+    subsections?: ScriptSection[];
 }
 export interface CuiDocsPageProps {
     script: DocsScript;

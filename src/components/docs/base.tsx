@@ -10,6 +10,7 @@ export interface ScriptSection {
     description: React.ReactNode;
     example?: JSX.Element;
     additions?: React.ReactNode;
+    subsections?: ScriptSection[];
 }
 
 export interface CuiDocsPageProps {
@@ -25,6 +26,7 @@ export function CuiDocsPage(props: CuiDocsPageProps) {
                         key={index}
                         classes={index === 0 ? 'cui-padding-remove-top' : undefined}
                         name={item.name}
+                        index={index}
                         description={item.description}
                         elements={
                             item.example

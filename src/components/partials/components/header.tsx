@@ -8,8 +8,10 @@ export interface DocsHeaderProps {
 export default function DocsHeader(props: DocsHeaderProps) {
     return (
         <>
-            <h1 className="cui-article-title">{props.title}</h1>
-            <p className="cui-article-description">{props.description}</p>
+            <div className="top-header-height cui-flex cui-middle">
+                <h1 className="cui-article-title">{props.title}</h1>
+            </div>
+            <p className="cui-article-description cui-margin-top">{props.description}</p>
         </>
     )
 }

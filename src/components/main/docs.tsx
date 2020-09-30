@@ -31,7 +31,7 @@ export function DocsComponent(args: DocsProps) {
     }, [id])
     return <div className="cui-container layout-docs">
         <div className="cui-visible--l">
-            <div className="cui-form">
+            <div className="cui-form cui-flex cui-middle top-header-height">
                 <input type="text" className="cui-input" placeholder="Search" />
             </div>
             <h3 className="cui-h3">Components</h3>

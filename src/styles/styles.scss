@@ -187,6 +187,10 @@ ul.hashtags {
     }
 }
 
+.top-header-height {
+    height: 110px;
+}
+
 // Commons
 @include commons.definitions;
 @include base.definitions;
