@@ -1,4 +1,7 @@
 import * as React from "react";
+import { ElementGenerator } from "../../api/parser/ElementGenerator";
+import { ParserNode } from "../../api/parser/interfaces";
+import { ReactPreParser, ReactParser } from "../../api/parser/GeneratorParsers";
 import { GLOBAL_COUNTER } from "../../statics/common";
 
 export type CuiPreviewType = 'aside' | "tabbed";
@@ -9,6 +12,10 @@ export interface CodePreviewProps {
     element: JSX.Element;
     js?: JSX.Element;
     height?: string;
+}
+
+export interface TabbedPreviewProps {
+    node: ParserNode;
 }
 
 export function CodePreviewAside(props: CodePreviewProps) {
@@ -60,4 +67,11 @@ export function ExamplePreview(props: CodePreviewProps, type: CuiPreviewType) {
             return <CodePreviewTabbed code={props.code} element={props.element} height={props.height} />;
     }
 
+}
+
+export function GetTabbedPreview(node: ParserNode) {
+    return ExamplePreview({
+        code: new ElementGenerator(new ReactPreParser()).build(node),
+        element: new ElementGenerator(new ReactParser()).build(node)
+    }, 'tabbed')
 }

@@ -1,4 +1,5 @@
 /// <reference types="react" />
+import { ParserNode } from "../../api/parser/interfaces";
 export declare type CuiPreviewType = 'aside' | "tabbed";
 export interface CodePreviewProps {
     code: JSX.Element;
@@ -6,6 +7,10 @@ export interface CodePreviewProps {
     js?: JSX.Element;
     height?: string;
 }
+export interface TabbedPreviewProps {
+    node: ParserNode;
+}
 export declare function CodePreviewAside(props: CodePreviewProps): JSX.Element;
 export declare function CodePreviewTabbed(props: CodePreviewProps): JSX.Element;
 export declare function ExamplePreview(props: CodePreviewProps, type: CuiPreviewType): JSX.Element;
+export declare function GetTabbedPreview(node: ParserNode): JSX.Element;

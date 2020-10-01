@@ -4,6 +4,7 @@ export interface ParserNodeAttribute {
 export interface ParserNode {
     tag: string;
     classes?: string[];
+    styleClass?: string;
     id?: string;
     text?: string;
     attributes?: ParserNodeAttribute;
@@ -11,7 +12,6 @@ export interface ParserNode {
 }
 export interface ITextParser<T> {
     parse(node: ParserNode, level: number): T;
-    appendChildrens(element: T, t: T[]): T;
 }
 export interface IElementGenerator<T> {
     build(data: ParserNode): T;

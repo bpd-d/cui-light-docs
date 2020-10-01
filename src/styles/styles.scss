@@ -83,7 +83,7 @@ body {
 .aside-card {
     top      : 30vh !important;
     min-width: 150px;
-    max-width: 300px;
+    max-width: 250px;
     margin   : 0 auto;
 }
 
@@ -123,7 +123,11 @@ body {
 }
 
 .home-main-container {
-    height: calc(100vh - 200px);
+    height             : calc(100vh - 60px);
+    background-color   : variables.$component-background-accent;
+    background-image   : url("/assets/images/home_background_shapes_vertical.svg");
+    background-repeat  : no-repeat;
+    background-position: 50% 50%;
 }
 
 .app-home-logo {
@@ -143,29 +147,6 @@ body {
     width: 100% !important;
 }
 
-@include mixins.media-screen-min-large {
-    .limited-content-width {
-        width: 1000px !important;
-    }
-
-    .layout-docs {
-        display              : grid;
-        grid-template-columns: 1fr 800px 1fr;
-        grid-template-rows   : 100%;
-    }
-}
-
-@include mixins.media-screen-min-xlarge {
-    .limited-content-width {
-        width: 1000px !important;
-    }
-
-    .layout-docs {
-        display              : grid;
-        grid-template-columns: 1fr 1000px 1fr;
-        grid-template-rows   : 100%;
-    }
-}
 
 .container-wrap-around {
     border: 1px solid variables.$component-color-muted;
@@ -187,8 +168,48 @@ ul.hashtags {
     }
 }
 
+.docs-card-image-style {
+    object-fit: fill;
+    width     : 100%;
+    height    : 300px;
+}
+
+.docs-card-image-style-aside {
+    object-fit: fill;
+    width     : 100%;
+    height    : 100%;
+}
+
 .top-header-height {
     height: 110px;
+}
+
+@include mixins.media-screen-min-large {
+    .limited-content-width {
+        width: 1000px !important;
+    }
+
+    .layout-docs {
+        display              : grid;
+        grid-template-columns: 1fr 700px 1fr;
+        grid-template-rows   : 100%;
+    }
+
+    .home-main-container {
+        background-image: url("/assets/images/home_background_shapes.svg");
+    }
+}
+
+@include mixins.media-screen-min-xlarge {
+    .limited-content-width {
+        width: 1000px !important;
+    }
+
+    .layout-docs {
+        display              : grid;
+        grid-template-columns: 1fr 1000px 1fr;
+        grid-template-rows   : 100%;
+    }
 }
 
 // Commons

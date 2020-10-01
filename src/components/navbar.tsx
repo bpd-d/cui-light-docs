@@ -14,7 +14,7 @@ export interface NavbarProps {
 export function Navbar(props: NavbarProps) {
     const currentLocation = useLocation();
     const [state, setState] = React.useState<NavbarState>({ currentSite: "" });
-    const navbarBgClass = state.currentSite ? "navbar-background-accent cui-dark" : "cui-transparent"
+    const navbarBgClass = "navbar-background-accent cui-dark cui-box-shadow-remove"; //state.currentSite ? "navbar-background-accent cui-dark" : "cui-transparent"
     const downloadBtnCls = state.currentSite ? "cui-shade" : "cui-accent"
     React.useEffect(() => {
         let split = currentLocation.pathname.split('/');

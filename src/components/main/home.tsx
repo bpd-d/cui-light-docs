@@ -10,14 +10,14 @@ export class Home extends React.Component<any, {}> {
         super(props);
     }
     render() {
-        return <div className="home-main-container cui-flex-center">
+        return <div className="home-main-container cui-flex-center cui-dark">
             <div className="cui-container cui-flex-grid cui-child-width-1-4">
                 <div className="cui-width-1-1 cui-flex-center">
                     <span className="cui-icon app-home-logo" cui-icon="app_icon_large"></span>
                 </div>
                 <div className="cui-width-1-1 cui-flex cui-center">
                     <div className="">
-                        <h1 className="cui-h1 cui-margin-top cui-margin-bottom cui-text-center cui-text-left--s">Modern, fast and responsive <span className="cui-text-bold">UI</span> framework for the <span className="cui-text-bold">Web</span></h1>
+                        <h1 className="cui-h1 cui-margin-top cui-margin-bottom cui-text-center cui-text-left--s">Modern, fast and responsive UI framework for the Web</h1>
                         {/* <ul className="hashtags cui-text-muted">
                             <li>#Responsive</li>
                             <li>#Light</li>

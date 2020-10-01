@@ -13,7 +13,7 @@ export function CuiDocsAside(props: CuiDocsAsideProps) {
             <div className="cui-card-body">
                 <ul className="cui-list">
                     {props.sections && props.sections.map((item: string, index: number) => {
-                        return (<li key={index}><a href={"#" + getHeaderId(index)} className="cui-link cui-text-truncate--l cui-width-1-1">{item}</a></li>)
+                        return (<li key={index} className="cui-overflow-hidden"><a href={"#" + getHeaderId(index)} className="cui-link cui-text-truncate--l cui-width-1-1">{item}</a></li>)
                     })}
                 </ul>
             </div>

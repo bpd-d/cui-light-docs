@@ -4,7 +4,7 @@ import { cuiComponents, CuiDocsComponentDef } from "../../statics/components/bas
 import { CuiDocsNavigation } from "../docs/navigation";
 import DocsHeader from "../partials/components/header";
 import { CuiDocsPage } from "../docs/base";
-import { CuiDocsAside } from "../docs/aside";
+import { CuiDocsAside } from "../docs/CuiDocsAside";
 
 export interface DocsProps {
     site?: string;
@@ -38,7 +38,7 @@ export function DocsComponent(args: DocsProps) {
             <CuiDocsNavigation sort={true} /></div>
         {state.component ?
             (<article>
-                <DocsHeader title={state.component.name} description={state.component.description} />
+                <DocsHeader title={state.component.name} description={state.component.description} illustration={state.component.illustration} />
                 <CuiDocsPage script={state.component.script} />
             </article>) :
             (<CuiDocsComponentNotFound />)
