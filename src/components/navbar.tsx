@@ -1,5 +1,6 @@
 import * as React from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
+import { capitalize } from "../utils/function";
 import { NavbarLink } from "./partials/navbarlink";
 
 export interface NavbarState {
@@ -15,11 +16,24 @@ export function Navbar(props: NavbarProps) {
     const currentLocation = useLocation();
     const [state, setState] = React.useState<NavbarState>({ currentSite: "" });
     const navbarBgClass = "navbar-background-accent cui-dark cui-box-shadow-remove"; //state.currentSite ? "navbar-background-accent cui-dark" : "cui-transparent"
-    const downloadBtnCls = state.currentSite ? "cui-shade" : "cui-accent"
-    React.useEffect(() => {
+    const downloadBtnCls = state.currentSite ? "cui-shade" : "cui-accent";
+
+    function getCurrentPage() {
         let split = currentLocation.pathname.split('/');
+        let curr = "";
+        if (split.length > 1) {
+            if (split.length >= 4 && split[2].toLowerCase().match("component")) {
+                curr = capitalize(split[3]);
+            } else {
+                curr = capitalize(split[1])
+            }
+        }
+        return curr;
+    }
+
+    React.useEffect(() => {
         setState({
-            currentSite: split.length > 1 ? currentLocation.pathname.split('/')[1].toLocaleUpperCase() : ""
+            currentSite: getCurrentPage()
         })
     }, [currentLocation])
     return (

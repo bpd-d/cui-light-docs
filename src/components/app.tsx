@@ -49,7 +49,7 @@ export class App extends React.Component<AppProps, AppState> {
                 </div>
                 <div className="info-bar">
                     <div className="cui-inline-block cui-drop-trigger" >
-                        <a className="cui-button cui-background-default cui-default cui-rounded cui-margin-small-right">Github</a>
+                        <a className="cui-button cui-accent cui-box-shadow cui-rounded cui-margin-small-right">Github</a>
                         <div className="cui-drop cui-dropdown cui-drop-top-right" cui-drop="mode: click; autoClose: y; outClose: y">
                             <ul className="cui-drop-nav">
                                 <li><a href="https://github.com/bpd-d/cui-light">cUI Light</a></li>
@@ -58,7 +58,7 @@ export class App extends React.Component<AppProps, AppState> {
                             </ul>
                         </div>
                     </div>
-                    <button className="cui-icon-button cui-default" cui-icon="info" cui-open="target: #beta-info-dialog"></button>
+                    <button className="cui-icon-button cui-box-shadow cui-accent" cui-icon="info" cui-open="target: #beta-info-dialog"></button>
                 </div>
                 <div className="cui-dialog" id="beta-info-dialog" cui-dialog="escClose: y; outClose: y">
                     <div className="cui-dialog-container">

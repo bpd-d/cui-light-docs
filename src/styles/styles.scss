@@ -71,12 +71,12 @@ body {
     }
 
     .off-canvas-content {
-        height    : 80vh;
+        height    : calc(85vh - 60px);
         overflow-y: auto;
     }
 
     .off-canvas-footer {
-        height: 10vh;
+        height: 15vh;
     }
 }
 
@@ -135,7 +135,22 @@ body {
         width : 200px;
         height: 200px;
 
-        stroke-width: 2px !important;
+        stroke-width: 3px !important;
+
+        path {
+            &.outer-ring {
+                stroke-dasharray : 415;
+                stroke-dashoffset: 415;
+                animation        : homeOuterRingShow ease-in 600ms forwards;
+            }
+
+            &.dot {
+                opacity        : 0;
+                stroke-width   : 2px !important;
+                animation      : homeDotLogoShow ease-in 300ms forwards;
+                animation-delay: 600ms;
+            }
+        }
     }
 }
 
@@ -218,3 +233,23 @@ ul.hashtags {
 @include components.definitions;
 @include dark.definitions;
 @include print.definitions;
+
+@keyframes homeDotLogoShow {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes homeOuterRingShow {
+    0% {
+        stroke-dashoffset: 415;
+    }
+
+    100% {
+        stroke-dashoffset: 0;
+    }
+}

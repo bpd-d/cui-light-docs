@@ -13,7 +13,7 @@ export class Home extends React.Component<any, {}> {
         return <div className="home-main-container cui-flex-center cui-dark">
             <div className="cui-container cui-flex-grid cui-child-width-1-4">
                 <div className="cui-width-1-1 cui-flex-center">
-                    <span className="cui-icon app-home-logo" cui-icon="app_icon_large"></span>
+                    <span className="cui-icon app-home-logo" cui-icon="app_icon_large_new"></span>
                 </div>
                 <div className="cui-width-1-1 cui-flex cui-center">
                     <div className="">
@@ -29,8 +29,8 @@ export class Home extends React.Component<any, {}> {
                             <li>#Dark Mode</li>
                         </ul> */}
                         <div className="cui-margin-large-top cui-flex cui-center">
-                            <Link to="/overview" className="cui-button cui-default cui-rounded">Learn more</Link>
-                            <Link to="/start" className="cui-margin-small-left cui-button cui-accent cui-rounded">Get started</Link>
+                            <Link to="/overview" className="cui-button cui-rounded">Learn more</Link>
+                            <Link to="/start" className="cui-margin-small-left cui-button cui-shade cui-rounded">Get started</Link>
                         </div>
                     </div>
                 </div>

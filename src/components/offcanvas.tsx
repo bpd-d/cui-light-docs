@@ -31,7 +31,6 @@ export class OffCanvas extends React.Component<OffCanvasProps, {}> {
                     <a href="#" className="cui-icon" cui-icon="close" cui-close=""></a>
                 </div>
                 <div className="off-canvas-content cui-card-body">
-
                     <div className="cui-width-1-1">
                         <h3 className="cui-h3">Menu</h3>
                         <ul className="cui-list cui-interactive cui-margin-top">
