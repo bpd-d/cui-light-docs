@@ -199,6 +199,24 @@ ul.hashtags {
     height: 110px;
 }
 
+
+@include mixins.media-screen-height-max-small {
+    .limited-content-width {
+        width: 1000px !important;
+    }
+
+    .layout-docs {
+        display              : grid;
+        grid-template-columns: 1fr 700px 1fr;
+        grid-template-rows   : 100%;
+    }
+
+    .home-main-container {
+        height          : 450px;
+        background-image: url("/assets/images/home_background_shapes.svg");
+    }
+}
+
 @include mixins.media-screen-min-large {
     .limited-content-width {
         width: 1000px !important;
