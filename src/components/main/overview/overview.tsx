@@ -25,7 +25,7 @@ export class Overview extends React.Component<any, {}> {
         {
             title: "Color themes",
             description: "Framework provides two color sets: accent and secondary. Beacause all colors come from CSS variables, they can be easily switched to other even in runtime. Framework gives ability to do that.",
-            icon: "overview_theme"
+            icon: "overview_theme_2"
         },
         {
             title: "Events system",
@@ -57,7 +57,7 @@ export class Overview extends React.Component<any, {}> {
             return <OverviewSegmentComponent title={item.title} description={item.description} icon={item.icon} even={index % 2 === 0} key={index} />
 
         })
-        return <div className="cui-flex cui-center">
+        return <div className="cui-flex cui-center overview-content" cui-intersection="action:.in-view; target: span.overview-icon">
             {components}
         </div>;
     }

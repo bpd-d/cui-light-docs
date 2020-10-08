@@ -7,7 +7,7 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   inkscape:version="1.0 (4035a4fb49, 2020-05-01)"
+   inkscape:version="1.0.1 (3bc2e813f5, 2020-09-07)"
    id="svg8"
    version="1.1"
    viewBox="0 0 200 200"
@@ -58,7 +58,7 @@
      style="fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:2.00001;stroke-linecap:round;stroke-linejoin:round;paint-order:fill markers stroke"
      id="path837" />
   <path
-     class="cui-accent"
+     class="cui-accent outer-ring"
      d="M 112.17362 48.868776 A 59 59 0 0 1 130.31601 46.010147 A 59 59 0 0 1 189.31601 105.01015 A 59 59 0 0 1 130.31601 164.01015 A 59 59 0 0 1 111.7028 160.99719 "
      style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:2.00001;stroke-linecap:round;stroke-linejoin:round;paint-order:fill markers stroke"
      id="circle839" />
@@ -66,5 +66,5 @@
      d="M 87.933127 146.05514 A 59 59 0 0 1 71.31601 105.01015 A 59 59 0 0 1 88.278611 63.611391 "
      style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:2.00001;stroke-linecap:round;stroke-linejoin:round;paint-order:fill markers stroke"
      id="path855"
-     class="cui-accent" />
+     class="cui-accent inner-ring" />
 </svg>

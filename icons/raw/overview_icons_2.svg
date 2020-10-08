@@ -7,7 +7,7 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   inkscape:version="1.0 (4035a4fb49, 2020-05-01)"
+   inkscape:version="1.0.1 (3bc2e813f5, 2020-09-07)"
    id="svg8"
    version="1.1"
    viewBox="0 0 200 200"
@@ -31,7 +31,7 @@
      inkscape:current-layer="svg8"
      inkscape:document-units="px"
      inkscape:cy="81.578518"
-     inkscape:cx="235.45845"
+     inkscape:cx="103.46519"
      inkscape:zoom="3.959798"
      inkscape:pageshadow="2"
      inkscape:pageopacity="0.0"
@@ -39,10 +39,10 @@
      bordercolor="#666666"
      pagecolor="#ffffff"
      id="base"
-     inkscape:window-width="2560"
-     inkscape:window-height="1017"
-     inkscape:window-x="2728"
-     inkscape:window-y="-8"
+     inkscape:window-width="1368"
+     inkscape:window-height="850"
+     inkscape:window-x="-6"
+     inkscape:window-y="-6"
      inkscape:window-maximized="1">
     <inkscape:grid
        id="grid840"
@@ -73,7 +73,7 @@
      d="M 165.45517,50 140,145"
      id="path841" />
   <path
-     class="cui-accent"
+     class="cui-accent circle"
      id="path843"
      style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;paint-order:fill markers stroke"
      d="M 78,84 A 14,14 0 0 1 64,98 14,14 0 0 1 50,84 14,14 0 0 1 64,70 14,14 0 0 1 78,84 Z" />
@@ -81,12 +81,10 @@
      d="m 87,105 h 28 v 28 H 87 Z"
      style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;paint-order:fill markers stroke"
      id="rect848"
-     class="cui-accent" />
+     class="cui-accent square" />
   <path
      id="path850"
      style="fill:none;fill-opacity:0;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;paint-order:fill markers stroke"
-     inkscape:transform-center-y="4.0446922"
-     class="cui-accent"
-     d="M 125,95 110.99992,70.731825 h 28.00015 z"
-     inkscape:transform-center-x="-3.78256e-06" />
+     class="cui-accent triangle"
+     d="M 125,95 110.99992,70.731825 h 28.00015 z" />
 </svg>
