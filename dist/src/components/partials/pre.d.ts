@@ -1,5 +1,5 @@
 /// <reference types="react" />
-import { ParserNode } from '../../api/parser/interfaces';
+import { ParserNode } from '../../api/DocsElementParser/interfaces';
 export interface preProps {
     node: ParserNode;
     level: number;

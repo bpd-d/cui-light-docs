@@ -1,10 +1,13 @@
 import * as React from "react";
 import { useParams } from "react-router-dom";
-import { cuiComponents, CuiDocsComponentDef } from "../../statics/components/base";
+import { cuiComponents, CuiDocsComponentDef } from "../../statics/ComponentsDocs/base";
 import { CuiDocsNavigation } from "../docs/navigation";
 import DocsHeader from "../partials/components/header";
 import { CuiDocsPage } from "../docs/base";
 import { CuiDocsAside } from "../docs/CuiDocsAside";
+import { BpdStateManager } from "../../../node_modules/bpd-state-manager/dist/esm/index";
+import { ActionsType, RecentState, RECENT_ACTION_ADD, StatesType, STATE_RECENT } from "../../api/state/state";
+import { addRecentItem } from "../../api/state/actions";
 
 export interface DocsProps {
     site?: string;
@@ -26,7 +29,9 @@ export function DocsComponent(args: DocsProps) {
             setState({
                 component: component
             })
+            addRecentItem(component.name, component.uri)
         }
+
 
     }, [id])
     return <div className="cui-container layout-docs">

@@ -29,17 +29,23 @@ body {
 }
 
 .info-bar {
-    position     : fixed;
-    bottom       : 0;
-    right        : 0;
-    margin-right : variables.$margin-global;
-    margin-bottom: variables.$margin-global;
+    position      : fixed;
+    bottom        : 0;
+    right         : 0;
+    margin-right  : variables.$margin-global;
+    margin-bottom : variables.$margin-global;
+    display       : flex;
+    flex-direction: column;
 }
 
 .app-icon {
     svg {
         width : variables.$font-xlarge;
         height: variables.$font-xlarge;
+
+        path {
+            stroke-width: 1px;
+        }
     }
 }
 
@@ -141,13 +147,13 @@ body {
             &.outer-ring {
                 stroke-dasharray : 415;
                 stroke-dashoffset: 415;
-                animation        : homeOuterRingShow ease-in 600ms forwards;
+                animation        : homeOuterRingShow ease-out 600ms forwards;
             }
 
             &.dot {
                 opacity        : 0;
                 stroke-width   : 2px !important;
-                animation      : homeDotLogoShow ease-in 300ms forwards;
+                animation      : homeDotLogoShow ease-out 300ms forwards;
                 animation-delay: 600ms;
             }
         }
@@ -198,6 +204,12 @@ ul.hashtags {
 .top-header-height {
     height: 110px;
 }
+
+// .overview-icon {
+//     &[cui-icon="overview_dark_mode_2"] {
+//         background-color: pink;
+//     }
+// }
 
 
 @include mixins.media-screen-height-max-small {

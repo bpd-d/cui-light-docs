@@ -1,6 +1,6 @@
 import * as React from "react";
 import { NavbarLink } from "../partials/navbarlink";
-import { cuiComponents } from "../../statics/components/base";
+import { cuiComponents } from "../../statics/ComponentsDocs/base";
 import { enumerate, getKeysFromObject } from "../../utils/function";
 
 export interface CuiDocsNavigationProps {

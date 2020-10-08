@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { ParserNode, ParserNodeAttribute } from '../../api/parser/interfaces';
+import { ParserNode, ParserNodeAttribute } from '../../api/DocsElementParser/interfaces';
 
 export interface preProps { 
     node: ParserNode;

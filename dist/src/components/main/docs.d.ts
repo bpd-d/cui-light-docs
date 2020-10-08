@@ -1,5 +1,5 @@
 /// <reference types="react" />
-import { CuiDocsComponentDef } from "../../statics/components/base";
+import { CuiDocsComponentDef } from "../../statics/ComponentsDocs/base";
 export interface DocsProps {
     site?: string;
 }

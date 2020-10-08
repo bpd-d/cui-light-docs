@@ -1,5 +1,5 @@
 /// <reference types="react" />
-import { ParserNode } from "../../api/parser/interfaces";
+import { ParserNode } from "../../api/DocsElementParser/interfaces";
 export declare type CuiPreviewType = 'aside' | "tabbed";
 export interface CodePreviewProps {
     code: JSX.Element;

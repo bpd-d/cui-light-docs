@@ -1,7 +1,7 @@
 import * as React from "react";
-import { ElementGenerator } from "../../api/parser/ElementGenerator";
-import { ParserNode } from "../../api/parser/interfaces";
-import { ReactPreParser, ReactParser } from "../../api/parser/GeneratorParsers";
+import { ElementGenerator } from "../../api/DocsElementParser/ElementGenerator";
+import { ParserNode } from "../../api/DocsElementParser/interfaces";
+import { ReactPreParser, ReactParser } from "../../api/DocsElementParser/GeneratorParsers";
 import { GLOBAL_COUNTER } from "../../statics/common";
 
 export type CuiPreviewType = 'aside' | "tabbed";
