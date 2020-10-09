@@ -18,19 +18,9 @@ export class Home extends React.Component<any, {}> {
                 <div className="cui-width-1-1 cui-flex cui-center">
                     <div className="">
                         <h1 className="cui-h1 cui-margin-top cui-margin-bottom cui-text-center">Modern, fast and responsive UI framework for the Web</h1>
-                        {/* <ul className="hashtags cui-text-muted">
-                            <li>#Responsive</li>
-                            <li>#Light</li>
-                            <li>#Fast</li>
-                            <li>#Simple</li>
-                            <li>#Sass</li>
-                            <li>#Typescript</li>
-                            <li>#Themes</li>
-                            <li>#Dark Mode</li>
-                        </ul> */}
                         <div className="cui-margin-large-top cui-flex cui-center">
                             <Link to="/overview" className="cui-button cui-rounded">Learn more</Link>
-                            <Link to="/start" className="cui-margin-small-left cui-button cui-shade cui-rounded">Get started</Link>
+                            <Link to="/docs/components/introduction" className="cui-margin-small-left cui-button cui-shade cui-rounded">Get started</Link>
                         </div>
                     </div>
                 </div>
