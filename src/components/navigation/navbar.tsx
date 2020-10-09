@@ -1,6 +1,7 @@
 import * as React from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import { capitalize } from "../../utils/function";
+import { ClearableInput } from "../partials/forms/ClearableInput";
 import { NavbarLink } from "../partials/navbarlink";
 
 export interface NavbarState {
@@ -15,8 +16,8 @@ export interface NavbarProps {
 export function Navbar(props: NavbarProps) {
     const currentLocation = useLocation();
     const [state, setState] = React.useState<NavbarState>({ currentSite: "" });
-    const navbarBgClass = "navbar-background-accent cui-dark cui-box-shadow-remove"; //state.currentSite ? "navbar-background-accent cui-dark" : "cui-transparent"
-    const downloadBtnCls = state.currentSite ? "cui-shade" : "cui-accent";
+    const navbarBgClass = "navbar-background-accent cui-dark cui-box-shadow-remove";
+    const downloadBtnCls = state.currentSite ? "cui-shade" : "cui-shade";
 
     function getCurrentPage() {
         let split = currentLocation.pathname.split('/');
@@ -43,7 +44,11 @@ export function Navbar(props: NavbarProps) {
                     {state.currentSite && <li><Link className="cui-icon app-icon" cui-icon="app_icon" to="/"></Link></li>}
                     <li><span>{state.currentSite}</span></li>
                 </ul>
-                <a className="cui-icon cui-padding cui-button cui-hidden--m" cui-icon="menu" cui-open="target: #app-offcanvas"></a>
+                <ul className="cui-hidden--m">
+                    <li><a className="cui-icon cui-button cui-padding" cui-icon="search" cui-open="#search-dialog"></a></li>
+                    <li><a className="cui-icon cui-padding cui-button " cui-icon="menu" cui-open="target: #app-offcanvas"></a></li>
+                </ul>
+
             </div>
 
             <ul className="cui-navbar-right cui-visible--m">
@@ -53,6 +58,7 @@ export function Navbar(props: NavbarProps) {
                 <li><NavbarLink class="cui-navbar-item" url="/icon" name="Icons" /></li>
                 <li><NavbarLink class="cui-navbar-item" url="/about" name="About" /></li>
                 <li><Link to="/download" className={"cui-button cui-rounded " + downloadBtnCls}>Download</Link></li>
+                <li><a className="cui-icon cui-button cui-padding" cui-icon="search" cui-open="#search-dialog"></a></li>
             </ul>
         </nav>
     )

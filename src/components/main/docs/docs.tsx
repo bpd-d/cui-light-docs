@@ -1,7 +1,7 @@
 import * as React from "react";
 import { useParams } from "react-router-dom";
 import { cuiComponents, CuiDocsComponentDef } from "../../../statics/ComponentsDocs/base";
-import { CuiDocsNavigation } from "../../docs/navigation";
+import { CuiDocsNavigation } from "../../docs/CuiDocsNavigation";
 import DocsHeader from "../../partials/components/header";
 import { CuiDocsPage } from "../../docs/base";
 import { CuiDocsAside } from "../../docs/CuiDocsAside";

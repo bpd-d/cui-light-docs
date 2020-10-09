@@ -24,7 +24,6 @@ export interface CuiIconFilterData {
     category: string;
 }
 export declare class IconsComponent extends React.Component<IconsProps, IconComponentState> {
-    icons: IconElementData[];
     constructor(props: IconsProps);
     onFilterUpdate(data: CuiIconFilterData): void;
     getCategory(result: string[], current: IconElementData): string[];

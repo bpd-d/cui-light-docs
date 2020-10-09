@@ -1,11 +1,11 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
-import { Navbar } from "./navigation/navbar";
+import { Navbar } from "./navigation/Navbar";
 import { Router, Switch, Route, BrowserRouter, useLocation, Link } from "react-router-dom";
 import { Home } from "./main/home";
 import { DocsComponent } from "./main/docs/docs";
 import { Overview } from "./main/overview/overview";
-import { OffCanvas } from "./navigation/offcanvas";
+import { OffCanvas } from "./navigation/Offcanvas";
 import { ErrorRoute } from "./error";
 import { Download } from "./main/download";
 import { IconsComponent } from "./main/icons/icons";
@@ -16,6 +16,7 @@ import { RecentItem } from "../api/services/models";
 import { getLastRecentItem, getRecentItems } from "../api/state/filters";
 import { capitalize } from "../utils/function";
 import { loadRecentsFromService } from "../api/state/actions";
+import { SearchDialog } from "./search/SearchDialog";
 
 export interface AppProps {
 }
@@ -77,7 +78,6 @@ export class App extends React.Component<AppProps, AppState> {
                     <Switch>
                         <Route path="/docs/components/:id" component={DocsComponent}></Route>
                         <Route path="/overview" component={Overview}></Route>
-                        {/* <Route path="/docs" component={DocsComponent}></Route> */}
                         <Route path="/download" component={Download}></Route>
                         <Route path="/icon" component={IconsComponent}></Route>
                         <Route path="/about" component={About} />
@@ -109,6 +109,7 @@ export class App extends React.Component<AppProps, AppState> {
                         </div>
                     </div>
                 </div>
+                <SearchDialog />
                 <OffCanvas />
             </div></BrowserRouter>;
     }

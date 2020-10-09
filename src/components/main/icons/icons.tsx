@@ -2,6 +2,7 @@ import * as React from "react";
 import { CuiIconsComponentHeader } from "./header";
 import { CuiIconsGroupedComponent } from "./group";
 import { CuiGroup, group } from "../../../utils/groups";
+import { iconsData } from "../../../statics/icons";
 export const CATEGORY_ALL = 'all';
 export interface GroupedIconsData {
     [id: string]: IconsGroup;
@@ -33,17 +34,10 @@ export interface CuiIconFilterData {
 }
 
 export class IconsComponent extends React.Component<IconsProps, IconComponentState> {
-    icons: IconElementData[] = [
-        { name: "Plus", code: "plus", category: "math" },
-        { name: "Minus", code: "minus", category: "math" },
-        { name: "Menu", code: "menu", category: "math" },
-        { name: "Album", code: "album", category: "apps" },
-        { name: "Bell", code: "bell", category: "interaction" },
-        { name: "Calendar", code: "calendar", category: "apps" },
-    ]
+
     constructor(props: IconsProps) {
         super(props);
-        const categories: string[] = [CATEGORY_ALL, ...this.icons.reduce<string[]>(this.getCategory, [])]
+        const categories: string[] = [CATEGORY_ALL, ...iconsData.reduce<string[]>(this.getCategory, [])]
         this.state = {
             categories: categories,
             filter: { category: CATEGORY_ALL, filter: "" }
@@ -77,7 +71,7 @@ export class IconsComponent extends React.Component<IconsProps, IconComponentSta
         //  const filterIcons = this.state.filter.filter ? this.icons.filter(icon => { return icon.code.includes(this.state.filter.filter.toLowerCase()) }) : this.icons;
         const groupedIcons: CuiGroup<IconElementData> = group((item: IconElementData) => {
             return item.category;
-        }, this.icons, (item: IconElementData) => {
+        }, iconsData, (item: IconElementData) => {
             return this.isFilterMatching(item, this.state.filter.filter) && this.isCategoryMatching(item, this.state.filter.category);
         });
         return <div className="">

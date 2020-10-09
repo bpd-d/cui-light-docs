@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { ElementManager } from "../../../node_modules/cui-light/dist/index";
 import { cuiComponents } from "../../statics/ComponentsDocs/base";
 import { enumerate } from "../../utils/function";
-import { CuiDocsNavigation } from "../docs/navigation";
+import { CuiDocsNavigation } from "../docs/CuiDocsNavigation";
 
 export interface OffCanvasProps {
 }
