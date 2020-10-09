@@ -90,10 +90,10 @@ body {
 }
 
 .aside-card {
-    top      : 30vh !important;
+    top      : 10vh !important;
     min-width: 150px;
     max-width: 250px;
-    margin   : 0 auto;
+    margin   : 0 20px;
 }
 
 .navbar-background-accent {
@@ -148,16 +148,28 @@ body {
 
         path {
             &.outer-ring {
-                stroke-dasharray : 415;
-                stroke-dashoffset: 415;
+                stroke-dasharray : 420;
+                stroke-dashoffset: 420;
                 animation        : homeOuterRingShow ease-out 600ms forwards;
+                animation-delay  : 500ms;
             }
 
             &.dot {
                 opacity        : 0;
                 stroke-width   : 2px !important;
                 animation      : fadeIn ease-out 300ms forwards;
-                animation-delay: 600ms;
+                animation-delay: 1s;
+            }
+
+            &.u {
+                opacity  : 0;
+                animation: fadeIn ease-out 500ms forwards;
+            }
+
+            &.i {
+                opacity        : 0;
+                animation      : fadeIn ease-out 500ms forwards;
+                animation-delay: 300ms;
             }
         }
     }

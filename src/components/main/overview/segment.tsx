@@ -10,7 +10,7 @@ export interface OverviewSegmentProps {
 export function OverviewSegmentComponent(props: OverviewSegmentProps) {
     let classIcon = `cui-width-1-1 cui-height-viewport-1-2 cui-width-1-3--m cui-flex-center cui-order-1 ${props.even ? "cui-order-1--m" : "cui-order-2--m"}`;
     let classText = `cui-width-1-1 cui-width-2-3--m cui-order-2 cui-flex cui-middle ${props.even ? "cui-order-2--m" : "cui-order-1--m"}`;
-    let classSection = `cui-section cui-height-viewport-1-1 cui-height-viewport-1-2--m cui-width-1-1 cui-flex-center ${props.even ? "" : ""}`
+    let classSection = `cui-section cui-height-viewport-1-2--m cui-width-1-1 cui-flex-center ${props.even ? "" : ""}`
     return (
         <div className={classSection}>
             <div className="limited-content-width cui-flex-grid">

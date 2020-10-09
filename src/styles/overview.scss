@@ -136,8 +136,7 @@
             &[cui-icon="overview_dark_mode_2"] {
                 .circle {
                     @include mixins.animation($name: overviewScaleUp, $duration: 500ms, $delay: 500ms);
-
-                    opacity: 1;
+                    opacity                        : 1;
 
                     &.second {
                         animation-delay: 800ms;
@@ -181,7 +180,9 @@
                     transform-origin               : center;
                     @include mixins.animation($name: overviewLineBreak, $duration: 500ms, $timing: ease-in, $delay: 1s);
                     opacity                        : 1;
+                    transition                     : stroke-dashoffset 300ms ease-out;
                 }
+
             }
 
 
@@ -228,6 +229,8 @@
                     @include mixins.animation($name: overviewPerfArrowDag, $duration: 1s);
                     opacity                        : 1;
                 }
+
+
             }
 
             &[cui-icon="overview_events_2"] {
@@ -284,12 +287,12 @@
                 }
 
                 .vertical {
-                    @include mixins.animation($name: overviewPluginsVertical, $duration: 500ms, $delay: 500ms);
+                    @include mixins.animation($name: overviewPluginsVertical, $duration: 600ms, $delay: 700ms);
                     opacity                        : 1;
                 }
 
                 .horizontal {
-                    @include mixins.animation($name: overviewPluginsHorizontal, $duration: 800ms, $delay: 300ms);
+                    @include mixins.animation($name: overviewPluginsHorizontal, $duration: 1s, $delay: 300ms);
                     opacity                        : 1;
                 }
             }
@@ -304,33 +307,36 @@
                 .bottom {
                     transform-origin               : 80% 50%;
                     opacity                        : 1;
-                    @include mixins.animation($name: overviewRollup, $duration: 500ms, $delay: 500ms);
+                    @include mixins.animation($name: overviewRollup, $duration: 600ms, $delay: 500ms);
                 }
 
                 .top {
                     transform-origin               : top center;
                     opacity                        : 1;
-                    @include mixins.animation($name: overviewRollup, $duration: 300ms, $delay: 300ms);
+                    @include mixins.animation($name: overviewRollup, $duration: 400ms, $delay: 300ms);
                 }
             }
 
             &[cui-icon="overview_theme_3"] {
                 [class*="circle"] {
                     transform-origin               : center;
-                    @include mixins.animation($name: overviewScaleUp, $duration: 500ms);
+                    @include mixins.animation($name: overviewScaleUp, $duration: 600ms);
                     opacity                        : 1;
                 }
 
                 .circle_2 {
-                    animation-delay: 200ms;
+                    animation-delay   : 200ms;
+                    animation-duration: 700ms;
                 }
 
                 .circle_3 {
-                    animation-delay: 400ms;
+                    animation-delay   : 400ms;
+                    animation-duration: 800ms;
                 }
 
                 .circle_4 {
-                    animation-delay: 600ms;
+                    animation-delay   : 600ms;
+                    animation-duration: 900ms;
                 }
             }
         }

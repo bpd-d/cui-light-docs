@@ -1,5 +1,5 @@
 import * as React from "react";
-import { CuiSelect } from "../../partials/forms/select";
+import { CuiSelect } from "../../partials/forms/CuiSelect";
 import { CuiIconsHeaderTitle } from "./title";
 import { CuiIconFilterData } from "./icons";
 

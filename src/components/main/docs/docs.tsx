@@ -1,13 +1,12 @@
 import * as React from "react";
 import { useParams } from "react-router-dom";
-import { cuiComponents, CuiDocsComponentDef } from "../../statics/ComponentsDocs/base";
-import { CuiDocsNavigation } from "../docs/navigation";
-import DocsHeader from "../partials/components/header";
-import { CuiDocsPage } from "../docs/base";
-import { CuiDocsAside } from "../docs/CuiDocsAside";
-import { BpdStateManager } from "../../../node_modules/bpd-state-manager/dist/esm/index";
-import { ActionsType, RecentState, RECENT_ACTION_ADD, StatesType, STATE_RECENT } from "../../api/state/state";
-import { addRecentItem } from "../../api/state/actions";
+import { cuiComponents, CuiDocsComponentDef } from "../../../statics/ComponentsDocs/base";
+import { CuiDocsNavigation } from "../../docs/navigation";
+import DocsHeader from "../../partials/components/header";
+import { CuiDocsPage } from "../../docs/base";
+import { CuiDocsAside } from "../../docs/CuiDocsAside";
+import { addRecentItem } from "../../../api/state/actions";
+import { ClearableInput } from "../../partials/forms/ClearableInput";
 
 export interface DocsProps {
     site?: string;
@@ -15,29 +14,31 @@ export interface DocsProps {
 
 export interface DocsComponentState {
     component: CuiDocsComponentDef;
+    search: string;
 }
 
 export function DocsComponent(args: DocsProps) {
     const { id } = useParams();
     const [state, setState] = React.useState<DocsComponentState>({
-        component: null
+        component: null,
+        search: ""
     });
 
     React.useEffect(() => {
         let component = cuiComponents[id];
         if (component) {
             setState({
-                component: component
+                component: component,
+                search: ""
             })
             addRecentItem(component.name, component.uri)
         }
-
-
     }, [id])
+
     return <div className="cui-container layout-docs">
         <div className="cui-visible--l">
-            <div className="cui-form cui-flex cui-middle top-header-height">
-                <input type="text" className="cui-input" placeholder="Search" />
+            <div className="cui-flex cui-middle top-header-height">
+                <ClearableInput value={state.search} />
             </div>
             <h3 className="cui-h3">Components</h3>
             <CuiDocsNavigation sort={true} /></div>

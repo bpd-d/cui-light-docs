@@ -3,7 +3,7 @@ import * as ReactDOM from "react-dom";
 import { Navbar } from "./navigation/navbar";
 import { Router, Switch, Route, BrowserRouter, useLocation, Link } from "react-router-dom";
 import { Home } from "./main/home";
-import { DocsComponent } from "./main/docs";
+import { DocsComponent } from "./main/docs/docs";
 import { Overview } from "./main/overview/overview";
 import { OffCanvas } from "./navigation/offcanvas";
 import { ErrorRoute } from "./error";
