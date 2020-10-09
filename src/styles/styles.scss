@@ -11,6 +11,9 @@ $prefix : 'cui' !default;
 @use '../../node_modules/cui-styles/styles/components'as components;
 @use "../../node_modules/cui-styles/styles/mixins"as mixins;
 
+@use "./overview.scss"as overview;
+@use './keyframes'as keyframes;
+
 :root {
     @include root.variables;
 }
@@ -205,183 +208,14 @@ ul.hashtags {
     height: 110px;
 }
 
-.overview-icon {
-    &[cui-icon="overview_flex_3"] {
-        path {
-            opacity: 0;
-        }
 
-        .outer-ring {
-            stroke-dasharray : 225;
-            stroke-dashoffset: 225;
-        }
-
-        .inner-ring {
-            stroke-dasharray : 88;
-            stroke-dashoffset: 88;
-        }
-    }
-
-    &[cui-icon="overview_icons_2"] {
-        path {
-            opacity: 0;
-        }
-
-        .circle,
-        .square,
-        .triangle {
-            transform-origin: center;
-            transform       : scale(0, 0);
-        }
-    }
-
-    &[cui-icon="overview_fastdom"] {
-        path {
-            opacity: 0;
-        }
-
-        .line_1,
-        .line_4 {
-            stroke-dasharray : 53;
-            stroke-dashoffset: 53;
-        }
-
-        .line_2,
-        .line_3 {
-            stroke-dasharray : 50;
-            stroke-dashoffset: 50;
-        }
-
-        .arrow-base {
-            stroke-dasharray : 172;
-            stroke-dashoffset: 172;
-        }
-    }
-
-    &[cui-icon="overview_events_2"] {
-        path {
-            opacity: 0;
-        }
-
-        .connector_1 {
-            stroke-dasharray : 50;
-            stroke-dashoffset: 50;
-        }
-
-        .connector_2 {
-            stroke-dasharray : 60;
-            stroke-dashoffset: 60;
-        }
-
-        .connector_3 {
-            stroke-dasharray : 60;
-            stroke-dashoffset: 60;
-        }
-    }
-
-    &.in-view {
-
-        &[cui-icon="overview_flex_3"] {
-            path {
-                animation: fadeIn 1s ease-out 300ms forwards;
-            }
-
-            .outer-ring {
-                animation: overviewFlexOuterRing 1s ease-out 600ms forwards;
-                opacity  : 1;
-
-            }
-
-            .inner-ring {
-                animation: overviewFlexInnerRing 600ms ease-out 1s forwards;
-                opacity  : 1;
-
-            }
-        }
-
-        &[cui-icon="overview_fastdom"] {
-            path {
-                animation: fadeIn 1s ease-out 300ms forwards;
-            }
-
-            .line_2,
-            .line_3 {
-                animation: overviewPerfLineLong 500ms ease-out 300ms forwards;
-                opacity  : 1;
-            }
-
-            .line_4,
-            .line_1 {
-                animation: overviewPerfLineLong 800ms ease-out forwards;
-                opacity  : 1;
-            }
-
-            .pointers {
-                animation: fadeIn 500ms ease-out forwards;
-            }
-
-            .arrow-base {
-                animation: overviewPerfArrow 2s ease-out forwards;
-                opacity  : 1;
-            }
-
-            .arrow-dagger {
-                animation: overviewPerfArrowDag 2s ease-out forwards;
-                opacity  : 1;
-            }
-        }
-
-        &[cui-icon="overview_events_2"] {
-            path {
-                animation: fadeIn 1s ease-out 300ms forwards;
-            }
-
-            .connector_1 {
-                animation      : overviewEventConn1 1s ease-out forwards;
-                animation-delay: 500ms;
-                opacity        : 1;
-            }
-
-            .connector_2 {
-                animation      : overviewEventConn1 1s ease-out forwards;
-                animation-delay: 700ms;
-                opacity        : 1;
-            }
-
-            .connector_3 {
-                animation      : overviewEventConn1 1s ease-out forwards;
-                animation-delay: 1s;
-                opacity        : 1;
-            }
-        }
-
-        &[cui-icon="overview_icons_2"] {
-            path {
-                animation: fadeIn 1s ease-out 300ms forwards;
-            }
-
-            .circle {
-                animation: overviewScaleUp 500ms ease-out forwards;
-                opacity  : 1;
-            }
-
-            .square {
-                animation: overviewScaleUp 500ms ease-out 300ms forwards;
-                opacity  : 1;
-            }
-
-            .triangle {
-                animation: overviewScaleUp 500ms ease-out 600ms forwards;
-                opacity  : 1;
-            }
-        }
-    }
-}
 
 .overview-content {
     height    : 100%;
     overflow-y: auto;
 }
+
+
 
 
 @include mixins.media-screen-height-max-small {
@@ -429,6 +263,9 @@ ul.hashtags {
     }
 }
 
+// Docs includes
+@include overview.definitions;
+
 // Commons
 @include commons.definitions;
 @include base.definitions;
@@ -436,144 +273,4 @@ ul.hashtags {
 @include dark.definitions;
 @include print.definitions;
 
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
-}
-
-@keyframes scaleIn {
-    0% {
-        transform: scale(0, 0);
-    }
-
-    100% {
-        transform: scale(1, 1);
-    }
-}
-
-@keyframes homeOuterRingShow {
-    0% {
-        stroke-dashoffset: 415;
-    }
-
-    100% {
-        stroke-dashoffset: 0;
-    }
-}
-
-@keyframes overviewFlexOuterRing {
-    0% {
-        stroke-dashoffset: 225;
-    }
-
-    100% {
-        stroke-dashoffset: 0;
-    }
-}
-
-@keyframes overviewFlexInnerRing {
-    0% {
-        stroke-dashoffset: 88;
-    }
-
-    100% {
-        stroke-dashoffset: 0;
-    }
-}
-
-@keyframes overviewEventConn1 {
-    0% {
-        stroke-dashoffset: 50;
-    }
-
-    100% {
-        stroke-dashoffset: 0;
-    }
-}
-
-@keyframes overviewEventConn23 {
-    0% {
-        stroke-dashoffset: 60;
-    }
-
-    100% {
-        stroke-dashoffset: 0;
-    }
-}
-
-@keyframes overviewPerfPoint {
-    0% {
-        transform: rotate(-90deg);
-    }
-
-    100% {
-        transform: rotate(0deg);
-    }
-}
-
-@keyframes overviewPerfArrow {
-    0% {
-        transform        : translateX(-200px);
-        stroke-dashoffset: 172;
-    }
-
-    100% {
-        transform        : translateX(0px);
-        stroke-dashoffset: 0;
-    }
-}
-
-@keyframes overviewPerfArrowDag {
-    0% {
-        transform        : translateX(-200px);
-        stroke-dashoffset: 172;
-    }
-
-    100% {
-        transform        : translateX(0px);
-        stroke-dashoffset: 0;
-    }
-}
-
-@keyframes overviewPerfLineLong {
-    0% {
-        transform        : translateX(-50px);
-        stroke-dashoffset: 53;
-    }
-
-    100% {
-        transform        : translateX(0px);
-        stroke-dashoffset: 0;
-    }
-}
-
-@keyframes overviewPerfLineShort {
-    0% {
-        transform        : translateX(-50px);
-        stroke-dashoffset: 50;
-    }
-
-    100% {
-        transform        : translateX(0px);
-        stroke-dashoffset: 0;
-    }
-}
-
-@keyframes overviewScaleUp {
-    0% {
-        transform: scale(0, 0);
-    }
-
-    80% {
-        transform: scale(1.2, 1.2);
-    }
-
-    100% {
-        transform: scale(1, 1);
-    }
-}
+@include keyframes.definitions;

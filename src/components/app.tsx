@@ -89,7 +89,7 @@ export class App extends React.Component<AppProps, AppState> {
                 </div>
                 <div className="info-bar">
                     <div className="cui-inline-block cui-drop-trigger cui-margin-small-bottom" >
-                        <a className="cui-icon-button cui-accent cui-box-shadow " cui-icon="history"></a>
+                        <a className="cui-icon-button cui-accent cui-box-shadow cui-animation-fade-in" cui-icon="history"></a>
                         <div className="cui-drop cui-dropdown cui-drop-top-right" cui-drop="mode: click; autoClose: y; outClose: y">
                             <ul className="cui-drop-nav">
                                 {this.state.recents.map(recent => {
@@ -99,7 +99,7 @@ export class App extends React.Component<AppProps, AppState> {
                         </div>
                     </div>
                     <div className="cui-inline-block cui-drop-trigger" >
-                        <a className="cui-icon-button cui-accent cui-box-shadow" cui-icon="info"></a>
+                        <a className="cui-icon-button cui-accent cui-box-shadow cui-animation-fade-in" cui-icon="info"></a>
                         <div className="cui-drop cui-dropdown cui-drop-top-right" cui-drop="mode: click; autoClose: y; outClose: y">
                             <ul className="cui-drop-nav">
                                 <li><a className="cui-icon cui-icon-margin" cui-icon="code" href="https://github.com/bpd-d/cui-light">cUI Light</a></li>

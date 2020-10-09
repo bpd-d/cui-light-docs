@@ -1,0 +1,338 @@
+@use "../../node_modules/cui-styles/styles/mixins"as mixins;
+
+@mixin definitions {
+    .overview-icon {
+        path {
+            opacity: 0;
+        }
+
+        &[cui-icon="overview_dark_mode_2"] {
+            .circle {
+                transform-origin: center;
+                transform       : scale(0);
+            }
+
+            .line {
+                transform       : scale(0);
+                transform-origin: center;
+            }
+
+            .line_break {
+                stroke-dasharray : 240;
+                stroke-dashoffset: 240;
+            }
+        }
+
+        &[cui-icon="overview_flex_3"] {
+
+
+            .outer-ring {
+                stroke-dasharray : 225;
+                stroke-dashoffset: 225;
+            }
+
+            .inner-ring {
+                stroke-dasharray : 90;
+                stroke-dashoffset: 90;
+            }
+        }
+
+        &[cui-icon="overview_icons_2"] {
+
+            .circle,
+            .square,
+            .triangle {
+                transform-origin: center;
+                transform       : scale(0, 0);
+            }
+        }
+
+        &[cui-icon="overview_fastdom"] {
+
+
+            .line_1,
+            .line_4 {
+                stroke-dasharray : 53;
+                stroke-dashoffset: 53;
+            }
+
+            .line_2,
+            .line_3 {
+                stroke-dasharray : 50;
+                stroke-dashoffset: 50;
+            }
+
+            .arrow-base {
+                stroke-dasharray : 172;
+                stroke-dashoffset: 172;
+            }
+        }
+
+        &[cui-icon="overview_events_2"] {
+
+
+            .connector_1 {
+                stroke-dasharray : 50;
+                stroke-dashoffset: 50;
+            }
+
+            .connector_2 {
+                stroke-dasharray : 60;
+                stroke-dashoffset: 60;
+            }
+
+            .connector_3 {
+                stroke-dasharray : 60;
+                stroke-dashoffset: 60;
+            }
+        }
+
+        &[cui-icon="overview_plugins"] {
+
+
+            .circle,
+            .circle_2,
+            .circle_3 {
+                transform-origin: center;
+                transform       : scale(0);
+            }
+
+            .vertical {
+                stroke-dasharray : 45;
+                stroke-dashoffset: 45;
+            }
+
+            .horizontal {
+                stroke-dasharray : 170;
+                stroke-dashoffset: -170;
+            }
+
+
+        }
+
+        &[cui-icon="overview_print"] {
+
+            .hud,
+            .bottom,
+            .top {
+                transform: scale(0);
+            }
+        }
+
+        &[cui-icon="overview_theme_3"] {
+            [class*="circle"] {
+                transform: scale(0);
+            }
+        }
+
+
+        ////////////
+
+        &.in-view {
+            path {
+                @include mixins.animation($name: fadeIn, $duration: 1s);
+            }
+
+            &[cui-icon="overview_dark_mode_2"] {
+                .circle {
+                    @include mixins.animation($name: overviewScaleUp, $duration: 500ms, $delay: 500ms);
+
+                    opacity: 1;
+
+                    &.second {
+                        animation-delay: 800ms;
+                    }
+
+                    &.third {
+                        animation-delay: 1s;
+                    }
+                }
+
+                .line {
+                    @include mixins.animation($name: overviewScaleUp, $duration: 500ms);
+                    opacity                        : 1;
+
+                    &.line_2 {
+                        animation-delay: 100ms;
+                    }
+
+                    &.line_3 {
+                        animation-delay: 200ms;
+                    }
+
+                    &.line_4 {
+                        animation-delay: 300ms;
+                    }
+
+                    &.line_5 {
+                        animation-delay: 400ms;
+                    }
+
+                    &.line_6 {
+                        animation-delay: 500ms;
+                    }
+
+                    &.line_7 {
+                        animation-delay: 600ms;
+                    }
+                }
+
+                .line_break {
+                    transform-origin               : center;
+                    @include mixins.animation($name: overviewLineBreak, $duration: 500ms, $timing: ease-in, $delay: 1s);
+                    opacity                        : 1;
+                }
+            }
+
+
+
+            &[cui-icon="overview_flex_3"] {
+                .outer-ring {
+                    @include mixins.animation($name: overviewFlexOuterRing, $duration: 1s, $delay: 300ms);
+                    opacity                        : 1;
+
+                }
+
+                .inner-ring {
+                    @include mixins.animation($name: overviewFlexInnerRing, $duration: 500ms, $delay: 800ms);
+                    opacity                        : 1;
+
+                }
+            }
+
+            &[cui-icon="overview_fastdom"] {
+
+
+                .line_2,
+                .line_3 {
+                    @include mixins.animation($name: overviewPerfLineShort, $duration: 500ms, $delay: 300ms);
+                    opacity                        : 1;
+                }
+
+                .line_4,
+                .line_1 {
+                    @include mixins.animation($name: overviewPerfLineLong, $duration: 800ms);
+                    opacity                        : 1;
+                }
+
+                .pointers {
+                    @include mixins.animation($name: fadeIn, $duration: 500ms);
+                }
+
+                .arrow-base {
+                    @include mixins.animation($name: overviewPerfArrow, $duration: 1s, $timing: ease-in);
+                    opacity                        : 1;
+                }
+
+                .arrow-dagger {
+                    @include mixins.animation($name: overviewPerfArrowDag, $duration: 1s);
+                    opacity                        : 1;
+                }
+            }
+
+            &[cui-icon="overview_events_2"] {
+
+                .connector_1 {
+                    @include mixins.animation($name: overviewEventConn1, $duration: 600ms, $delay: 300ms);
+                    opacity                        : 1;
+                }
+
+                .connector_2 {
+                    @include mixins.animation($name: overviewEventConn1, $duration: 600ms, $delay: 500ms);
+
+                    opacity: 1;
+                }
+
+                .connector_3 {
+                    @include mixins.animation($name: overviewEventConn1, $duration: 600ms, $delay: 800ms);
+                    opacity                        : 1;
+                }
+            }
+
+            &[cui-icon="overview_icons_2"] {
+                .circle {
+                    @include mixins.animation($name: overviewScaleUp, $duration: 500ms);
+                    opacity                        : 1;
+                }
+
+                .square {
+                    @include mixins.animation($name: overviewScaleUp, $duration: 500ms, $delay: 300ms);
+                    opacity                        : 1;
+                }
+
+                .triangle {
+                    @include mixins.animation($name: overviewScaleUp, $duration: 500ms, $delay: 600ms);
+                    opacity                        : 1;
+                }
+            }
+
+            &[cui-icon="overview_plugins"] {
+
+                .circle {
+                    @include mixins.animation($name: overviewScaleUp, $duration: 500ms);
+                    opacity                        : 1;
+                }
+
+                .circle_2 {
+                    @include mixins.animation($name: overviewScaleUp, $duration: 500ms, $delay: 300ms);
+                    opacity                        : 1;
+                }
+
+                .circle_3 {
+                    @include mixins.animation($name: overviewScaleUp, $duration: 500ms, $delay: 500ms);
+                    opacity                        : 1;
+                }
+
+                .vertical {
+                    @include mixins.animation($name: overviewPluginsVertical, $duration: 500ms, $delay: 500ms);
+                    opacity                        : 1;
+                }
+
+                .horizontal {
+                    @include mixins.animation($name: overviewPluginsHorizontal, $duration: 800ms, $delay: 300ms);
+                    opacity                        : 1;
+                }
+            }
+
+            &[cui-icon="overview_print"] {
+                .hud {
+                    transform-origin               : 30% 20%;
+                    opacity                        : 1;
+                    @include mixins.animation($name: overviewScaleUp, $duration: 500ms, $delay: 200ms);
+                }
+
+                .bottom {
+                    transform-origin               : 80% 50%;
+                    opacity                        : 1;
+                    @include mixins.animation($name: overviewRollup, $duration: 500ms, $delay: 500ms);
+                }
+
+                .top {
+                    transform-origin               : top center;
+                    opacity                        : 1;
+                    @include mixins.animation($name: overviewRollup, $duration: 300ms, $delay: 300ms);
+                }
+            }
+
+            &[cui-icon="overview_theme_3"] {
+                [class*="circle"] {
+                    transform-origin               : center;
+                    @include mixins.animation($name: overviewScaleUp, $duration: 500ms);
+                    opacity                        : 1;
+                }
+
+                .circle_2 {
+                    animation-delay: 200ms;
+                }
+
+                .circle_3 {
+                    animation-delay: 400ms;
+                }
+
+                .circle_4 {
+                    animation-delay: 600ms;
+                }
+            }
+        }
+    }
+}

@@ -7,7 +7,7 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   inkscape:version="1.0 (4035a4fb49, 2020-05-01)"
+   inkscape:version="1.0.1 (3bc2e813f5, 2020-09-07)"
    id="svg8"
    version="1.1"
    viewBox="0 0 200 200"
@@ -17,7 +17,8 @@
   <path
      d="m 54.085659,158.74747 a 19,19 0 0 1 -19,19 19,19 0 0 1 -19,-19 19,19 0 0 1 19,-19 19,19 0 0 1 19,19 z"
      style="fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:2.00001;stroke-linecap:round;stroke-linejoin:round;paint-order:fill markers stroke"
-     id="path836" />
+     id="path836"
+     class="circle" />
   <defs
      id="defs2" />
   <sodipodi:namedview
@@ -28,9 +29,9 @@
      inkscape:document-rotation="0"
      inkscape:current-layer="svg8"
      inkscape:document-units="px"
-     inkscape:cy="178.77223"
-     inkscape:cx="-22.07307"
-     inkscape:zoom="1.979899"
+     inkscape:cy="119.64767"
+     inkscape:cx="173.17238"
+     inkscape:zoom="3.959798"
      inkscape:pageshadow="2"
      inkscape:pageopacity="0.0"
      borderopacity="1.0"
@@ -59,23 +60,24 @@
     </rdf:RDF>
   </metadata>
   <path
-     class="cui-accent"
+     class="cui-accent vertical"
      id="path937"
      d="m 100,90 v 45"
      style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
   <path
-     class="cui-accent"
+     class="cui-accent horizontal"
      id="path939"
      d="M 165,135 V 115 H 35 v 20"
      style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
   <path
      id="path839"
      style="fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:2.00001;stroke-linecap:round;stroke-linejoin:round;paint-order:fill markers stroke"
-     d="m 120,160 a 19,19 0 0 1 -19,19 19,19 0 0 1 -19,-19 19,19 0 0 1 19,-19 19,19 0 0 1 19,19 z" />
+     d="m 120,160 a 19,19 0 0 1 -19,19 19,19 0 0 1 -19,-19 19,19 0 0 1 19,-19 19,19 0 0 1 19,19 z"
+     class="circle_2" />
   <path
      d="m 185,160 a 19,19 0 0 1 -19,19 19,19 0 0 1 -19,-19 19,19 0 0 1 19,-19 19,19 0 0 1 19,19 z"
      style="fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:2.00001;stroke-linecap:round;stroke-linejoin:round;paint-order:fill markers stroke"
-     id="path841" />
+     class="circle_3" />
   <path
      d="M 133.96732,49.936865 A 33.999998,33.999998 0 0 1 99.967333,83.936863 33.999998,33.999998 0 0 1 65.96733,49.936865 33.999998,33.999998 0 0 1 99.967333,15.936866 33.999998,33.999998 0 0 1 133.96732,49.936865 Z"
      style="fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:1.99999;stroke-linecap:round;stroke-linejoin:round;paint-order:fill markers stroke"

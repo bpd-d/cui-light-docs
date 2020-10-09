@@ -7,7 +7,7 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   inkscape:version="1.0 (4035a4fb49, 2020-05-01)"
+   inkscape:version="1.0.1 (3bc2e813f5, 2020-09-07)"
    id="svg8"
    version="1.1"
    viewBox="0 0 200 200"
@@ -56,13 +56,15 @@
   <path
      d="M 40.157544,105.71623 H 158.54663 v 75.10781 H 40.157544 Z"
      style="fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;paint-order:fill markers stroke"
-     id="path968" />
+     id="path968"
+     class="bottom" />
   <path
      id="path973"
      style="fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;paint-order:fill markers stroke"
-     d="M 40.157544,24.651493 H 158.54663 V 65.414112 H 40.157544 Z" />
+     d="M 40.157544,24.651493 H 158.54663 V 65.414112 H 40.157544 Z"
+     class="top" />
   <path
-     class="cui-accent"
+     class="cui-accent hud"
      d="M 20.455587,73.362328 H 68.666029 V 83.463853 H 20.455587 Z"
      style="fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;paint-order:fill markers stroke"
      id="rect975" />

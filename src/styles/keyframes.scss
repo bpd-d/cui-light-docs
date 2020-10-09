@@ -1,0 +1,185 @@
+@mixin definitions {
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+
+    @keyframes scaleIn {
+        0% {
+            transform: scale(0, 0);
+        }
+
+        100% {
+            transform: scale(1, 1);
+        }
+    }
+
+    @keyframes homeOuterRingShow {
+        0% {
+            stroke-dashoffset: 415;
+        }
+
+        100% {
+            stroke-dashoffset: 0;
+        }
+    }
+
+    @keyframes overviewFlexOuterRing {
+        0% {
+            stroke-dashoffset: 225;
+        }
+
+        100% {
+            stroke-dashoffset: 0;
+        }
+    }
+
+    @keyframes overviewFlexInnerRing {
+        0% {
+            stroke-dashoffset: 88;
+        }
+
+        100% {
+            stroke-dashoffset: 0;
+        }
+    }
+
+    @keyframes overviewEventConn1 {
+        0% {
+            stroke-dashoffset: 50;
+        }
+
+        100% {
+            stroke-dashoffset: 0;
+        }
+    }
+
+    @keyframes overviewEventConn23 {
+        0% {
+            stroke-dashoffset: 60;
+        }
+
+        100% {
+            stroke-dashoffset: 0;
+        }
+    }
+
+    @keyframes overviewPerfPoint {
+        0% {
+            transform: rotate(-90deg);
+        }
+
+        100% {
+            transform: rotate(0deg);
+        }
+    }
+
+    @keyframes overviewPerfArrow {
+        0% {
+            transform        : translateX(-200px);
+            stroke-dashoffset: 172;
+        }
+
+        100% {
+            transform        : translateX(0px);
+            stroke-dashoffset: 0;
+        }
+    }
+
+    @keyframes overviewPerfArrowDag {
+        0% {
+            transform        : translateX(-200px);
+            stroke-dashoffset: 172;
+        }
+
+        100% {
+            transform        : translateX(0px);
+            stroke-dashoffset: 0;
+        }
+    }
+
+    @keyframes overviewPerfLineLong {
+        0% {
+            transform        : translateX(-50px);
+            stroke-dashoffset: 53;
+        }
+
+        100% {
+            transform        : translateX(0px);
+            stroke-dashoffset: 0;
+        }
+    }
+
+    @keyframes overviewPerfLineShort {
+        0% {
+            transform        : translateX(-50px);
+            stroke-dashoffset: 50;
+        }
+
+        100% {
+            transform        : translateX(0px);
+            stroke-dashoffset: 0;
+        }
+    }
+
+    @keyframes overviewScaleUp {
+        0% {
+            transform: scale(0, 0);
+        }
+
+        80% {
+            transform: scale(1.2, 1.2);
+        }
+
+        100% {
+            transform: scale(1, 1);
+        }
+    }
+
+    @keyframes overviewLineBreak {
+        0% {
+            stroke-dashoffset: 230;
+        }
+
+        100% {
+            stroke-dashoffset: 0;
+        }
+    }
+
+    @keyframes overviewPluginsVertical {
+        0% {
+            stroke-dashoffset: 45;
+        }
+
+        100% {
+            stroke-dashoffset: 0;
+        }
+    }
+
+    @keyframes overviewPluginsHorizontal {
+        0% {
+            stroke-dasharray : 0 170;
+            stroke-dashoffset: -100;
+        }
+
+        100% {
+            stroke-dasharray : 170 170;
+            stroke-dashoffset: 0;
+        }
+    }
+
+    @keyframes overviewRollup {
+        0% {
+            transform: scale(1, 0);
+        }
+
+        100% {
+            transform: scale(1, 1);
+        }
+    }
+}
