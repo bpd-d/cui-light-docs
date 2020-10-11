@@ -45,7 +45,7 @@ export function Navbar(props: NavbarProps) {
                     <li><span>{state.currentSite}</span></li>
                 </ul>
                 <ul className="cui-hidden--m">
-                    <li><a className="cui-icon cui-button cui-padding" cui-icon="search" cui-open="#search-dialog"></a></li>
+                    <li><a className="cui-icon cui-button cui-circle cui-padding" cui-icon="search" cui-open="#search-dialog"></a></li>
                     <li><a className="cui-icon cui-padding cui-button " cui-icon="menu" cui-open="target: #app-offcanvas"></a></li>
                 </ul>
 
@@ -58,7 +58,7 @@ export function Navbar(props: NavbarProps) {
                 <li><NavbarLink class="cui-navbar-item" url="/icon" name="Icons" /></li>
                 <li><NavbarLink class="cui-navbar-item" url="/about" name="About" /></li>
                 <li><Link to="/download" className={"cui-button cui-rounded " + downloadBtnCls}>Download</Link></li>
-                <li><a className="cui-icon cui-button cui-padding" cui-icon="search" cui-open="#search-dialog"></a></li>
+                <li><a className="cui-icon cui-button cui-circle cui-padding" cui-icon="search" cui-open="#search-dialog"></a></li>
             </ul>
         </nav>
     )

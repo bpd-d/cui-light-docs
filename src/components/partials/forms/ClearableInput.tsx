@@ -25,6 +25,10 @@ export function ClearableInput(props: ClearableInputProps) {
         }
     }
 
+    React.useEffect(() => {
+        setValue(props.value);
+    }, [props.value])
+
     return (<div className={"cui-input-mix " + props.className ?? ""}>
         <input type="text" className="cui-input" placeholder={props.filter ?? "Filter"} value={value} onChange={onInputChange} disabled={props.disabled} />
         {(is(value) || props.alwaysShow) && <a className="cui-icon" cui-icon="clear" onClick={() => changeValue("")}></a>}
