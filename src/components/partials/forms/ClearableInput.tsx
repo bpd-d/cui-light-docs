@@ -27,6 +27,6 @@ export function ClearableInput(props: ClearableInputProps) {
 
     return (<div className={"cui-input-mix " + props.className ?? ""}>
         <input type="text" className="cui-input" placeholder={props.filter ?? "Filter"} value={value} onChange={onInputChange} disabled={props.disabled} />
-        {(is(value) || props.alwaysShow) && <a className="cui-icon" cui-icon="close" onClick={() => changeValue("")}></a>}
+        {(is(value) || props.alwaysShow) && <a className="cui-icon" cui-icon="clear" onClick={() => changeValue("")}></a>}
     </div>);
 }

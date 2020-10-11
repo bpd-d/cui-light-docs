@@ -5,7 +5,7 @@ export interface CuiDocsAsideProps {
     sections: string[];
 }
 export function CuiDocsAside(props: CuiDocsAsideProps) {
-    return (<div className="cui-visible--l">
+    return (<div className="cui-visible--l cui-animation-fade-in cui-animation-delay">
         {props.sections && props.sections.length > 0 && <div className="cui-card cui-default cui-sticky aside-card">
             <div className="cui-card-header">
                 <span className="cui-card-title">Sections</span>

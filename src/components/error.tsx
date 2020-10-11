@@ -16,11 +16,11 @@ export class ErrorRoute extends React.Component<ErrorProps, {}> {
                 <div className="cui-card-header cui-text-error">
                     <span className="cui-card-title">Error</span>
                 </div>
-                <div className="cui-card-body">
+                <div className="cui-card-body cui-animation-fade-in cui-animation-delay">
                     It appears that page you looking for does not exist.
                     Try to look for it again or go back to our Home page
                 </div>
-                <div className="cui-card-footer cui-flex cui-right">
+                <div className="cui-card-footer cui-flex cui-right cui-animation-fade-in cui-animation-delay-long">
                     <Link to="/" className="cui-link">Go Home</Link>
                 </div>
             </div>

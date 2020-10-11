@@ -39,7 +39,7 @@ export function CuiDocsPage(props: CuiDocsPageProps) {
 
 export function CuiDocsUnderConstruction() {
     return (
-        <div className="cui-container cui-center">
+        <div className="cui-container cui-center cui-animation-fade-in">
             <h2 className="cui-h2 cui-text-warning">Page is under construction</h2>
         </div>
     );

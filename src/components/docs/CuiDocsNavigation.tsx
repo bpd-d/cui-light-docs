@@ -37,7 +37,7 @@ export function CuiDocsNavigation(props: CuiDocsNavigationProps) {
     }, [props.sort])
     return (
         <>
-            <ul className={"cui-list cui-interactive " + (props.class ?? "")}>
+            <ul className={"cui-list cui-interactive animated-list " + (props.class ?? "")}>
                 {items}
             </ul>
         </>

@@ -39,6 +39,7 @@ body {
     margin-bottom : variables.$margin-global;
     display       : flex;
     flex-direction: column;
+    animation     : slideInDown variables.$animation-duration-long ease-out forwards;
 }
 
 .app-icon {
@@ -90,7 +91,7 @@ body {
 }
 
 .aside-card {
-    top      : 10vh !important;
+    top      : 110px !important;
     min-width: 150px;
     max-width: 250px;
     margin   : 0 20px;
@@ -220,6 +221,10 @@ ul.hashtags {
     height: 110px;
 }
 
+.aside-from-top {
+    height: 110px;
+}
+
 
 
 .overview-content {
@@ -228,7 +233,20 @@ ul.hashtags {
 }
 
 
+.search-result-list-item {
+    animation: slideUp variables.$animation-duration-default ease-out forwards;
+}
 
+ul.animated-list {
+    @for $i from 1 through 30 {
+        li:nth-child(#{$i}) {
+            transform      : translateY(-100%);
+            animation      : slideInLeft variables.$animation-duration-long ease-out forwards;
+            animation-delay: calc(#{$i}*10ms);
+        }
+    }
+
+}
 
 @include mixins.media-screen-height-max-small {
     .limited-content-width {
