@@ -33,7 +33,7 @@ export function SearchResultLinkItem(prop: ListItemProp) {
 export function SearchResulIconItem(prop: ListItemProp) {
     function onClick() {
         copyText(prop.result.detail).then((value) => {
-            window.$cui.toast(`<b>${value}</b> has been copied`);
+            window.$cui.toast(`${value} copied`);
         });
     }
     return (<a className="cui-icon cui-icon-margin" cui-icon={prop.result.detail} cui-close="" onClick={onClick}>{prop.result.name}</a>);
