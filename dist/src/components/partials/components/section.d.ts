@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { DocsHint } from './CuiHint';
 export interface SubSectionProps {
     name: string;
     description: React.ReactNode;
@@ -11,6 +12,7 @@ export interface DocsSectionProps {
     classes?: string;
     elements?: React.ReactNode;
     index?: number;
+    hint?: DocsHint;
     subSections?: SubSectionProps[];
 }
 export declare function DocsSection(props: DocsSectionProps): JSX.Element;

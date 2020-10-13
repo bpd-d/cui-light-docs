@@ -18,7 +18,7 @@ export function IconElement(props: IconElementProps) {
             <div className="cui-card-body cui-flex-center cui-padding-large">
                 <span className="cui-icon" cui-icon={props.code}></span>
             </div>
-            <div className="cui-card-footer cui-flex-center">
+            <div className="cui-card-footer cui-flex-center cui-text-nowrap">
                 <a href="#" className="cui-link" onClick={onLinkClick}>{props.name}</a>
             </div>
         </div>

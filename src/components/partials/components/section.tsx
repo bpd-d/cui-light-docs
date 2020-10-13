@@ -1,5 +1,6 @@
 import * as React from 'react'
 import { getHeaderId } from '../../../core/functions';
+import { CuiHint, DocsHint } from './CuiHint';
 
 export interface SubSectionProps {
     name: string;
@@ -14,6 +15,7 @@ export interface DocsSectionProps {
     classes?: string;
     elements?: React.ReactNode;
     index?: number;
+    hint?: DocsHint;
     subSections?: SubSectionProps[];
 }
 
@@ -23,6 +25,7 @@ export function DocsSection(props: DocsSectionProps) {
         <h2 className="cui-h2" id={headerId}>{props.name}</h2>
         <p>{props.description}</p>
         {props.elements}
+        {props.hint && <CuiHint option={props.hint?.option} content={props.hint?.content} title={props.hint?.title} />}
         {props.subSections && props.subSections.length > 0 && props.subSections.map((sub => {
             return SubSubSection(sub)
         }))}

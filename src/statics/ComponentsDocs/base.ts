@@ -7,6 +7,8 @@ import { CuiDocsComponentBadge } from "./badge"
 import { Introduction } from "./intro"
 import { CuiDocsBannerScript } from "./banner"
 import { CuiDocsCardScript } from "./card"
+import { CuiDocsTextScript } from "./text"
+import { AccordionDocsScript } from "./accordion"
 
 export const COMPONENTS = {
     container: "container",
@@ -37,7 +39,8 @@ export const cuiComponents: CuiDocsComponents = {
     "card": { name: "Card", uri: "/docs/components/card", description: "Creates wrapper to organize your data", script: CuiDocsCardScript },
     "breadcrumb": { name: "Breadcrumb", uri: "/docs/components/breadcrumb", description: "Makes subpage navigation more accessible", script: BreadrumbScript },
     "badge": { name: "Badge", uri: "/docs/components/badge", description: "Provides pretty indicators to other elements", script: CuiDocsComponentBadge },
-    "accordion": { name: "Accordion", uri: "/docs/components/accordion", description: "Helps to display a grouped data" },
+    "accordion": { name: "Accordion", uri: "/docs/components/accordion", description: "Helps to display a grouped data", script: AccordionDocsScript },
     "introduction": { name: "Introduction", uri: "/docs/components/introduction", description: "This is introduction", script: Introduction },
-    "banner": { name: "Banner", uri: "/docs/components/banner", description: "Display messages on the page", script: CuiDocsBannerScript }
+    "banner": { name: "Banner", uri: "/docs/components/banner", description: "Display messages on the page", script: CuiDocsBannerScript },
+    "text": { name: "Text", uri: "/docs/components/text", description: "Brings some handy classes that style text elements on the page", script: CuiDocsTextScript }
 }

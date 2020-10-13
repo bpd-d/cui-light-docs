@@ -1,14 +1,18 @@
 import * as React from "react";
+import { DocsHint } from "../partials/components/CuiHint";
 import { DocsSection } from "../partials/components/section";
 
 export interface DocsScript {
     sections?: ScriptSection[];
 }
 
+
+
 export interface ScriptSection {
     name: string;
     description: React.ReactNode;
     example?: JSX.Element;
+    hint?: DocsHint;
     additions?: React.ReactNode;
     subsections?: ScriptSection[];
 }
@@ -28,6 +32,7 @@ export function CuiDocsPage(props: CuiDocsPageProps) {
                         name={item.name}
                         index={index}
                         description={item.description}
+                        hint={item.hint}
                         elements={
                             item.example
                         }

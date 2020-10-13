@@ -36,7 +36,7 @@ const bannerSecondCode = (
 
 const bannerThird = (<>
     <div className="cui-banner cui-active">
-        <span className="cui-message">Banner advanced</span>
+        <span className="cui-margin-left cui-message">Banner advanced</span>
         <span className="cui-message-icon" cui-icon="error"></span>
         <a className="cui-close cui-icon" cui-icon="close" cui-close=""></a>
     </div>
