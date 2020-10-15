@@ -36,13 +36,15 @@ export function DocsComponent(args: DocsProps) {
     }, [id])
 
     return <div className="cui-container layout-docs">
-        <div className="cui-visible--l cui-flex cui-right">
-            <div className="layout-docs-navigation cui-padding">
-                <div className="cui-flex cui-middle top-header-height">
-                    <ClearableInput value={state.search} />
-                </div>
-                <h3 className="cui-h3">Components</h3>
-                <CuiDocsNavigation sort={true} /></div>
+        <div className="cui-visible--l">
+            <div className="cui-flex cui-right">
+                <div className="layout-docs-navigation cui-padding">
+                    <div className="cui-flex cui-middle top-header-height">
+                        <ClearableInput value={state.search} />
+                    </div>
+                    <h3 className="cui-h3">Components</h3>
+                    <CuiDocsNavigation sort={true} /></div>
+            </div>
         </div>
         {state.component ?
             (<article className="cui-padding">
