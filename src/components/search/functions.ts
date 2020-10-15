@@ -24,7 +24,7 @@ export function FindSearchResults(search: string): Promise<SearchResultSection[]
         let result: SearchResult[] = [];
         try {
             result = iconsData.reduce<SearchResult[]>((results: SearchResult[], current: IconElementData) => {
-                if (current.code.match(filter)) {
+                if (current.code.match(filter.toLowerCase())) {
                     results.push({
                         name: current.name,
                         detail: current.code

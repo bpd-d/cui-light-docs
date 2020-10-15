@@ -3,12 +3,12 @@ import { ParserNode } from "../../api/DocsElementParser/interfaces";
 import { DocsScript } from "../../components/docs/base";
 import { GetTabbedPreview } from "../../components/partials/preview";
 
-function getNode(text: string, classes: string): ParserNode {
+function getNode(text: string, classes: string, childTag?: string): ParserNode {
     return {
         tag: 'div',
         styleClass: "cui-padding-small",
         children: [
-            { tag: "span", text: text, classes: [classes] }
+            { tag: childTag ?? "span", text: text, classes: [classes] }
         ]
     };
 }
@@ -103,10 +103,10 @@ export const sizezExample: ParserNode = getParent(
 )
 
 export const alignExample: ParserNode = getParent(
-    getNode("Left Text", "cui-text-left"),
-    getNode("Center Text", "cui-text-center"),
-    getNode("Right Text", "cui-text-right"),
-    getNode("Long justified text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.", "cui-text-justify")
+    getNode("Left Text", "cui-text-left", "p"),
+    getNode("Center Text", "cui-text-center", "p"),
+    getNode("Right Text", "cui-text-right", "p"),
+    getNode("Long justified text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.", "cui-text-justify", "p")
 )
 
 
@@ -125,7 +125,7 @@ export const CuiDocsTextScript: DocsScript = {
         {
             name: "Colors",
             description: <>To change default dark/light text color add accent class to HTML element:</>,
-            example: GetTabbedPreview(accentsExample)
+            example: GetTabbedPreview(accentsExample, "210px")
         },
         {
             name: "Weights",

@@ -70,6 +70,10 @@ body {
 
 }
 
+.layout-docs-navigation {
+    width: 250px;
+}
+
 .preview-wrapper {
     border: 1px solid transparent;
 }
@@ -244,6 +248,16 @@ ul.hashtags {
 ul.animated-list {
     opacity  : 0;
     animation: fadeIn variables.$animation-duration-long ease-out forwards;
+}
+
+.background-example {
+    height          : 240px;
+    width           : 240px;
+    background-color: pink;
+}
+
+.image-background {
+    background-image: url("/assets/images/pic_200.jpg");
 }
 
 @include mixins.media-screen-height-max-small {

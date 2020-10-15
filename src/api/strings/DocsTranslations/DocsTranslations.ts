@@ -1,8 +1,16 @@
+export interface ITranslationFetcher {
+    fetch(uri: string): Promise<any>;
+}
+
 export class TranslationsParser {
     constructor(baseUrl: string) {
 
     }
+
+    ///getTranslation
 }
+
+
 
 export class Translations {
     #defaults: any;

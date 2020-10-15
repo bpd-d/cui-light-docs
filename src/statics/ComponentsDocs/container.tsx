@@ -64,7 +64,7 @@ export const CuiDocsContainerScript: DocsScript = {
             example: ExamplePreview({
                 code: firstExampleCode,
                 element: firstExample,
-                height: "200px"
+                height: "60px"
             }, 'tabbed')
         },
         {
@@ -73,7 +73,7 @@ export const CuiDocsContainerScript: DocsScript = {
             example: ExamplePreview({
                 code: secondExampleCode,
                 element: secondExample,
-                height: "200px"
+                height: "140px"
             }, 'tabbed')
         },
         {
@@ -82,7 +82,7 @@ export const CuiDocsContainerScript: DocsScript = {
             example: ExamplePreview({
                 code: thirdExampleCode,
                 element: thirdExample,
-                height: "200px"
+                height: "140px"
             }, 'tabbed')
         },
         {
@@ -91,7 +91,7 @@ export const CuiDocsContainerScript: DocsScript = {
             example: ExamplePreview({
                 code: fourthExampleCode,
                 element: fourthExample,
-                height: "200px"
+                height: "240px"
             }, 'tabbed')
         },
     ]

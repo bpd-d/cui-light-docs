@@ -100,7 +100,7 @@ export const CuiDocsComponentBadge: DocsScript = {
             example: ExamplePreview({
                 code: badgeFirstCode,
                 element: badgeFirst,
-                height: "200px"
+                height: "140px"
             }, 'tabbed')
         },
         {
@@ -109,7 +109,7 @@ export const CuiDocsComponentBadge: DocsScript = {
             example: ExamplePreview({
                 code: badgeSecondCode,
                 element: badgeSecond,
-                height: "200px"
+                height: "300px"
             }, 'tabbed')
         }
 

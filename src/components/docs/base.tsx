@@ -1,6 +1,9 @@
 import * as React from "react";
 import { DocsHint } from "../partials/components/CuiHint";
+import { CuiTable, DocsTable } from "../partials/components/CuiTable";
 import { DocsSection } from "../partials/components/section";
+import { CuiListItem } from "./CuiDocsList";
+import { PropertyGridItem } from "./CuiDocsPropertyGrid";
 
 export interface DocsScript {
     sections?: ScriptSection[];
@@ -13,15 +16,22 @@ export interface ScriptSection {
     description: React.ReactNode;
     example?: JSX.Element;
     hint?: DocsHint;
+    table?: DocsTable;
+    list?: CuiListItem[];
+    properties?: PropertyGridItem[];
     additions?: React.ReactNode;
     subsections?: ScriptSection[];
 }
 
 export interface CuiDocsPageProps {
     script: DocsScript
+    pageName: string;
 }
 
 export function CuiDocsPage(props: CuiDocsPageProps) {
+    React.useEffect(() => {
+
+    }, [props.pageName])
     return (<>
         {
             props.script && props.script.sections ? props.script.sections.map((item: ScriptSection, index: number) => {
@@ -33,6 +43,10 @@ export function CuiDocsPage(props: CuiDocsPageProps) {
                         index={index}
                         description={item.description}
                         hint={item.hint}
+                        properties={item.properties}
+                        table={item.table}
+                        list={item.list}
+                        pageName={props.pageName}
                         elements={
                             item.example
                         }

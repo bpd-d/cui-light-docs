@@ -33,15 +33,15 @@ export function CodePreviewTabbed(props: CodePreviewProps) {
     const identification = GLOBAL_COUNTER.next().value;
     let tabId = "tab-" + identification;
     let switchId = 'switch-' + identification;
-
+    let height = props.height ? "; height:" + props.height : "";
     return (
         <div className="">
-            <ul className="cui-tab" cui-switcher={"target: #" + switchId} id={tabId}>
+            <ul className="cui-tab" cui-switcher={`target: #${switchId}${height}`} id={tabId}>
                 <li><a href="#">Preview</a></li>
                 {props.code && <li> <a href="#">HTML</a></li>}
                 {props.js && <li> <a href="#">Code</a></li>}
             </ul>
-            <ul className="cui-switch cui-margin-top" cui-switch={`links: #${tabId} > li`} id={switchId}>
+            <ul className="cui-switch cui-margin-top" cui-switch={`links: #${tabId} > li${height}`} id={switchId}>
                 <li className="cui-active"><div className="preview-wrapper">{props.element}</div></li>
                 {props.code && <li>
                     <div className="cui-code cui-format cui-line-counter">
@@ -60,6 +60,7 @@ export function CodePreviewTabbed(props: CodePreviewProps) {
 
 
 export function ExamplePreview(props: CodePreviewProps, type: CuiPreviewType) {
+
     switch (type) {
         case "aside":
             return <CodePreviewAside code={props.code} element={props.element} />;
@@ -69,9 +70,10 @@ export function ExamplePreview(props: CodePreviewProps, type: CuiPreviewType) {
 
 }
 
-export function GetTabbedPreview(node: ParserNode) {
+export function GetTabbedPreview(node: ParserNode, height?: string) {
     return ExamplePreview({
         code: new ElementGenerator(new ReactPreParser()).build(node),
-        element: new ElementGenerator(new ReactParser()).build(node)
+        element: new ElementGenerator(new ReactParser()).build(node),
+        height: height
     }, 'tabbed')
 }
