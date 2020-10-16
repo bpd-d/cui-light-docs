@@ -18,6 +18,7 @@ import { CuiDocsListScript } from "./list"
 import { CuiDocsDropScript } from "./drop"
 import { CuiDocsAlertScript } from "./alert"
 import { CuiDocsTooltipScript } from "./tooltip"
+import { CuiDocsNavbarScript } from "./navbar"
 
 export const COMPONENTS = {
     container: "container",
@@ -61,7 +62,7 @@ export const cuiComponents: CuiDocsComponents = {
     "cover": { name: "Cover", uri: "/docs/components/cover", description: "Creates element that cover whole viewport" },
     "drop": { name: "Drop", uri: "/docs/components/drop", description: "Creates drop and dropdowns", script: CuiDocsDropScript },
     "float": { name: "Float", uri: "/docs/components/float", description: "Movable and resizable floating elements" },
-    "navbar": { name: "Navbar", uri: "/docs/components/navbar", description: "Navigation bar for the web page" },
+    "navbar": { name: "Navbar", uri: "/docs/components/navbar", description: "Navigation bar for the web page", script: CuiDocsNavbarScript },
     "input": { name: "Input", uri: "/docs/components/input", description: "Set of forms and input elements" },
     "link": { name: "Link", uri: "/docs/components/link", description: "Styled anchor elements", script: CuiDocsLinkScript },
     "shadow": { name: "Shadow", uri: "/docs/components/shadow", description: "Styled anchor elements", script: CuiDocsShadowElement },
