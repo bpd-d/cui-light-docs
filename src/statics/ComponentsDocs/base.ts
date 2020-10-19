@@ -19,6 +19,10 @@ import { CuiDocsDropScript } from "./drop"
 import { CuiDocsAlertScript } from "./alert"
 import { CuiDocsTooltipScript } from "./tooltip"
 import { CuiDocsNavbarScript } from "./navbar"
+import { CuiDocsToggleScript } from "./toggle"
+import { CuiDocsOverlayScript } from "./overlay"
+import { CuiDocsFloatScript } from "./float"
+import { CuiDocsOffcanvas } from "./offcanvas"
 
 export const COMPONENTS = {
     container: "container",
@@ -58,14 +62,41 @@ export const cuiComponents: CuiDocsComponents = {
     "dialog": { name: "Dialog", uri: "/docs/components/dialog", description: "Creates modal dialog", script: CuiDocsDialogScript },
     "alert": { name: "Alert", uri: "/docs/components/alert", description: "Easy to use, interactive dialog", script: CuiDocsAlertScript },
     "animation": { name: "Animation", uri: "/docs/components/animation", description: "Add some animations to components" },
-    "overlay": { name: "Overlay", uri: "/docs/components/overlay", description: "Creates simple overlay on elements" },
+    "overlay": { name: "Overlay", uri: "/docs/components/overlay", description: "Creates simple overlay on elements", script: CuiDocsOverlayScript },
     "cover": { name: "Cover", uri: "/docs/components/cover", description: "Creates element that cover whole viewport" },
     "drop": { name: "Drop", uri: "/docs/components/drop", description: "Creates drop and dropdowns", script: CuiDocsDropScript },
-    "float": { name: "Float", uri: "/docs/components/float", description: "Movable and resizable floating elements" },
+    "float": { name: "Float", uri: "/docs/components/float", description: "Movable and resizable floating elements", script: CuiDocsFloatScript },
     "navbar": { name: "Navbar", uri: "/docs/components/navbar", description: "Navigation bar for the web page", script: CuiDocsNavbarScript },
     "input": { name: "Input", uri: "/docs/components/input", description: "Set of forms and input elements" },
     "link": { name: "Link", uri: "/docs/components/link", description: "Styled anchor elements", script: CuiDocsLinkScript },
     "shadow": { name: "Shadow", uri: "/docs/components/shadow", description: "Styled anchor elements", script: CuiDocsShadowElement },
     "list": { name: "List", uri: "/docs/components/list", description: "Styled lists with options", script: CuiDocsListScript },
     "tooltip": { name: "Tooltip", uri: "/docs/components/tooltip", description: "Add little feature descriptors on hover", script: CuiDocsTooltipScript },
+    "switcher": { name: "Switchers", uri: "/docs/components/switcher", description: "Switchers for lists and items styles with options" },
+    "hint": { name: "Hint", uri: "/docs/components/hint", description: "Highlights notices and informations between paragraphs" },
+    "offcanvas": { name: "Offcanvas", uri: "/docs/components/offcanvas", description: "Highlights notices and informations between paragraphs", script: CuiDocsOffcanvas },
+    "spinner": { name: "Spinner", uri: "/docs/components/spinner", description: "Simple preloaders and progress indicators" },
+    "table": { name: "Table", uri: "/docs/components/table", description: "Nice looking tables with many options" },
+    "separator": { name: "Separator", uri: "/docs/components/separator", description: "Creates separation between blocks" },
+    "code": { name: "Code", uri: "/docs/components/code", description: "Styled code blocks built from span" },
+    "flex": { name: "Flex", uri: "/docs/components/flex", description: "Set of options for flexible components" },
+    "grid": { name: "Grid", uri: "/docs/components/grid", description: "Simple grid implementation built on top of flex" },
+    "heading": { name: "Heading", uri: "/docs/components/heading", description: "Styling options for heading elements" },
+    "position": { name: "Position", uri: "/docs/components/heading", description: "Styling options for heading elements" },
+    "sticky": { name: "Sticky", uri: "/docs/components/sticky", description: "Creates element that stick to specific position" },
+    "transition": { name: "Transitions", uri: "/docs/components/transition", description: "Add transitions to element on hover" },
+    "visibility": { name: "Visibility", uri: "/docs/components/visibility", description: "Allows to show and hide elements" },
+    "width": { name: "Width", uri: "/docs/components/width", description: "Set of width options for components" },
+    "circle": { name: "Circle", uri: "/docs/components/circle", description: "Custom progress bar created on circle" },
+    "close": { name: "Close", uri: "/docs/components/close", description: "Allows to close other cUI components" },
+    "open": { name: "Open", uri: "/docs/components/open", description: "Allows to open other cUI components" },
+    "intersection": { name: "Intersection", uri: "/docs/components/intersection", description: "Triggers actions when elements are intersecting viewport" },
+    "offset": { name: "Offset", uri: "/docs/components/offset", description: "Offset" },
+    "scrollspy": { name: "Scrollspy", uri: "/docs/components/scrollspy", description: "Triggers specific actions on user scoll" },
+    "toggle": { name: "Toggle", uri: "/docs/components/toggle", description: "Toggles an action on target element", script: CuiDocsToggleScript },
+    "resize": { name: "Resize", uri: "/docs/components/resize", description: "Work in progress" },
+    "icon": { name: "Icon", uri: "/docs/components/icon", description: "Predefined styles for svg icons" },
+    "height": { name: "Height", uri: "/docs/components/height", description: "Customization for heights of the element" },
+    "switch": { name: "Switch", uri: "/docs/components/switch", description: "Switch elements in view" },
+    "slider": { name: "Slider", uri: "/docs/components/slider", description: "Switch elements by sliding" },
 }

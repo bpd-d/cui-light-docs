@@ -14,3 +14,4 @@ export declare function CodePreviewAside(props: CodePreviewProps): JSX.Element;
 export declare function CodePreviewTabbed(props: CodePreviewProps): JSX.Element;
 export declare function ExamplePreview(props: CodePreviewProps, type: CuiPreviewType): JSX.Element;
 export declare function GetTabbedPreview(node: ParserNode, height?: string): JSX.Element;
+export declare function GetTabbedPreviewWithJs(node: ParserNode, js: string, height?: string): JSX.Element;

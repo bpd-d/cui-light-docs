@@ -1,56 +1,67 @@
 
 import * as React from "react";
+import { ParserNode } from "../../api/DocsElementParser/interfaces";
 import { DocsScript } from "../../components/docs/base";
-import { ExamplePreview } from "../../components/partials/preview";
+import { ExamplePreview, GetTabbedPreview } from "../../components/partials/preview";
 
-const bannerFirst = (<>
-    <div className="cui-banner cui-active">
-        Banner
-    </div>
-</>);
+function getBanner(text: string, cls?: string): ParserNode {
+    return {
+        tag: "div",
+        classes: cls ? [cls] : undefined,
+        attributes: {
+            "cui-banner": ""
+        },
+        text: text
+    }
+}
 
-const bannerFirstCode = (
-    <>
-        <span>&lt;<span className="cui-tag">div</span> class="<span className="cui-var">cui-banner cui-active</span>"&gt;Banner&lt;/<span className="cui-tag">div</span>&gt;</span>
-    </>
-);
+const bannerFirst: ParserNode = getBanner("Banner")
+const bannerSecond: ParserNode = {
+    tag: "div",
+    children: [
+        getBanner("Accent", "cui-accent"),
+        getBanner("Secondary", "cui-secondary cui-margin-top"),
+        getBanner("Success", "cui-success cui-margin-top"),
+        getBanner("Error", "cui-error cui-margin-top"),
+        getBanner("Warning", "cui-warning cui-margin-top"),
+    ]
+}
 
+const bannerThird: ParserNode = {
+    tag: "div",
+    attributes: {
+        "cui-banner": ""
+    },
+    children: [
+        {
+            tag: "span",
+            classes: ["cui-margin-left", "cui-message"],
+            text: "Banner advanced"
+        },
+        {
+            tag: "span",
+            classes: ["cui-message-icon"],
+            attributes: {
+                "cui-icon": "error"
+            }
+        },
+        {
+            tag: "a",
+            attributes: {
+                "cui-icon": "close",
+                "cui-close": ""
+            }
+        }
+    ]
+}
 
-const bannerSecond = (<>
-    <div className="cui-banner cui-active cui-accent">Banner accent</div>
-    <div className="cui-banner cui-active cui-secondary cui-margin-top">Banner secondary</div>
-    <div className="cui-banner cui-active cui-success cui-margin-top">Banner success</div>
-    <div className="cui-banner cui-active cui-warning cui-margin-top">Banner warning</div>
-    <div className="cui-banner cui-active cui-error cui-margin-top">Banner error</div>
-</>)
-
-const bannerSecondCode = (
-    <>
-        <span>&lt;<span className="cui-tag">div</span> class="<span className="cui-var">cui-banner cui-active cui-accent</span>"&gt;Banner accent&lt;/<span className="cui-tag">div</span>&gt;</span>
-        <span>&lt;<span className="cui-tag">div</span> class="<span className="cui-var">cui-banner cui-active cui-secondary</span>"&gt;Banner secondary&lt;/<span className="cui-tag">div</span>&gt;</span>
-        <span>&lt;<span className="cui-tag">div</span> class="<span className="cui-var">cui-banner cui-active cui-success</span>"&gt;Banner success&lt;/<span className="cui-tag">div</span>&gt;</span>
-        <span>&lt;<span className="cui-tag">div</span> class="<span className="cui-var">cui-banner cui-active cui-warning</span>"&gt;Banner warning&lt;/<span className="cui-tag">div</span>&gt;</span>
-        <span>&lt;<span className="cui-tag">div</span> class="<span className="cui-var">cui-banner cui-active cui-error</span>"&gt;Banner error&lt;/<span className="cui-tag">div</span>&gt;</span>
-    </>
-);
-
-const bannerThird = (<>
-    <div className="cui-banner cui-active">
-        <span className="cui-margin-left cui-message">Banner advanced</span>
-        <span className="cui-message-icon" cui-icon="error"></span>
-        <a className="cui-close cui-icon" cui-icon="close" cui-close=""></a>
-    </div>
-</>);
-
-const bannerThirdCode = (
-    <>
-        <span>&lt;<span className="cui-tag">div</span> class="<span className="cui-var">cui-banner cui-active</span>"&gt;</span>
-        <span><span className="cui-indent-1">&lt;<span className="cui-tag">span</span> class="<span className="cui-var">cui-message-icon</span>" cui-icon="error"&gt;&lt;<span className="cui-tag">span</span>&gt;</span></span>
-        <span><span className="cui-indent-1">&lt;<span className="cui-tag">span</span> class="<span className="cui-var">cui-message</span>"&gt;Banner advanced&lt;<span className="cui-tag">span</span>&gt;</span></span>
-        <span><span className="cui-indent-1">&lt;<span className="cui-tag">a</span> class="<span className="cui-var">cui-close</span>"  cui-icon="close"&gt;&lt;/<span className="cui-tag">a</span>&gt;</span></span>
-        <span>&lt;<span className="cui-tag">div</span>&gt;</span>
-    </>
-);
+const bannerFourth = {
+    tag: "div",
+    attributes: {
+        "cui-banner": "swipe: Y"
+    },
+    text: "Swipe to close"
+}
 
 
 export const CuiDocsBannerScript: DocsScript = {
@@ -58,21 +69,15 @@ export const CuiDocsBannerScript: DocsScript = {
         {
             name: "Usage",
             description: (<>Banners are small, closable components which intended usage is notifing user about events happeing on the page.
-            Component comes with variety of styling options. The most basic option is to add cui-banner and cui-active classes. If you want to close component remove cui-active or use component Close.
+            Component comes with variety of styling options. The most basic option is to add cui-banner attribute to div element. Use cui-close component to close it:
             </>),
-            example: ExamplePreview({
-                code: bannerFirstCode,
-                element: bannerFirst
-            }, 'tabbed')
+            example: GetTabbedPreview(bannerFirst, "60px")
         },
         {
             name: "Styling",
             description: (<>To style banner with some color extend component with style classes: cui-accent, cui-secondary, cui-success, cui-warning, cui-error:
             </>),
-            example: ExamplePreview({
-                code: bannerSecondCode,
-                element: bannerSecond
-            }, 'tabbed')
+            example: GetTabbedPreview(bannerSecond, "350px")
         },
         {
             name: "Advanced",
@@ -80,10 +85,47 @@ export const CuiDocsBannerScript: DocsScript = {
             Add element with cui-message-icon to add an icon at the very begining. Wrap banner text with class cui-message.
             If you want to add icon closing/hiding element insert a link element with class cui-close and the same attribute, see example below
             </>),
-            example: ExamplePreview({
-                code: bannerThirdCode,
-                element: bannerThird
-            }, 'tabbed')
+            example: GetTabbedPreview(bannerThird, "60px")
+        },
+        {
+            name: "Swipe",
+            description: (<>Add option swipe to cui-banner to turn on option "Swipe to close":
+            </>),
+            example: GetTabbedPreview(bannerFourth, "60px")
+        },
+        {
+            name: "Options",
+            description: "Due to having a support for swipe banner supports some properties:",
+            properties: [
+                {
+                    name: "swipe",
+                    description: "Enables/disables swipe on the component",
+                    type: "boolean",
+                    defaultValue: "false"
+                },
+                {
+                    name: "timeout",
+                    description: "Swipe animation timeout",
+                    type: "number",
+                    defaultValue: "Default value (300)"
+                }
+            ]
+        },
+        {
+            name: "Events",
+            description: "Banner will react for two events:",
+            list: [
+                { name: "open", description: "Shows banner on the screen if it is not showing" },
+                { name: "close", description: "Hides banner from the screen." }
+            ]
+        },
+        {
+            name: "Emits",
+            description: "Banner emits two events:",
+            list: [
+                { name: "opened", description: "Emitted after banner is opened" },
+                { name: "closed", description: "Emitted after banner is closed" }
+            ]
         }
     ]
 }

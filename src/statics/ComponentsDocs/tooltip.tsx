@@ -4,7 +4,7 @@ import { GetTabbedPreview } from "../../components/partials/preview";
 function createTooltip(text: string, cls: string): ParserNode {
     return {
         tag: "div",
-        classes: ['cui-relative-container'],
+        classes: ['cui-tooltip-container'],
         children: [
             {
                 tag: "button",
@@ -20,15 +20,15 @@ function createTooltip(text: string, cls: string): ParserNode {
     };
 }
 
-export const tooltipExample = createTooltip("Tooltip", "");
+export const tooltipExample = createTooltip("Tooltip", "cui-tooltip-bottom-right");
 
 export const CuiDocsTooltipScript: DocsScript = {
     sections: [
         {
             name: "Usage",
             description: `To add a tooltip, wrap target with div with class cui-tooltip-container 
-            or cui-relative-container and add span with class cui-tooltip and class pointing to tooltip position if necessary`,
-            example: GetTabbedPreview(tooltipExample, "60px")
+            and add span with class cui-tooltip and class pointing to tooltip position if necessary`,
+            example: GetTabbedPreview(tooltipExample, "100px")
         },
         {
             name: "Position",

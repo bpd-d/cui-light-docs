@@ -65,7 +65,7 @@ export function ExamplePreview(props: CodePreviewProps, type: CuiPreviewType) {
         case "aside":
             return <CodePreviewAside code={props.code} element={props.element} />;
         default:
-            return <CodePreviewTabbed code={props.code} element={props.element} height={props.height} />;
+            return <CodePreviewTabbed code={props.code} element={props.element} js={props.js} height={props.height} />;
     }
 
 }
@@ -74,6 +74,15 @@ export function GetTabbedPreview(node: ParserNode, height?: string) {
     return ExamplePreview({
         code: new ElementGenerator(new ReactPreParser()).build(node),
         element: new ElementGenerator(new ReactParser()).build(node),
+        height: height
+    }, 'tabbed')
+}
+
+export function GetTabbedPreviewWithJs(node: ParserNode, js: string, height?: string) {
+    return ExamplePreview({
+        code: node && new ElementGenerator(new ReactPreParser()).build(node),
+        element: node && new ElementGenerator(new ReactParser()).build(node),
+        js: <div>{js}</div>,
         height: height
     }, 'tabbed')
 }

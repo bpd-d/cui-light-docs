@@ -260,6 +260,11 @@ ul.animated-list {
     background-image: url("/assets/images/pic_200.jpg");
 }
 
+.background-200 {
+    width : 200px;
+    height: 200px;
+}
+
 @include mixins.media-screen-height-max-small {
     .limited-content-width {
         width: 1000px !important;
