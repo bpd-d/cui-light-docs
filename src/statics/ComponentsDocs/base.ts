@@ -23,6 +23,8 @@ import { CuiDocsToggleScript } from "./toggle"
 import { CuiDocsOverlayScript } from "./overlay"
 import { CuiDocsFloatScript } from "./float"
 import { CuiDocsOffcanvas } from "./offcanvas"
+import { CuiDocsHeadingsScript } from "./headings"
+import { CuiDocsSeparatorScript } from "./separator"
 
 export const COMPONENTS = {
     container: "container",
@@ -77,12 +79,12 @@ export const cuiComponents: CuiDocsComponents = {
     "offcanvas": { name: "Offcanvas", uri: "/docs/components/offcanvas", description: "Highlights notices and informations between paragraphs", script: CuiDocsOffcanvas },
     "spinner": { name: "Spinner", uri: "/docs/components/spinner", description: "Simple preloaders and progress indicators" },
     "table": { name: "Table", uri: "/docs/components/table", description: "Nice looking tables with many options" },
-    "separator": { name: "Separator", uri: "/docs/components/separator", description: "Creates separation between blocks" },
+    "separator": { name: "Separator", uri: "/docs/components/separator", description: "Creates separation between blocks", script: CuiDocsSeparatorScript },
     "code": { name: "Code", uri: "/docs/components/code", description: "Styled code blocks built from span" },
     "flex": { name: "Flex", uri: "/docs/components/flex", description: "Set of options for flexible components" },
     "grid": { name: "Grid", uri: "/docs/components/grid", description: "Simple grid implementation built on top of flex" },
-    "heading": { name: "Heading", uri: "/docs/components/heading", description: "Styling options for heading elements" },
-    "position": { name: "Position", uri: "/docs/components/heading", description: "Styling options for heading elements" },
+    "heading": { name: "Heading", uri: "/docs/components/heading", description: "Styling options for heading elements", script: CuiDocsHeadingsScript },
+    "position": { name: "Position", uri: "/docs/components/position", description: "Position" },
     "sticky": { name: "Sticky", uri: "/docs/components/sticky", description: "Creates element that stick to specific position" },
     "transition": { name: "Transitions", uri: "/docs/components/transition", description: "Add transitions to element on hover" },
     "visibility": { name: "Visibility", uri: "/docs/components/visibility", description: "Allows to show and hide elements" },

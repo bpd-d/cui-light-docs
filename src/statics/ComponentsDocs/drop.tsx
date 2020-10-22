@@ -116,8 +116,7 @@ export const CuiDocsDropScript: DocsScript = {
             description: "Here is a list of all options supported by cui-drop:",
             properties: [
                 { name: "mode", description: "Sets trigger mode", type: "click | hover", defaultValue: "click" },
-                { name: "trigger", description: "Selector for trigger element", type: "click | hover", defaultValue: "click" },
-                { name: "mode", description: "Sets trigger mode", type: "string", defaultValue: "> a, button" },
+                { name: "trigger", description: "Selector for trigger element", type: "string", defaultValue: "> a, button" },
                 { name: "prevent", description: "Prevents default click/hover event behavior on trigger", type: "boolean", defaultValue: "false" },
                 { name: "outClose", description: "Click outside of drop area will close it", type: "boolean", defaultValue: "true" },
                 { name: "autoClose", description: "Automatically closes drop after timeout when user not hovering drop area", type: "boolean", defaultValue: "false" },

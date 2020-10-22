@@ -85,9 +85,11 @@ export const CuiDocsFloatScript: DocsScript = {
             name: "Options",
             description: "Component float supports following options:",
             properties: [
-                {
-                    name: "escClose", type: "boolean", defaultValue: "false", description: "Closes a float after Esc keyboard key was pressed"
-                }
+                { name: "escClose", type: "boolean", defaultValue: "false", description: "Closes a float after Esc keyboard key was pressed" },
+                { name: "keyClose", type: "string", defaultValue: "undefined", description: "Assign keyboard key to closing a dialog with" },
+                { name: "openAct", type: "action", defaultValue: "cui-dialog-default-in", description: "Animation action opening float" },
+                { name: "closeAct", type: "action", defaultValue: "cui-dialog-default-out", description: "Animation action closing float" },
+                { name: "timeout", type: "number", defaultValue: "default long", description: "Animation timeout" }
             ]
         },
 

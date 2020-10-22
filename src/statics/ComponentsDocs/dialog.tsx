@@ -85,7 +85,11 @@ export const CuiDocsDialogScript: DocsScript = {
             description: "Dialog comes with few options:",
             properties: [
                 { name: "outClose", type: "boolean", defaultValue: "false", description: "Click outside a dialog container should close opened dialog" },
-                { name: "escClose", type: "boolean", defaultValue: "false", description: "Escape keyboard button should close opened dialog" }
+                { name: "escClose", type: "boolean", defaultValue: "false", description: "Escape keyboard button should close opened dialog" },
+                { name: "keyClose", type: "string", defaultValue: "undefined", description: "Assign keyboard key to closing a dialog with" },
+                { name: "openAct", type: "action", defaultValue: "cui-dialog-default-in", description: "Animation action opening dialog" },
+                { name: "closeAct", type: "action", defaultValue: "cui-dialog-default-out", description: "Animation action closing dialog" },
+                { name: "timeout", type: "number", defaultValue: "default long", description: "Animation timeout" }
             ],
             example: GetTabbedPreview(dialogOptionsExample, "60px")
         },

@@ -6,13 +6,30 @@ import { GetTabbedPreview } from "../../components/partials/preview";
 const jsonElementData: ParserNode =
 {
     tag: "div",
-    classes: ["cui-card", "cui-default"],
+    classes: ["cui-card", 'cui-default'],
     children: [
         {
-            tag: "span",
-            text: "Card"
+            tag: 'div',
+            classes: ['cui-card-header'],
+            children: [
+                { tag: "span", text: "Title", classes: ["cui-card-title"] }
+            ]
+        },
+        {
+            tag: "div",
+            classes: ["cui-card-body"],
+            children: [
+                { tag: "span", text: "Card body" }
+            ]
+        },
+        {
+            tag: "div",
+            classes: ["cui-card-footer cui-flex cui-right"],
+            children: [
+                { tag: "button", styleClass: "cui-button cui-margin-small-right", text: "Cancel" },
+                { tag: "button", styleClass: "cui-button cui-accent", text: "Ok" }
+            ]
         }
-
     ]
 }
 
@@ -36,7 +53,7 @@ const stylingExample: ParserNode = {
         },
         {
             tag: "div",
-            classes: ["cui-card-header"],
+            classes: ["cui-card-footer"],
             children: [
                 { tag: "span", text: "Card footer" }
             ]

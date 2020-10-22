@@ -2,12 +2,18 @@ import { ParserNode } from "../../api/DocsElementParser/interfaces";
 import { DocsScript } from "../../components/docs/base";
 import { GetTabbedPreview } from "../../components/partials/preview";
 
-function createContainer(children: ParserNode[], cls?: string) {
+function createContainer(children: ParserNode[], cls?: string): ParserNode {
     return {
         tag: "div",
-        classes: ["image-background", "background-200"],
-        children: children
+        children: [
+            {
+                tag: "div",
+                classes: ["image-background", "background-200"],
+                children: children
+            }
+        ]
     }
+
 }
 
 function createOverlay(text: string, cls: string): ParserNode {
@@ -21,7 +27,7 @@ function createOverlay(text: string, cls: string): ParserNode {
 
 const firstExample: ParserNode = {
     tag: "div",
-    styleClass: "cui-flex cui-center",
+    styleClass: "cui-flex-grid cui-child-width-1-1 cui-child-width-1-2--s",
     children: [
         createContainer([
             createOverlay("cui-overlay-light", "cui-overlay-light"),

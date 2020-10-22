@@ -24,6 +24,32 @@ let rootElement = document.getElementById('root');
 let setup = new CuiSetupInit();
 setup.logLevel = 'debug';
 setup.root = rootElement;
+setup.busSetup = [
+    {
+        name: "MoveQueue",
+        eventsDef: ["global_move"],
+        handler: 'tasked',
+        priority: 0
+    },
+    {
+        name: "InteractQueue",
+        eventsDef: ["open", "close", "switch"],
+        handler: 'tasked',
+        priority: 0
+    },
+    {
+        name: "ResponsesQueue",
+        eventsDef: ["opened", "closed", "switched", "resize", "offset"],
+        handler: 'tasked',
+        priority: 1
+    },
+    {
+        name: "GlobalSimple",
+        eventsDef: ["keydown", "scroll", "intersection", "windowclick"],
+        handler: 'tasked',
+        priority: 2
+    },
+]
 let cuiSetup: CuiInitData = {
     setup: setup,
     icons: {

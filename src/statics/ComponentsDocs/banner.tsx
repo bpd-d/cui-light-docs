@@ -105,10 +105,22 @@ export const CuiDocsBannerScript: DocsScript = {
                 },
                 {
                     name: "timeout",
-                    description: "Swipe animation timeout",
+                    description: "Animation timeout",
                     type: "number",
                     defaultValue: "Default value (300)"
-                }
+                },
+                {
+                    name: "openAct",
+                    description: "Component open animation action",
+                    defaultValue: "cui-animation-fade-in",
+                    type: "action"
+                },
+                {
+                    name: "closeAct",
+                    description: "Component close animation action",
+                    defaultValue: "cui-animation-fade-out",
+                    type: "action"
+                },
             ]
         },
         {
