@@ -1,7 +1,7 @@
 import * as React from "react";
 import { ElementGenerator } from "../../api/DocsElementParser/ElementGenerator";
 import { ParserNode } from "../../api/DocsElementParser/interfaces";
-import { ReactPreParser, ReactParser } from "../../api/DocsElementParser/GeneratorParsers";
+import { ReactPreParser, ReactParser, ReactJsParser } from "../../api/DocsElementParser/GeneratorParsers";
 import { GLOBAL_COUNTER } from "../../statics/common";
 
 export type CuiPreviewType = 'aside' | "tabbed";
@@ -12,6 +12,10 @@ export interface CodePreviewProps {
     element: JSX.Element;
     js?: JSX.Element;
     height?: string;
+}
+
+export interface JsCodePrevieProps {
+    js: JSX.Element;
 }
 
 export interface TabbedPreviewProps {
@@ -25,6 +29,14 @@ export function CodePreviewAside(props: CodePreviewProps) {
             <div className="cui-background-shade">
                 <pre>{props.code}</pre>
             </div>
+        </div>
+    )
+}
+
+export function JsCodePreview(props: JsCodePrevieProps) {
+    return (
+        <div className="cui-code cui-format cui-line-counter">
+            {props.js}
         </div>
     )
 }
@@ -68,6 +80,10 @@ export function ExamplePreview(props: CodePreviewProps, type: CuiPreviewType) {
             return <CodePreviewTabbed code={props.code} element={props.element} js={props.js} height={props.height} />;
     }
 
+}
+
+export function getJsCodePreview(node: ParserNode) {
+    return <JsCodePreview js={new ElementGenerator(new ReactJsParser()).build(node)} />
 }
 
 export function GetTabbedPreview(node: ParserNode, height?: string) {

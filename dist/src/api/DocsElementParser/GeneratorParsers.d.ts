@@ -13,3 +13,6 @@ export declare class ReactPreParser implements ITextParser<any> {
         level: number;
     }>;
 }
+export declare class ReactJsParser implements ITextParser<JSX.Element> {
+    parse(node: ParserNode, level: number): JSX.Element;
+}

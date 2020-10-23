@@ -1,5 +1,5 @@
 import * as React from "react";
-import { PreNode } from "../../components/partials/pre";
+import { PreJsNode, PreNode } from "../../components/partials/pre";
 import { GLOBAL_COUNTER } from "../../statics/common";
 import { ITextParser, ParserNode } from "./interfaces";
 
@@ -92,6 +92,12 @@ export class ReactPreParser implements ITextParser<any> {
             arr.push(node.text)
         }
         return React.createElement(PreNode, { node: node, level: 0 });
+    }
+}
+
+export class ReactJsParser implements ITextParser<JSX.Element> {
+    parse(node: ParserNode, level: number): JSX.Element {
+        return React.createElement(PreJsNode, { node: node, level: 0 })
     }
 
 }

@@ -1,4 +1,48 @@
+import { ParserNode } from "../../api/DocsElementParser/interfaces";
 import { DocsScript } from "../../components/docs/base";
+import { getJsCodePreview } from "../../components/partials/preview";
+
+const firstExample: ParserNode = {
+    tag: "group",
+    children: [
+        {
+            tag: 'object',
+            text: `options`,
+            children: [
+                {
+                    tag: 'text',
+                    text: `title: "Title",`
+                },
+                {
+                    tag: 'text',
+                    text: `message: "Message",`
+                },
+                {
+                    tag: 'text',
+                    text: `onOk: () => { console.log("Ok") },`
+                },
+                {
+                    tag: 'text',
+                    text: `onCancel: () => { console.log("Cancel") },`
+                },
+                {
+                    tag: 'text',
+                    text: `onYes: () => { console.log("Yes") },`
+                },
+                {
+                    tag: 'text',
+                    text: `onNo: () => { console.log("No") }`
+                }
+            ]
+        },
+        {
+            tag: "text",
+            text: `$cui.alert("alert-id", "YesNoCancel", options)`
+        }
+
+    ]
+
+}
 
 export const CuiDocsAlertScript: DocsScript = {
     sections: [
@@ -15,7 +59,8 @@ export const CuiDocsAlertScript: DocsScript = {
             hint: {
                 title: "Keep id unique",
                 content: "cUI tries to reuse alert if possible so it is important to use the same id in calls that point the same part of the program."
-            }
+            },
+            example: getJsCodePreview(firstExample)
         }
     ]
 }

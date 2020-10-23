@@ -5,3 +5,4 @@ export interface preProps {
     level: number;
 }
 export declare function PreNode(props: preProps): JSX.Element;
+export declare function PreJsNode(pre: preProps): JSX.Element;
