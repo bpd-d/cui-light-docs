@@ -265,6 +265,19 @@ ul.animated-list {
     height: 200px;
 }
 
+.float-initial-size {
+    width : 150px;
+    height: 200px;
+}
+
+.flex-default-height {
+    height: 110px;
+}
+
+.flex-medium-height {
+    height: 300px;
+}
+
 @include mixins.media-screen-height-max-small {
     .limited-content-width {
         width: 1000px !important;

@@ -25,6 +25,8 @@ import { CuiDocsFloatScript } from "./float"
 import { CuiDocsOffcanvas } from "./offcanvas"
 import { CuiDocsHeadingsScript } from "./headings"
 import { CuiDocsSeparatorScript } from "./separator"
+import { CuiDocsFlexScript } from "./flex"
+import { CuiDocsCloseScript } from "./close"
 
 export const COMPONENTS = {
     container: "container",
@@ -81,7 +83,7 @@ export const cuiComponents: CuiDocsComponents = {
     "table": { name: "Table", uri: "/docs/components/table", description: "Nice looking tables with many options" },
     "separator": { name: "Separator", uri: "/docs/components/separator", description: "Creates separation between blocks", script: CuiDocsSeparatorScript },
     "code": { name: "Code", uri: "/docs/components/code", description: "Styled code blocks built from span" },
-    "flex": { name: "Flex", uri: "/docs/components/flex", description: "Set of options for flexible components" },
+    "flex": { name: "Flex", uri: "/docs/components/flex", description: "Set of options for flexible components", script: CuiDocsFlexScript },
     "grid": { name: "Grid", uri: "/docs/components/grid", description: "Simple grid implementation built on top of flex" },
     "heading": { name: "Heading", uri: "/docs/components/heading", description: "Styling options for heading elements", script: CuiDocsHeadingsScript },
     "position": { name: "Position", uri: "/docs/components/position", description: "Position" },
@@ -90,7 +92,7 @@ export const cuiComponents: CuiDocsComponents = {
     "visibility": { name: "Visibility", uri: "/docs/components/visibility", description: "Allows to show and hide elements" },
     "width": { name: "Width", uri: "/docs/components/width", description: "Set of width options for components" },
     "circle": { name: "Circle", uri: "/docs/components/circle", description: "Custom progress bar created on circle" },
-    "close": { name: "Close", uri: "/docs/components/close", description: "Allows to close other cUI components" },
+    "close": { name: "Close", uri: "/docs/components/close", description: "Allows to close other cUI components", script: CuiDocsCloseScript },
     "open": { name: "Open", uri: "/docs/components/open", description: "Allows to open other cUI components" },
     "intersection": { name: "Intersection", uri: "/docs/components/intersection", description: "Triggers actions when elements are intersecting viewport" },
     "offset": { name: "Offset", uri: "/docs/components/offset", description: "Offset" },

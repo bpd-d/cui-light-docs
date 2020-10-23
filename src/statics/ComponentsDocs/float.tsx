@@ -15,9 +15,10 @@ const firstExample: ParserNode = {
         },
         {
             tag: "div",
+            styleClass: "float-initial-size",
             attributes: {
                 "cui-float": "",
-                "id": "float-test-01"
+                "id": "float-test-01",
             },
             children: [
                 {
@@ -54,7 +55,7 @@ const firstExample: ParserNode = {
                                     {
                                         tag: "div",
                                         classes: ["cui-card-body"],
-                                        text: "Float"
+                                        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
                                     }
                                 ]
                             }]
