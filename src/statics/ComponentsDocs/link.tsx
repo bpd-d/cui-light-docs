@@ -2,6 +2,13 @@ import { ParserNode } from "../../api/DocsElementParser/interfaces";
 import { DocsScript } from "../../components/docs/base";
 import { GetTabbedPreview } from "../../components/partials/preview";
 
+function createContainer(name: string, ...classes: string[]): ParserNode {
+    return {
+        tag: "div",
+        children: [createLink(name, ...classes)]
+    }
+}
+
 function createLink(name: string, ...classes: string[]): ParserNode {
     return {
         tag: "a",
@@ -19,11 +26,11 @@ const linkExample: ParserNode = createLink("Simple link");
 const accentsExample: ParserNode = {
     tag: "div",
     children: [
-        createLink("Accent link", "cui-accent"),
-        createLink("Secondary link", "cui-secondary"),
-        createLink("Error link", "cui-error"),
-        createLink("Warning link", "cui-warning"),
-        createLink("Success link", "cui-success"),
+        createContainer("Accent link", "cui-accent"),
+        createContainer("Secondary link", "cui-secondary"),
+        createContainer("Error link", "cui-error"),
+        createContainer("Warning link", "cui-warning"),
+        createContainer("Success link", "cui-success"),
     ]
 }
 

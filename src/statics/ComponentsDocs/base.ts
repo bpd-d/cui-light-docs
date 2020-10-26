@@ -27,6 +27,7 @@ import { CuiDocsHeadingsScript } from "./headings"
 import { CuiDocsSeparatorScript } from "./separator"
 import { CuiDocsFlexScript } from "./flex"
 import { CuiDocsCloseScript } from "./close"
+import { CuiDocsIconScript } from "./icon"
 
 export const COMPONENTS = {
     container: "container",
@@ -99,7 +100,7 @@ export const cuiComponents: CuiDocsComponents = {
     "scrollspy": { name: "Scrollspy", uri: "/docs/components/scrollspy", description: "Triggers specific actions on user scoll" },
     "toggle": { name: "Toggle", uri: "/docs/components/toggle", description: "Toggles an action on target element", script: CuiDocsToggleScript },
     "resize": { name: "Resize", uri: "/docs/components/resize", description: "Work in progress" },
-    "icon": { name: "Icon", uri: "/docs/components/icon", description: "Predefined styles for svg icons" },
+    "icon": { name: "Icon", uri: "/docs/components/icon", description: "Predefined styles for svg icons", script: CuiDocsIconScript },
     "height": { name: "Height", uri: "/docs/components/height", description: "Customization for heights of the element" },
     "switch": { name: "Switch", uri: "/docs/components/switch", description: "Switch elements in view" },
     "slider": { name: "Slider", uri: "/docs/components/slider", description: "Switch elements by sliding" },
