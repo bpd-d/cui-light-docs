@@ -31,6 +31,7 @@ import { CuiDocsIconScript } from "./icon"
 import { CuiDocsSpinnerScript } from "./spinner"
 import { CuiDocsCoverScript } from "./cover"
 import { CuiDocsWidthScript } from "./width"
+import { CuiDocsSortableScript } from "./sortable"
 
 export const COMPONENTS = {
     container: "container",
@@ -107,4 +108,5 @@ export const cuiComponents: CuiDocsComponents = {
     "height": { name: "Height", uri: "/docs/components/height", description: "Customization for heights of the element" },
     "switch": { name: "Switch", uri: "/docs/components/switch", description: "Switch elements in view" },
     "slider": { name: "Slider", uri: "/docs/components/slider", description: "Switch elements by sliding" },
+    "sortable": { name: "Sortable", uri: "/docs/components/sortable", description: "Reorders children in list", script: CuiDocsSortableScript }
 }
