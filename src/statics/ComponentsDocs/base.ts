@@ -28,6 +28,9 @@ import { CuiDocsSeparatorScript } from "./separator"
 import { CuiDocsFlexScript } from "./flex"
 import { CuiDocsCloseScript } from "./close"
 import { CuiDocsIconScript } from "./icon"
+import { CuiDocsSpinnerScript } from "./spinner"
+import { CuiDocsCoverScript } from "./cover"
+import { CuiDocsWidthScript } from "./width"
 
 export const COMPONENTS = {
     container: "container",
@@ -68,7 +71,7 @@ export const cuiComponents: CuiDocsComponents = {
     "alert": { name: "Alert", uri: "/docs/components/alert", description: "Easy to use, interactive dialog", script: CuiDocsAlertScript },
     "animation": { name: "Animation", uri: "/docs/components/animation", description: "Add some animations to components" },
     "overlay": { name: "Overlay", uri: "/docs/components/overlay", description: "Creates simple overlay on elements", script: CuiDocsOverlayScript },
-    "cover": { name: "Cover", uri: "/docs/components/cover", description: "Creates element that cover whole viewport" },
+    "cover": { name: "Cover", uri: "/docs/components/cover", description: "Creates element that cover whole viewport", script: CuiDocsCoverScript },
     "drop": { name: "Drop", uri: "/docs/components/drop", description: "Creates drop and dropdowns", script: CuiDocsDropScript },
     "float": { name: "Float", uri: "/docs/components/float", description: "Movable and resizable floating elements", script: CuiDocsFloatScript },
     "navbar": { name: "Navbar", uri: "/docs/components/navbar", description: "Navigation bar for the web page", script: CuiDocsNavbarScript },
@@ -80,7 +83,7 @@ export const cuiComponents: CuiDocsComponents = {
     "switcher": { name: "Switchers", uri: "/docs/components/switcher", description: "Switchers for lists and items styles with options" },
     "hint": { name: "Hint", uri: "/docs/components/hint", description: "Highlights notices and informations between paragraphs" },
     "offcanvas": { name: "Offcanvas", uri: "/docs/components/offcanvas", description: "Highlights notices and informations between paragraphs", script: CuiDocsOffcanvas },
-    "spinner": { name: "Spinner", uri: "/docs/components/spinner", description: "Simple preloaders and progress indicators" },
+    "spinner": { name: "Spinner", uri: "/docs/components/spinner", description: "Simple preloaders and progress indicators", script: CuiDocsSpinnerScript },
     "table": { name: "Table", uri: "/docs/components/table", description: "Nice looking tables with many options" },
     "separator": { name: "Separator", uri: "/docs/components/separator", description: "Creates separation between blocks", script: CuiDocsSeparatorScript },
     "code": { name: "Code", uri: "/docs/components/code", description: "Styled code blocks built from span" },
@@ -91,7 +94,7 @@ export const cuiComponents: CuiDocsComponents = {
     "sticky": { name: "Sticky", uri: "/docs/components/sticky", description: "Creates element that stick to specific position" },
     "transition": { name: "Transitions", uri: "/docs/components/transition", description: "Add transitions to element on hover" },
     "visibility": { name: "Visibility", uri: "/docs/components/visibility", description: "Allows to show and hide elements" },
-    "width": { name: "Width", uri: "/docs/components/width", description: "Set of width options for components" },
+    "width": { name: "Width", uri: "/docs/components/width", description: "Set of width options for components", script: CuiDocsWidthScript },
     "circle": { name: "Circle", uri: "/docs/components/circle", description: "Custom progress bar created on circle" },
     "close": { name: "Close", uri: "/docs/components/close", description: "Allows to close other cUI components", script: CuiDocsCloseScript },
     "open": { name: "Open", uri: "/docs/components/open", description: "Allows to open other cUI components" },

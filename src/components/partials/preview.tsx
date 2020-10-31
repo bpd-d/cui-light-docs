@@ -56,7 +56,7 @@ export function CodePreviewTabbed(props: CodePreviewProps) {
             <ul className="cui-switch cui-margin-top" cui-switch={`links: #${tabId} > li${height}`} id={switchId}>
                 <li className="cui-active"><div className="preview-wrapper">{props.element}</div></li>
                 {props.code && <li>
-                    <div className="cui-code cui-format cui-line-counter">
+                    <div className="cui-code cui-format cui-line-counter cui-overflow-x-auto">
                         {props.code}
                     </div>
                 </li>}

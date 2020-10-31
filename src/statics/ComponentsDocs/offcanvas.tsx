@@ -106,6 +106,22 @@ export const CuiDocsOffcanvas: DocsScript = {
                 { name: "closeAct", type: "string", defaultValue: ".cui-offcanvas-default-right-out", description: "Offcanvas hide animation" },
                 { name: "timeout", type: "number", defaultValue: "300", description: "Open/close animation time" },
             ]
+        },
+        {
+            name: "Events",
+            description: "Offcanvas support for following events:",
+            list: [
+                { name: "open", description: "Shows offcanvas if not opened" },
+                { name: "close", description: "Hides offcanvas if opened" }
+            ]
+        },
+        {
+            name: "Emits",
+            description: "Cover emits following events:",
+            list: [
+                { name: "opened", description: "Emitted after offcanvas is opened" },
+                { name: "closed", description: "Emitted after offcanvas is closed" }
+            ]
         }
     ]
 }

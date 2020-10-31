@@ -100,6 +100,14 @@ export const CuiDocsDialogScript: DocsScript = {
                 { name: "open", description: "Shows dialog if not opened" },
                 { name: "close", description: "Hides dialog if opened" }
             ]
+        },
+        {
+            name: "Emits",
+            description: "Dialog emits following events:",
+            list: [
+                { name: "opened", description: "Emitted after dialog is opened" },
+                { name: "closed", description: "Emitted after dialog is closed" }
+            ]
         }
     ]
 }

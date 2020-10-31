@@ -93,6 +93,22 @@ export const CuiDocsFloatScript: DocsScript = {
                 { name: "timeout", type: "number", defaultValue: "default long", description: "Animation timeout" }
             ]
         },
+        {
+            name: "Events",
+            description: "Float support for following events:",
+            list: [
+                { name: "open", description: "Shows float if not opened" },
+                { name: "close", description: "Hides float if opened" }
+            ]
+        },
+        {
+            name: "Emits",
+            description: "Float emits following events:",
+            list: [
+                { name: "opened", description: "Emitted after float is opened" },
+                { name: "closed", description: "Emitted after float is closed" }
+            ]
+        }
 
     ]
 }

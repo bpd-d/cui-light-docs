@@ -44,6 +44,54 @@ const firstExample: ParserNode = {
     ]
 }
 
+const secondExample: ParserNode = {
+    tag: "div",
+    children: [
+        {
+            tag: "button",
+            attributes: { "cui-open": "#close-cover-01" },
+            text: "Open cover without animation",
+            classes: ["cui-button", "cui-default"]
+        },
+        {
+            tag: "button",
+            attributes: {
+                "cui-open": "target: #close-cover-02; action:.cui-anim-fade-in"
+            },
+            text: "Open cover with animation",
+            classes: ["cui-button", "cui-default"]
+        },
+        {
+            tag: "div",
+            attributes: { "id": "close-cover-01" },
+            children: [
+                {
+                    tag: "div",
+                    classes: ["cui-dialog-container cui-padding"],
+                    children: [
+                        { tag: "button", attributes: { "cui-close": "#close-cover-01" }, classes: ["cui-button", "cui-default"], text: "Close cover" }
+                    ]
+                }
+
+            ]
+        },
+        {
+            tag: "div",
+            attributes: { "id": "close-cover-02" },
+            children: [
+                {
+                    tag: "div",
+                    classes: ["cui-dialog-container cui-padding"],
+                    children: [
+                        { tag: "button", attributes: { "cui-close": "target: #close-cover-02; action:.cui-anim-fade-out" }, classes: ["cui-button", "cui-default"], text: "Close cover" }
+                    ]
+                }
+
+            ]
+        }
+    ]
+}
+
 export const CuiDocsOpenScript: DocsScript = {
     sections: [
         {
