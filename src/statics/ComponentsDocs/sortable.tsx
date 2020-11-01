@@ -54,6 +54,30 @@ function createLiWithTrigger(text: string): ParserNode {
     }
 }
 
+function createCustomChild(text: string): ParserNode {
+    return {
+        tag: "div",
+        children: [
+            {
+                tag: "div",
+                classes: ["cui-card", "cui-default"],
+                children: [
+                    {
+                        tag: "div",
+                        children: [
+                            {
+                                tag: "span",
+                                classes: ["cui-margin-left"],
+                                text: text
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}
+
 const firstExample: ParserNode = {
     tag: "ul",
     attributes: {
@@ -82,6 +106,21 @@ const secondExample: ParserNode = {
     ]
 }
 
+const thirdExample: ParserNode = {
+    tag: "div",
+    classes: ["cui-flex-grid", "cui-child-width-1-2"],
+    attributes: {
+        "cui-sortable": "target: > div; trigger: > div"
+    },
+    children: [
+        createCustomChild("Item 1"),
+        createCustomChild("Item 2"),
+        createCustomChild("Item 3"),
+        createCustomChild("Item 4"),
+        createCustomChild("Item 5"),
+    ]
+
+}
 
 export const CuiDocsSortableScript: DocsScript = {
     sections: [
@@ -102,13 +141,15 @@ export const CuiDocsSortableScript: DocsScript = {
         {
             name: "Custom",
             description: <>To adapt sortable to custom HTML elements set options target and trigger to match your children and target selectors:</>,
-
+            example: GetTabbedPreview(thirdExample, "300px")
         },
         {
             name: "Options",
             description: <>By default whole target is considered as trigger. This means that click on specific child will start drag and drop procedure.
             This behavior can be changed by setting up a trigger option which basically is a selector for elements that will be used as triggers, e.g. button inside of card of child:</>,
-
+            properties: [
+                { name: "target", type: "selector", defaultValue: "> *", description: "Selector for child elements" }
+            ]
         }
     ]
 }
