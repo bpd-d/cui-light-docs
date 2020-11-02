@@ -34,6 +34,9 @@ import { CuiDocsWidthScript } from "./width"
 import { CuiDocsSortableScript } from "./sortable"
 import { CuiDocsHintScript } from "./hint"
 import { CuiDocsGridScript } from "./grid"
+import { CuiDocsSliderScript } from "./slider"
+import { CuiDocsSwitcherScript } from "./switcher"
+import { CuiDocsCircleScript } from "./circle"
 
 export const COMPONENTS = {
     container: "container",
@@ -83,7 +86,7 @@ export const cuiComponents: CuiDocsComponents = {
     "shadow": { name: "Shadow", uri: "/docs/components/shadow", description: "Styled anchor elements", script: CuiDocsShadowElement },
     "list": { name: "List", uri: "/docs/components/list", description: "Styled lists with options", script: CuiDocsListScript },
     "tooltip": { name: "Tooltip", uri: "/docs/components/tooltip", description: "Add little feature descriptors on hover", script: CuiDocsTooltipScript },
-    "switcher": { name: "Switchers", uri: "/docs/components/switcher", description: "Switchers for lists and items styles with options" },
+    "switcher": { name: "Switchers", uri: "/docs/components/switcher", description: "Switchers for lists and items styles with options", script: CuiDocsSwitcherScript },
     "hint": { name: "Hint", uri: "/docs/components/hint", description: "Highlights notices and informations between paragraphs", script: CuiDocsHintScript },
     "offcanvas": { name: "Offcanvas", uri: "/docs/components/offcanvas", description: "Highlights notices and informations between paragraphs", script: CuiDocsOffcanvas },
     "spinner": { name: "Spinner", uri: "/docs/components/spinner", description: "Simple preloaders and progress indicators", script: CuiDocsSpinnerScript },
@@ -98,7 +101,7 @@ export const cuiComponents: CuiDocsComponents = {
     "transition": { name: "Transitions", uri: "/docs/components/transition", description: "Add transitions to element on hover" },
     "visibility": { name: "Visibility", uri: "/docs/components/visibility", description: "Allows to show and hide elements" },
     "width": { name: "Width", uri: "/docs/components/width", description: "Set of width options for components", script: CuiDocsWidthScript },
-    "circle": { name: "Circle", uri: "/docs/components/circle", description: "Custom progress bar created on circle" },
+    "circle": { name: "Circle", uri: "/docs/components/circle", description: "Custom progress bar created on circle", script: CuiDocsCircleScript },
     "close": { name: "Close", uri: "/docs/components/close", description: "Allows to close other cUI components", script: CuiDocsCloseScript },
     "open": { name: "Open", uri: "/docs/components/open", description: "Allows to open other cUI components" },
     "intersection": { name: "Intersection", uri: "/docs/components/intersection", description: "Triggers actions when elements are intersecting viewport" },
@@ -109,6 +112,6 @@ export const cuiComponents: CuiDocsComponents = {
     "icon": { name: "Icon", uri: "/docs/components/icon", description: "Predefined styles for svg icons", script: CuiDocsIconScript },
     "height": { name: "Height", uri: "/docs/components/height", description: "Customization for heights of the element" },
     "switch": { name: "Switch", uri: "/docs/components/switch", description: "Switch elements in view" },
-    "slider": { name: "Slider", uri: "/docs/components/slider", description: "Switch elements by sliding" },
+    "slider": { name: "Slider", uri: "/docs/components/slider", description: "Switch elements by sliding", script: CuiDocsSliderScript },
     "sortable": { name: "Sortable", uri: "/docs/components/sortable", description: "Reorders children in list", script: CuiDocsSortableScript }
 }

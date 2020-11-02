@@ -17,7 +17,7 @@ export function CuiDocsDashboard() {
             <h1 className="cui-h1">Documentation</h1>
             <div className="cui-container cui-flex-grid cui-child-width-1-1 cui-child-width-1-2--l">
                 {items.map(item => {
-                    return <div>
+                    return <div key={item.title}>
                         <div className="cui-card">
                             <div className="cui-card-header"><span className="cui-card-title">{item.title}</span></div>
                             <div className="cui-card-body cui-flex-center">
