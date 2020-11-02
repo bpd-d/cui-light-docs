@@ -17,6 +17,7 @@ import { getLastRecentItem, getRecentItems } from "../api/state/filters";
 import { capitalize } from "../utils/function";
 import { loadRecentsFromService } from "../api/state/actions";
 import { SearchDialog } from "./search/SearchDialog";
+import { CuiDocsDashboard } from "./main/docs/dashboard";
 
 export interface AppProps {
 }
@@ -76,6 +77,7 @@ export class App extends React.Component<AppProps, AppState> {
                 <Navbar site={this.state.currentSite} />
                 <div className="layout-content">
                     <Switch>
+                        <Route path="/docs/dashboard" component={CuiDocsDashboard}></Route>
                         <Route path="/docs/components/:id" component={DocsComponent}></Route>
                         <Route path="/overview" component={Overview}></Route>
                         <Route path="/download" component={Download}></Route>

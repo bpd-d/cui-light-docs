@@ -6,7 +6,7 @@ import { GetTabbedPreview } from "../../components/partials/preview";
 function createLiWithCard(text: string): ParserNode {
     return {
         tag: "li",
-        classes: ["cui-margin-vertical"],
+        // classes: ["cui-margin-vertical"],
         children: [
             {
                 tag: "div",
@@ -25,7 +25,7 @@ function createLiWithCard(text: string): ParserNode {
 function createLiWithTrigger(text: string): ParserNode {
     return {
         tag: "li",
-        classes: ["cui-margin-vertical"],
+        // classes: ["cui-margin-vertical"],
         children: [
             {
                 tag: "div",
@@ -130,25 +130,36 @@ export const CuiDocsSortableScript: DocsScript = {
             Feature start after long press on child element.
             To setup this component add element with attribute <span className="style-class">cui-sortable</span>.
             Default implementation expects to element <span className="style-element">UL</span> to ba a parent element and <span className="style-element">li</span> childrens to be sortable child items:</>,
-            example: GetTabbedPreview(firstExample, "400px")
+            example: GetTabbedPreview(firstExample, "350px")
         },
         {
             name: "Trigger",
             description: <>By default whole target is considered as trigger. This means that click on specific child will start drag and drop procedure.
             This behavior can be changed by setting up a trigger option which basically is a selector for elements that will be used as triggers, e.g. button inside of card of child:</>,
-            example: GetTabbedPreview(secondExample, "400px")
+            example: GetTabbedPreview(secondExample, "350px")
         },
         {
             name: "Custom",
             description: <>To adapt sortable to custom HTML elements set options target and trigger to match your children and target selectors:</>,
-            example: GetTabbedPreview(thirdExample, "300px")
+            example: GetTabbedPreview(thirdExample, "250px")
         },
         {
             name: "Options",
             description: <>By default whole target is considered as trigger. This means that click on specific child will start drag and drop procedure.
             This behavior can be changed by setting up a trigger option which basically is a selector for elements that will be used as triggers, e.g. button inside of card of child:</>,
             properties: [
-                { name: "target", type: "selector", defaultValue: "> *", description: "Selector for child elements" }
+                { name: "target", type: "selector", defaultValue: "> *", description: "Selector for child elements" },
+                { name: "trigger", type: "selector", defaultValue: "> *", description: "Selector for child trigger elements" },
+                { name: "timeout", type: "number", defaultValue: "150", description: "Long press timeout" },
+                { name: "threshold", type: "number", defaultValue: "5", description: "Value which sets margin around childrens which is used on element hover detector" }
+            ]
+        },
+        {
+            name: "Emits",
+            description: `Sortable emits following event:`,
+            list: [
+                { name: "sortstart", description: "Triggered after sort has started, passes current element index and target" },
+                { name: "sorted", description: "Triggered after sort has finished, passes current element index and target" }
             ]
         }
     ]

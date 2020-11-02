@@ -32,6 +32,8 @@ import { CuiDocsSpinnerScript } from "./spinner"
 import { CuiDocsCoverScript } from "./cover"
 import { CuiDocsWidthScript } from "./width"
 import { CuiDocsSortableScript } from "./sortable"
+import { CuiDocsHintScript } from "./hint"
+import { CuiDocsGridScript } from "./grid"
 
 export const COMPONENTS = {
     container: "container",
@@ -82,14 +84,14 @@ export const cuiComponents: CuiDocsComponents = {
     "list": { name: "List", uri: "/docs/components/list", description: "Styled lists with options", script: CuiDocsListScript },
     "tooltip": { name: "Tooltip", uri: "/docs/components/tooltip", description: "Add little feature descriptors on hover", script: CuiDocsTooltipScript },
     "switcher": { name: "Switchers", uri: "/docs/components/switcher", description: "Switchers for lists and items styles with options" },
-    "hint": { name: "Hint", uri: "/docs/components/hint", description: "Highlights notices and informations between paragraphs" },
+    "hint": { name: "Hint", uri: "/docs/components/hint", description: "Highlights notices and informations between paragraphs", script: CuiDocsHintScript },
     "offcanvas": { name: "Offcanvas", uri: "/docs/components/offcanvas", description: "Highlights notices and informations between paragraphs", script: CuiDocsOffcanvas },
     "spinner": { name: "Spinner", uri: "/docs/components/spinner", description: "Simple preloaders and progress indicators", script: CuiDocsSpinnerScript },
     "table": { name: "Table", uri: "/docs/components/table", description: "Nice looking tables with many options" },
     "separator": { name: "Separator", uri: "/docs/components/separator", description: "Creates separation between blocks", script: CuiDocsSeparatorScript },
     "code": { name: "Code", uri: "/docs/components/code", description: "Styled code blocks built from span" },
     "flex": { name: "Flex", uri: "/docs/components/flex", description: "Set of options for flexible components", script: CuiDocsFlexScript },
-    "grid": { name: "Grid", uri: "/docs/components/grid", description: "Simple grid implementation built on top of flex" },
+    "grid": { name: "Grid", uri: "/docs/components/grid", description: "Simple grid implementation built on top of flex", script: CuiDocsGridScript },
     "heading": { name: "Heading", uri: "/docs/components/heading", description: "Styling options for heading elements", script: CuiDocsHeadingsScript },
     "position": { name: "Position", uri: "/docs/components/position", description: "Position" },
     "sticky": { name: "Sticky", uri: "/docs/components/sticky", description: "Creates element that stick to specific position" },
