@@ -37,6 +37,8 @@ import { CuiDocsGridScript } from "./grid"
 import { CuiDocsSliderScript } from "./slider"
 import { CuiDocsSwitcherScript } from "./switcher"
 import { CuiDocsCircleScript } from "./circle"
+import { CuiDocsPositionScript } from "./position"
+import { CuiDocsOffsetScript } from "./offset"
 
 export const COMPONENTS = {
     container: "container",
@@ -96,7 +98,7 @@ export const cuiComponents: CuiDocsComponents = {
     "flex": { name: "Flex", uri: "/docs/components/flex", description: "Set of options for flexible components", script: CuiDocsFlexScript },
     "grid": { name: "Grid", uri: "/docs/components/grid", description: "Simple grid implementation built on top of flex", script: CuiDocsGridScript },
     "heading": { name: "Heading", uri: "/docs/components/heading", description: "Styling options for heading elements", script: CuiDocsHeadingsScript },
-    "position": { name: "Position", uri: "/docs/components/position", description: "Position" },
+    "position": { name: "Position", uri: "/docs/components/position", description: "Position", script: CuiDocsPositionScript },
     "sticky": { name: "Sticky", uri: "/docs/components/sticky", description: "Creates element that stick to specific position" },
     "transition": { name: "Transitions", uri: "/docs/components/transition", description: "Add transitions to element on hover" },
     "visibility": { name: "Visibility", uri: "/docs/components/visibility", description: "Allows to show and hide elements" },
@@ -105,7 +107,7 @@ export const cuiComponents: CuiDocsComponents = {
     "close": { name: "Close", uri: "/docs/components/close", description: "Allows to close other cUI components", script: CuiDocsCloseScript },
     "open": { name: "Open", uri: "/docs/components/open", description: "Allows to open other cUI components" },
     "intersection": { name: "Intersection", uri: "/docs/components/intersection", description: "Triggers actions when elements are intersecting viewport" },
-    "offset": { name: "Offset", uri: "/docs/components/offset", description: "Offset" },
+    "offset": { name: "Offset", uri: "/docs/components/offset", description: "Offset", script: CuiDocsOffsetScript },
     "scrollspy": { name: "Scrollspy", uri: "/docs/components/scrollspy", description: "Triggers specific actions on user scoll" },
     "toggle": { name: "Toggle", uri: "/docs/components/toggle", description: "Toggles an action on target element", script: CuiDocsToggleScript },
     "resize": { name: "Resize", uri: "/docs/components/resize", description: "Work in progress" },

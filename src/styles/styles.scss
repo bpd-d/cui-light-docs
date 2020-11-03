@@ -282,6 +282,18 @@ ul.animated-list {
     height: 300px;
 }
 
+.offset-parent {
+    height: 300px;
+}
+
+.offset-first-child {
+    height: 300px;
+}
+
+.offset-second-child {
+    height: 400px;
+}
+
 @include mixins.media-screen-height-max-small {
     .limited-content-width {
         width: 1000px !important;

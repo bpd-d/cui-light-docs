@@ -18,7 +18,8 @@ import { loadRecentsFromService } from "../api/state/actions";
 import { SearchDialog } from "./search/SearchDialog";
 import { CuiDocsDashboard } from "./main/docs/dashboard";
 import { CUI_LIGHT_VERSION } from "../../node_modules/cui-light/dist/index";
-import { VERSION } from "../../node_modules/bpd-cui-icons/index";
+import { CUI_STYLES_VERSION } from "../../node_modules/cui-styles/index";
+import { CUI_ICONS_VERSION } from "../../node_modules/bpd-cui-icons/index";
 
 
 export interface AppProps {
@@ -113,8 +114,8 @@ export class App extends React.Component<AppProps, AppState> {
                             <span className="cui-icon-margin cui-icon cui-padding-small cui-text-bold" cui-icon="git"> Git links</span>
                             <ul className="cui-drop-nav">
                                 <li><a href="https://github.com/bpd-d/cui-light">cUI Light {CUI_LIGHT_VERSION}</a></li>
-                                <li><a href="https://github.com/bpd-d/cui-styles">cUI Styles </a></li>
-                                <li><a href="https://github.com/bpd-d/cui-icons">cUI Icons {VERSION}</a></li>
+                                <li><a href="https://github.com/bpd-d/cui-styles">cUI Styles {CUI_STYLES_VERSION}</a></li>
+                                <li><a href="https://github.com/bpd-d/cui-icons">cUI Icons {CUI_ICONS_VERSION}</a></li>
                             </ul>
                         </div>
                     </div>
