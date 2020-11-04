@@ -70,10 +70,10 @@ function getListItem(text: string): ParserNode {
     }
 }
 
-export const dropExample: ParserNode = createDrop("", "cui-drop-bottom-left", [getSimpleContent("Drop content")])
-export const dropNavExample: ParserNode = createDrop("", "cui-drop-bottom-left", [getList()])
-export const dropHoverExample: ParserNode = createDrop("mode: hover", "cui-drop-bottom-left", [getList()])
-export const dropAutoExample: ParserNode = createDrop("autoClose: Y", "cui-drop-bottom-left", [getList()])
+export const dropExample: ParserNode = createDrop("", "", [getSimpleContent("Drop content")])
+export const dropNavExample: ParserNode = createDrop("", "", [getList()])
+export const dropHoverExample: ParserNode = createDrop("mode: hover", "", [getList()])
+export const dropAutoExample: ParserNode = createDrop("autoClose: Y", "", [getList()])
 
 export const CuiDocsDropScript: DocsScript = {
     sections: [
@@ -91,14 +91,15 @@ export const CuiDocsDropScript: DocsScript = {
         },
         {
             name: "Position",
-            description: "Dropdown can be placed in any position in relation to the parent element. There are few predefined classes that help with it:",
+            description: `Dropdown can be placed in any position in relation to the parent element. It is calculated automatically based on drop size and trigger position. 
+            Default position is: bottom-left, however this can be changed by setting option pos to one of following values:`,
             list: [
-                { name: "cui-drop-top-left", description: "Places dropdown in top left corner of the parent" },
-                { name: "cui-drop-top-center", description: "Places dropdown in top part of the parent" },
-                { name: "cui-drop-top-right", description: "Places dropdown in top left corner of the parent" },
-                { name: "cui-drop-bottom-left", description: "Places dropdown in bottom left corner of the parent" },
-                { name: "cui-drop-bottom-center", description: "Places dropdown in bottom part of the parent" },
-                { name: "cui-drop-bottom-right", description: "Places dropdown in bottom right corner of the parent" },
+                { name: "top-left", description: "Places dropdown in top left corner of the parent" },
+                { name: "top-center", description: "Places dropdown in top part of the parent" },
+                { name: "top-right", description: "Places dropdown in top left corner of the parent" },
+                { name: "bottom-left", description: "Places dropdown in bottom left corner of the parent" },
+                { name: "bottom-center", description: "Places dropdown in bottom part of the parent" },
+                { name: "bottom-right", description: "Places dropdown in bottom right corner of the parent" },
             ]
         },
         {
@@ -120,7 +121,7 @@ export const CuiDocsDropScript: DocsScript = {
                 { name: "prevent", description: "Prevents default click/hover event behavior on trigger", type: "boolean", defaultValue: "false" },
                 { name: "outClose", description: "Click outside of drop area will close it", type: "boolean", defaultValue: "true" },
                 { name: "autoClose", description: "Automatically closes drop after timeout when user not hovering drop area", type: "boolean", defaultValue: "false" },
-                { name: "escClose", description: "Closes drop after Esc keyboard key was clicked", type: "boolean", defaultValue: "false" },
+                { name: "pos", description: "Dropdown position in relation to trigger", type: "string", defaultValue: "bottom-left" },
             ]
         }
     ]

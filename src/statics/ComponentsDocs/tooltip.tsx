@@ -12,7 +12,7 @@ function createTooltip(text: string, cls: string): ParserNode {
     };
 }
 
-export const tooltipExample = createTooltip("Tooltip", "cui-tooltip-bottom-right");
+export const tooltipExample = createTooltip("Tooltip", "");
 
 export const CuiDocsTooltipScript: DocsScript = {
     sections: [
