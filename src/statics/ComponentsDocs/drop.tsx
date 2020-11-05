@@ -122,6 +122,24 @@ export const CuiDocsDropScript: DocsScript = {
                 { name: "outClose", description: "Click outside of drop area will close it", type: "boolean", defaultValue: "true" },
                 { name: "autoClose", description: "Automatically closes drop after timeout when user not hovering drop area", type: "boolean", defaultValue: "false" },
                 { name: "pos", description: "Dropdown position in relation to trigger", type: "string", defaultValue: "bottom-left" },
+                { name: "margin", description: "Drop margin from trigger", type: "number", defaultValue: "8" },
+                { name: "timeout", description: "Timeout (in ms) for auto close task", type: "number", defaultValue: "3000" },
+            ]
+        },
+        {
+            name: "Events",
+            description: "Drop supports follwing events:",
+            list: [
+                { name: "open", description: "Openes a drop component" },
+                { name: "close", description: "Closes a drop component" },
+            ]
+        },
+        {
+            name: "Emits",
+            description: "Drop emits follwing events:",
+            list: [
+                { name: "opened", description: "Emitted after component is opened" },
+                { name: "closed", description: "Emitted after component is closed" },
             ]
         }
     ]

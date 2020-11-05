@@ -64,10 +64,11 @@ const secondExample: ParserNode = {
         {
             tag: "div",
             attributes: { "id": "close-cover-01" },
+            classes: ["cui-cover"],
             children: [
                 {
                     tag: "div",
-                    classes: ["cui-dialog-container cui-padding"],
+                    classes: ["cui-padding"],
                     children: [
                         { tag: "button", attributes: { "cui-close": "#close-cover-01" }, classes: ["cui-button", "cui-default"], text: "Close cover" }
                     ]
@@ -78,10 +79,11 @@ const secondExample: ParserNode = {
         {
             tag: "div",
             attributes: { "id": "close-cover-02" },
+            classes: ["cui-cover"],
             children: [
                 {
                     tag: "div",
-                    classes: ["cui-dialog-container cui-padding"],
+                    classes: ["cui-padding"],
                     children: [
                         { tag: "button", attributes: { "cui-close": "target: #close-cover-02; action:.cui-anim-fade-out" }, classes: ["cui-button", "cui-default"], text: "Close cover" }
                     ]
@@ -113,7 +115,7 @@ export const CuiDocsOpenScript: DocsScript = {
             name: "Non cUI target",
             description: <>If target is not a cUI component, it adds class <span className="style-class">cui-active</span> on it. Beside it can perfrom an action if timeout and action is defined.
             In pratice it means that first it adds class <span className="style-class">animation-progress</span> then triggers in the action (depending on action type it will be something different). Then after timeout, removes an action and progress class and sets active class in the end.</>,
-            // example: GetTabbedPreview(firstExample, "60px")
+            example: GetTabbedPreview(secondExample, "60px")
         },
         {
             name: "Options",

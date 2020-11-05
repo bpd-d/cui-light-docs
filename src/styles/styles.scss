@@ -294,6 +294,15 @@ ul.animated-list {
     height: 400px;
 }
 
+.intersection-parent {
+    height: 300px;
+}
+
+.intersection-child {
+    height: 200px;
+}
+
+
 @include mixins.media-screen-height-max-small {
     .limited-content-width {
         width: 1000px !important;

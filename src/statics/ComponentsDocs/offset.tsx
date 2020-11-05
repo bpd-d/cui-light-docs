@@ -16,7 +16,7 @@ const firstExample: ParserNode = {
             children: [
                 {
                     tag: "div",
-                    classes: ["cui-padding", "cui-background-default", "cui-position-top", "cui-sticky"],
+                    classes: ["cui-padding", "cui-background-default", "cui-sticky"],
                     text: "Sticky",
                     attributes: {
                         "id": "offset-test-01"

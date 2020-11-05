@@ -2,6 +2,28 @@ import * as React from "react";
 import { ParserNode } from "../../api/DocsElementParser/interfaces";
 import { DocsScript } from "../../components/docs/base";
 import { GetTabbedPreview } from "../../components/partials/preview";
+
+function createIndicator(...cls: string[]): ParserNode {
+    return {
+        tag: "ul",
+        classes: ["cui-switcher-indicator", ...cls],
+        children: [
+            createIndLi(),
+            createIndLi(),
+            createIndLi("cui-active"),
+            createIndLi(),
+            createIndLi(),
+        ]
+    }
+}
+
+function createIndLi(...cls: string[]): ParserNode {
+    return {
+        tag: "li",
+        classes: [...cls],
+
+    }
+}
 function createLi(text: string): ParserNode {
     return {
         tag: "li",
@@ -80,6 +102,28 @@ const firstExample: ParserNode = {
     ]
 }
 
+
+const thirdExample: ParserNode = {
+    tag: "div",
+    children: [
+        {
+            tag: "div",
+            classes: ["cui-padding", "cui-flex-center"],
+            children: [
+                createIndicator()
+            ]
+        },
+        {
+            tag: "div",
+            classes: ["cui-padding", "cui-flex-center"],
+            children: [
+                createIndicator("cui-small")
+            ]
+        }
+
+    ],
+}
+
 export const CuiDocsSwitcherScript: DocsScript = {
     sections: [
         {
@@ -88,6 +132,17 @@ export const CuiDocsSwitcherScript: DocsScript = {
             It can always trigger specific index or choose one according to position of clicked list item if set on <span className="style-element">UL</span>.
             </>,
             example: GetTabbedPreview(firstExample, "170px")
+        },
+        {
+            name: "Indicator",
+            description: <>There are different kinds of switchers available in cUI. Most popular showed around this whole page is a <span className="style-class">cui-tab</span>.
+            Other switcher, simpler option, is a common button with attribute <span className="style-class">cui-switcher</span>.
+            There are also indicators available as elliptical simple shapes:</>,
+            example: GetTabbedPreview(thirdExample, "150px")
+        },
+        {
+            name: "Events",
+            description: `Component does not support any events. To change switcher, call switch event on linked component.`
         },
         {
             name: "Emits",
