@@ -11,6 +11,8 @@ import { ViewRecentStorageService } from "./api/services/ViewRecents";
 import { BpdStateManagerConfig } from "../node_modules/bpd-state-manager/dist/esm/interfaces";
 import { StateErrorHandler } from "./api/state/handlers";
 
+export const CUI_DOCS_VER = "0.0.1";
+
 declare global {
     interface Window {
         cuiInit: CuiInit;

@@ -302,6 +302,13 @@ ul.animated-list {
     height: 200px;
 }
 
+.scrollspy-parent {
+    height: 300px;
+}
+
+.scrollspy-child {
+    height: 200px;
+}
 
 @include mixins.media-screen-height-max-small {
     .limited-content-width {

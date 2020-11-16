@@ -98,7 +98,7 @@ export const CuiDocsOffsetScript: DocsScript = {
             name: "Emits",
             description: `Offset emits following events:`,
             list: [
-                { name: "offset", description: "Emitted when action is triggered on and off and perodically every certain amount of pixels" }
+                { name: "offset", description: "Emitted when action is triggered on and off and perodically every certain amount of pixels. Offset emits also scroll ratio which tell how much scroll is progressed" }
             ]
         }
     ]

@@ -42,6 +42,8 @@ import { CuiDocsOffsetScript } from "./offset"
 import { CuiDocsOpenScript } from "./open"
 import { CuiDocsStickyScript } from "./sticky"
 import { CuiDocsIntersectionScript } from "./intersection"
+import { CuiDocsScrollSpyScript } from "./scrollspy"
+import { CuiDocsTransitionScript } from "./transition"
 
 export const COMPONENTS = {
     container: "container",
@@ -103,7 +105,7 @@ export const cuiComponents: CuiDocsComponents = {
     "heading": { name: "Heading", uri: "/docs/components/heading", description: "Styling options for heading elements", script: CuiDocsHeadingsScript },
     "position": { name: "Position", uri: "/docs/components/position", description: "Position", script: CuiDocsPositionScript },
     "sticky": { name: "Sticky", uri: "/docs/components/sticky", description: "Creates element that stick to specific position", script: CuiDocsStickyScript },
-    "transition": { name: "Transitions", uri: "/docs/components/transition", description: "Add transitions to element on hover" },
+    "transition": { name: "Transitions", uri: "/docs/components/transition", description: "Add transitions to element on hover", script: CuiDocsTransitionScript },
     "visibility": { name: "Visibility", uri: "/docs/components/visibility", description: "Allows to show and hide elements" },
     "width": { name: "Width", uri: "/docs/components/width", description: "Set of width options for components", script: CuiDocsWidthScript },
     "circle": { name: "Circle", uri: "/docs/components/circle", description: "Custom progress bar created on circle", script: CuiDocsCircleScript },
@@ -111,7 +113,7 @@ export const cuiComponents: CuiDocsComponents = {
     "open": { name: "Open", uri: "/docs/components/open", description: "Allows to open other cUI components", script: CuiDocsOpenScript },
     "intersection": { name: "Intersection", uri: "/docs/components/intersection", description: "Triggers actions when elements are intersecting the viewport", script: CuiDocsIntersectionScript },
     "offset": { name: "Offset", uri: "/docs/components/offset", description: "Offset", script: CuiDocsOffsetScript },
-    "scrollspy": { name: "Scrollspy", uri: "/docs/components/scrollspy", description: "Triggers specific actions on user scoll" },
+    "scrollspy": { name: "Scrollspy", uri: "/docs/components/scrollspy", description: "Triggers specific actions on user scoll", script: CuiDocsScrollSpyScript },
     "toggle": { name: "Toggle", uri: "/docs/components/toggle", description: "Toggles an action on target element", script: CuiDocsToggleScript },
     "resize": { name: "Resize", uri: "/docs/components/resize", description: "Work in progress" },
     "icon": { name: "Icon", uri: "/docs/components/icon", description: "Predefined styles for svg icons", script: CuiDocsIconScript },
