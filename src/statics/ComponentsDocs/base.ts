@@ -44,6 +44,7 @@ import { CuiDocsStickyScript } from "./sticky"
 import { CuiDocsIntersectionScript } from "./intersection"
 import { CuiDocsScrollSpyScript } from "./scrollspy"
 import { CuiDocsTransitionScript } from "./transition"
+import { CuiDocsSwitchScript } from "./switch"
 
 export const COMPONENTS = {
     container: "container",
@@ -118,7 +119,7 @@ export const cuiComponents: CuiDocsComponents = {
     "resize": { name: "Resize", uri: "/docs/components/resize", description: "Work in progress" },
     "icon": { name: "Icon", uri: "/docs/components/icon", description: "Predefined styles for svg icons", script: CuiDocsIconScript },
     "height": { name: "Height", uri: "/docs/components/height", description: "Customization for heights of the element" },
-    "switch": { name: "Switch", uri: "/docs/components/switch", description: "Switch elements in view" },
+    "switch": { name: "Switch", uri: "/docs/components/switch", description: "Switch elements in view", script: CuiDocsSwitchScript },
     "slider": { name: "Slider", uri: "/docs/components/slider", description: "Switch elements by sliding", script: CuiDocsSliderScript },
     "sortable": { name: "Sortable", uri: "/docs/components/sortable", description: "Reorders children in list", script: CuiDocsSortableScript }
 }
