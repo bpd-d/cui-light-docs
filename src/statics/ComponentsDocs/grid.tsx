@@ -149,6 +149,17 @@ export const CuiDocsGridScript: DocsScript = {
             To make them all of a equal height, add class <span className="style-class">cui-flex-grid-match</span>.
             If cUI Card element is used as child, body can be strechted out accordingly to element height leaving header and footer not changed:</>,
             example: GetTabbedPreview(fourthExample, "370px")
+        },
+        {
+            name: "CSS options",
+            description: "Component name is grid and supports following CSS build options:",
+            list: [
+                { name: "align", description: "Adds grid aligning options" },
+                { name: "match", description: "Adds grid match class for children" },
+                { name: "space", description: "Adds grid spacing options" },
+                { name: "width", description: "Adds child width classes" },
+                { name: "repsonsive", description: "Adds responsive width classes" }
+            ]
         }
     ]
 }

@@ -122,6 +122,15 @@ export const CuiDocsOffcanvas: DocsScript = {
                 { name: "opened", description: "Emitted after offcanvas is opened" },
                 { name: "closed", description: "Emitted after offcanvas is closed" }
             ]
+        },
+        {
+            name: "CSS options",
+            description: "Component name is offcanvas and supports following CSS build options:",
+            list: [
+                { name: "dark", description: "Adds dark mode styling" },
+                { name: "print", description: "Adds print mode styling" },
+                { name: "animation", description: "Adds support for transition effect" },
+            ]
         }
     ]
 }

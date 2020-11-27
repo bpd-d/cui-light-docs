@@ -55,6 +55,14 @@ export const CuiDocsSeparatorScript: DocsScript = {
             name: "Containers",
             description: "Separator will adapt to theme of other cUI elements. If place in accented container it will revert colors:",
             example: GetTabbedPreview(thirdExample, "70px")
+        },
+        {
+            name: "CSS options",
+            description: "Component name is separator and supports following CSS build options:",
+            list: [
+                { name: "dark", description: "Adds dark mode styling" },
+                { name: "theme", description: "Adds theme color classes" },
+            ]
         }
     ]
 }

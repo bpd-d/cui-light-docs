@@ -94,5 +94,17 @@ export const CuiDocsContainerScript: DocsScript = {
                 height: "240px"
             }, 'tabbed')
         },
+        {
+            name: "CSS options",
+            description: "Component name is container and supports following CSS build options:",
+            list: [
+                { name: "dark", description: "Adds dark mode styling" },
+                { name: "print", description: "Adds print mode styling" },
+                { name: "theme", description: "Adds theme colored badge options" },
+                { name: "space", description: "Adds container space classes" },
+                { name: "lean", description: "Adds container lean classes" },
+                { name: "center", description: "Adds container center classes" },
+            ]
+        }
     ]
 }

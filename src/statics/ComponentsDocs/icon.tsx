@@ -200,6 +200,18 @@ export const CuiDocsIconScript: DocsScript = {
                 { name: "size", description: "Default icon size is 20x20, but it is not required" },
                 { name: "fill", description: "Paths supporting cui-fill must contain class: fill" }
             ]
+        },
+        {
+            name: "CSS options",
+            description: "Component name is icon and supports following CSS build options:",
+            list: [
+                { name: "dark", description: "Adds dark mode styling" },
+                { name: "print", description: "Adds print mode styling" },
+                { name: "theme", description: "Adds theme color classes" },
+                { name: "signal", description: "Adds signal color options" },
+                { name: "fill", description: "Adds icon fill classes" },
+                { name: "nav", description: "Adds icon navigation classes" },
+            ]
         }
     ]
 }

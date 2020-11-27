@@ -45,6 +45,29 @@ function createSwitcher(text: string, options: string, ...cls: string[]): Parser
     }
 }
 
+function createIndicator(id: string, ...cls: string[]): ParserNode {
+    return {
+        tag: "ul",
+        classes: ["cui-switcher-indicator"],
+        attributes: {
+            id: id,
+        },
+        children: [
+            createIndicatorChild(),
+            createIndicatorChild(),
+            createIndicatorChild(),
+            createIndicatorChild(),
+        ]
+    }
+}
+
+function createIndicatorChild(cls?: string): ParserNode {
+    return {
+        tag: "li",
+        classes: cls ? [cls] : [],
+    }
+}
+
 const firstExample: ParserNode = {
     tag: "div",
     children: [
@@ -75,6 +98,26 @@ const thirdExample: ParserNode = {
     ]
 }
 
+const fourthExample: ParserNode = {
+    tag: "div",
+    children: [
+        {
+            tag: "div",
+            children: [
+                createSwitcher("Previous", "target: #switch-test-005; index: prev"),
+                createSwitcher("Next", "target: #switch-test-005; index: next", "cui-margin-left"),
+            ]
+        },
+        createSwitch("switch-test-005", "links: #switch-ind-001 > li", "cui-margin-small-top"),
+        {
+            tag: "div",
+            classes: ["cui-padding", "cui-flex-center"],
+            children: [
+                createIndicator("switch-ind-001")
+            ]
+        }
+    ]
+}
 
 export const CuiDocsSwitchScript: DocsScript = {
     sections: [
@@ -86,6 +129,13 @@ export const CuiDocsSwitchScript: DocsScript = {
             Elements can be switched with or without an animation.
             Also it is possible to remotely switch elements using <span className="style-class">Switcher</span> or by calling an event.</>,
             example: GetTabbedPreview(firstExample, "140px")
+        },
+        {
+            name: "Links",
+            description: <>Switch is able to change state of linked item (switcher or indicator) on self state change.
+            To set it up, add option <span className="style-element">links</span> and provide selector to collection of items that need to have set class <span className="style-class">cui-active</span> on switch state change.
+            Most common usage example would be a tab element like all examples are shown in documentation, but following example shows different usage:</>,
+            example: GetTabbedPreview(fourthExample, "200px")
         },
         {
             name: "Auto",
@@ -109,7 +159,8 @@ export const CuiDocsSwitchScript: DocsScript = {
                 { name: "autoTimeout", type: "number", defaultValue: "-1", description: "Turns on task to automatic switch" },
                 { name: "links", type: "selector", defaultValue: "null", description: "selector to linked items, like switcher - to be changed on switch change" },
                 { name: "switch", type: "selector", defaultValue: "null", description: "selector to other switch components - for synchronized switch" },
-                { name: "height", type: "string | auto", defaultValue: "auto", description: "Sets height of the element - static value or automatically calculated" }
+                { name: "height", type: "string | auto", defaultValue: "auto", description: "Sets height of the element - static value or automatically calculated" },
+                { name: "loop", type: "boolean", defaultValue: "false", description: "Determines whether children are switched in loop - affects only indexes: next and prev" }
             ]
         },
         {
@@ -129,14 +180,3 @@ export const CuiDocsSwitchScript: DocsScript = {
         }
     ]
 }
-
-/**
- *     targets: string;
-    in: string;
-    out: string;
-    timeout: number;
-    links: string;
-    switch: string;
-    autoTimeout: number;
-    height: 'auto' | string;
- */

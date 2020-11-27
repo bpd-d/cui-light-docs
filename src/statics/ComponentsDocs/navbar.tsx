@@ -149,8 +149,17 @@ export const CuiDocsNavbarScript: DocsScript = {
             To use it, add cui-navbar item to anchor element. Also add cui-active to link indicating current page.
             Navbar item comes with two themed options: cui-accent and cui-secondary:`,
             example: GetTabbedPreview(navbarItemExample)
+        },
+        {
+            name: "CSS options",
+            description: "Component name is navbar and supports following CSS build options:",
+            list: [
+                { name: "dark", description: "Adds dark mode styling" },
+                { name: "print", description: "Adds print mode styling" },
+                { name: "theme", description: "Adds theme color classes to navbar items" },
+                { name: "responsive", description: "Adds responsive navbar options" },
+                { name: "animation", description: "Adds support for transition effect in navbar item" },
+            ]
         }
-
-
     ]
 }

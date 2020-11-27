@@ -278,6 +278,20 @@ export const CuiDocsCardScript: DocsScript = {
             description: (<>There is an option to create aside card with image filling up a part of card and content the rest: </>),
             example: GetTabbedPreview(asideCardExample)
         },
+        {
+            name: "CSS options",
+            description: "Component name is card and supports following CSS build options:",
+            list: [
+                { name: "dark", description: "Adds dark mode styling" },
+                { name: "print", description: "Adds print mode styling" },
+                { name: "theme", description: "Adds theme colored card options" },
+                { name: "signal", description: "Adds signal colored card options" },
+                { name: "inverse", description: "Adds inversed color card options" },
+                { name: "large", description: "Adds larger padding stying classes" },
+                { name: "side", description: "Adds classes for side card" },
+                { name: "hover", description: "Adds classes for card hover effect" },
+            ]
+        }
 
     ]
 }

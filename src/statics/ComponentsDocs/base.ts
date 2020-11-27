@@ -45,6 +45,9 @@ import { CuiDocsIntersectionScript } from "./intersection"
 import { CuiDocsScrollSpyScript } from "./scrollspy"
 import { CuiDocsTransitionScript } from "./transition"
 import { CuiDocsSwitchScript } from "./switch"
+import { CuiDocsInputScript } from "./input"
+import { CuiDocsVisibilityScript } from "./visibility"
+import { CuiDocProgressScript } from "./progress"
 
 export const COMPONENTS = {
     container: "container",
@@ -89,7 +92,7 @@ export const cuiComponents: CuiDocsComponents = {
     "drop": { name: "Drop", uri: "/docs/components/drop", description: "Creates drop and dropdowns", script: CuiDocsDropScript },
     "float": { name: "Float", uri: "/docs/components/float", description: "Movable and resizable floating elements", script: CuiDocsFloatScript },
     "navbar": { name: "Navbar", uri: "/docs/components/navbar", description: "Navigation bar for the web page", script: CuiDocsNavbarScript },
-    "input": { name: "Input", uri: "/docs/components/input", description: "Set of forms and input elements" },
+    "input": { name: "Input", uri: "/docs/components/input", description: "Set of forms and input elements", script: CuiDocsInputScript },
     "link": { name: "Link", uri: "/docs/components/link", description: "Styled anchor elements", script: CuiDocsLinkScript },
     "shadow": { name: "Shadow", uri: "/docs/components/shadow", description: "Styled anchor elements", script: CuiDocsShadowElement },
     "list": { name: "List", uri: "/docs/components/list", description: "Styled lists with options", script: CuiDocsListScript },
@@ -107,7 +110,7 @@ export const cuiComponents: CuiDocsComponents = {
     "position": { name: "Position", uri: "/docs/components/position", description: "Position", script: CuiDocsPositionScript },
     "sticky": { name: "Sticky", uri: "/docs/components/sticky", description: "Creates element that stick to specific position", script: CuiDocsStickyScript },
     "transition": { name: "Transitions", uri: "/docs/components/transition", description: "Add transitions to element on hover", script: CuiDocsTransitionScript },
-    "visibility": { name: "Visibility", uri: "/docs/components/visibility", description: "Allows to show and hide elements" },
+    "visibility": { name: "Visibility", uri: "/docs/components/visibility", description: "Allows to show and hide elements", script: CuiDocsVisibilityScript },
     "width": { name: "Width", uri: "/docs/components/width", description: "Set of width options for components", script: CuiDocsWidthScript },
     "circle": { name: "Circle", uri: "/docs/components/circle", description: "Custom progress bar created on circle", script: CuiDocsCircleScript },
     "close": { name: "Close", uri: "/docs/components/close", description: "Allows to close other cUI components", script: CuiDocsCloseScript },
@@ -121,5 +124,6 @@ export const cuiComponents: CuiDocsComponents = {
     "height": { name: "Height", uri: "/docs/components/height", description: "Customization for heights of the element" },
     "switch": { name: "Switch", uri: "/docs/components/switch", description: "Switch elements in view", script: CuiDocsSwitchScript },
     "slider": { name: "Slider", uri: "/docs/components/slider", description: "Switch elements by sliding", script: CuiDocsSliderScript },
-    "sortable": { name: "Sortable", uri: "/docs/components/sortable", description: "Reorders children in list", script: CuiDocsSortableScript }
+    "sortable": { name: "Sortable", uri: "/docs/components/sortable", description: "Reorders children in list", script: CuiDocsSortableScript },
+    "progress": { name: "Progress", uri: "/docs/components/progress", description: "Customized progress bars", script: CuiDocProgressScript },
 }

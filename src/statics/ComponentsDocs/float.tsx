@@ -108,6 +108,14 @@ export const CuiDocsFloatScript: DocsScript = {
                 { name: "opened", description: "Emitted after float is opened" },
                 { name: "closed", description: "Emitted after float is closed" }
             ]
+        },
+        {
+            name: "CSS options",
+            description: "Component name is float and supports following CSS build options:",
+            list: [
+                { name: "dark", description: "Adds dark mode styling" },
+                { name: "animation", description: "Adds default animation/transition classes" },
+            ]
         }
 
     ]

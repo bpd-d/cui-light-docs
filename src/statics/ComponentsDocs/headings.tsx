@@ -32,6 +32,17 @@ export const CuiDocsHeadingsScript: DocsScript = {
                 { name: "cui-h4", description: "Bold style, with default font size" }
             ],
             example: GetTabbedPreview(firstExample, "250px")
+        },
+        {
+            name: "CSS options",
+            description: "Component name is heading and supports following CSS build options:",
+            list: [
+                { name: "title", description: "Adds title classes" },
+                { name: "h1", description: "Adds h1 classes" },
+                { name: "h2", description: "Adds h2 classes" },
+                { name: "h3", description: "Adds h3 classes" },
+                { name: "h4", description: "Adds h4 classes" }
+            ]
         }
     ]
 }

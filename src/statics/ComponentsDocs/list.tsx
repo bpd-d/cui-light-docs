@@ -52,6 +52,7 @@ export const listSmallExample = createList("cui-small");
 export const listHoverExample = createList("cui-hover");
 export const listStrippedExample = createList("cui-stripped");
 export const listBulletExample = createList("cui-bullet");
+export const listBulletShadeExample = createList("cui-bullet-shade");
 export const listInteractiveExample = createInteractiveList("cui-interactive");
 export const listInteractiveAccentExample = createInteractiveList("cui-interactive", "cui-accent");
 export const listInteractiveSecondaryExample = createInteractiveList("cui-interactive", "cui-secondary");
@@ -84,19 +85,40 @@ export const CuiDocsListScript: DocsScript = {
             example: GetTabbedPreview(listBulletExample, "200px")
         },
         {
+            name: "Bullet shade",
+            description: "Add item bullet indicator with class cui-bullet-shade:",
+            example: GetTabbedPreview(listBulletShadeExample, "200px")
+        },
+        {
             name: "Interactive",
             description: "To create interactive list add cui-interactive to ul and have list items to inculde an anchor:",
-            example: GetTabbedPreview(listInteractiveExample, "200px")
+            example: GetTabbedPreview(listInteractiveExample, "210px")
         },
         {
             name: "Interactive accent",
             description: "Style interactive list with accent colors:",
-            example: GetTabbedPreview(listInteractiveAccentExample, "200px")
+            example: GetTabbedPreview(listInteractiveAccentExample, "210px")
         },
         {
             name: "Interactive secondary",
             description: "Style interactive list with secondary colors:",
-            example: GetTabbedPreview(listInteractiveSecondaryExample, "200px")
+            example: GetTabbedPreview(listInteractiveSecondaryExample, "210px")
+        },
+        {
+            name: "CSS options",
+            description: "Component name is list and supports following CSS build options:",
+            list: [
+                { name: "dark", description: "Adds dark mode styling" },
+                { name: "print", description: "Adds print mode styling" },
+                { name: "theme", description: "Adds theme color classes" },
+                { name: "interactive", description: "Adds list interactive classes" },
+                { name: "bullet", description: "Adds list bullet indicator classes" },
+                { name: "bullet-shade", description: "Adds list bullet shade indicator classes" },
+                { name: "hover", description: "Adds list hover option" },
+                { name: "small", description: "Adds list small option" },
+                { name: "inline", description: "Adds list inline option" },
+                { name: "stripped", description: "Adds list stripped classes" },
+            ]
         }
     ]
 

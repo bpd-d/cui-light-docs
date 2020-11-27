@@ -138,6 +138,16 @@ export const CuiDocsBannerScript: DocsScript = {
                 { name: "opened", description: "Emitted after banner is opened" },
                 { name: "closed", description: "Emitted after banner is closed" }
             ]
+        },
+        {
+            name: "CSS options",
+            description: "Component name is banner and supports following CSS build options:",
+            list: [
+                { name: "dark", description: "Adds dark mode styling" },
+                { name: "print", description: "Adds print mode styling" },
+                { name: "theme", description: "Adds theme colored banner options" },
+                { name: "signal", description: "Adds signal colored banner options" }
+            ]
         }
     ]
 }

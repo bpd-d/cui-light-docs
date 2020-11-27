@@ -150,6 +150,26 @@ export const CuiDocsSwitcherScript: DocsScript = {
             list: [
                 { name: "switch", description: "Emitted on click action" }
             ]
+        },
+        {
+            name: "CSS options",
+            description: "Component name is switcher and supports following CSS build options:",
+            list: [
+                { name: "dark", description: "Adds dark mode styling" },
+                { name: "print", description: "Adds print mode styling" },
+                { name: "shade", description: "Adds shade indicator classes" },
+                { name: "small", description: "Adds indicator small classes" },
+            ]
+        },
+        {
+            name: "CSS tab options",
+            description: "Component name is tab and supports following CSS build options:",
+            list: [
+                { name: "dark", description: "Adds dark mode styling" },
+                { name: "print", description: "Adds print mode styling" },
+                { name: "theme", description: "Adds theme color classes" },
+                { name: "side", description: "Adds side option classes" },
+            ]
         }
     ]
 }

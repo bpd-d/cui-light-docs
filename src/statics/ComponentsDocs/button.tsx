@@ -39,6 +39,7 @@ const secondExample: ParserNode = {
         createButtonWrap(createButton("Button warning", "cui-warning"), "cui-margin-top"),
         createButtonWrap(createButton("Button success", "cui-success"), "cui-margin-top"),
         createButtonWrap(createButton("Button rounded", "cui-rounded", "cui-default"), "cui-margin-top"),
+        createButtonWrap(createButton("Button disabled", "cui-disabled"), "cui-margin-top"),
     ]
 }
 
@@ -79,7 +80,7 @@ export const CuiDocsComponentButtonScript: DocsScript = {
             description: (<>Buttons come with handy classes which add themes color or appearance styling to element.
             Add <span className="style-class">cui-accent</span> or <span className="style-class">cui-secondary</span> to the component to set theme base color or set <span className="style-class">cui-rounded</span> to get nicely rounded corners on the button.
             Component also supports signals: error, warning and success</>),
-            example: GetTabbedPreview(secondExample, "400px")
+            example: GetTabbedPreview(secondExample, "450px")
         },
         {
             name: "Sizes",
@@ -94,6 +95,17 @@ export const CuiDocsComponentButtonScript: DocsScript = {
             For themes and signals (except of sections and hints) use proper accent class e.g. <span className="style-class">cui-accent</span> or <span className="style-class">cui-error</span> on the parent. Framework will apply colors from inverted (dark) palette which make buttons visible.
             This doesn't have to be done for accented buttons because theirs styling does not change in dark theme. For better look, see example below which is based on themed container:</>),
             example: GetTabbedPreview(fourthExample, "250px")
+        },
+        {
+            name: "CSS options",
+            description: "Component name is button and supports following CSS build options:",
+            list: [
+                { name: "dark", description: "Adds dark mode styling" },
+                { name: "print", description: "Adds print mode styling" },
+                { name: "theme", description: "Adds theme colored button options" },
+                { name: "signal", description: "Adds signal colored button options" },
+                { name: "nav", description: "Adds support for button navigation" }
+            ]
         }
 
     ]

@@ -135,6 +135,23 @@ export const CuiDocsSpacesScript: DocsScript = {
                 { name: "cui-margin-remove", description: "Removes margin for all element side" },
                 { name: "cui-margin-remove-SIDE", description: "Removes margin from element on specifi side" }
             ]
+        },
+        {
+            name: "CSS options",
+            description: "Component name is spaces and supports following CSS build options:",
+            list: [
+                { name: "margin", description: "Adds base margin classes" },
+                { name: "padding", description: "Adds base padding classes" },
+                { name: "remove", description: "Adds remove classes to padding and margin" },
+                { name: "small", description: "Adds small classes to padding and margin" },
+                { name: "large", description: "Adds large classes to padding and margin" },
+                { name: "auto", description: "Adds margin auto classes" },
+                { name: "responsive", description: "Adds responsive options to small/large/remove/auto classes in padding and margin" },
+                { name: "clearfix", description: "Adds clearfix option class" },
+                { name: "display", description: "Adds block/inline/inline-block classes" },
+                { name: "wrapper", description: "Adds a wrapper class" },
+                { name: "overflow", description: "Adds an overflow classes" },
+            ]
         }
     ]
 }

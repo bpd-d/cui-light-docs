@@ -53,6 +53,13 @@ export const CuiDocsWidthScript: DocsScript = {
             Responsive option sets width for indicated size and bigger, e.g. cui-width-1-3--m will set width of 33% to medium screen sizes and bigger.
             Following example sets 1/6 generally for screen sizes up to medium size, then 1/4 on screens between medium and large an then it sets 1/3 on screen size large and bigger:`,
         example: GetTabbedPreview(secondExample, "60px")
+    },
+    {
+        name: "CSS options",
+        description: "Component name is link and supports following CSS build options:",
+        list: [
+            { name: "responsive", description: "Adds responsive options to width classes" },
+        ]
     }
     ]
 }

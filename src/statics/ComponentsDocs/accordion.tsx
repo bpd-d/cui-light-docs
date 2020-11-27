@@ -56,7 +56,7 @@ export const AccordionDocsScript: DocsScript = {
         {
             name: "Expand",
             description: "Accordion allows to control items expand bahavior set option single to true or false:",
-            example: GetTabbedPreview(accordionExampleSingle, '270ps')
+            example: GetTabbedPreview(accordionExampleSingle, '270px')
         },
         {
             name: "Options",
@@ -79,6 +79,14 @@ export const AccordionDocsScript: DocsScript = {
             //     ]
             // }
         },
-
+        {
+            name: "CSS options",
+            description: "Accordion name is accordion and supports following CSS build options:",
+            list: [
+                { name: "dark", description: "Adds dark mode styling" },
+                { name: "print", description: "Adds print mode styling" },
+                { name: "animation", description: "Adds animation/transition options" }
+            ]
+        }
     ]
 }

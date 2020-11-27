@@ -96,6 +96,15 @@ export const CuiDocsCoverScript: DocsScript = {
                 { name: "opened", description: "Emitted after cover is opened" },
                 { name: "closed", description: "Emitted after cover is closed" }
             ]
+        },
+        {
+            name: "CSS options",
+            description: "Component name is cover and supports following CSS build options:",
+            list: [
+                { name: "dark", description: "Adds dark mode styling" },
+                { name: "print", description: "Adds print mode styling" },
+                { name: "animation", description: "Adds transitions effects to cover" }
+            ]
         }
     ]
 }

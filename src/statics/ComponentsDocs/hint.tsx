@@ -72,6 +72,16 @@ export const CuiDocsHintScript: DocsScript = {
                 { name: "cui-success", description: "Gives a success signal background and colors" },
             ],
             example: GetTabbedPreview(thirdExample, "750px")
+        },
+        {
+            name: "CSS options",
+            description: "Component name is hint and supports following CSS build options:",
+            list: [
+                { name: "dark", description: "Adds dark mode styling" },
+                { name: "print", description: "Adds print mode styling" },
+                { name: "theme", description: "Adds theme coloring classes" },
+                { name: "signal", description: "Adds signal coloring classes" }
+            ]
         }
     ]
 }

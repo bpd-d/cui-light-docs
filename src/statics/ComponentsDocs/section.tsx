@@ -26,6 +26,14 @@ export const CuiDocsSectionScript: DocsScript = {
                 code: sectionFirstCode,
                 element: sectionFirst
             }, 'tabbed')
+        },
+        {
+            name: "CSS options",
+            description: "Component name is section and supports following CSS build options:",
+            list: [
+                { name: "space", description: "Adds section space classes" },
+                { name: "print", description: "Adds print mode styling" },
+            ]
         }
     ]
 }

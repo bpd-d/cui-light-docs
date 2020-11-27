@@ -46,6 +46,17 @@ export const CuiDocsLinkScript: DocsScript = {
             name: "Colors",
             description: "Links also come with signal and theme colors:",
             example: GetTabbedPreview(accentsExample)
+        },
+        {
+            name: "CSS options",
+            description: "Component name is link and supports following CSS build options:",
+            list: [
+                { name: "dark", description: "Adds dark mode styling" },
+                { name: "print", description: "Adds print mode styling" },
+                { name: "theme", description: "Adds theme color classes" },
+                { name: "signal", description: "Adds signal color classes" },
+                { name: "animation", description: "Adds support for transition effect" },
+            ]
         }
     ]
 }

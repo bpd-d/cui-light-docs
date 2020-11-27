@@ -141,6 +141,17 @@ export const CuiDocsDropScript: DocsScript = {
                 { name: "opened", description: "Emitted after component is opened" },
                 { name: "closed", description: "Emitted after component is closed" },
             ]
+        },
+        {
+            name: "CSS options",
+            description: "Component name is drop and supports following CSS build options:",
+            list: [
+                { name: "dark", description: "Adds dark mode styling" },
+                { name: "print", description: "Adds print mode styling" },
+                { name: "animation", description: "Adds default animation/transition classes" },
+                { name: "dropdown", description: "Adds dropdown classes" },
+                { name: "nav", description: "Adds drop navigation classes" },
+            ]
         }
     ]
 }

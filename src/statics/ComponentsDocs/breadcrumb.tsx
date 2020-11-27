@@ -29,5 +29,13 @@ export const BreadrumbScript: DocsScript = {
             height: "200px"
         }, 'tabbed')
 
+    },
+    {
+        name: "CSS options",
+        description: "Component name is breadcrumb and supports following CSS build options:",
+        list: [
+            { name: "dark", description: "Adds dark mode styling" },
+            { name: "print", description: "Adds print mode styling" },
+        ]
     }]
 }

@@ -78,6 +78,15 @@ export const CuiDocsBackgroundScript: DocsScript = {
                 { name: "cui-background-success", description: "Sets success light/dark component background color" },
             ],
             example: GetTabbedPreview(backgroundColorExample, '400px')
+        },
+        {
+            name: "CSS options",
+            description: "Component name is background and supports following CSS build options:",
+            list: [
+                { name: "dark", description: "Adds dark mode styling" },
+                { name: "print", description: "Adds print mode styling" },
+                { name: "colors", description: "Adds colored background options" }
+            ]
         }
     ]
 }

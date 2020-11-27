@@ -54,6 +54,14 @@ export const CuiDocsPositionScript: DocsScript = {
             name: "Float",
             description: <>HTML elements can be also positioned in relation to whole viewport by setting display property to fixed.
             To setup such element, add class <span className="style-class">cui-position-float</span> to target and mix of position classes which have been listed in previous section</>
+        },
+        {
+            name: "CSS options",
+            description: "Component name is position and supports following CSS build options:",
+            list: [
+                { name: "float", description: "Adds float positioning classes" },
+                { name: "relative", description: "Adds relative/absolute positioning classes" },
+            ]
         }
     ]
 }

@@ -108,6 +108,16 @@ export const CuiDocsDialogScript: DocsScript = {
                 { name: "opened", description: "Emitted after dialog is opened" },
                 { name: "closed", description: "Emitted after dialog is closed" }
             ]
+        },
+        {
+            name: "CSS options",
+            description: "Component name is dialog and supports following CSS build options:",
+            list: [
+                { name: "dark", description: "Adds dark mode styling" },
+                { name: "print", description: "Adds print mode styling" },
+                { name: "animation", description: "Adds default animation/transition classes" },
+                { name: "responsive", description: "Adds responsive styling to dialog" }
+            ]
         }
     ]
 }

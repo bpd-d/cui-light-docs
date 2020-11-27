@@ -168,6 +168,24 @@ export const CuiDocsTextScript: DocsScript = {
             name: 'Article',
             description: <>Gives some styling to article title and article intro description:</>,
             example: GetTabbedPreview(articleExample)
+        },
+        {
+            name: "CSS options",
+            description: "Component name is text and supports following CSS build options:",
+            list: [
+                { name: "dark", description: "Adds dark mode styling" },
+                { name: "print", description: "Adds print mode styling" },
+                { name: "theme", description: "Adds theme color classes" },
+                { name: "signal", description: "Adds signal color classes" },
+                { name: "blockquote", description: "Adds blockquote styling classes" },
+                { name: "size", description: "Adds text sizing options classes" },
+                { name: "transform", description: "Adds text transform classes" },
+                { name: "placement", description: "Adds text align and wrap classes" },
+                { name: "responsive", description: "Adds responsive classes to placement option" },
+                { name: "article", description: "Adds article styling classes" },
+                { name: "weight", description: "Adds text weight classes" },
+                { name: "decoration", description: "Adds text decoration classes" },
+            ]
         }
     ]
 }

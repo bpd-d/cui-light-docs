@@ -148,5 +148,17 @@ export const CuiDocsFlexScript: DocsScript = {
             description: <>Set class  <span className="style-class">cui-flex-center</span> on the flex container to center items vertically and horizontally:</>,
             example: GetTabbedPreview(eleventhExample, '310px')
         },
+        {
+            name: "CSS options",
+            description: "Component name is flex and supports following CSS build options:",
+            list: [
+                { name: "center", description: "Adds dark mode styling" },
+                { name: "grow", description: "Adds flex grow/shrink classes" },
+                { name: "wrap", description: "Adds flex wrapping options classes" },
+                { name: "order", description: "Adds flex order classes" },
+                { name: "align", description: "Adds flex justify/align classes" },
+                { name: "responsive", description: "Adds responsive options to align and order classes" },
+            ]
+        }
     ]
 }

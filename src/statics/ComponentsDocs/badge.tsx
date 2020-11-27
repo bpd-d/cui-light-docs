@@ -111,7 +111,14 @@ export const CuiDocsComponentBadge: DocsScript = {
                 element: badgeSecond,
                 height: "300px"
             }, 'tabbed')
+        },
+        {
+            name: "CSS options",
+            description: "Component name is badge and supports following CSS build options:",
+            list: [
+                { name: "dark", description: "Adds dark mode styling" },
+                { name: "print", description: "Adds print mode styling" },
+            ]
         }
-
     ]
 }

@@ -49,6 +49,15 @@ export const CuiDocsTooltipScript: DocsScript = {
                 { name: "action", type: "action", defaultValue: ".{prefix}-animation-tooltip-in", description: "Action to be toggled on when creating a tooltip" },
                 { name: "timeout", type: "number", defaultValue: "3000", description: "Timeout (in ms) that tooltip will be removed after" },
             ]
+        },
+        {
+            name: "CSS options",
+            description: "Component name is tooltip and supports following CSS build options:",
+            list: [
+                { name: "dark", description: "Adds dark mode styling" },
+                { name: "print", description: "Adds print mode styling" },
+                { name: "animation", description: "Adds support for transition effect" },
+            ]
         }
     ]
 }
