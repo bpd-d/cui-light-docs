@@ -3,12 +3,13 @@ import * as ReactDOM from "react-dom";
 import './styles/styles.scss';
 import { App } from "./components/app";
 import { CuiInit, CuiInitData, CuiSetupInit, CuiInstance } from "../node_modules/cui-light/dist/index";
-import { BpdStateManager } from '../node_modules/bpd-state-manager/dist/esm/index';
-import { CuiIconsPack } from '../node_modules/bpd-cui-icons/index';
+import { BpdStateManager } from 'bpd-state-manager/dist/esm/index';
+import { BpdStateManagerConfig } from "bpd-state-manager/dist/esm/interfaces";
+import { CuiIconsPack } from 'bpd-cui-icons/index';
 import { Translations } from "./api/strings/DocsTranslations/DocsTranslations";
 import { ActionsType, RecentsMutationHandler, StatesType, STATE_RECENT } from "./api/state/state";
 import { ViewRecentStorageService } from "./api/services/ViewRecents";
-import { BpdStateManagerConfig } from "../node_modules/bpd-state-manager/dist/esm/interfaces";
+
 import { StateErrorHandler } from "./api/state/handlers";
 
 export const CUI_DOCS_VER = "0.0.1";
