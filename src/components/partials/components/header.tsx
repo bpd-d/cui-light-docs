@@ -12,7 +12,7 @@ export default function DocsHeader(props: DocsHeaderProps) {
             <div className="cui-flex cui-middle cui-center cui-left--m cui-height-viewport-1-2 cui-height-viewport-1-4--m">
                 <div className="cui-text-center cui-text-left--m">
                     <h1 className="cui-article-title">{props.title}</h1>
-                    <p className="cui-article-description">{props.description}</p>
+                    <p className="">{props.description}</p>
                 </div>
 
             </div>

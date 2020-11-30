@@ -9,4 +9,5 @@ export declare const listBulletShadeExample: ParserNode;
 export declare const listInteractiveExample: ParserNode;
 export declare const listInteractiveAccentExample: ParserNode;
 export declare const listInteractiveSecondaryExample: ParserNode;
+export declare const listInlineExample: ParserNode;
 export declare const CuiDocsListScript: DocsScript;

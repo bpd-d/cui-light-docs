@@ -98,36 +98,64 @@ export const CuiDocsFlexScript: DocsScript = {
         {
             name: "Flex right",
             description: <>To place flex children on the right side of the flexbox add class <span className="style-class">cui-right</span> to container:</>,
+            hint: {
+                title: "Responsive",
+                content: "Option comes with responsive modifiers - use proper screen size suffixes to change flex behavior on different types of devices"
+            },
             example: GetTabbedPreview(secondExample, '120px')
         },
         {
             name: "Flex center",
             description: <>To center children horizontally in the flexbox add class <span className="style-class">cui-center</span> to container:</>,
+            hint: {
+                title: "Responsive",
+                content: "Option comes with responsive modifiers - use proper screen size suffixes to change flex behavior on different types of devices"
+            },
             example: GetTabbedPreview(thirdExample, '120px')
         },
         {
             name: "Flex between",
             description: <>To place children between each other in the flexbox add class <span className="style-class">cui-between</span> to container:</>,
+            hint: {
+                title: "Responsive",
+                content: "Option comes with responsive modifiers - use proper screen size suffixes to change flex behavior on different types of devices"
+            },
             example: GetTabbedPreview(fourthExample, '120px')
         },
         {
             name: "Flex space evenly",
             description: <>To place children evenly between each other and sides of the flexbox add class <span className="style-class">cui-evenly</span> to container:</>,
+            hint: {
+                title: "Responsive",
+                content: "Option comes with responsive modifiers - use proper screen size suffixes to change flex behavior on different types of devices"
+            },
             example: GetTabbedPreview(fifthExample, '120px')
         },
         {
             name: "Flex end (bottom)",
             description: <>To put childrens at the flexbox's bottom (end) add class <span className="style-class">cui-end</span> to container:</>,
+            hint: {
+                title: "Responsive",
+                content: "Option comes with responsive modifiers - use proper screen size suffixes to change flex behavior on different types of devices"
+            },
             example: GetTabbedPreview(sixthExample, '120px')
         },
         {
             name: "Flex middle",
             description: <>To center items vertically in the flexbox <span className="style-class">cui-middle</span> to container:</>,
+            hint: {
+                title: "Responsive",
+                content: "Option comes with responsive modifiers - use proper screen size suffixes to change flex behavior on different types of devices"
+            },
             example: GetTabbedPreview(seventhExample, '120px')
         },
         {
             name: "Flex stretch",
             description: <>Flexbox children can be stretched to fill parent. It can be done by adding class <span className="style-class">cui-stretch</span> to container:</>,
+            hint: {
+                title: "Responsive",
+                content: "Option comes with responsive modifiers - use proper screen size suffixes to change flex behavior on different types of devices"
+            },
             example: GetTabbedPreview(eightExample, '120px')
         },
         {
@@ -141,6 +169,10 @@ export const CuiDocsFlexScript: DocsScript = {
             On the other hand, item set to shrink will take as much container area as it needs to. If there more than one item set to grow, space is divided equally to each of growable elements.
             To set item to grow or shrink set class <span className="style-class">cui-flex-grow</span> or <span className="style-class">cui-flex-shrink</span> 
             on the child element. See below some placement configuration to see how it works in practice:</>,
+            hint: {
+                title: "Responsive",
+                content: "Option comes with responsive modifiers - use proper screen size suffixes to change flex behavior on different types of devices"
+            },
             example: GetTabbedPreview(tenthExample, '340px')
         },
         {

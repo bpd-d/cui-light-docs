@@ -68,16 +68,6 @@ export const AccordionDocsScript: DocsScript = {
                 { name: "animation", defaultValue: "true", type: "boolean", description: "Perform open/close animaton" },
                 { name: "timeout", defaultValue: "default", type: "number", description: "Defines animation timeout" },
             ]
-            // table: {
-            //     header: ["Property", "Type", "Default", "Description"],
-            //     data: [
-            //         ["single", "boolean", "false", "Expand one only or many"],
-            //         ["selector", "string", "> * > .{prefix}-accordion-title", "Selector to element which triggers active state"],
-            //         ["content", "string", "> * ", "Selector to child element"],
-            //         ["animation", "boolean", "true", "Perform open/close animaton"],
-            //         ["timeout", "number", "default", "Defines animation timeout"]
-            //     ]
-            // }
         },
         {
             name: "CSS options",

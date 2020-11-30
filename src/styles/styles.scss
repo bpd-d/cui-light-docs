@@ -288,6 +288,10 @@ $prefix : 'cui' !default;
         height: 200px;
     }
 
+    .sequence-height {
+        height: 90px;
+    }
+
     @include mixins.media-screen-height-max-small {
         .limited-content-width {
             width: 1000px !important;

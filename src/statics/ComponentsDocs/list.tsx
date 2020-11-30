@@ -56,6 +56,7 @@ export const listBulletShadeExample = createList("cui-bullet-shade");
 export const listInteractiveExample = createInteractiveList("cui-interactive");
 export const listInteractiveAccentExample = createInteractiveList("cui-interactive", "cui-accent");
 export const listInteractiveSecondaryExample = createInteractiveList("cui-interactive", "cui-secondary");
+export const listInlineExample = createList("cui-inline");
 
 export const CuiDocsListScript: DocsScript = {
     sections: [
@@ -103,6 +104,11 @@ export const CuiDocsListScript: DocsScript = {
             name: "Interactive secondary",
             description: "Style interactive list with secondary colors:",
             example: GetTabbedPreview(listInteractiveSecondaryExample, "210px")
+        },
+        {
+            name: "Inline",
+            description: "List can be also styled as line list, where items are placed next to each other instead of on the top of another",
+            example: GetTabbedPreview(listInlineExample, "100px")
         },
         {
             name: "CSS options",
