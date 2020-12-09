@@ -2,7 +2,6 @@ import * as React from "react";
 import * as ReactDOM from "react-dom";
 import './styles/styles.scss';
 import { App } from "./components/app";
-import { CuiInit, CuiInitData, CuiSetupInit, CuiInstance } from "../node_modules/cui-light/dist/index";
 import { BpdStateManager } from 'bpd-state-manager/dist/esm/index';
 import { BpdStateManagerConfig } from "bpd-state-manager/dist/esm/interfaces";
 import { CuiIconsPack } from 'bpd-cui-icons/index';
@@ -11,12 +10,14 @@ import { ActionsType, RecentsMutationHandler, StatesType, STATE_RECENT } from ".
 import { ViewRecentStorageService } from "./api/services/ViewRecents";
 
 import { StateErrorHandler } from "./api/state/handlers";
+import { CuiInitData, CuiInstance } from "node_modules/cui-light/dist/index";
+import { CuiSetupInit } from "../../cui-light-core/dist/esm/models/setup";
 
 export const CUI_DOCS_VER = "0.0.1";
 
 declare global {
     interface Window {
-        cuiInit: CuiInit;
+        //cuiInit: CuiInit;
         $cui: CuiInstance;
         strings: Translations;
     }

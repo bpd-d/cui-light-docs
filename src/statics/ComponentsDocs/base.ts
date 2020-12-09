@@ -49,6 +49,7 @@ import { CuiDocsInputScript } from "./input"
 import { CuiDocsVisibilityScript } from "./visibility"
 import { CuiDocProgressScript } from "./progress"
 import { CuiDocsSequenceScript } from "./sequence"
+import { CuiDocsInfoBoxScript } from "./infobox"
 
 export const COMPONENTS = {
     container: "container",
@@ -127,5 +128,6 @@ export const cuiComponents: CuiDocsComponents = {
     "slider": { name: "Slider", uri: "/docs/components/slider", description: "Switch elements by sliding", script: CuiDocsSliderScript },
     "sortable": { name: "Sortable", uri: "/docs/components/sortable", description: "Reorders children in list", script: CuiDocsSortableScript },
     "progress": { name: "Progress", uri: "/docs/components/progress", description: "Customized progress bars", script: CuiDocProgressScript },
-    "sequence": { name: "Step sequence", uri: "/docs/components/sequence", description: "Progress Step sequence with options", script: CuiDocsSequenceScript }
+    "sequence": { name: "Step sequence", uri: "/docs/components/sequence", description: "Progress Step sequence with options", script: CuiDocsSequenceScript },
+    "infobox": { name: "Info box", uri: "/docs/components/infobox", description: "Highligts informations in a small box", script: CuiDocsInfoBoxScript },
 }
