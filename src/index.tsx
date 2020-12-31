@@ -8,7 +8,6 @@ import { CuiIconsPack } from 'bpd-cui-icons/index';
 import { Translations } from "./api/strings/DocsTranslations/DocsTranslations";
 import { ActionsType, RecentsMutationHandler, StatesType, STATE_RECENT } from "./api/state/state";
 import { ViewRecentStorageService } from "./api/services/ViewRecents";
-
 import { StateErrorHandler } from "./api/state/handlers";
 import { CuiInitData, CuiInstance } from "node_modules/cui-light/dist/index";
 import { CuiSetupInit } from "../../cui-light-core/dist/esm/models/setup";
