@@ -1,7 +1,7 @@
 import { Children } from "react";
 import { ParserNode } from "../../api/DocsElementParser/interfaces";
 import { DocsScript } from "../../components/docs/base";
-import { GetTabbedPreview } from "../../components/partials/preview";
+import { GetTabbedPreview } from "../../components/preview/preview";
 
 {/* <div className="cui-drop-trigger" >
     <a className="cui-icon-button cui-accent cui-box-shadow" cui-icon="git"></a>

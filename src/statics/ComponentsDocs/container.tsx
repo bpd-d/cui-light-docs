@@ -1,6 +1,6 @@
 import * as React from "react"
 import { DocsScript } from "../../components/docs/base"
-import { ExamplePreview } from "../../components/partials/preview"
+import { ExamplePreview } from "../../components/preview/preview"
 
 const firstExample = (
     <>

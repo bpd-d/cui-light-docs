@@ -2,7 +2,7 @@ import * as React from "react";
 import { Link } from "react-router-dom";
 import { ParserNode } from "../../api/DocsElementParser/interfaces";
 import { DocsScript } from "../../components/docs/base";
-import { GetTabbedPreview } from "../../components/partials/preview";
+import { GetTabbedPreview } from "../../components/preview/preview";
 
 function getContainerWithIcon(icon: string, cls: string, text?: string): ParserNode {
     let classes = cls ?? ""

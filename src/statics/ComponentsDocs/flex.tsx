@@ -1,7 +1,7 @@
 import * as React from "react";
 import { ParserNode } from "../../api/DocsElementParser/interfaces";
 import { DocsScript } from "../../components/docs/base";
-import { GetTabbedPreview } from "../../components/partials/preview";
+import { GetTabbedPreview } from "../../components/preview/preview";
 
 function createFlex(options: string[], children: ParserNode[]): ParserNode {
     return {
@@ -176,6 +176,22 @@ export const CuiDocsFlexScript: DocsScript = {
             example: GetTabbedPreview(tenthExample, '340px')
         },
         {
+            name: "Direction",
+            description: <>Flex element comes with options to setup children placement direction.
+            In opposite to default behvior where child elements are added aside, it can be setup to place elements on top of each other.
+            Defualt setup is a row direction, where opposite is a column direction. They match to classic flexbox naming convention. </>,
+            list: [
+                { name:"cui-flex-direction-column", description: "Sets flex direction to column. Children will be places from top to bottom"},
+                { name:"cui-flex-direction-column-reverse", description: "Sets flex direction to column reverse. Children will be place from bottom to top"},
+                { name:"cui-flex-direction-row", description: "Default. Sets flex direction to row. Children will be placed from left to right"},
+                { name:"cui-flex-direction-row-reverse", description: "Sets flex direction to row reverse. Children will be placed from right to left"},
+            ],
+            hint: {
+                title: "Responsive",
+                content: "Option comes with responsive modifiers - use proper screen size suffixes to change flex behavior on different types of devices"
+            },
+        },
+        {
             name: "Center",
             description: <>Set class  <span className="style-class">cui-flex-center</span> on the flex container to center items vertically and horizontally:</>,
             example: GetTabbedPreview(eleventhExample, '310px')
@@ -190,6 +206,7 @@ export const CuiDocsFlexScript: DocsScript = {
                 { name: "order", description: "Adds flex order classes" },
                 { name: "align", description: "Adds flex justify/align classes" },
                 { name: "responsive", description: "Adds responsive options to align and order classes" },
+                { name: "direction", description: "Adds classes related to flex direction" },
             ]
         }
     ]

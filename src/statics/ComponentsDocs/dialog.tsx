@@ -1,6 +1,6 @@
 import { ParserNode } from "../../api/DocsElementParser/interfaces";
 import { DocsScript } from "../../components/docs/base";
-import { GetTabbedPreview } from "../../components/partials/preview";
+import { GetTabbedPreview } from "../../components/preview/preview";
 
 export function createDialog(id: string, name: string, body: string, options: string): ParserNode {
     return {

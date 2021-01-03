@@ -1,6 +1,6 @@
 import { ParserNode } from "../../api/DocsElementParser/interfaces";
 import { DocsScript } from "../../components/docs/base";
-import { GetTabbedPreview } from "../../components/partials/preview";
+import { GetTabbedPreview } from "../../components/preview/preview";
 
 function createHeading(text: string, type: string, cls: string): ParserNode {
     return {

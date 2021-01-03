@@ -10,7 +10,7 @@ import { ActionsType, RecentsMutationHandler, StatesType, STATE_RECENT } from ".
 import { ViewRecentStorageService } from "./api/services/ViewRecents";
 import { StateErrorHandler } from "./api/state/handlers";
 import { CuiInitData, CuiInstance } from "node_modules/cui-light/dist/index";
-import { CuiSetupInit } from "../../cui-light-core/dist/esm/models/setup";
+import { CuiSetupInit } from "cui-light-core/dist/esm/models/setup";
 
 export const CUI_DOCS_VER = "0.0.1";
 

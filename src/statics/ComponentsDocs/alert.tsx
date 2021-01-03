@@ -1,6 +1,6 @@
 import { ParserNode } from "../../api/DocsElementParser/interfaces";
 import { DocsScript } from "../../components/docs/base";
-import { getJsCodePreview } from "../../components/partials/preview";
+import { getJsCodePreview } from "../../components/preview/preview";
 
 const firstExample: ParserNode = {
     tag: "group",

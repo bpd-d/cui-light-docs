@@ -9,7 +9,7 @@
         "allowJs": true,
         "experimentalDecorators": true,
         "declaration": true,
-        "baseUrl": ".",
+        "baseUrl": "./",
         "paths": {
             "bpd-cui-icons*": [
                 "node_modules/bpd-cui-icons*",

@@ -1,6 +1,6 @@
 import * as React from "react";
-import { ElementGenerator } from "../../api/DocsElementParser/ElementGenerator";
 import { ParserNode } from "../../api/DocsElementParser/interfaces";
+import { ElementGenerator } from "../../api/DocsElementParser/ElementGenerator";
 import { ReactPreParser, ReactParser, ReactJsParser } from "../../api/DocsElementParser/GeneratorParsers";
 import { GLOBAL_COUNTER } from "../../statics/common";
 

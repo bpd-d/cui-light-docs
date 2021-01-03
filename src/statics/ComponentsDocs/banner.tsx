@@ -2,7 +2,7 @@
 import * as React from "react";
 import { ParserNode } from "../../api/DocsElementParser/interfaces";
 import { DocsScript } from "../../components/docs/base";
-import { ExamplePreview, GetTabbedPreview } from "../../components/partials/preview";
+import { ExamplePreview, GetTabbedPreview } from "../../components/preview/preview";
 
 function getBanner(text: string, cls?: string): ParserNode {
     return {

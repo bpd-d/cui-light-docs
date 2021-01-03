@@ -1,7 +1,7 @@
 
 import * as React from "react";
 import { DocsScript } from "../../components/docs/base";
-import { ExamplePreview } from "../../components/partials/preview";
+import { ExamplePreview } from "../../components/preview/preview";
 
 const sectionFirst = (<>
     <div className="cui-section container-wrap-around">Section default</div>
