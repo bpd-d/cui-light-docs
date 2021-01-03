@@ -12,9 +12,80 @@
     <link rel="icon" type="image/png" href="/assets/images/favicon/favicon_128.png" sizes="128x128" />
     <link rel="icon" type="image/png" href="/assets/images/favicon/favicon_196.png" sizes="196x196" />
 </head>
+<style>
+    .loading-main {
+        width: 100vw;
+        height: 100vh;
+        position: relative;
+    }
+
+    .loading-content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .app-icon-style {
+        display: block;
+    }
+
+    .app-icon-style {
+        color: #ccc;
+        fill: none;
+        stroke: #222;
+        stroke-opacity: 1;
+        stroke-width: 2px;
+        stroke-linecap: round;
+        stroke-linejoin: miter;
+    }
+
+    .loading-text {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .fade-out {
+        animation: mainFadeOut 300ms ease-out;
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    @keyframes mainFadeOut {
+        0% {
+            opacity: 1;
+        }
+
+        100% {
+            opacity: 0;
+        }
+    }
+</style>
 
 <body>
-    <div id="root"></div>
+    <div class="loading-main" id="preload">
+        <div class="loading-content">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100" height="100"
+                class="app-icon-style">
+                <path
+                    d="m 142.88274,65.385416 v 53.897944 c 0,20.28939 -15.51763,36.47957 -34.96415,36.47957 v 0 c -19.446558,0 -34.964135,-16.19018 -34.964135,-36.47957 V 65.385416"
+                    class="u"></path>
+                <path d="M 170,65.63655 V 155" class="i"></path>
+                <path d="m 174.34038,38.776245 a 4,4 0 0 1 -4,4 4,4 0 0 1 -4,-4 4,4 0 0 1 4,-4 4,4 0 0 1 4,4 z"
+                    class="dot"></path>
+                <path
+                    d="M 157.16011 174.62387 A 94 94 0 0 1 100 194 A 94 94 0 0 1 6 100 A 94 94 0 0 1 100 6 A 94 94 0 0 1 157.16077 25.376638 "
+                    class="outer-ring"></path>
+            </svg>
+            <div class="loading-text">
+                Loading...
+            </div>
+
+        </div>
+    </div>
+    <div id="root" class="hidden"></div>
 </body>
 
 </html>

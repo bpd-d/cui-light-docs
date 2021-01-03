@@ -7,6 +7,7 @@ export interface AppState {
     currentSite?: string;
     recents: RecentItem[];
     recent: RecentItem;
+    isReady: boolean;
 }
 export declare class App extends React.Component<AppProps, AppState> {
     subscribctionId: string;

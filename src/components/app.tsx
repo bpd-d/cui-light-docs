@@ -28,6 +28,7 @@ export interface AppState {
     currentSite?: string;
     recents: RecentItem[];
     recent: RecentItem;
+    isReady: boolean;
 }
 
 // 'HelloProps' describes the shape of props.
@@ -39,8 +40,8 @@ export class App extends React.Component<AppProps, AppState> {
         this.state = {
             currentSite: "",
             recents: [],
-            recent: undefined
-
+            recent: undefined,
+            isReady: false
         }
         this.subscribctionId = null;
         this.shouldDisplayRecent = this.shouldDisplayRecent.bind(this)
@@ -63,11 +64,11 @@ export class App extends React.Component<AppProps, AppState> {
     }
 
     onGlobalStateUpdate(state: RecentState) {
-        console.log(state);
         this.setState({
             ...this.state,
             recents: getRecentItems(state),
-            recent: getLastRecentItem(state)
+            recent: getLastRecentItem(state),
+            isReady: true
         })
     }
 
@@ -75,53 +76,62 @@ export class App extends React.Component<AppProps, AppState> {
         return this.state.recent && this.state.recent.name;
     }
     render() {
-        return <BrowserRouter>
-            <div className="layout-main">
-                <Navbar site={this.state.currentSite} />
-                <div className="layout-content">
-                    <Switch>
-                        <Route path="/docs/dashboard" component={CuiDocsDashboard}></Route>
-                        <Route path="/docs/components/:id" component={DocsComponent}></Route>
-                        <Route path="/overview" component={Overview}></Route>
-                        <Route path="/download" component={Download}></Route>
-                        <Route path="/icon" component={IconsComponent}></Route>
-                        <Route path="/about" component={About} />
-                        <Route path="/" component={Home}></Route>
-                        <Route>
-                            <ErrorRoute />
-                        </Route>
-                    </Switch>
+        return <div>
+            {!this.state.isReady ?
+                <div className="loading-main">
+                    <div className="loading-content">
+                        cUI is loading...
+                    </div>
                 </div>
-                <div className="info-bar">
-                    <div className="cui-drop-trigger cui-margin-small-bottom" >
-                        <a className="cui-icon-button cui-accent cui-box-shadow" cui-icon="history"></a>
-                        <div className="cui-drop cui-dropdown" cui-drop="mode: click; autoClose: y; outClose: y">
-                            {/* <div className="cui-flex cui-middle">
+                :
+                <BrowserRouter>
+                    <div className="layout-main">
+                        <Navbar site={this.state.currentSite} />
+                        <div className="layout-content">
+                            <Switch>
+                                <Route path="/docs/dashboard" component={CuiDocsDashboard}></Route>
+                                <Route path="/docs/components/:id" component={DocsComponent}></Route>
+                                <Route path="/overview" component={Overview}></Route>
+                                <Route path="/download" component={Download}></Route>
+                                <Route path="/icon" component={IconsComponent}></Route>
+                                <Route path="/about" component={About} />
+                                <Route path="/" component={Home}></Route>
+                                <Route>
+                                    <ErrorRoute />
+                                </Route>
+                            </Switch>
+                        </div>
+                        <div className="info-bar">
+                            <div className="cui-drop-trigger cui-margin-small-bottom" >
+                                <a className="cui-icon-button cui-accent cui-box-shadow" cui-icon="history"></a>
+                                <div className="cui-drop cui-dropdown" cui-drop="mode: click; autoClose: y; outClose: y">
+                                    {/* <div className="cui-flex cui-middle">
                                 <span cui-icon="history"></span>
                                 <span className="cui-margin-left">History</span>
                             </div> */}
-                            <span className="cui-icon-margin cui-icon cui-padding-small cui-text-bold" cui-icon="history"> History</span>
-                            <ul className="cui-drop-nav">
-                                {this.state.recents.map(recent => {
-                                    return <li key={recent.name}><Link to={recent.url}>{recent.name}</Link></li>
-                                })}
-                            </ul>
+                                    <span className="cui-icon-margin cui-icon cui-padding-small cui-text-bold" cui-icon="history"> History</span>
+                                    <ul className="cui-drop-nav">
+                                        {this.state.recents.map(recent => {
+                                            return <li key={recent.name}><Link to={recent.url}>{recent.name}</Link></li>
+                                        })}
+                                    </ul>
+                                </div>
+                            </div>
+                            <div className="cui-drop-trigger" >
+                                <a className="cui-icon-button cui-accent cui-box-shadow" cui-icon="git"></a>
+                                <div className="cui-drop cui-dropdown" cui-drop="mode: click; autoClose: y; outClose: y">
+                                    <span className="cui-icon-margin cui-icon cui-padding-small cui-text-bold" cui-icon="git"> Git links</span>
+                                    <ul className="cui-drop-nav">
+                                        <li><a href="https://github.com/bpd-d/cui-light">cUI Light {CUI_LIGHT_VERSION}</a></li>
+                                        <li><a href="https://github.com/bpd-d/cui-styles">cUI Styles {CUI_STYLES_VERSION}</a></li>
+                                        <li><a href="https://github.com/bpd-d/cui-icons">cUI Icons {CUI_ICONS_VERSION}</a></li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div className="cui-drop-trigger" >
-                        <a className="cui-icon-button cui-accent cui-box-shadow" cui-icon="git"></a>
-                        <div className="cui-drop cui-dropdown" cui-drop="mode: click; autoClose: y; outClose: y">
-                            <span className="cui-icon-margin cui-icon cui-padding-small cui-text-bold" cui-icon="git"> Git links</span>
-                            <ul className="cui-drop-nav">
-                                <li><a href="https://github.com/bpd-d/cui-light">cUI Light {CUI_LIGHT_VERSION}</a></li>
-                                <li><a href="https://github.com/bpd-d/cui-styles">cUI Styles {CUI_STYLES_VERSION}</a></li>
-                                <li><a href="https://github.com/bpd-d/cui-icons">cUI Icons {CUI_ICONS_VERSION}</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <SearchDialog />
-                <OffCanvas />
-            </div></BrowserRouter>;
-    }
+                        <SearchDialog />
+                        <OffCanvas />
+                    </div></BrowserRouter>
+            }</div>
+    };
 }

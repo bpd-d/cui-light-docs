@@ -8,6 +8,7 @@ $prefix : 'cui' !default;
 @use './keyframes'as keyframes;
 
 @include build.wrapper() {
+   
 
     .info-bar {
         position      : fixed;

@@ -34,7 +34,7 @@ export const CuiDocsBorderScript: DocsScript = {
                 { name: "cui-border-left", description: "Adds border to left side of the element" },
                 { name: "cui-border-right", description: "Adds border to right side of the element" },
             ],
-            example: GetTabbedPreview(firstExample, "180px")
+            example: GetTabbedPreview(firstExample, "200px")
         },
         {
             name: "CSS options",
