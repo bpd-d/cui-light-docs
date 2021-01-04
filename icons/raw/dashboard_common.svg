@@ -55,14 +55,17 @@
     </rdf:RDF>
   </metadata>
   <path
+  	class="common"
      id="rect869"
      style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
      d="m 27.827245,21.349337 h 53.76354 c 3.943503,0 7.118232,3.17473 7.118232,7.118228 v 53.76354 c 0,3.943503 -3.174729,7.118232 -7.118232,7.118232 h -53.76354 c -3.943498,0 -7.118228,-3.174729 -7.118228,-7.118232 v -53.76354 c 0,-3.943498 3.17473,-7.118228 7.118228,-7.118228 z" />
   <path
+  	class="common"
      id="path880"
      style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
      d="m 27.827246,111.25291 h 53.76354 c 3.943504,0 7.118232,3.17473 7.118232,7.11823 v 53.76354 c 0,3.9435 -3.174728,7.11823 -7.118232,7.11823 h -53.76354 c -3.943498,0 -7.118228,-3.17473 -7.118228,-7.11823 v -53.76354 c 0,-3.9435 3.17473,-7.11823 7.118228,-7.11823 z" />
   <path
+  	class="common"
      id="path882"
      style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
      d="m 112.76934,110.92377 h 53.76355 c 3.9435,0 7.11823,3.17473 7.11823,7.11823 v 53.76354 c 0,3.9435 -3.17473,7.11823 -7.11823,7.11823 h -53.76355 c -3.94349,0 -7.11822,-3.17473 -7.11822,-7.11823 V 118.042 c 0,-3.9435 3.17473,-7.11823 7.11822,-7.11823 z" />
@@ -70,5 +73,5 @@
      id="path884"
      style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
      d="m 149.27189,17.700472 32.85154,32.851538 c 2.40963,2.409629 2.40963,6.289386 0,8.699011 l -32.85154,32.851544 c -2.40963,2.40963 -6.28938,2.40963 -8.69901,0 L 107.72134,59.251023 c -2.40963,-2.409628 -2.40963,-6.289384 0,-8.699012 l 32.85154,-32.85154 c 2.40963,-2.409626 6.28938,-2.409627 8.69901,1e-6 z"
-     class="cui-accent" />
+     class="cui-accent rectangle" />
 </svg>

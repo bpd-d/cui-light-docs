@@ -1,7 +1,7 @@
 import * as React from "react";
 import { DocsHint } from "../partials/components/CuiHint";
 import { CuiTable, DocsTable } from "../partials/components/CuiTable";
-import { DocsSection } from "../partials/components/section";
+import { DocsSection } from "../partials/components/DocsSection";
 import { CuiListItem } from "./CuiDocsList";
 import { PropertyGridItem } from "./CuiDocsPropertyGrid";
 

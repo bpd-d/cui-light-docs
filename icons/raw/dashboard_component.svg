@@ -58,44 +58,48 @@
      d="M 119.00001,100 A 19.000005,19.000005 0 0 1 100,119.00001 19.000005,19.000005 0 0 1 80.999995,100 19.000005,19.000005 0 0 1 100,80.999994 19.000005,19.000005 0 0 1 119.00001,100 Z"
      style="fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:1.99999;stroke-linecap:round;stroke-linejoin:round;paint-order:fill markers stroke"
      id="path843"
-     class="cui-accent" />
+     class="cui-accent circle" />
   <path
      d="M 189,30.714289 A 19.000005,19.000005 0 0 1 170,49.71429 19.000005,19.000005 0 0 1 150.99999,30.714289 19.000005,19.000005 0 0 1 170,11.714279 a 19.000005,19.000005 0 0 1 19,19.00001 z"
      style="fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:1.99999;stroke-linecap:round;stroke-linejoin:round;paint-order:fill markers stroke"
      id="path861"
-     class="cui-accent" />
+     class="cui-accent circle" />
   <path
      d="m 49.357144,30.714289 a 19.000005,19.000005 0 0 1 -19,19.000001 19.000005,19.000005 0 0 1 -19.00001,-19.000001 19.000005,19.000005 0 0 1 19.00001,-19.00001 19.000005,19.000005 0 0 1 19,19.00001 z"
      style="fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:1.99999;stroke-linecap:round;stroke-linejoin:round;paint-order:fill markers stroke"
      id="path863"
-     class="cui-accent" />
+     class="cui-accent circle" />
   <path
      d="m 49.357144,169.61026 a 19.000005,19.000005 0 0 1 -19,19 19.000005,19.000005 0 0 1 -19.00001,-19 19.000005,19.000005 0 0 1 19.00001,-19.00001 19.000005,19.000005 0 0 1 19,19.00001 z"
      style="fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:1.99999;stroke-linecap:round;stroke-linejoin:round;paint-order:fill markers stroke"
      id="path865"
-     class="cui-accent" />
+     class="cui-accent circle" />
   <path
      d="m 188.96741,169.99541 a 19.000005,19.000005 0 0 1 -19,19 19.000005,19.000005 0 0 1 -19.00001,-19 19.000005,19.000005 0 0 1 19.00001,-19.00001 19.000005,19.000005 0 0 1 19,19.00001 z"
      style="fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:1.99999;stroke-linecap:round;stroke-linejoin:round;paint-order:fill markers stroke"
      id="path867"
-     class="cui-accent" />
+     class="cui-accent circle" />
   <path
      id="rect869"
      style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
      d="m 77.07143,71 h 45.85714 C 126.29214,71 129,73.707858 129,77.07143 v 45.85714 C 129,126.29214 126.29214,129 122.92857,129 H 77.07143 C 73.707858,129 71,126.29214 71,122.92857 V 77.07143 C 71,73.707858 73.707858,71 77.07143,71 Z" />
   <path
+     class="path"
      style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
      d="m 130.30968,85.105351 h 39.64848 V 50.507627"
      id="path871" />
   <path
+    class="path"
      style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
      d="m 129.8046,114.90485 h 40.15356 v 34.85026"
      id="path873" />
   <path
+    class="path"
      style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
      d="M 71.215754,85.357889 H 30.304576 V 50.507627"
      id="path875" />
   <path
+    class="path"
      style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
      d="M 70.45814,114.65231 H 29.546962 v 34.85027"
      id="path877" />

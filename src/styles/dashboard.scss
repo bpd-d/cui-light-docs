@@ -1,0 +1,131 @@
+@mixin definitions {
+    .dashboard-icon {
+        &[cui-icon="dashboard_common"] {
+
+            .rectangle {
+                transition      : transform 300ms ease-out;
+                transform       : scale(1) rotate(0deg);
+                transform-origin: 55% 30%;
+            }
+
+            &:hover {
+                .rectangle {
+                    transform       : scale(0.6) rotate(45deg);
+                    transform-origin: 55% 30%;
+                }
+
+                .common {
+                    // transform       : scale(0.9);
+                    transform-origin: center center;
+                }
+            }
+        }
+
+        &[cui-icon="dashboard_api"] {
+
+            .circle {
+                transition      : transform 300ms ease-out;
+                transform       : scale(1);
+                transform-origin: center;
+            }
+
+            .outer {
+                transition      : transform 300ms ease-out;
+                transform       : rotate(0deg);
+                transform-origin: center;
+            }
+
+            &:hover {
+                .circle {
+                    transform: scale(0.8);
+
+                }
+
+                .outer {
+                    transform: rotate(90deg);
+                }
+            }
+        }
+
+        &[cui-icon="dashboard_component"] {
+
+            .circle {
+                transition      : transform 300ms ease-out;
+                transform       : scale(1);
+                transform-origin: center;
+            }
+
+            .path {
+                transition: opacity 300ms ease-out;
+                opacity   : 1;
+            }
+
+            &:hover {
+                .circle {
+                    transform: scale(0.8);
+
+                }
+
+                .path {
+                    opacity: 0;
+                }
+            }
+        }
+
+        &[cui-icon="overview_plugins"] {
+
+            .circle {
+                transition      : transform 300ms ease-out;
+                transform       : translate(0%, 0%);
+                transform-origin: center;
+            }
+
+            .circle_2 {
+                transition      : transform 300ms ease-out;
+                transform       : translate(0%, 0%);
+                transform-origin: center;
+            }
+
+            .circle_3 {
+                transition      : transform 300ms ease-out;
+                transform       : translate(0%, 0%);
+                transform-origin: center;
+            }
+
+            .circle_main {
+                transition      : transform 300ms ease-out;
+                transform       : translate(0%, 0%);
+                transform-origin: center;
+            }
+
+            .horizontal,
+            .vertical {
+                transition: opacity 300ms ease-out;
+                opacity   : 1;
+            }
+
+            &:hover {
+                .circle {
+                    transform: translate(33%, -20%);
+                }
+
+                .circle_2 {
+                    transform: translate(0%, -20%);
+                }
+
+                .circle_3 {
+                    transform: translate(-33%, -20%);
+                }
+
+                .circle_main {
+                    transform: translate(0%, 35%);
+                }
+
+                .horizontal,
+                .vertical {
+                    opacity: 0;
+                }
+            }
+        }
+    }
+}

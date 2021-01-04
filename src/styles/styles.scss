@@ -5,10 +5,11 @@ $prefix : 'cui' !default;
 @use "../../node_modules/cui-styles/styles/build"as build;
 
 @use "./overview.scss"as overview;
+@use "./dashboard.scss"as dashboard;
 @use './keyframes'as keyframes;
 
 @include build.wrapper() {
-   
+
 
     .info-bar {
         position      : fixed;
@@ -340,6 +341,7 @@ $prefix : 'cui' !default;
 
     // Docs includes
     @include overview.definitions;
+    @include dashboard.definitions;
 
     @include keyframes.definitions;
 
