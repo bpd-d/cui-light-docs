@@ -182,4 +182,17 @@ export const iconsData: IconElementData[] = [
     { name: "Warning", code: "warning", category: "signal" },
     { name: "Window", code: "window", category: "controls" },
     { name: "Wireless", code: "wireless", category: "controls" },
+    { name: "Sun", code: "sun", category: "all" },
+    { name: "Moon", code: "moon", category: "all" },
+    { name: "Moon 2", code: "moon_2", category: "all" },
+    { name: "Light mode", code: "light_mode", category: "controls" },
+    { name: "Sunny", code: "weather_sunny", category: "weather" },
+    { name: "Partially sunny", code: "weather_sunny_partially", category: "weather" },
+    { name: "Wind", code: "weather_wind", category: "weather" },
+    { name: "Cloudy", code: "weather_cloudy", category: "weather" },
+    { name: "Rainy", code: "weather_rainy", category: "weather" },
+    { name: "Foggy", code: "weather_foggy", category: "weather" },
+    { name: "Fog", code: "weather_fog", category: "weather" },
+    { name: "Snowy", code: "weather_snowy", category: "weather" },
+
 ]
