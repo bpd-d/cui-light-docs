@@ -45,6 +45,14 @@ $prefix : 'cui' !default;
         }
     }
 
+    .z-index-1 {
+        z-index: 1;
+    }
+
+    .height-dashboard-item {
+        height: 300px;
+    }
+
     .layout-docs {
         display: block;
 

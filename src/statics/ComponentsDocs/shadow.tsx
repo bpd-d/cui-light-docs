@@ -17,9 +17,9 @@ const shadowExample: ParserNode = {
     styleClass: "cui-flex cui-center",
     children: [
         createShadow("Box shadow", "cui-box-shadow"),
-        createShadow("Box shadow medium", "cui-box-shadow-m"),
-        createShadow("Box shadow large", "cui-box-shadow-l"),
-        createShadow("Box shadow xlarge", "cui-box-shadow-xl"),
+        createShadow("Box shadow medium", "cui-box-shadow--m"),
+        createShadow("Box shadow large", "cui-box-shadow--l"),
+        createShadow("Box shadow xlarge", "cui-box-shadow--xl"),
     ]
 }
 
@@ -28,9 +28,9 @@ const shadowHoverExample: ParserNode = {
     styleClass: "cui-flex cui-center",
     children: [
         createShadow("Box shadow hover ", "cui-box-shadow-hover"),
-        createShadow("Box shadow hover medium", "cui-box-shadow-hover-m"),
-        createShadow("Box shadow hover large", "cui-box-shadow-hover-l"),
-        createShadow("Box shadow hover xlarge", "cui-box-shadow-hover-xl"),
+        createShadow("Box shadow hover medium", "cui-box-shadow-hover--m"),
+        createShadow("Box shadow hover large", "cui-box-shadow-hover--l"),
+        createShadow("Box shadow hover xlarge", "cui-box-shadow-hover--xl"),
     ]
 }
 
@@ -42,9 +42,9 @@ export const CuiDocsShadowElement: DocsScript = {
             description: "Add some depth to flat elements to make them stand out: ",
             list: [
                 { name: "cui-box-shadow", description: "Add a subtle box shadow" },
-                { name: "cui-box-shadow-m", description: "Add a medium box shadow" },
-                { name: "cui-box-shadow-l", description: "Add a large box shadow" },
-                { name: "cui-box-shadow-xl", description: "Add a xlarge box shadow" }
+                { name: "cui-box-shadow--m", description: "Add a medium box shadow" },
+                { name: "cui-box-shadow--l", description: "Add a large box shadow" },
+                { name: "cui-box-shadow--xl", description: "Add a xlarge box shadow" }
             ],
             example: GetTabbedPreview(shadowExample, "350px")
         },
@@ -53,9 +53,9 @@ export const CuiDocsShadowElement: DocsScript = {
             description: "Add some depth to flat elements to make them stand out: ",
             list: [
                 { name: "cui-box-shadow-hover", description: "Add a subtle box shadow on hover" },
-                { name: "cui-box-shadow-hover-m", description: "Add a medium box shadow on hover" },
-                { name: "cui-box-shadow-hover-l", description: "Add a large box shadow on hover" },
-                { name: "cui-box-shadow-hover-xl", description: "Add a xlarge box shadow on hover" }
+                { name: "cui-box-shadow-hover--m", description: "Add a medium box shadow on hover" },
+                { name: "cui-box-shadow-hover--l", description: "Add a large box shadow on hover" },
+                { name: "cui-box-shadow-hover--xl", description: "Add a xlarge box shadow on hover" }
             ],
             example: GetTabbedPreview(shadowHoverExample, "350px")
         },

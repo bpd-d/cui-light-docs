@@ -60,6 +60,7 @@ const fifthExample: ParserNode = {
     children: [
         getContainerWithIcon("heart", "cui-icon-button"),
         getContainerWithIcon("heart", "cui-icon-button cui-default cui-margin-top"),
+        getContainerWithIcon("heart", "cui-icon-button cui-default cui-large cui-margin-top"),
     ]
 }
 
@@ -155,7 +156,7 @@ export const CuiDocsIconScript: DocsScript = {
         {
             name: "Icon button",
             description: <>Icons can be a part of common cUI button, but are also availabe in standalone option called <span className="style-class">cui-icon-button</span>:</>,
-            example: GetTabbedPreview(fifthExample, "100px"),
+            example: GetTabbedPreview(fifthExample, "170px"),
             hint: {
                 title: "Icon button with text",
                 content: "Don't add any text to component when using icon button. Use standard cui-button instead as it has better styling for wider components."

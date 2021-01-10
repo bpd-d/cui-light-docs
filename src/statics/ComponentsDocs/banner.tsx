@@ -5,9 +5,13 @@ import { DocsScript } from "../../components/docs/base";
 import { ExamplePreview, GetTabbedPreview } from "../../components/preview/preview";
 
 function getBanner(text: string, cls?: string): ParserNode {
+    let classes = ["cui-active"];
+    if (cls) {
+        classes.push(cls);
+    }
     return {
         tag: "div",
-        classes: cls ? [cls] : undefined,
+        classes: classes,
         attributes: {
             "cui-banner": ""
         },
@@ -69,7 +73,7 @@ export const CuiDocsBannerScript: DocsScript = {
         {
             name: "Usage",
             description: (<>Banners are small, closable components which intended usage is notifing user about events happeing on the page.
-            Component comes with variety of styling options. The most basic option is to add cui-banner attribute to div element. Use cui-close component to close it:
+            Component comes with variety of styling options. The most basic option is to add <span className="style-element">cui-banner</span> attribute to div element and class <span className="style-element">cui-active</span> to make it visible. Use cui-close component to close it:
             </>),
             example: GetTabbedPreview(bannerFirst, "60px")
         },
