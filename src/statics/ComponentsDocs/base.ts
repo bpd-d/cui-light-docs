@@ -52,6 +52,7 @@ import { CuiDocsSequenceScript } from "./sequence"
 import { CuiDocsInfoBoxScript } from "./infobox"
 import { CuiDocsHoverScript } from "./hover"
 import { CuiDocsBorderScript } from "./border"
+import { CuiDocsTableScript } from "./table"
 
 export const COMPONENTS = {
     container: "container",
@@ -105,7 +106,7 @@ export const cuiComponents: CuiDocsComponents = {
     "hint": { name: "Hint", uri: "/docs/components/hint", description: "Highlights notices and informations between paragraphs", script: CuiDocsHintScript },
     "offcanvas": { name: "Offcanvas", uri: "/docs/components/offcanvas", description: "Highlights notices and informations between paragraphs", script: CuiDocsOffcanvas },
     "spinner": { name: "Spinner", uri: "/docs/components/spinner", description: "Simple preloaders and progress indicators", script: CuiDocsSpinnerScript },
-    "table": { name: "Table", uri: "/docs/components/table", description: "Nice looking tables with many options" },
+    "table": { name: "Table", uri: "/docs/components/table", description: "Styled table component with customizations", script: CuiDocsTableScript },
     "separator": { name: "Separator", uri: "/docs/components/separator", description: "Creates separation between blocks", script: CuiDocsSeparatorScript },
     "code": { name: "Code", uri: "/docs/components/code", description: "Styled code blocks built from span" },
     "flex": { name: "Flex", uri: "/docs/components/flex", description: "Set of options for flexible components", script: CuiDocsFlexScript },

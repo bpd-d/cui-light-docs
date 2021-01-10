@@ -23,7 +23,7 @@ export function CuiDocsDashboard() {
     return <div className="cui-container limited-content-width cui-margin-auto">
         <div className="">
             <PageHeader title="Documentation" description="Product documentation dashboard" />
-            <div className="cui-flex-grid cui-child-width-1-1 cui-child-width-1-3--l">
+            <div className="cui-flex-grid cui-flex-grid-center cui-child-width-1-1 cui-child-width-1-3--l">
                 {items.map(item => {
                     return <div key={item.title}>
                         <div className="cui-card cui-animation-fade-in">
@@ -32,13 +32,13 @@ export function CuiDocsDashboard() {
                                 onIconClick(item)
                             }}>
                                 <div className="cui-position-relative height-dashboard-item">
-                                    <div className="cui-transition-fade cui-position-absolute cui-position-center cui-flex-center cui-background-default z-index-1 cui-width-1-1 cui-height-1-1">
+                                    <div className="cui-transition-fade cui-position-center cui-flex-center cui-background-default cui-layer-top cui-fill-parent">
                                         <div>
                                             <h2 className="cui-h2 cui-text-center">{item.title}</h2>
                                             <p className="cui-text-center">{item.description}</p>
                                         </div>
                                     </div>
-                                    <div className="cui-position-absolute cui-position-center cui-width-1-1 cui-height-1-1">
+                                    <div className="cui-position-center cui-fill-parent">
                                         <div className="cui-flex-center">
                                             <span cui-icon={item.icon} className=""></span>
                                         </div>
