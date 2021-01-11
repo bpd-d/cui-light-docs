@@ -43,6 +43,22 @@ const firstExample: ParserNode = {
     ]
 }
 
+const secondExample: ParserNode = {
+    tag: 'div',
+    children: [
+        createTransition("Fade", "cui-transition-fade-reverse"),
+        createTransition("Scale", "cui-transition-scale-reverse", "cui-margin-top"),
+        createTransition("Slide Top", "cui-transition-slide-reverse-top", "cui-margin-top"),
+        createTransition("Slide Bottom", "cui-transition-slide-reverse-bottom", "cui-margin-top"),
+        createTransition("Slide Left", "cui-transition-slide-reverse-left", "cui-margin-top"),
+        createTransition("Slide Right", "cui-transition-slide-reverse-right", "cui-margin-top"),
+        createTransition("Slide Top Small", "cui-transition-slide-reverse-top--s", "cui-margin-top"),
+        createTransition("Slide Bottom Small", "cui-transition-slide-reverse-bottom--s", "cui-margin-top"),
+        createTransition("Slide Left Small", "cui-transition-slide-reverse-left--s", "cui-margin-top"),
+        createTransition("Slide Right Small", "cui-transition-slide-reverse-right--s", "cui-margin-top"),
+    ]
+}
+
 
 export const CuiDocsTransitionScript: DocsScript = {
     sections: [
@@ -70,9 +86,32 @@ export const CuiDocsTransitionScript: DocsScript = {
             example: GetTabbedPreview(firstExample, "1400px")
         },
         {
+            name: "Reverse",
+            description: <>The same transitions can be applied in reverse direction. That means that target element gets hidden on hover instead of being showed up:</>,
+            list: [
+                { name: "cui-transition-fade-reverse", description: "" },
+                { name: "cui-transition-scale-reverse", description: "" },
+                { name: "cui-transition-slide-reverse-top", description: "" },
+                { name: "cui-transition-slide-reverse-bottom", description: "" },
+                { name: "cui-transition-slide-reverse-left", description: "" },
+                { name: "cui-transition-slide-reverse-right", description: "" },
+                { name: "cui-transition-slide-reverse-top--s", description: "" },
+                { name: "cui-transition-slide-reverse-bottom--s", description: "" },
+                { name: "cui-transition-slide-reverse-left--s", description: "" },
+                { name: "cui-transition-slide-reverse-right--s", description: "" },
+            ], example: GetTabbedPreview(secondExample, "1400px")
+        },
+        {
             name: "Delay",
             description: <>Transition effect can be dalayed a bit.
             To set it up, add class <span className="style-class">cui-delay</span> to child element.</>
+        },
+        {
+            name: "CSS options",
+            description: "Component name is transition and supports following CSS build options:",
+            list: [
+                { name: "reverse", description: "Adds transition reverse options" },
+            ]
         }
     ]
 }

@@ -46,8 +46,13 @@ export const CuiDocsWidthScript: DocsScript = {
         description: `Width classes can be used to take control over elements width, even responsively on different screen sizes.
         cUI element grid is divided on 6 parts so users can basically choose from value 1-1 (100%) to 5-6 (~83%). All width class names start from cui-width- followed by proper value. 
         To set width for certain screen sizes group one of suffixes --s, --m, --l, --xl:`,
-        example: GetTabbedPreview(firstExample, "1300px")
-    }, {
+        example: GetTabbedPreview(firstExample, "1300px"),
+        hint: {
+            title: "Fill parent",
+            content: "cUI provides small shorthand class that allows child to fill parent completely - cui-fill-parent. Useful in relative views."
+        }
+    },
+    {
         name: "Responsive",
         description: `To add responsivity to elements with static width, classes support alse screen size value. 
             Responsive option sets width for indicated size and bigger, e.g. cui-width-1-3--m will set width of 33% to medium screen sizes and bigger.

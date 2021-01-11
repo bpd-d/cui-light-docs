@@ -53,6 +53,7 @@ import { CuiDocsInfoBoxScript } from "./infobox"
 import { CuiDocsHoverScript } from "./hover"
 import { CuiDocsBorderScript } from "./border"
 import { CuiDocsTableScript } from "./table"
+import { CuiDocsAnimationScript } from "./animation"
 
 export const COMPONENTS = {
     container: "container",
@@ -91,7 +92,7 @@ export const cuiComponents: CuiDocsComponents = {
     "spaces": { name: "Spaces", uri: "/docs/components/spaces", description: "Add some space to the components", script: CuiDocsSpacesScript },
     "dialog": { name: "Dialog", uri: "/docs/components/dialog", description: "Creates modal dialog", script: CuiDocsDialogScript },
     "alert": { name: "Alert", uri: "/docs/components/alert", description: "Easy to use, interactive dialog", script: CuiDocsAlertScript },
-    "animation": { name: "Animation", uri: "/docs/components/animation", description: "Add some animations to components" },
+    "animation": { name: "Animation", uri: "/docs/components/animation", description: "Add some animations to components", script: CuiDocsAnimationScript },
     "overlay": { name: "Overlay", uri: "/docs/components/overlay", description: "Creates simple overlay on elements", script: CuiDocsOverlayScript },
     "cover": { name: "Cover", uri: "/docs/components/cover", description: "Creates element that cover whole viewport", script: CuiDocsCoverScript },
     "drop": { name: "Drop", uri: "/docs/components/drop", description: "Creates drop and dropdowns", script: CuiDocsDropScript },
