@@ -37,6 +37,7 @@ export const iconsData: IconElementData[] = [
     { name: "Clear", code: "clear", category: "controls" },
     { name: "Clock", code: "clock", category: "controls" },
     { name: "Close", code: "close", category: "controls" },
+    { name: "Close small", code: "close_small", category: "controls" },
     { name: "Code", code: "code", category: "controls" },
     { name: "Comment 2", code: "comment_2", category: "editor" },
     { name: "Comment 3", code: "comment_3", category: "editor" },
@@ -194,5 +195,9 @@ export const iconsData: IconElementData[] = [
     { name: "Foggy", code: "weather_foggy", category: "weather" },
     { name: "Fog", code: "weather_fog", category: "weather" },
     { name: "Snowy", code: "weather_snowy", category: "weather" },
-
+    { name: "Bolt", code: "bolt", category: "weather" },
+    { name: "Cloud", code: "cloud", category: "controls" },
+    { name: "Cloud offline", code: "cloud_offline", category: "controls" },
+    { name: "Cookie", code: "cookie", category: "all" },
+    { name: "Viewfinder", code: "viewfinder", category: "media" },
 ]

@@ -11,7 +11,6 @@ import { ViewRecentStorageService } from "./api/services/ViewRecents";
 import { StateErrorHandler } from "./api/state/handlers";
 import { CuiInitData, CuiInstance } from "node_modules/cui-light/dist/index";
 import { CuiSetupInit } from "cui-light-core/dist/esm/models/setup";
-import { sleep } from "node_modules/bpd-toolkit/dist/esm/index";
 
 export const CUI_DOCS_VER = "0.0.1";
 
@@ -24,10 +23,15 @@ declare global {
 }
 
 const preload = document.getElementById("preload");
+const loadingText = document.getElementById("loading-text");
 const HIDDEN_CLS = 'hidden';
 
-function load(): boolean {
-    let app_icons = require("../icons/dist/all.json");
+
+
+
+function load(icons: any): boolean {
+    loadingText.textContent = "Initializing..."
+    let app_icons = icons;
     let rootElement = document.getElementById('root');
     let setup = new CuiSetupInit();
     setup.logLevel = 'debug';
@@ -81,15 +85,25 @@ function load(): boolean {
     window.cuiInit.init(cuiSetup).then((result) => {
         preload.classList.add("fade-out");
         setTimeout(() => {
-            preload.classList.add(HIDDEN_CLS);
-            rootElement.classList.remove(HIDDEN_CLS);
+            requestAnimationFrame(() => {
+                preload.remove();//classList.add(HIDDEN_CLS);
+                rootElement.classList.remove(HIDDEN_CLS);
+            })
         }, 300);
 
     });
     return true;
 }
 
-load();
+Promise.all([
+    fetch("/icons/dist/all.json").then((response) => response.json())
+]).then((results) => {
+    load(results[0])
+}).catch((e) => {
+    loadingText.textContent = "App cannot be loaded, an error occured";
+    console.error(e);
+})
+
 // setTimeout(() => {
 //     load();
 // }, 500);
