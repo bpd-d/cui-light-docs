@@ -89,7 +89,7 @@ function load(icons: any): boolean {
                 preload.remove();//classList.add(HIDDEN_CLS);
                 rootElement.classList.remove(HIDDEN_CLS);
             })
-        }, 300);
+        }, 100);
 
     });
     return true;
