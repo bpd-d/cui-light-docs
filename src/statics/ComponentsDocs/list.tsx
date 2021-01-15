@@ -57,6 +57,7 @@ export const listInteractiveExample = createInteractiveList("cui-interactive");
 export const listInteractiveAccentExample = createInteractiveList("cui-interactive", "cui-accent");
 export const listInteractiveSecondaryExample = createInteractiveList("cui-interactive", "cui-secondary");
 export const listInlineExample = createList("cui-inline");
+export const listHighlightExample = createInteractiveList("cui-highlight");
 
 export const CuiDocsListScript: DocsScript = {
     sections: [
@@ -111,6 +112,11 @@ export const CuiDocsListScript: DocsScript = {
             example: GetTabbedPreview(listInlineExample, "100px")
         },
         {
+            name: "Highlight",
+            description: "Similar to interactive, but gives a bit other styling to active element. To set it, add class cui-highlight to main element",
+            example: GetTabbedPreview(listHighlightExample, "210px")
+        },
+        {
             name: "CSS options",
             description: "Component name is list and supports following CSS build options:",
             list: [
@@ -124,6 +130,7 @@ export const CuiDocsListScript: DocsScript = {
                 { name: "small", description: "Adds list small option" },
                 { name: "inline", description: "Adds list inline option" },
                 { name: "stripped", description: "Adds list stripped classes" },
+                { name: "highlight", description: "Adds list highlight classes" },
             ]
         }
     ]

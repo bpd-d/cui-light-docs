@@ -28,21 +28,20 @@ export function CuiDocsDashboard() {
                     return <div key={item.title}>
                         <div className="cui-card cui-animation-fade-in">
                             {/* <div className="cui-card-header cui-flex cui-center"><span className="cui-card-title">{item.title}</span></div> */}
-                            <div className="cui-transition-trigger cui-card-body " onClick={() => {
+                            <div className="cui-card-body cui-cursor-pointer" onClick={() => {
                                 onIconClick(item)
                             }}>
-                                <div className="cui-position-relative height-dashboard-item">
-                                    <div className="cui-transition-fade cui-position-center cui-flex-center cui-background-default cui-layer-top cui-fill-parent">
-                                        <div>
-                                            <h2 className="cui-h2 cui-text-center">{item.title}</h2>
-                                            <p className="cui-text-center">{item.description}</p>
-                                        </div>
+                                <div className="cui-position-relative cui-transition-trigger cui-transition-slide-up height-dashboard-item">
+                                    <div className="cui-position-center">
+                                        <div className="cui-transition-fade-reverse" cui-icon={item.icon}></div>
                                     </div>
-                                    <div className="cui-position-center cui-fill-parent">
-                                        <div className="cui-flex-center">
-                                            <span cui-icon={item.icon} className=""></span>
+                                    <div className="cui-transition-container">
+                                        <div className="cui-transition-body">
+                                            <div className="cui-transition-header cui-text-center">{item.title}</div>
+                                            <div className="cui-transition-content cui-text-center">
+                                                {item.description}
+                                            </div>
                                         </div>
-                                        <div className="cui-text-center cui-margin-top">{item.title}</div>
                                     </div>
                                 </div>
                             </div>

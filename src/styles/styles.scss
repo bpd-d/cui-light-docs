@@ -50,7 +50,7 @@ $prefix : 'cui' !default;
     }
 
     .height-dashboard-item {
-        height: 300px;
+        height: 250px;
     }
 
     .layout-docs {
@@ -300,6 +300,11 @@ $prefix : 'cui' !default;
 
     .sequence-height {
         height: 90px;
+    }
+
+    .transition-size {
+        width : 250px;
+        height: 300px;
     }
 
     @include mixins.media-screen-height-max-small {

@@ -54,6 +54,7 @@ import { CuiDocsHoverScript } from "./hover"
 import { CuiDocsBorderScript } from "./border"
 import { CuiDocsTableScript } from "./table"
 import { CuiDocsAnimationScript } from "./animation"
+import { CuiDocsInteractionsScript } from "./interactions"
 
 export const COMPONENTS = {
     container: "container",
@@ -136,4 +137,5 @@ export const cuiComponents: CuiDocsComponents = {
     "infobox": { name: "Info box", uri: "/docs/components/infobox", description: "Highligts informations in a small box", script: CuiDocsInfoBoxScript },
     'hover': { name: "Hover", uri: "/docs/components/hover", description: "Highlights hovered element", script: CuiDocsHoverScript },
     'border': { name: "Border", uri: "/docs/components/border", description: "Adds border to page element", script: CuiDocsBorderScript },
+    'interactions': { name: "Interactions", uri: "/docs/components/interactions", description: "Controls user interactions with component", script: CuiDocsInteractionsScript }
 }
