@@ -27,7 +27,6 @@ export function CuiDocsDashboard() {
                 {items.map(item => {
                     return <div key={item.title}>
                         <div className="cui-card cui-animation-fade-in">
-                            {/* <div className="cui-card-header cui-flex cui-center"><span className="cui-card-title">{item.title}</span></div> */}
                             <div className="cui-card-body cui-cursor-pointer" onClick={() => {
                                 onIconClick(item)
                             }}>

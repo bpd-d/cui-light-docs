@@ -55,6 +55,7 @@ import { CuiDocsBorderScript } from "./border"
 import { CuiDocsTableScript } from "./table"
 import { CuiDocsAnimationScript } from "./animation"
 import { CuiDocsInteractionsScript } from "./interactions"
+import { CuiDocsResizeScript } from "./resize"
 
 export const COMPONENTS = {
     container: "container",
@@ -126,7 +127,7 @@ export const cuiComponents: CuiDocsComponents = {
     "offset": { name: "Offset", uri: "/docs/components/offset", description: "Offset", script: CuiDocsOffsetScript },
     "scrollspy": { name: "Scrollspy", uri: "/docs/components/scrollspy", description: "Triggers specific actions on user scoll", script: CuiDocsScrollSpyScript },
     "toggle": { name: "Toggle", uri: "/docs/components/toggle", description: "Toggles an action on target element", script: CuiDocsToggleScript },
-    "resize": { name: "Resize", uri: "/docs/components/resize", description: "Work in progress" },
+    "resize": { name: "Resize", uri: "/docs/components/resize", description: "Switches actions depending on screen size", script: CuiDocsResizeScript },
     "icon": { name: "Icon", uri: "/docs/components/icon", description: "Predefined styles for svg icons", script: CuiDocsIconScript },
     "height": { name: "Height", uri: "/docs/components/height", description: "Customization for heights of the element" },
     "switch": { name: "Switch", uri: "/docs/components/switch", description: "Switch elements in view", script: CuiDocsSwitchScript },
