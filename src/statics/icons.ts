@@ -200,4 +200,7 @@ export const iconsData: IconElementData[] = [
     { name: "Cloud offline", code: "cloud_offline", category: "controls" },
     { name: "Cookie", code: "cookie", category: "all" },
     { name: "Viewfinder", code: "viewfinder", category: "media" },
+    { name: "Send", code: "send", category: "controls" },
+    { name: "Send out", code: "send_out", category: "controls" },
+
 ]

@@ -1,7 +1,7 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { Navbar } from "./navigation/Navbar";
-import { Router, Switch, Route, BrowserRouter, useLocation, Link } from "react-router-dom";
+import { Router, Switch, Route, BrowserRouter, Link } from "react-router-dom";
 import { Home } from "./main/home";
 import { DocsComponent } from "./main/docs/docs";
 import { Overview } from "./main/overview/overview";
@@ -19,7 +19,7 @@ import { SearchDialog } from "./search/SearchDialog";
 import { CuiDocsDashboard } from "./main/docs/dashboard";
 import { CUI_LIGHT_VERSION } from "cui-light/dist/esm/index";
 import { CUI_STYLES_VERSION } from "cui-styles/index";
-import { CUI_ICONS_VERSION } from "bpd-cui-icons/index";
+import { CUI_ICONS_VERSION } from "bpd-cui-icons/esm/index";
 
 
 export interface AppProps {

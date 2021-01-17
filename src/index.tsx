@@ -4,7 +4,7 @@ import './styles/styles.scss';
 import { App } from "./components/app";
 import { BpdStateManager } from 'bpd-state-manager/dist/esm/index';
 import { BpdStateManagerConfig } from "bpd-state-manager/dist/esm/interfaces";
-import { CuiIconsPack } from 'bpd-cui-icons/index';
+import { CuiIconsPack } from 'bpd-cui-icons/esm/index';
 import { Translations } from "./api/strings/DocsTranslations/DocsTranslations";
 import { ActionsType, RecentsMutationHandler, StatesType, STATE_RECENT } from "./api/state/state";
 import { ViewRecentStorageService } from "./api/services/ViewRecents";
