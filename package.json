@@ -40,7 +40,7 @@
     "cui-light-components": "^0.2.7",
     "cui-light-core": "^0.2.8",
     "cui-light-plugins": "^0.2.6",
-    "cui-styles": "^0.2.11",
+    "cui-styles": "^0.2.13",
     "html-webpack-plugin": "^3.2.0",
     "jasmine": "^3.6.3",
     "karma-typescript": "^5.2.0",
