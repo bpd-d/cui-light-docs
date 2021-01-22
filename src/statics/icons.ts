@@ -202,5 +202,10 @@ export const iconsData: IconElementData[] = [
     { name: "Viewfinder", code: "viewfinder", category: "media" },
     { name: "Send", code: "send", category: "controls" },
     { name: "Send out", code: "send_out", category: "controls" },
+    { name: "Wrench", code: "wrench", category: "controls" },
+    { name: "Clip", code: "clip", category: "editor" },
+    { name: "Clip 2", code: "clip_2", category: "editor" },
+    { name: "Clip 3", code: "clip_3", category: "editor" },
+    { name: "Stopwatch", code: "stopwatch", category: "media" },
 
 ]
