@@ -125,11 +125,18 @@ $prefix : 'cui' !default;
     }
 
     .home-main-container {
-        height             : calc(100vh - 60px);
-        background-color   : variables.$component-background-accent;
-        background-image   : url("/assets/images/home_background_shapes_vertical.svg");
-        background-repeat  : no-repeat;
-        background-position: 50% 50%;
+        height                     : calc(100vh - 60px);
+        background-color           : variables.$component-background-accent;
+        // background-image   : url("/assets/images/home_background_shapes_vertical.svg");
+        //background-color         : linear-gradient(#e66465, #9198e5);
+        background-image           : url("/assets/images/wave.png");
+        background-repeat          : no-repeat;
+        background-position        : 50% 50%;
+        background-size            : cover;
+    }
+
+    .home-logo-margin {
+        margin-top: 100px;
     }
 
     .app-home-logo {
@@ -137,7 +144,7 @@ $prefix : 'cui' !default;
             width : 200px;
             height: 200px;
 
-            stroke-width: 3px !important;
+            stroke-width: 5px !important;
 
             path {
                 &.outer-ring {
@@ -319,8 +326,9 @@ $prefix : 'cui' !default;
         }
 
         .home-main-container {
-            height          : 450px;
-            background-image: url("/assets/images/home_background_shapes.svg");
+            height                 : 450px;
+            // background-image: url("/assets/images/home_background_shapes.svg");
+            //  background-image   : url("/assets/images/wave.png");
         }
     }
 
@@ -336,7 +344,8 @@ $prefix : 'cui' !default;
         }
 
         .home-main-container {
-            background-image: url("/assets/images/home_background_shapes.svg");
+            // background-image: url("/assets/images/home_background_shapes.svg");
+            //   background-image: url("/assets/images/wave.png");
         }
     }
 

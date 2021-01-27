@@ -16,7 +16,7 @@ export interface NavbarProps {
 export function Navbar(props: NavbarProps) {
     const currentLocation = useLocation();
     const [state, setState] = React.useState<NavbarState>({ currentSite: "" });
-    const navbarBgClass = "navbar-background-accent cui-dark cui-box-shadow-remove";
+    const navbarBgClass = " cui-box-shadow-remove";
     const downloadBtnCls = state.currentSite ? "cui-shade" : "cui-shade";
 
     function getCurrentPage() {
@@ -38,7 +38,7 @@ export function Navbar(props: NavbarProps) {
         })
     }, [currentLocation])
     return (
-        <nav className={"cui-navbar cui-sticky layout-navigation " + navbarBgClass}>
+        <nav className={"cui-navbar cui-sticky layout-navigation navbar-background-accent cui-dark " + navbarBgClass}>
             <div className="cui-navbar-left cui-width-1-1 cui-width-auto--m cui-flex cui-middle cui-between" id="navbar-left">
                 <ul>
                     {state.currentSite && <li><Link className="cui-icon app-icon" cui-icon="app_icon" to="/"></Link></li>}
