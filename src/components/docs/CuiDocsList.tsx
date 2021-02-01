@@ -13,7 +13,7 @@ export interface CuiDocsListProps {
 export function CuiDocsList(props: CuiDocsListProps) {
     function onItemClick(value: string) {
         copyText(value).then(() => {
-            window.$cui.toast("")
+
         })
     }
     return (<ul className="cui-list cui-bullet">

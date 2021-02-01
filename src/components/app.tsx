@@ -17,7 +17,7 @@ import { getLastRecentItem, getRecentItems } from "../api/state/filters";
 import { loadRecentsFromService } from "../api/state/actions";
 import { SearchDialog } from "./search/SearchDialog";
 import { CuiDocsDashboard } from "./main/docs/dashboard";
-import { CUI_LIGHT_VERSION } from "cui-light/dist/esm/index";
+import { CUI_LIGHT_VERSION } from "cui-light-app/dist/esm/index";
 import { CUI_STYLES_VERSION } from "cui-styles/index";
 import { CUI_ICONS_VERSION } from "bpd-cui-icons/esm/index";
 

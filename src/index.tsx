@@ -9,8 +9,10 @@ import { Translations } from "./api/strings/DocsTranslations/DocsTranslations";
 import { ActionsType, RecentsMutationHandler, StatesType, STATE_RECENT } from "./api/state/state";
 import { ViewRecentStorageService } from "./api/services/ViewRecents";
 import { StateErrorHandler } from "./api/state/handlers";
-import { CuiInitData, CuiInstance } from "node_modules/cui-light/dist/index";
-import { CuiSetupInit } from "cui-light-core/dist/esm/models/setup";
+import { CuiInitData } from "../node_modules/cui-light-app/dist/esm/app/initializer";
+import { CuiInstance } from "../node_modules/cui-light-app/dist/esm/app/instance";
+import { CuiSetupInit } from "../node_modules/cui-light-app/dist/esm/core/models/setup";
+import { CuiInit } from "../node_modules/cui-light-app/dist/esm/app/init";
 
 export const CUI_DOCS_VER = "0.0.1";
 
@@ -82,14 +84,14 @@ function load(icons: any): boolean {
         recents: []
     }, mutatationHandler.mutate.bind(mutatationHandler))
     ReactDOM.render(<App />, rootElement);
-    window.cuiInit.init(cuiSetup).then((result) => {
+    new CuiInit().init(cuiSetup).then((result) => {
         preload.classList.add("fade-out");
         setTimeout(() => {
             requestAnimationFrame(() => {
                 preload.remove();//classList.add(HIDDEN_CLS);
                 rootElement.classList.remove(HIDDEN_CLS);
             })
-        }, 100);
+        }, 0);
 
     });
     return true;

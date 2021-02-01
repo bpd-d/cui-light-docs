@@ -9,7 +9,7 @@ export interface IconElementProps {
 export function IconElement(props: IconElementProps) {
     function onLinkClick() {
         copyText(props.code).then((value) => {
-            window.$cui.toast(`${value} copied`);
+            window.$cui.emit("toast", "~toast-plugin", `${value} copied`);
         });
     }
 

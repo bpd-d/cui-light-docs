@@ -1,7 +1,7 @@
 import * as React from "react";
 import { NavbarLink } from "../partials/navbarlink";
 import { Link } from "react-router-dom";
-import { ElementManager } from "../../../node_modules/cui-light/dist/index";
+import { ElementManager } from "../../../node_modules/cui-light-app/dist/index";
 import { cuiComponents } from "../../statics/ComponentsDocs/base";
 import { enumerate } from "../../utils/function";
 import { CuiDocsNavigation } from "../docs/CuiDocsNavigation";
