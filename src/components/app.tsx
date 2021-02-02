@@ -21,6 +21,7 @@ import { CUI_LIGHT_VERSION } from "cui-light-app/dist/esm/index";
 import { CUI_STYLES_VERSION } from "cui-styles/index";
 import { CUI_ICONS_VERSION } from "bpd-cui-icons/esm/index";
 import { ROUTES } from "../routes";
+import { CuiDocsIconPackBuilder } from "./main/icons/builder/builder";
 
 
 export interface AppProps {
@@ -94,6 +95,7 @@ export class App extends React.Component<AppProps, AppState> {
                                 <Route path={ROUTES['component'].uri} component={DocsComponent}></Route>
                                 <Route path={ROUTES.overview.uri} component={Overview}></Route>
                                 <Route path={ROUTES.download.uri} component={Download}></Route>
+                                <Route path={ROUTES.builder.uri} component={CuiDocsIconPackBuilder}></Route>
                                 <Route path={ROUTES.icons.uri} component={IconsComponent}></Route>
                                 <Route path={ROUTES.about.uri} component={About} />
                                 <Route path={ROUTES.home.uri} component={Home}></Route>

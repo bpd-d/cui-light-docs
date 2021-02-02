@@ -207,5 +207,16 @@ export const iconsData: IconElementData[] = [
     { name: "Clip 2", code: "clip_2", category: "editor" },
     { name: "Clip 3", code: "clip_3", category: "editor" },
     { name: "Stopwatch", code: "stopwatch", category: "media" },
-
+    { name: "Chart", code: "chart", category: "chart" },
+    { name: "Chart bar", code: "chart_bar", category: "chart" },
+    { name: "Chart line", code: "chart_line", category: "chart" },
+    { name: "Chart log", code: "chart_log", category: "chart" },
+    { name: "Chart pie", code: "chart_pie", category: "chart" },
+    { name: "Chart simple", code: "chart_simple", category: "chart" },
+    { name: "Chart square", code: "chart_square", category: "chart" },
+    { name: "Chart round", code: "chart_round", category: "chart" },
+    { name: "Select all", code: "select_all", category: "controls" },
+    { name: "Select all 2", code: "select_all_2", category: "controls" },
+    { name: "Select", code: "select", category: "controls" },
+    { name: "Wall", code: "wall", category: "all" }
 ]

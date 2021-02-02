@@ -1,7 +1,10 @@
 import * as React from "react";
+import { Link } from "react-router-dom";
 import { CuiSelect } from "../../partials/forms/CuiSelect";
 import { CuiIconsHeaderTitle } from "./title";
 import { CuiIconFilterData } from "./icons";
+import { ROUTES } from "../../../routes";
+
 
 export interface CuiIconsComponentHeaderProps {
     categories: string[];
@@ -34,6 +37,9 @@ export function CuiIconsComponentHeader(props: CuiIconsComponentHeaderProps) {
                     <label htmlFor="categories" className="cui-form-label cui-margin-small-right">Categories</label>
                     <CuiSelect name="categories" options={props.categories} current={props.filter.category} placeholder="Category" onChange={onSelectChange} />
                 </div>
+                <Link to={ROUTES['builder'].uri} className="cui-button cui-accent cui-width-1-1 cui-width-auto--m cui-margin-small cui-icon-margin" cui-icon="wrench">
+                    Builder
+                </Link>
             </div>
         </div>
     );
