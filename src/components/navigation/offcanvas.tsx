@@ -5,6 +5,7 @@ import { ElementManager } from "../../../node_modules/cui-light-app/dist/index";
 import { cuiComponents } from "../../statics/ComponentsDocs/base";
 import { enumerate } from "../../utils/function";
 import { CuiDocsNavigation } from "../docs/CuiDocsNavigation";
+import { ROUTES } from "../../routes";
 
 export interface OffCanvasProps {
 }
@@ -34,18 +35,18 @@ export class OffCanvas extends React.Component<OffCanvasProps, {}> {
                     <div className="cui-width-1-1">
                         <h3 className="cui-h3">Menu</h3>
                         <ul className="cui-list cui-interactive cui-margin-top">
-                            <li><NavbarLink url="/" name="Home" shouldClose={true} /></li>
-                            <li><NavbarLink url="/overview" name="Overview" shouldClose={true} /></li>
-                            <li><NavbarLink url="/docs/dashboard" name="Documentation" shouldClose={true} /></li>
-                            <li><NavbarLink url="/icon" name="Icons" shouldClose={true} /></li>
-                            <li><NavbarLink url="/about" name="About" shouldClose={true} /></li>
+                            <li><NavbarLink url={ROUTES['home'].uri} name={ROUTES['home'].name} shouldClose={true} /></li>
+                            <li><NavbarLink url={ROUTES['overview'].uri} name={ROUTES['overview'].name} shouldClose={true} /></li>
+                            <li><NavbarLink url={ROUTES['docs'].uri} name={ROUTES['docs'].name} shouldClose={true} /></li>
+                            <li><NavbarLink url={ROUTES['icons'].uri} name={ROUTES['icons'].name} shouldClose={true} /></li>
+                            <li><NavbarLink url={ROUTES['about'].uri} name={ROUTES['about'].name} shouldClose={true} /></li>
                         </ul>
                         <h3 className="cui-h3">Components</h3>
                         <CuiDocsNavigation shouldClose={true} sort={true} />
                     </div>
                 </div>
                 <div className="cui-flex-center cui-card-footer">
-                    <Link to="/download" className="cui-button cui-accent cui-rounded">Download</Link>
+                    <Link to={ROUTES['download'].uri} className="cui-button cui-accent cui-rounded">{ROUTES['download'].name}</Link>
                 </div>
             </div>
         </div>

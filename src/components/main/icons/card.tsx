@@ -1,4 +1,5 @@
 import * as React from "react";
+import { toast } from "../../../core/cui";
 import { copyText } from "../../../utils/function";
 
 export interface IconElementProps {
@@ -9,7 +10,7 @@ export interface IconElementProps {
 export function IconElement(props: IconElementProps) {
     function onLinkClick() {
         copyText(props.code).then((value) => {
-            window.$cui.emit("toast", "~toast-plugin", `${value} copied`);
+            toast(`${value} copied`);
         });
     }
 

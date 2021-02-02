@@ -3,7 +3,7 @@ import { CuiIconsComponentHeader } from "./header";
 import { CuiIconsGroupedComponent } from "./group";
 import { CuiGroup, group } from "../../../utils/groups";
 import { iconsData } from "../../../statics/icons";
-import { PageHeader } from "../../partials/components/PageHeader";
+import { PageWithHeaderBase } from "../../../components/base/PageWithHeaderBase";
 export const CATEGORY_ALL = 'all';
 export interface GroupedIconsData {
     [id: string]: IconsGroup;
@@ -75,12 +75,9 @@ export class IconsComponent extends React.Component<IconsProps, IconComponentSta
         }, iconsData, (item: IconElementData) => {
             return this.isFilterMatching(item, this.state.filter.filter) && this.isCategoryMatching(item, this.state.filter.category);
         });
-        return <div className="">
-            <PageHeader title="Icons" description="cUI icons pack" />
-            <div className="limited-content-width cui-section cui-margin-auto">
-                <CuiIconsComponentHeader categories={this.state.categories} filter={this.state.filter} onUpdate={this.onFilterUpdate} />
-                <CuiIconsGroupedComponent icons={groupedIcons} />
-            </div>
-        </div>;
+        return <PageWithHeaderBase name="Icons" description="cUI icons pack">
+            <CuiIconsComponentHeader categories={this.state.categories} filter={this.state.filter} onUpdate={this.onFilterUpdate} />
+            <CuiIconsGroupedComponent icons={groupedIcons} />
+        </PageWithHeaderBase>
     }
 }

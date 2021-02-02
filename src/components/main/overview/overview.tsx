@@ -1,4 +1,5 @@
 import * as React from "react";
+import { PageBase } from "../../../components/base/PageBase";
 import { OverviewSegmentComponent } from "./segment";
 
 export interface OverviewProps {
@@ -57,8 +58,10 @@ export class Overview extends React.Component<any, {}> {
             return <OverviewSegmentComponent title={item.title} description={item.description} icon={item.icon} even={index % 2 === 0} key={index} />
 
         })
-        return <div className="cui-flex cui-center overview-content" cui-intersection="action:.in-view; target: span.overview-icon; offset: 0.9">
-            {components}
-        </div>;
+        return <PageBase name="Overview">
+            <div className="cui-flex cui-center overview-content" cui-intersection="action:.in-view; target: span.overview-icon; offset: 0.9">
+                {components}
+            </div>
+        </PageBase>
     }
 }

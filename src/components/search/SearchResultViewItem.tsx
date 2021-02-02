@@ -1,5 +1,6 @@
 import * as React from 'react'
 import { Link } from 'react-router-dom';
+import { toast } from '../../core/cui';
 import { capitalize, copyText } from '../../utils/function';
 import { SearchResult, SearchResultSection } from './interfaces';
 
@@ -33,7 +34,7 @@ export function SearchResultLinkItem(prop: ListItemProp) {
 export function SearchResulIconItem(prop: ListItemProp) {
     function onClick() {
         copyText(prop.result.detail).then((value) => {
-            window.$cui.emit("toast", "~toast-plugin", `${value} copied`);
+            toast(`${value} copied`);
         });
     }
     return (<a className="cui-icon cui-icon-margin" cui-icon={prop.result.detail} cui-close="" onClick={onClick}>{prop.result.name}</a>);

@@ -20,6 +20,7 @@ import { CuiDocsDashboard } from "./main/docs/dashboard";
 import { CUI_LIGHT_VERSION } from "cui-light-app/dist/esm/index";
 import { CUI_STYLES_VERSION } from "cui-styles/index";
 import { CUI_ICONS_VERSION } from "bpd-cui-icons/esm/index";
+import { ROUTES } from "../routes";
 
 
 export interface AppProps {
@@ -89,13 +90,13 @@ export class App extends React.Component<AppProps, AppState> {
                         <Navbar site={this.state.currentSite} />
                         <div className="layout-content">
                             <Switch>
-                                <Route path="/docs/dashboard" component={CuiDocsDashboard}></Route>
-                                <Route path="/docs/components/:id" component={DocsComponent}></Route>
-                                <Route path="/overview" component={Overview}></Route>
-                                <Route path="/download" component={Download}></Route>
-                                <Route path="/icon" component={IconsComponent}></Route>
-                                <Route path="/about" component={About} />
-                                <Route path="/" component={Home}></Route>
+                                <Route path={ROUTES["docs"].uri} component={CuiDocsDashboard}></Route>
+                                <Route path={ROUTES['component'].uri} component={DocsComponent}></Route>
+                                <Route path={ROUTES.overview.uri} component={Overview}></Route>
+                                <Route path={ROUTES.download.uri} component={Download}></Route>
+                                <Route path={ROUTES.icons.uri} component={IconsComponent}></Route>
+                                <Route path={ROUTES.about.uri} component={About} />
+                                <Route path={ROUTES.home.uri} component={Home}></Route>
                                 <Route>
                                     <ErrorRoute />
                                 </Route>

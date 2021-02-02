@@ -1,7 +1,7 @@
 import * as React from "react";
-import { Link, NavLink, useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+import { ROUTES } from "../../routes";
 import { capitalize } from "../../utils/function";
-import { ClearableInput } from "../partials/forms/ClearableInput";
 import { NavbarLink } from "../partials/navbarlink";
 
 export interface NavbarState {
@@ -52,11 +52,11 @@ export function Navbar(props: NavbarProps) {
             </div>
 
             <ul className="cui-navbar-right cui-visible--m">
-                <li><NavbarLink class="cui-navbar-item" url="/" name="Home" /></li>
-                <li><NavbarLink class="cui-navbar-item" url="/overview" name="Oveview" /></li>
-                <li><NavbarLink class="cui-navbar-item" url="/docs/dashboard" name="Documentation" /></li>
-                <li><NavbarLink class="cui-navbar-item" url="/icon" name="Icons" /></li>
-                <li><NavbarLink class="cui-navbar-item" url="/about" name="About" /></li>
+                <li><NavbarLink class="cui-navbar-item" url={ROUTES['home'].uri} name={ROUTES['home'].name} /></li>
+                <li><NavbarLink class="cui-navbar-item" url={ROUTES['overview'].uri} name={ROUTES['overview'].name} /></li>
+                <li><NavbarLink class="cui-navbar-item" url={ROUTES['docs'].uri} name={ROUTES['docs'].name} /></li>
+                <li><NavbarLink class="cui-navbar-item" url={ROUTES['icons'].uri} name={ROUTES['icons'].name} /></li>
+                <li><NavbarLink class="cui-navbar-item" url={ROUTES['about'].uri} name={ROUTES['about'].name} /></li>
                 <li><Link to="/download" className={"cui-button cui-rounded " + downloadBtnCls}>Download</Link></li>
                 <li><a className="cui-icon cui-button cui-circle cui-padding" cui-icon="search" cui-open="#search-dialog"></a></li>
             </ul>
