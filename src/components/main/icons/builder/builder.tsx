@@ -6,7 +6,6 @@ import { mapObjectToArray } from '../../../../core/functions';
 import { copyText } from '../../../../utils/function';
 import { is } from 'bpd-toolkit/dist/esm/index';
 import { toast } from '../../../../core/cui';
-import { useIsLoading } from '../../../../components/hooks/loading';
 import { IsLoading } from '../../../../components/base/IsLoading';
 
 interface CuiIconPackItem {
@@ -48,7 +47,7 @@ export function CuiDocsIconPackBuilder() {
     }
 
     React.useEffect(() => {
-        // Map icons object to array
+        //Map icons object to array
         setIcons(mapObjectToArray(CuiIconsPack, (icon: string, iconData: string, index: number) => {
             return {
                 name: icon,
@@ -59,6 +58,9 @@ export function CuiDocsIconPackBuilder() {
         }))
         return () => { }
     }, [])
+    if (!is(icons)) {
+        return <IsLoading classes="cui-height-viewport-1-2" />
+    }
     return (<PageWithHeaderBase name="Icons builder" description="Tool which allows to build custom icon pack">
         <div className="cui-flex cui-right">
             <button className="cui-button cui-default" onClick={onSelectAllClick}>Select All</button>
