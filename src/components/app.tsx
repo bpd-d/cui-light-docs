@@ -106,7 +106,7 @@ export class App extends React.Component<AppProps, AppState> {
                         </div>
                         <div className="info-bar">
                             <div className="cui-drop-trigger cui-margin-small-bottom" >
-                                <a className="cui-icon-button cui-accent cui-box-shadow" cui-icon="history"></a>
+                                <a className="cui-icon-button cui-default cui-box-shadow" cui-icon="history"></a>
                                 <div className="cui-drop cui-dropdown" cui-drop="mode: click; autoClose: y; outClose: y">
                                     {/* <div className="cui-flex cui-middle">
                                 <span cui-icon="history"></span>
@@ -121,7 +121,7 @@ export class App extends React.Component<AppProps, AppState> {
                                 </div>
                             </div>
                             <div className="cui-drop-trigger" >
-                                <a className="cui-icon-button cui-accent cui-box-shadow" cui-icon="git"></a>
+                                <a className="cui-icon-button cui-default cui-box-shadow" cui-icon="git"></a>
                                 <div className="cui-drop cui-dropdown" cui-drop="mode: click; autoClose: y; outClose: y">
                                     <span className="cui-icon-margin cui-icon cui-padding-small cui-text-bold" cui-icon="git"> Git links</span>
                                     <ul className="cui-drop-nav">

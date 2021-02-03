@@ -126,7 +126,7 @@ $prefix : 'cui' !default;
 
     .home-main-container {
         height    : calc(100vh - 60px);
-        background: linear-gradient(variables.$component-background-accent, variables.$component-background-secondary);
+        background: linear-gradient(variables.$component-background-accent, variables.$component-background-secondary-muted);
     }
 
     .home-logo-container {
