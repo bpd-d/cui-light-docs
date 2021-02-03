@@ -1,7 +1,10 @@
 import * as React from "react";
+import { PageBase } from "../base/PageBase";
 
 export function Download(props: any) {
+    React.useEffect(() => {
+    })
     return (
-        <div className="aa">Download section</div>
+        <PageBase name="Download"></PageBase>
     )
 }
