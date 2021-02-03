@@ -4,9 +4,12 @@ $prefix : 'cui' !default;
 @use "../../node_modules/cui-styles/styles/mixins"as mixins;
 @use "../../node_modules/cui-styles/styles/build"as build;
 
+
+@use "./transitions/page.scss"as page;
 @use "./overview.scss"as overview;
 @use "./dashboard.scss"as dashboard;
 @use './keyframes'as keyframes;
+
 
 @include build.wrapper() {
 
@@ -42,6 +45,15 @@ $prefix : 'cui' !default;
             height    : calc(100vh - 60px);
             max-height: calc(100vh - 60px);
             overflow-y: auto;
+            position  : relative;
+
+            .route-child {
+                position: absolute;
+                top     : 0px;
+                left    : 0px;
+                width   : 100%;
+                height  : 100%;
+            }
         }
     }
 
@@ -361,10 +373,6 @@ $prefix : 'cui' !default;
             grid-template-rows   : 100%;
         }
 
-        .home-main-container {
-            // background-image: url("/assets/images/home_background_shapes.svg");
-            //   background-image: url("/assets/images/wave.png");
-        }
     }
 
     @include mixins.media-screen-min-xlarge {
@@ -384,5 +392,7 @@ $prefix : 'cui' !default;
     @include dashboard.definitions;
 
     @include keyframes.definitions;
+
+    @include page.definitions;
 
 }

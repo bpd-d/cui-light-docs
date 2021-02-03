@@ -48,7 +48,6 @@ export function Navbar(props: NavbarProps) {
                     <li><a className="cui-icon cui-button cui-circle cui-padding" cui-icon="search" cui-open="#search-dialog"></a></li>
                     <li><a className="cui-icon cui-padding cui-button " cui-icon="menu" cui-open="target: #app-offcanvas"></a></li>
                 </ul>
-
             </div>
 
             <ul className="cui-navbar-right cui-visible--m">

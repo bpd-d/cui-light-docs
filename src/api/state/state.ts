@@ -52,7 +52,6 @@ export class RecentsMutationHandler {
                         recents: fromStorage ?? [],
                         recent: last
                     }
-                    console.log(fromStorage);
                 }
 
                 break;

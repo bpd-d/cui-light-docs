@@ -1,4 +1,5 @@
-import * as React from "react";
+/// <reference types="react" />
+import { CuiGroup } from "../../../utils/groups";
 export declare const CATEGORY_ALL = "all";
 export interface GroupedIconsData {
     [id: string]: IconsGroup;
@@ -16,18 +17,11 @@ export interface IconElementData {
     category: string;
 }
 export interface IconComponentState {
-    categories: string[];
     filter: CuiIconFilterData;
+    grouped: CuiGroup<IconElementData>;
 }
 export interface CuiIconFilterData {
     filter: string;
     category: string;
 }
-export declare class IconsComponent extends React.Component<IconsProps, IconComponentState> {
-    constructor(props: IconsProps);
-    onFilterUpdate(data: CuiIconFilterData): void;
-    getCategory(result: string[], current: IconElementData): string[];
-    isCategoryMatching(item: IconElementData, category: string): boolean;
-    isFilterMatching(item: IconElementData, filter: string): boolean;
-    render(): JSX.Element;
-}
+export declare function IconsComponent(props: IconsProps): JSX.Element;

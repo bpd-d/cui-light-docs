@@ -4,6 +4,8 @@ import { CuiIconsGroupedComponent } from "./group";
 import { CuiGroup, group } from "../../../utils/groups";
 import { iconsData } from "../../../statics/icons";
 import { PageWithHeaderBase } from "../../../components/base/PageWithHeaderBase";
+import { IsLoading } from "../../../components/base/IsLoading";
+
 export const CATEGORY_ALL = 'all';
 export interface GroupedIconsData {
     [id: string]: IconsGroup;
@@ -25,8 +27,8 @@ export interface IconElementData {
 }
 
 export interface IconComponentState {
-    categories: string[];
     filter: CuiIconFilterData;
+    grouped: CuiGroup<IconElementData>;
 }
 
 export interface CuiIconFilterData {
@@ -34,50 +36,69 @@ export interface CuiIconFilterData {
     category: string;
 }
 
-export class IconsComponent extends React.Component<IconsProps, IconComponentState> {
+export function IconsComponent(props: IconsProps) {
+    const [state, setState] = React.useState<IconComponentState>({
+        filter: { category: CATEGORY_ALL, filter: "" },
+        grouped: {}
+    });
 
-    constructor(props: IconsProps) {
-        super(props);
-        const categories: string[] = [CATEGORY_ALL, ...iconsData.reduce<string[]>(this.getCategory, [])]
-        this.state = {
-            categories: categories,
-            filter: { category: CATEGORY_ALL, filter: "" }
-        }
-        this.onFilterUpdate = this.onFilterUpdate.bind(this);
-    }
+    const categories = React.useRef<string[]>([]);
 
-    onFilterUpdate(data: CuiIconFilterData) {
-        this.setState({
-            ...this.state,
+    const [isLoading, setIsLoading] = React.useState(false);
+
+    function onFilterUpdate(data: CuiIconFilterData) {
+        setState({
+            ...state,
             filter: data
         })
     }
 
-    getCategory(result: string[], current: IconElementData) {
+    function getCategory(result: string[], current: IconElementData) {
         if (!result.find(x => x == current.category)) {
             result.push(current.category);
         }
         return result;
     }
 
-    isCategoryMatching(item: IconElementData, category: string) {
+    function isCategoryMatching(item: IconElementData, category: string) {
         return !category || category === CATEGORY_ALL ? true : item.category === category
     }
 
-    isFilterMatching(item: IconElementData, filter: string) {
+    function isFilterMatching(item: IconElementData, filter: string) {
         return !filter || filter === '' ? true : item.code.includes(filter.toLowerCase());
     }
 
-    render() {
-        //  const filterIcons = this.state.filter.filter ? this.icons.filter(icon => { return icon.code.includes(this.state.filter.filter.toLowerCase()) }) : this.icons;
-        const groupedIcons: CuiGroup<IconElementData> = group((item: IconElementData) => {
-            return item.category;
-        }, iconsData, (item: IconElementData) => {
-            return this.isFilterMatching(item, this.state.filter.filter) && this.isCategoryMatching(item, this.state.filter.category);
+    function prepareGroup(data: CuiIconFilterData): Promise<CuiGroup<IconElementData>> {
+        return new Promise((resolve, reject) => {
+            resolve(group((item: IconElementData) => {
+                return item.category;
+            }, iconsData, (item: IconElementData) => {
+                return isFilterMatching(item, data.filter) && isCategoryMatching(item, data.category);
+            }));
         });
-        return <PageWithHeaderBase name="Icons" description="cUI icons pack">
-            <CuiIconsComponentHeader categories={this.state.categories} filter={this.state.filter} onUpdate={this.onFilterUpdate} />
-            <CuiIconsGroupedComponent icons={groupedIcons} />
-        </PageWithHeaderBase>
     }
+
+
+    React.useEffect(() => {
+        setIsLoading(true);
+        if (categories.current.length === 0) {
+            categories.current = iconsData.reduce<string[]>(getCategory, [])
+        }
+
+        prepareGroup(state.filter).then((group) => {
+            setState({
+                ...state,
+                grouped: group
+            })
+            setIsLoading(false)
+        });
+
+    }, [state.filter])
+
+    return <PageWithHeaderBase name="Icons" description="cUI icons pack">
+        <CuiIconsComponentHeader categories={categories.current} filter={state.filter} onUpdate={onFilterUpdate} />
+        {isLoading ? <IsLoading /> :
+            <CuiIconsGroupedComponent icons={state.grouped} />
+        }
+    </PageWithHeaderBase>
 }

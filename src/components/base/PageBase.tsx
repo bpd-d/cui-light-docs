@@ -9,7 +9,7 @@ export function PageBase(props: PageBaseProps) {
     React.useEffect(() => {
         setDocumentTitle(props.name)
     })
-    return (<>
+    return (<div className='route-child'>
         {props.children}
-    </>);
+    </div>);
 }
