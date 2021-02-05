@@ -18,4 +18,3 @@ export interface CuiDocsComponentDef {
 export interface CuiDocsComponents {
     [id: string]: CuiDocsComponentDef;
 }
-export declare const cuiComponents: CuiDocsComponents;

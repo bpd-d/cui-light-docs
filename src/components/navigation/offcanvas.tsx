@@ -2,8 +2,6 @@ import * as React from "react";
 import { NavbarLink } from "../partials/navbarlink";
 import { Link } from "react-router-dom";
 import { ElementManager } from "../../../node_modules/cui-light-app/dist/index";
-import { cuiComponents } from "../../statics/ComponentsDocs/base";
-import { enumerate } from "../../utils/function";
 import { CuiDocsNavigation } from "../docs/CuiDocsNavigation";
 import { ROUTES } from "../../routes";
 
@@ -20,12 +18,6 @@ export class OffCanvas extends React.Component<OffCanvasProps, {}> {
     }
 
     render() {
-        const componentListItems: JSX.Element[] = []
-        enumerate((key, value) => {
-            if (value) {
-                componentListItems.push(<li key={key}><NavbarLink url={value.uri} name={value.name} shouldClose={true} /></li>)
-            }
-        }, cuiComponents)
         return <div className="cui-off-canvas" id="app-offcanvas" cui-off-canvas="escClose: y; outClose: y">
             <div className="cui-off-canvas-container cui-card off-canvas-layout">
                 <div className="cui-card-header cui-flex cui-middle cui-right">

@@ -1,5 +1,5 @@
-import { enumerateObject } from "../../../node_modules/bpd-toolkit/dist/esm/index";
-import { cuiComponents, CuiDocsComponentDef } from "../../statics/ComponentsDocs/base";
+// import { enumerateObject } from "../../../node_modules/bpd-toolkit/dist/esm/index";
+// import { cuiComponents, CuiDocsComponentDef } from "../../statics/ComponentsDocs/base";
 import { iconsData } from "../../statics/icons";
 import { IconElementData } from "../main/icons/icons";
 import { SearchResult, SearchResultSection } from "./interfaces";
@@ -8,11 +8,11 @@ export function FindSearchResults(search: string): Promise<SearchResultSection[]
     function getComponents(filter: string) {
         let result: SearchResult[] = [];
         try {
-            enumerateObject(cuiComponents, (key: string, value: CuiDocsComponentDef) => {
-                if (key.match(filter.toLowerCase())) {
-                    result.push({ name: key, detail: value.uri })
-                }
-            });
+            // enumerateObject(cuiComponents, (key: string, value: CuiDocsComponentDef) => {
+            //     if (key.match(filter.toLowerCase())) {
+            //         result.push({ name: key, detail: value.uri })
+            //     }
+            // });
         } catch (e) {
             console.log(e);
             return []

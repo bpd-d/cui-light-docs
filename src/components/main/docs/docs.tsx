@@ -1,12 +1,13 @@
 import * as React from "react";
-import { useLocation, useParams } from "react-router-dom";
-import { cuiComponents, CuiDocsComponentDef } from "../../../statics/ComponentsDocs/base";
+import { useParams } from "react-router-dom";
+import { CuiDocsComponentDef } from "../../../statics/ComponentsDocs/base";
 import { CuiDocsNavigation } from "../../docs/CuiDocsNavigation";
 import DocsHeader from "../../partials/components/DocsHeader";
 import { CuiDocsPage } from "../../docs/base";
 import { CuiDocsAside } from "../../docs/CuiDocsAside";
 import { addRecentItem } from "../../../api/state/actions";
 import { ClearableInput } from "../../partials/forms/ClearableInput";
+import { getComponentsDocsAsync } from "../../../core/imports/components";
 
 export interface DocsProps {
     site?: string;
@@ -36,21 +37,27 @@ export default function DocsComponent(args: DocsProps) {
     }
 
     React.useEffect(() => {
-        console.log("Docs render:" + id)
-        let component = cuiComponents[id];
-        if (component) {
-            setState({
-                component: component,
-                search: "",
-                error: false
-            })
-            addRecentItem(component.name, component.uri)
-        } else {
+        getComponentsDocsAsync().then((cuiComponents) => {
+            let component = cuiComponents[id];
+            if (component) {
+                setState({
+                    component: component,
+                    search: "",
+                    error: false
+                })
+                addRecentItem(component.name, component.uri)
+            } else {
+                setState({
+                    ...state,
+                    error: true
+                })
+            }
+        }, (e) => {
             setState({
                 ...state,
                 error: true
             })
-        }
+        })
     }, [id])
     if (state.error) {
         return <CuiDocsComponentNotFound />
@@ -99,21 +106,21 @@ function CuiDocsComponentLoading() {
     </div>);
 }
 
-function CuiDocsNavigationPane() {
-    const [search, setSearch] = React.useState<string>("");
-    function onInputUpdate(value: string) {
-        setSearch(value);
-    }
-    return (
-        <div className="cui-unhidden--l">
-            <div className="cui-flex cui-right">
-                <div className="layout-docs-navigation cui-padding-small">
-                    <div className="cui-flex cui-middle">
-                        <ClearableInput value={search} onUpdate={onInputUpdate} />
-                    </div>
-                    <h3 className="cui-h3">Components</h3>
-                    <CuiDocsNavigation sort={true} /></div>
-            </div>
-        </div>
-    )
-}
+// function CuiDocsNavigationPane() {
+//     const [search, setSearch] = React.useState<string>("");
+//     function onInputUpdate(value: string) {
+//         setSearch(value);
+//     }
+//     return (
+//         <div className="cui-unhidden--l">
+//             <div className="cui-flex cui-right">
+//                 <div className="layout-docs-navigation cui-padding-small">
+//                     <div className="cui-flex cui-middle">
+//                         <ClearableInput value={search} onUpdate={onInputUpdate} />
+//                     </div>
+//                     <h3 className="cui-h3">Components</h3>
+//                     <CuiDocsNavigation sort={true} /></div>
+//             </div>
+//         </div>
+//     )
+// }

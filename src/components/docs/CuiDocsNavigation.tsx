@@ -1,7 +1,8 @@
 import * as React from "react";
 import { NavbarLink } from "../partials/navbarlink";
-import { cuiComponents } from "../../statics/ComponentsDocs/base";
 import { enumerate, getKeysFromObject } from "../../utils/function";
+import { getComponentsDocsAsync } from "../../core/imports/components";
+import { CuiDocsComponents } from "../../statics/ComponentsDocs/base";
 
 export interface CuiDocsNavigationProps {
     class?: string;
@@ -14,7 +15,9 @@ export function CuiDocsNavigation(props: CuiDocsNavigationProps) {
     // let items: JSX.Element[] = []
     const [items, setItems] = React.useState<JSX.Element[]>([]);
     const shouldClose = props.shouldClose && true;
-    function sortAndPrepare(): JSX.Element[] {
+    const [error, setError] = React.useState<string>(undefined);
+
+    function sortAndPrepare(cuiComponents: CuiDocsComponents): JSX.Element[] {
         let keys: string[] = getKeysFromObject(cuiComponents);
         return keys.sort().map(key => {
             let value = cuiComponents[key]
@@ -22,7 +25,7 @@ export function CuiDocsNavigation(props: CuiDocsNavigationProps) {
         })
     }
 
-    function prepare(): JSX.Element[] {
+    function prepare(cuiComponents: CuiDocsComponents): JSX.Element[] {
         const list: JSX.Element[] = [];
         enumerate((key, value) => {
             if (value) {
@@ -33,8 +36,16 @@ export function CuiDocsNavigation(props: CuiDocsNavigationProps) {
     }
 
     React.useEffect(() => {
-        setItems(props.sort && true ? sortAndPrepare() : prepare())
-    }, [props.sort])
+        getComponentsDocsAsync().then((components) => {
+            setItems(props.sort && true ? sortAndPrepare(components) : prepare(components))
+        }, (e) => {
+            setError(e.message);
+        })
+
+    }, [props.sort, error])
+    if (error) {
+        return <div className="cui-text-error">{error}</div>
+    }
     return (
         <>
             <ul className={"cui-list cui-interactive animated-list " + (props.class ?? "")}>
