@@ -1,2 +1,2 @@
 /// <reference types="react" />
-export declare function Download(props: any): JSX.Element;
+export default function Download(props: any): JSX.Element;

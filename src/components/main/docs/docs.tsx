@@ -18,7 +18,7 @@ export interface DocsComponentState {
     error: boolean;
 }
 
-export function DocsComponent(args: DocsProps) {
+export default function DocsComponent(args: DocsProps) {
     const { id } = useParams();
     const [state, setState] = React.useState<DocsComponentState>({
         component: null,

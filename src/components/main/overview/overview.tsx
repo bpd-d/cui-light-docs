@@ -6,7 +6,7 @@ export interface OverviewProps {
     site?: string;
 }
 
-export class Overview extends React.Component<any, {}> {
+export default class Overview extends React.Component<any, {}> {
     list: any = [
         {
             title: "Built-in dark mode",

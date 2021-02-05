@@ -1,13 +1,12 @@
 import * as React from "react";
 import { Link } from "react-router-dom";
-import { setDocumentTitle } from "src/core/functions";
 import { PageBase } from "../base/PageBase";
 
 export interface HomeProps {
     site?: string;
 }
 
-export class Home extends React.Component<any, {}> {
+export default class Home extends React.Component<any, {}> {
     constructor(props: HomeProps) {
         super(props);
     }

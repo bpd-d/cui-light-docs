@@ -1,2 +1,2 @@
 /// <reference types="react" />
-export declare function About(): JSX.Element;
+export default function About(): JSX.Element;
