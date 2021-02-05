@@ -36,6 +36,7 @@ export default function DocsComponent(args: DocsProps) {
     }
 
     React.useEffect(() => {
+        console.log("Docs render:" + id)
         let component = cuiComponents[id];
         if (component) {
             setState({
@@ -51,45 +52,54 @@ export default function DocsComponent(args: DocsProps) {
             })
         }
     }, [id])
-
+    if (state.error) {
+        return <CuiDocsComponentNotFound />
+    }
     return (
-
-        state.error ? <CuiDocsComponentNotFound /> :
-            <div className="cui-container layout-docs">
-                <div className="cui-unhidden--l">
-                    <div className="cui-flex cui-right">
-                        <div className="layout-docs-navigation cui-padding-small">
-                            <div className="cui-flex cui-middle">
-                                <ClearableInput value={state.search} />
-                            </div>
-                            <h3 className="cui-h3">Components</h3>
-                            <CuiDocsNavigation sort={true} /></div>
-                    </div>
+        <div className="cui-container layout-docs">
+            <div className="cui-unhidden--l">
+                <div className="cui-flex cui-right">
+                    <div className="layout-docs-navigation cui-padding-small">
+                        <div className="cui-flex cui-middle">
+                            <ClearableInput value={state.search} />
+                        </div>
+                        <h3 className="cui-h3">Components</h3>
+                        <CuiDocsNavigation sort={true} /></div>
                 </div>
-                {state.component ?
-                    (<article className="cui-padding-small">
-                        <DocsHeader title={state.component.name} description={state.component.description} illustration={state.component.illustration} />
-                        <CuiDocsPage script={state.component.script} pageName={state.component.name} />
-                    </article>) :
-                    (<CuiDocsComponentLoading />)}
-                <CuiDocsAside name={id} sections={getAsideHeaders()} />
             </div>
+            <CuiDocsContentPane component={state.component} />
+            <CuiDocsAside name={id} sections={getAsideHeaders()} />
+        </div>
     )
 }
 
-export function CuiDocsComponentNotFound() {
+interface CuiDocsContentPaneProps {
+    component: CuiDocsComponentDef;
+}
+
+function CuiDocsContentPane(props: CuiDocsContentPaneProps) {
+    if (!props.component) {
+        return <CuiDocsComponentLoading />;
+    }
+    return (<article className="cui-padding-small">
+        <DocsHeader title={props.component.name} description={props.component.description} illustration={props.component.illustration} />
+        <CuiDocsPage script={props.component.script} pageName={props.component.name} />
+    </article>)
+}
+
+function CuiDocsComponentNotFound() {
     return (<div className="cui-container cui-center cui-height-viewport-1-2">
         <h2 className="cui-h2 cui-text-error">Page has not been found</h2>
     </div>);
 }
 
-export function CuiDocsComponentLoading() {
+function CuiDocsComponentLoading() {
     return (<div className="cui-container cui-center cui-height-viewport-1-2">
         <span className="">Loading...</span>
     </div>);
 }
 
-export function CuiDocsNavigationPane() {
+function CuiDocsNavigationPane() {
     const [search, setSearch] = React.useState<string>("");
     function onInputUpdate(value: string) {
         setSearch(value);

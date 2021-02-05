@@ -9,6 +9,3 @@ export interface DocsComponentState {
     error: boolean;
 }
 export default function DocsComponent(args: DocsProps): JSX.Element;
-export declare function CuiDocsComponentNotFound(): JSX.Element;
-export declare function CuiDocsComponentLoading(): JSX.Element;
-export declare function CuiDocsNavigationPane(): JSX.Element;

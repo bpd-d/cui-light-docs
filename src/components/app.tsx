@@ -22,6 +22,15 @@ import { ROUTES } from "../routes";
 //import Home from "./main/home";
 
 
+const CuiDocsDashboard = React.lazy(() => import('./main/docs/dashboard'));
+const IconsComponent = React.lazy(() => import('./main/icons/icons'));
+const CuiDocsIconPackBuilder = React.lazy(() => import('./main/icons/builder/builder'));
+const Home = React.lazy(() => import('./main/home'));
+const Overview = React.lazy(() => import('./main/overview/overview'));
+const About = React.lazy(() => import('./main/about/About'));
+const Download = React.lazy(() => import('./main/download'));
+const DocsComponent = React.lazy(() => import('./main/docs/docs'));
+
 export interface AppProps {
 }
 export interface AppState {
@@ -50,14 +59,6 @@ function AppContent(props: AppProps) {
     })
     const location = useLocation();
 
-    const CuiDocsDashboard = React.lazy(() => import('./main/docs/dashboard'));
-    const IconsComponent = React.lazy(() => import('./main/icons/icons'));
-    const CuiDocsIconPackBuilder = React.lazy(() => import('./main/icons/builder/builder'));
-    const Home = React.lazy(() => import('./main/home'));
-    const Overview = React.lazy(() => import('./main/overview/overview'));
-    const About = React.lazy(() => import('./main/about/About'));
-    const Download = React.lazy(() => import('./main/download'));
-    const DocsComponent = React.lazy(() => import('./main/docs/docs'));
 
 
     function onGlobalStateUpdate(recentstate: RecentState) {
