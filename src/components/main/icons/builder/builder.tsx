@@ -15,7 +15,7 @@ interface CuiIconPackItem {
     index: number;
 }
 
-export function CuiDocsIconPackBuilder() {
+export default function CuiDocsIconPackBuilder() {
     const [icons, setIcons] = React.useState<CuiIconPackItem[]>([]);
     function onClearSelectionClick() {
         setIcons(icons.map(icon => {

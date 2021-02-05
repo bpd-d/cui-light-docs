@@ -1,5 +1,5 @@
 import * as React from "react";
-import { useParams } from "react-router-dom";
+import { useLocation, useParams } from "react-router-dom";
 import { cuiComponents, CuiDocsComponentDef } from "../../../statics/ComponentsDocs/base";
 import { CuiDocsNavigation } from "../../docs/CuiDocsNavigation";
 import DocsHeader from "../../partials/components/DocsHeader";

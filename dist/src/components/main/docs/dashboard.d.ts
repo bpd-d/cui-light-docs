@@ -5,7 +5,7 @@ export interface CuiDocsDashboardItem {
     uri: string;
     description: string;
 }
-export declare function CuiDocsDashboard(): JSX.Element;
+export default function CuiDocsDashboard(): JSX.Element;
 export interface CuiDocsDashboardItemViewProps {
     item: CuiDocsDashboardItem;
     onClick: (uri: string) => void;

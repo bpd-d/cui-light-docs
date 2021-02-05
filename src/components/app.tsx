@@ -8,7 +8,6 @@ import { Overview } from "./main/overview/overview";
 import { OffCanvas } from "./navigation/Offcanvas";
 import { ErrorRoute } from "./error";
 import { Download } from "./main/download";
-import { IconsComponent } from "./main/icons/icons";
 import { About } from "./main/about/About";
 import { BpdStateManager } from "../../node_modules/bpd-state-manager/dist/esm/index";
 import { RecentState, STATE_RECENT } from "../api/state/state";
@@ -16,12 +15,10 @@ import { RecentItem } from "../api/services/models";
 import { getLastRecentItem, getRecentItems } from "../api/state/filters";
 import { loadRecentsFromService } from "../api/state/actions";
 import { SearchDialog } from "./search/SearchDialog";
-import { CuiDocsDashboard } from "./main/docs/dashboard";
 import { CUI_LIGHT_VERSION } from "cui-light-app/dist/esm/index";
 import { CUI_STYLES_VERSION } from "cui-styles/index";
 import { CUI_ICONS_VERSION } from "bpd-cui-icons/esm/index";
 import { ROUTES } from "../routes";
-import { CuiDocsIconPackBuilder } from "./main/icons/builder/builder";
 import { IsLoading } from "./base/IsLoading";
 
 
@@ -35,12 +32,12 @@ export interface AppState {
 }
 export function App() {
     return (<>
+
         <BrowserRouter>
             <AppContent />
         </BrowserRouter>
 
-    </>
-    );
+    </>);
 }
 
 
@@ -52,6 +49,10 @@ function AppContent(props: AppProps) {
         isReady: false
     })
     const location = useLocation();
+
+    const CuiDocsDashboard = React.lazy(() => import('./main/docs/dashboard'));
+    const IconsComponent = React.lazy(() => import('./main/icons/icons'));
+    const CuiDocsIconPackBuilder = React.lazy(() => import('./main/icons/builder/builder'));
 
     function onGlobalStateUpdate(recentstate: RecentState) {
         setState({
@@ -79,19 +80,21 @@ function AppContent(props: AppProps) {
         <div className="layout-main">
             <Navbar site={state.currentSite} />
             <div className="layout-content">
-                <Switch location={location} >
-                    <Route path={ROUTES["docs"].uri} component={CuiDocsDashboard}></Route>
-                    <Route path={ROUTES['component'].uri} component={DocsComponent}></Route>
-                    <Route path={ROUTES.overview.uri} component={Overview}></Route>
-                    <Route path={ROUTES.download.uri} component={Download}></Route>
-                    <Route path={ROUTES.builder.uri} component={CuiDocsIconPackBuilder}></Route>
-                    <Route path={ROUTES.icons.uri} component={IconsComponent}></Route>
-                    <Route path={ROUTES.about.uri} component={About} />
-                    <Route path={ROUTES.home.uri} component={Home}></Route>
-                    <Route>
-                        <ErrorRoute />
-                    </Route>
-                </Switch>
+                <React.Suspense fallback={<IsLoading classes="cui-height-viewport-1-1" />}>
+                    <Switch location={location} >
+                        <Route path={ROUTES["docs"].uri} render={() => <CuiDocsDashboard />} ></Route>
+                        <Route path={ROUTES['component'].uri} component={DocsComponent}></Route>
+                        <Route path={ROUTES.overview.uri} component={Overview}></Route>
+                        <Route path={ROUTES.download.uri} component={Download}></Route>
+                        <Route path={ROUTES.builder.uri} render={() => <CuiDocsIconPackBuilder />}></Route>
+                        <Route path={ROUTES.icons.uri} render={() => <IconsComponent />}></Route>
+                        <Route path={ROUTES.about.uri} component={About} />
+                        <Route path={ROUTES.home.uri} component={Home}></Route>
+                        <Route>
+                            <ErrorRoute />
+                        </Route>
+                    </Switch>
+                </React.Suspense>
             </div>
             <div className="info-bar">
                 <div className="cui-drop-trigger cui-margin-small-bottom" >

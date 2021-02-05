@@ -19,7 +19,7 @@ export class NavbarLink extends React.Component<NavbarLinkProps, {}> {
             setTimeout(() => {
                 let offcanvas = window.$cui.get("#app-offcanvas");
                 offcanvas.emit('close');
-            }, 50)
+            }, 0);
         }
     }
 

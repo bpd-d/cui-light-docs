@@ -5,8 +5,14 @@ import { CuiGroup, group } from "../../../utils/groups";
 import { iconsData } from "../../../statics/icons";
 import { PageWithHeaderBase } from "../../../components/base/PageWithHeaderBase";
 import { IsLoading } from "../../../components/base/IsLoading";
+import { useHistory, useLocation } from "react-router-dom";
+import { useSearchParams } from "../../../components/hooks/params";
 
 export const CATEGORY_ALL = 'all';
+
+const PARAM_FILTER = 'filter';
+const PARAM_CATEGORY = 'category';
+
 export interface GroupedIconsData {
     [id: string]: IconsGroup;
 }
@@ -36,7 +42,7 @@ export interface CuiIconFilterData {
     category: string;
 }
 
-export function IconsComponent(props: IconsProps) {
+export default function IconsComponent(props: IconsProps) {
     const [state, setState] = React.useState<IconComponentState>({
         filter: { category: CATEGORY_ALL, filter: "" },
         grouped: {}
@@ -46,7 +52,19 @@ export function IconsComponent(props: IconsProps) {
 
     const [isLoading, setIsLoading] = React.useState(false);
 
+    const location = useLocation();
+    const history = useHistory();
+    const { params, search } = useSearchParams(location);
+
     function onFilterUpdate(data: CuiIconFilterData) {
+        const params = new URLSearchParams();
+        params.set(PARAM_FILTER, data.filter);
+        params.set(PARAM_CATEGORY, data.category);
+
+        history.push({
+            pathname: location.pathname,
+            search: params.toString()
+        })
         setState({
             ...state,
             filter: data
@@ -78,22 +96,35 @@ export function IconsComponent(props: IconsProps) {
         });
     }
 
+    function getFilterParams(queryString: string): CuiIconFilterData {
+        // const searchParams = new URLSearchParams(queryString);
+        const filter = params.get(PARAM_FILTER);
+        const cat = params.get(PARAM_CATEGORY);
+        return {
+            filter: filter ?? "",
+            category: cat && categories.current.includes(cat) ? cat : CATEGORY_ALL
+        }
+    }
 
     React.useEffect(() => {
         setIsLoading(true);
+
         if (categories.current.length === 0) {
             categories.current = iconsData.reduce<string[]>(getCategory, [])
         }
 
-        prepareGroup(state.filter).then((group) => {
+        const filterData = getFilterParams(location.search);
+
+        prepareGroup(filterData).then((group) => {
             setState({
                 ...state,
+                filter: filterData,
                 grouped: group
             })
             setIsLoading(false)
         });
 
-    }, [state.filter])
+    }, [search])
 
     return <PageWithHeaderBase name="Icons" description="cUI icons pack">
         <CuiIconsComponentHeader categories={categories.current} filter={state.filter} onUpdate={onFilterUpdate} />

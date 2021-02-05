@@ -24,4 +24,4 @@ export interface CuiIconFilterData {
     filter: string;
     category: string;
 }
-export declare function IconsComponent(props: IconsProps): JSX.Element;
+export default function IconsComponent(props: IconsProps): JSX.Element;

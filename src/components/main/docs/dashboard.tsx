@@ -7,7 +7,7 @@ export interface CuiDocsDashboardItem {
     uri: string;
     description: string;
 }
-export function CuiDocsDashboard() {
+export default function CuiDocsDashboard() {
     const history = useHistory();
     const items: CuiDocsDashboardItem[] = [
         { title: "Commons", icon: "dashboard_common", uri: "/", description: "Read about basics of cUI usage" },
