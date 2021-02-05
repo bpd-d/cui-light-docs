@@ -62,7 +62,7 @@ export default function CuiDocsIconPackBuilder() {
         return <IsLoading classes="cui-height-viewport-1-2" />
     }
     return (<PageWithHeaderBase name="Icons builder" description="Tool which allows to build custom icon pack">
-        <div className="cui-flex cui-right">
+        <div className="cui-container cui-flex cui-right">
             <button className="cui-button cui-default" onClick={onSelectAllClick}>Select All</button>
             <button className="cui-button cui-error cui-margin-small-left" onClick={onClearSelectionClick}>Clear</button>
         </div>
@@ -77,7 +77,7 @@ export default function CuiDocsIconPackBuilder() {
             })}
         </div>
         <div className="cui-container cui-center cui-position-float cui-position-bottom cui-position-center">
-            <button className="cui-button cui-default cui-background-default cui-large cui-box-shadow cui-rounded cui-icon-margin" cui-icon="wrench" onClick={onBuildClick}>Build</button>
+            <button className="cui-button cui-accent cui-large cui-box-shadow cui-rounded cui-icon-margin" cui-icon="wrench" onClick={onBuildClick}>Build</button>
         </div>
     </PageWithHeaderBase>);
 }
