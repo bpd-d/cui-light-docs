@@ -19,13 +19,13 @@ import { CUI_STYLES_VERSION } from "cui-styles/index";
 import { CUI_ICONS_VERSION } from "bpd-cui-icons/esm/index";
 import { IsLoading } from "./base/IsLoading";
 import { ROUTES } from "../routes";
-//import Home from "./main/home";
+import Home from "./main/home";
 
 
 const CuiDocsDashboard = React.lazy(() => import('./main/docs/dashboard'));
 const IconsComponent = React.lazy(() => import('./main/icons/icons'));
 const CuiDocsIconPackBuilder = React.lazy(() => import('./main/icons/builder/builder'));
-const Home = React.lazy(() => import('./main/home'));
+// const Home = React.lazy(() => import('./main/home'));
 const Overview = React.lazy(() => import('./main/overview/overview'));
 const About = React.lazy(() => import('./main/about/About'));
 const Download = React.lazy(() => import('./main/download'));
@@ -96,7 +96,7 @@ function AppContent(props: AppProps) {
                         <Route path={ROUTES.builder.uri} render={() => <CuiDocsIconPackBuilder />}></Route>
                         <Route path={ROUTES.icons.uri} render={() => <IconsComponent />}></Route>
                         <Route path={ROUTES.about.uri} render={() => <About />} />
-                        <Route path={ROUTES.home.uri} render={() => <Home />}></Route>
+                        <Route path={ROUTES.home.uri} component={Home}></Route>
                         <Route>
                             <ErrorRoute />
                         </Route>
