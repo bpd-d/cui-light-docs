@@ -29,10 +29,11 @@ export function OffCanvas() {
         if (is(search)) {
             const params = new URLSearchParams();
             params.set("search", search);
-            pushHistory(ROUTES.search.uri, params);
             setSearch("")
             let offcanvas = window.$cui.get("#app-offcanvas");
             offcanvas.emit('close');
+            pushHistory(ROUTES.search.uri, params);
+
         }
     }
 

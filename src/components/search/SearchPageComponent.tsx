@@ -9,6 +9,8 @@ import { FindSearchResults } from "./functions";
 import { SearchResultSection } from "./interfaces";
 import { IsLoading } from "../base/IsLoading";
 import { SearchResultComponent } from "./SearchResultComponent";
+import { Debounce } from "../../core/debounce";
+import { useDebounce } from "../hooks/debounce";
 
 const PARAM_SEARCH = "search";
 
@@ -68,6 +70,8 @@ export default function SearchPageComponent() {
     const { pushHistory } = useHistoryWrapper();
     const location = useLocation();
     const { searchParams, search } = useSearchParams(location);
+    const { debounceState, call, cancel } = useDebounce(updateFilter, 1000);// React.useRef<Debounce>(new Debounce(1000, updateFilter));
+
 
     function runFilter(filter: string) {
         if (is(filter)) {
@@ -87,6 +91,10 @@ export default function SearchPageComponent() {
     }
 
     function onFilterUpdate(value: string) {
+        call(value);
+    }
+
+    function updateFilter(value: string) {
         const params = new URLSearchParams();
         params.set(PARAM_SEARCH, value);
         pushHistory(location.pathname, params);
@@ -95,11 +103,16 @@ export default function SearchPageComponent() {
     React.useEffect(() => {
         const filter = searchParams.get(PARAM_SEARCH);
         runFilter(filter);
+
+        return () => {
+            cancel();
+        }
     }, [search]);
 
     return (<PageWithHeaderBase name="Search" description="Find content which you are interseted in">
-        <div key="search-input" className="cui-container cui-large cui-center">
+        <div key="search-input" className="cui-container cui-large">
             <ClearableInput value={state.filter} onUpdate={onFilterUpdate} className="cui-width-1-1" />
+            <span className={"cui-text-small cui-text-muted"}>{debounceState === 'idle' ? "" : "..."}</span>
         </div>
         <SearchPageContent isLoading={state.isLoading} results={state.searchResults} />
     </PageWithHeaderBase>);
