@@ -8,7 +8,7 @@ export interface UseDebounceRet {
 }
 
 export function useDebounce(callback: (...args: any[]) => void, timeout: number): UseDebounceRet {
-    const [state, setState] = React.useState("");
+    const [state, setState] = React.useState("idle");
     const debounce = React.useRef(new Debounce(timeout, onFinish));
 
     function onFinish(...args: any[]) {
