@@ -2,12 +2,8 @@ import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { Navbar } from "./navigation/Navbar";
 import { Switch, Route, BrowserRouter, Link, useLocation } from "react-router-dom";
-// import { DocsComponent } from "./main/docs/docs";
-// import { Overview } from "./main/overview/overview";
 import { OffCanvas } from "./navigation/Offcanvas";
 import { ErrorRoute } from "./error";
-// import { Download } from "./main/download";
-// import { About } from "./main/about/About";
 import { BpdStateManager } from "../../node_modules/bpd-state-manager/dist/esm/index";
 import { RecentState, STATE_RECENT } from "../api/state/state";
 import { RecentItem } from "../api/services/models";
@@ -30,6 +26,7 @@ const Overview = React.lazy(() => import('./main/overview/overview'));
 const About = React.lazy(() => import('./main/about/About'));
 const Download = React.lazy(() => import('./main/download'));
 const DocsComponent = React.lazy(() => import('./main/docs/docs'));
+const SearchPageComponent = React.lazy(() => import('./search/SearchPageComponent'));
 
 export interface AppProps {
 }
@@ -96,6 +93,7 @@ function AppContent(props: AppProps) {
                         <Route path={ROUTES.builder.uri} render={() => <CuiDocsIconPackBuilder />}></Route>
                         <Route path={ROUTES.icons.uri} render={() => <IconsComponent />}></Route>
                         <Route path={ROUTES.about.uri} render={() => <About />} />
+                        <Route path={ROUTES.search.uri} render={() => <SearchPageComponent />} />
                         <Route path={ROUTES.home.uri} component={Home}></Route>
                         <Route>
                             <ErrorRoute />
@@ -127,7 +125,6 @@ function AppContent(props: AppProps) {
                     </div>
                 </div>
             </div>
-            <SearchDialog />
             <OffCanvas />
         </div>
     )

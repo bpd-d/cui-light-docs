@@ -79,11 +79,6 @@ $prefix : 'cui' !default;
     }
 
     .off-canvas-layout {
-
-        .off-canvas-header {
-            height: 60px;
-        }
-
         .off-canvas-content {
             height    : calc(85vh - 60px);
             overflow-y: auto;

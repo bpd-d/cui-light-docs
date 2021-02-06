@@ -2,7 +2,7 @@ import * as React from "react";
 import { Location } from 'history';
 
 export interface SearchParamsResult {
-    params: URLSearchParams,
+    searchParams: URLSearchParams,
     search: string,
 }
 
@@ -12,7 +12,7 @@ export function useSearchParams<T>(location: Location<T>): SearchParamsResult {
     React.useEffect(() => {
     }, [location.search])
     return {
-        params: params,
+        searchParams: params,
         search: location.search
     };
 }

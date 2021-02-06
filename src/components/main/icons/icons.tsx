@@ -54,7 +54,7 @@ export default function IconsComponent(props: IconsProps) {
 
     const location = useLocation();
     const history = useHistory();
-    const { params, search } = useSearchParams(location);
+    const { searchParams: params, search } = useSearchParams(location);
 
     function onFilterUpdate(data: CuiIconFilterData) {
         const params = new URLSearchParams();

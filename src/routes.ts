@@ -17,5 +17,6 @@ export const ROUTES: CuiDocsRoutes = {
     download: { name: "Download", uri: "/download" },
     docs: { name: "Documentation", uri: "/docs/dashboard" },
     component: { name: "Component", uri: "/docs/components/:id", },
-    builder: { name: "Icons builder", uri: "/icons/builder", }
+    builder: { name: "Icons builder", uri: "/icons/builder", },
+    search: { name: "Search", uri: "/search", }
 };
