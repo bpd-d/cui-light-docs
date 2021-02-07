@@ -4,6 +4,7 @@ import { CuiSelect } from "../../partials/forms/CuiSelect";
 import { CuiIconsHeaderTitle } from "./title";
 import { CuiIconFilterData } from "./icons";
 import { ROUTES } from "../../../routes";
+import { useDebounce } from "../../../components/hooks/debounce";
 
 
 export interface CuiIconsComponentHeaderProps {
@@ -13,6 +14,8 @@ export interface CuiIconsComponentHeaderProps {
 }
 
 export function CuiIconsComponentHeader(props: CuiIconsComponentHeaderProps) {
+    const debounce = useDebounce(debouceFilterValue, 500);
+    const [filter, setFilter] = React.useState(props.filter.filter);
     function onSelectChange(value: string) {
         if (props.onUpdate) {
             props.onUpdate({ ...props.filter, category: value })
@@ -20,8 +23,14 @@ export function CuiIconsComponentHeader(props: CuiIconsComponentHeaderProps) {
     }
 
     function onInputChange(event: any) {
+        const value = event.target.value
+        debounce.call(value);
+        setFilter(value);
+    }
+
+    function debouceFilterValue(filter: string) {
         if (props.onUpdate) {
-            props.onUpdate({ ...props.filter, filter: event.target.value })
+            props.onUpdate({ ...props.filter, filter: filter })
         }
     }
 
@@ -31,7 +40,7 @@ export function CuiIconsComponentHeader(props: CuiIconsComponentHeaderProps) {
             <div className="cui-flex cui-right--s cui-flex-grow cui-middle">
                 <div className="cui-form cui-flex cui-between cui-left--s cui-width-1-1 cui-width-auto--m cui-margin-small cui-middle">
                     <label htmlFor="filter" className="cui-form-label cui-margin-small-right">Filter</label>
-                    <input className="cui-input" type="text" placeholder="Filter" value={props.filter.filter} onChange={onInputChange} />
+                    <input className="cui-input" type="text" placeholder="Filter" value={filter} onChange={onInputChange} />
                 </div>
                 <div className="cui-form cui-flex cui-between cui-left--s cui-width-1-1 cui-width-auto--m cui-margin-small cui-middle">
                     <label htmlFor="categories" className="cui-form-label cui-margin-small-right">Categories</label>

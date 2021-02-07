@@ -78,7 +78,7 @@ module.exports = {
     output: {
         filename: 'cui-light-docs.[name].js',
         path: path.resolve(__dirname, 'dist'),
-        chunkFilename: 'cui-light-doc.pack.[name].js',
+        chunkFilename: 'cui-light-doc.pack.[name].[chunkhash].js',
         publicPath: "/"
     },
     // externals: {
