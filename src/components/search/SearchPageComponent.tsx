@@ -111,7 +111,7 @@ export default function SearchPageComponent() {
 
     return (<PageWithHeaderBase name="Search" description="Find content which you are interseted in">
         <div key="search-input" className="cui-container cui-large cui-center">
-            <ClearableInput value={state.filter} onUpdate={onFilterUpdate} className="cui-width-2-3" />
+            <ClearableInput value={state.filter} onUpdate={onFilterUpdate} className="cui-width-1-1" />
         </div>
         <SearchPageContent isLoading={state.isLoading} results={state.searchResults} />
     </PageWithHeaderBase>);
