@@ -70,6 +70,10 @@ $prefix : 'cui' !default;
 
     }
 
+    .width-300 {
+        width: 300px;
+    }
+
     .layout-docs-navigation {
         width: 250px;
     }
@@ -382,7 +386,7 @@ $prefix : 'cui' !default;
 
     @include mixins.media-screen-height-max-small {
         .limited-content-width {
-            width: 1000px !important;
+            width: 100% !important;
         }
 
         .layout-docs {
