@@ -54,8 +54,11 @@ export const listStrippedExample = createList("cui-stripped");
 export const listBulletExample = createList("cui-bullet");
 export const listBulletShadeExample = createList("cui-bullet-shade");
 export const listInteractiveExample = createInteractiveList("cui-interactive");
+export const listInteractiveLineExample = createInteractiveList("cui-interactive-line");
 export const listInteractiveAccentExample = createInteractiveList("cui-interactive", "cui-accent");
+export const listInteractiveLineAccentExample = createInteractiveList("cui-interactive-line", "cui-accent");
 export const listInteractiveSecondaryExample = createInteractiveList("cui-interactive", "cui-secondary");
+export const listInteractiveLineSecondaryExample = createInteractiveList("cui-interactive-line", "cui-secondary");
 export const listInlineExample = createList("cui-inline");
 export const listHighlightExample = createInteractiveList("cui-highlight");
 
@@ -64,32 +67,32 @@ export const CuiDocsListScript: DocsScript = {
         {
             name: "Usage",
             description: "Add ul element and add class cui-list to it to style list elements:",
-            example: GetTabbedPreview(listExample, "200px")
+            example: GetTabbedPreview(listExample, "210px")
         },
         {
             name: "Small",
             description: "Reduce padding on list items by adding class cui-small:",
-            example: GetTabbedPreview(listSmallExample, "200px")
+            example: GetTabbedPreview(listSmallExample, "210px")
         },
         {
             name: "Hover",
             description: "Bring item highlight to list item with cui-hover:",
-            example: GetTabbedPreview(listHoverExample, "200px")
+            example: GetTabbedPreview(listHoverExample, "210px")
         },
         {
             name: "Stripped",
             description: "Highlight even list items by adding class cui-stripped:",
-            example: GetTabbedPreview(listStrippedExample, "200px")
+            example: GetTabbedPreview(listStrippedExample, "210px")
         },
         {
             name: "Bullet",
             description: "Add item bullet indicator with class cui-bullet:",
-            example: GetTabbedPreview(listBulletExample, "200px")
+            example: GetTabbedPreview(listBulletExample, "210px")
         },
         {
             name: "Bullet shade",
             description: "Add item bullet indicator with class cui-bullet-shade:",
-            example: GetTabbedPreview(listBulletShadeExample, "200px")
+            example: GetTabbedPreview(listBulletShadeExample, "210px")
         },
         {
             name: "Interactive",
@@ -105,6 +108,21 @@ export const CuiDocsListScript: DocsScript = {
             name: "Interactive secondary",
             description: "Style interactive list with secondary colors:",
             example: GetTabbedPreview(listInteractiveSecondaryExample, "210px")
+        },
+        {
+            name: "Interactive line",
+            description: "Interactive list can be styled with line on either right or left side of the list element. To set it up add class cui-interactive-line to parent element. Add cui-reverse to place line on the other side:",
+            example: GetTabbedPreview(listInteractiveLineExample, "210px")
+        },
+        {
+            name: "Interactive line accent",
+            description: "Interactive line list comes with line colored with accent color:",
+            example: GetTabbedPreview(listInteractiveLineAccentExample, "210px")
+        },
+        {
+            name: "Interactive line secondary",
+            description: "Interactive line list comes with line colored with accent color:",
+            example: GetTabbedPreview(listInteractiveLineSecondaryExample, "210px")
         },
         {
             name: "Inline",
@@ -124,13 +142,13 @@ export const CuiDocsListScript: DocsScript = {
                 { name: "print", description: "Adds print mode styling" },
                 { name: "theme", description: "Adds theme color classes" },
                 { name: "interactive", description: "Adds list interactive classes" },
+                { name: "interactive-line", description: "Adds list interactive line classes" },
                 { name: "bullet", description: "Adds list bullet indicator classes" },
                 { name: "bullet-shade", description: "Adds list bullet shade indicator classes" },
                 { name: "hover", description: "Adds list hover option" },
                 { name: "small", description: "Adds list small option" },
                 { name: "inline", description: "Adds list inline option" },
                 { name: "stripped", description: "Adds list stripped classes" },
-                { name: "highlight", description: "Adds list highlight classes" },
             ]
         }
     ]

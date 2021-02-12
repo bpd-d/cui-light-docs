@@ -11,6 +11,10 @@ const firstExample: ParserNode = {
             children: [
                 {
                     tag: 'text',
+                    text: `id: "id",`
+                },
+                {
+                    tag: 'text',
                     text: `title: "Title",`
                 },
                 {
@@ -37,11 +41,10 @@ const firstExample: ParserNode = {
         },
         {
             tag: "text",
-            text: `$cui.alert("alert-id", "YesNoCancel", options)`
+            text: `$cui.emit("alert", "~alert-plugin", options)`
         }
 
     ]
-
 }
 
 export const CuiDocsAlertScript: DocsScript = {

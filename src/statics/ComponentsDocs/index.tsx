@@ -30,6 +30,7 @@ import { Introduction } from "./intro";
 import { CuiDocsLinkScript } from "./link";
 import { CuiDocsListScript } from "./list";
 import { CuiDocsNavbarScript } from "./navbar";
+import { CuiDocsNotificationScript } from "./notification";
 import { CuiDocsOffcanvas } from "./offcanvas";
 import { CuiDocsOffsetScript } from "./offset";
 import { CuiDocsOpenScript } from "./open";
@@ -116,7 +117,8 @@ const cuiComponents: CuiDocsComponents = {
     "infobox": { name: "Info box", uri: "/docs/components/infobox", description: "Highligts informations in a small box", script: CuiDocsInfoBoxScript },
     'hover': { name: "Hover", uri: "/docs/components/hover", description: "Highlights hovered element", script: CuiDocsHoverScript },
     'border': { name: "Border", uri: "/docs/components/border", description: "Adds border to page element", script: CuiDocsBorderScript },
-    'interactions': { name: "Interactions", uri: "/docs/components/interactions", description: "Controls user interactions with component", script: CuiDocsInteractionsScript }
+    'interactions': { name: "Interactions", uri: "/docs/components/interactions", description: "Controls user interactions with component", script: CuiDocsInteractionsScript },
+    'notification': { name: "Notification", uri: "/docs/components/notification", description: "Adds support for notification to library", script: CuiDocsNotificationScript }
 }
 
 export default cuiComponents;

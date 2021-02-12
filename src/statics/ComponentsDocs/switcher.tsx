@@ -130,6 +130,7 @@ export const CuiDocsSwitcherScript: DocsScript = {
             name: "Usage",
             description: <>Switcher is used to cooperate with components that listen for event <span className="style-class">switch</span>.
             It can always trigger specific index or choose one according to position of clicked list item if set on <span className="style-element">UL</span>.
+            By default, tab items come with simple styling. To underline effect to items, add class <span className="style-class">cui-underline</span> to parent element.
             </>,
             example: GetTabbedPreview(firstExample, "170px")
         },
@@ -169,6 +170,7 @@ export const CuiDocsSwitcherScript: DocsScript = {
                 { name: "print", description: "Adds print mode styling" },
                 { name: "theme", description: "Adds theme color classes" },
                 { name: "side", description: "Adds side option classes" },
+                { name: "underline", description: "Adds classes related to underlined tab" },
             ]
         }
     ]
