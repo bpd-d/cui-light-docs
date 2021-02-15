@@ -9,6 +9,7 @@ export interface ParserNode {
     text?: string;
     attributes?: ParserNodeAttribute;
     children?: ParserNode[];
+    click?: string;
 }
 export interface ITextParser<T> {
     parse(node: ParserNode, level: number): T;

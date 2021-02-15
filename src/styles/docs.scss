@@ -1,0 +1,13 @@
+@mixin definitions {
+    .docs-table-sticky-container {
+        height: 150px;
+    }
+
+    .docs-table-sticky-column-container {
+        width: 240px;
+    }
+
+    .element-width-100 {
+        width: 100px;
+    }
+}

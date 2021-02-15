@@ -9,6 +9,7 @@ $prefix : 'cui' !default;
 @use "./overview.scss"as overview;
 @use "./dashboard.scss"as dashboard;
 @use './keyframes'as keyframes;
+@use './docs'as docs;
 
 
 @include build.wrapper() {
@@ -450,5 +451,6 @@ $prefix : 'cui' !default;
     @include keyframes.definitions;
 
     @include page.definitions;
+    @include docs.definitions;
 
 }

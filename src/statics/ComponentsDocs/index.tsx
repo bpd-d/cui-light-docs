@@ -4,7 +4,7 @@ import { CuiDocsAnimationScript } from "./animation";
 import { CuiDocsBackgroundScript } from "./background";
 import { CuiDocsComponentBadge } from "./badge";
 import { CuiDocsBannerScript } from "./banner";
-import { CuiDocsComponents } from "./base"
+import { CuiDocsComponents } from "../base"
 import { CuiDocsBorderScript } from "./border";
 import { BreadrumbScript } from "./breadcrumb";
 import { CuiDocsComponentButtonScript } from "./button";

@@ -15,6 +15,13 @@ function createHeaderEx(...names: ExampleCell[]): ParserNode {
     }
 }
 
+function createHeaderEx2(names: ExampleCell[], modifier?: string): ParserNode {
+    return {
+        tag: "thead",
+        children: [createRowEx2("th", names, modifier)],
+    }
+}
+
 function createHeader(...names: string[]): ParserNode {
     return {
         tag: "thead",
@@ -40,7 +47,23 @@ function createRowEx(childTag: string, ...names: ExampleCell[]): ParserNode {
     })
     return {
         tag: "tr",
-        children: children
+        children: children,
+    }
+}
+
+function createRowEx2(childTag: string, names: ExampleCell[], modifier?: string): ParserNode {
+    const children: ParserNode[] = names.map(cell => {
+
+        return {
+            tag: childTag,
+            text: cell.name,
+            classes: cell.modifier ? [cell.modifier] : []
+        }
+    })
+    return {
+        tag: "tr",
+        children: children,
+        classes: modifier ? [modifier] : undefined
     }
 }
 
@@ -110,6 +133,47 @@ const seventhExample: ParserNode = {
     ]
 }
 
+const stickyHeaderExample: ParserNode = {
+    tag: "div",
+    classes: ["docs-table-sticky-container", "cui-overflow-y-auto"],
+    children: [
+        {
+            tag: "table",
+            classes: ['cui-table', "cui-divider", "cui-column-divider"],
+            children: [
+                createHeaderEx2([{ name: "Head 1", modifier: 'cui-background-default' }, { name: "Head 2", modifier: "cui-background-default" }, { name: "Head 3", modifier: "cui-background-default" }], 'cui-row-sticky'),
+                createBody([
+                    createRowEx("td", { name: "Item 1" }, { name: "Item 2" }, { name: "Item 3" }),
+                    createRowEx("td", { name: "Item 1" }, { name: "Item 2" }, { name: "Item 3" }),
+                    createRowEx("td", { name: "Item 1" }, { name: "Item 2" }, { name: "Item 3" }),
+                    createRowEx("td", { name: "Item 1" }, { name: "Item 2" }, { name: "Item 3" }),
+                ])
+            ]
+        }
+    ]
+}
+
+const stickyColumnExample: ParserNode = {
+    tag: "div",
+    classes: ["docs-table-sticky-column-container", "cui-overflow-x-auto"],
+    children: [
+        {
+            tag: "table",
+            classes: ['cui-table', "cui-divider", "cui-column-divider", "cui-first-column-sticky"],
+            children: [
+                createHeaderEx({ name: "Head 1", modifier: 'cui-background-default element-width-100' }, { name: "Head 2", modifier: "element-width-100" }, { name: "Head 3", modifier: "element-width-100" }, { name: "Head 4", modifier: "element-width-100" }, { name: "Head 5", modifier: "element-width-100" }, { name: "Head 6", modifier: "element-width-100" }, { name: "Head 7", modifier: "element-width-100" }),
+                createBody([
+                    createRowEx("td", { name: "Item 1", modifier: 'cui-background-default' }, { name: "Item 2" }, { name: "Item 3" }, { name: "Item 4" }, { name: "Item 5" }, { name: "Item 6" }, { name: "Item 7" }),
+                    createRowEx("td", { name: "Item 1", modifier: 'cui-background-default' }, { name: "Item 2" }, { name: "Item 3" }, { name: "Item 4" }, { name: "Item 5" }, { name: "Item 6" }, { name: "Item 7" }),
+                    createRowEx("td", { name: "Item 1", modifier: 'cui-background-default' }, { name: "Item 2" }, { name: "Item 3" }, { name: "Item 4" }, { name: "Item 5" }, { name: "Item 6" }, { name: "Item 7" }),
+                ])
+            ]
+        }
+    ]
+}
+
+
+
 export const CuiDocsTableScript: DocsScript = {
     sections: [
         {
@@ -126,21 +190,17 @@ export const CuiDocsTableScript: DocsScript = {
         {
             name: "Divider",
             description: <>Default table styling comes with no row dividers. To make them visible, add class <span className="style-class">cui-divider</span> to main component:</>,
-            example: GetTabbedPreview(thirdExample, "180px")
+            example: GetTabbedPreview(thirdExample, "185px")
         },
         {
             name: "Column divider",
             description: <>To add column separators to table add class <span className="style-class">cui-column-divider</span> to main component:</>,
-            example: GetTabbedPreview(fourthExample, "180px")
+            example: GetTabbedPreview(fourthExample, "180px"),
         },
         {
             name: "Header",
             description: <>To change color of the header row, add class <span className="style-class">cui-header-inverse</span> to main component:</>,
             example: GetTabbedPreview(fifthExample, "180px"),
-            hint: {
-                title: "Sticky",
-                content: "By adding class \"cui-header-sticky\" you can make header stick to the top of the component when scrolling through table. To make it work table must be wrapped container with fixed height and overflow enabled"
-            }
         },
         {
             name: "Theme",
@@ -150,7 +210,36 @@ export const CuiDocsTableScript: DocsScript = {
         {
             name: "Alignment",
             description: <>By default, content of table cell is left-aligned. To changed it add class <span className="style-class">cui-center</span> or <span className="style-class">cui-right</span> to choosen td or th cell element to make content centered or right-aligned:</>,
-            example: GetTabbedPreview(seventhExample, "180px"),
+            example: GetTabbedPreview(seventhExample, "185px"),
+        },
+        {
+            name: "Sticky",
+            description: <>This option brings some responsiveness to the table component.
+            Depending on the choosen modifier it allows to stick row or column to parent component edge when scrolling.
+            For example, you can make header row to stick to top when scrolling through the table vertically. It becomes handy for long data tables, so user can easily track table context and meaning of data in cell.
+            To add sticky header to table add class <span className="style-class">cui-row-sticky</span> to header tr element. In similar matter, you can add the same class to any row in table body to achieve the same effect:</>,
+            hint: {
+                content: "Header will become sticky only when table's parent is limited in height and has overflow set to auto."
+            },
+            example: GetTabbedPreview(stickyHeaderExample, "155px"),
+        },
+        {
+            name: "Sticky column",
+            description: <>It is possible to also make first column sticky to the left table edge, so it will work in similar way to header, but in horizontal scrolling.
+            To enable this behavior, add class <span className="style-class">cui-first-column-sticky</span> to table root element.</>,
+            hint: {
+                content: "Header will become sticky only when table's parent is limited in width and has overflow set to auto."
+            },
+            example: GetTabbedPreview(stickyColumnExample, "200px"),
+        },
+        {
+            name: "Sticky cell",
+            description: <>Previous options provided a shorthand for sticky options for most used cases. For more complex solution there are some modifiers provided: </>,
+            list: [
+                { name: "cui-cell-sticky", description: "To be set on specific cell (th or td). If set on th, it will stick to top by default. When set on td, it will stick to left." },
+                { name: "cui-cell-sticky-top", description: "Tells exactly that cell shall stick to top edge" },
+                { name: "cui-cell-sticky-left", description: "Tells exactly that cell shall stick to left edge" },
+            ]
         },
         {
             name: "CSS options",

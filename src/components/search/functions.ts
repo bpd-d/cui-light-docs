@@ -1,5 +1,5 @@
 import { enumerateObject } from "../../../node_modules/bpd-toolkit/dist/esm/index";
-import { CuiDocsComponentDef } from "../../statics/ComponentsDocs/base";
+import { CuiDocsComponentDef } from "../../statics/base";
 import { getComponentsDocsAsync } from "../../core/imports/components";
 import { iconsData } from "../../statics/icons";
 import { IconElementData } from "../main/icons/icons";

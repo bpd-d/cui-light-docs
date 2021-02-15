@@ -1,14 +1,15 @@
 import * as React from "react";
 import { NavbarLink } from "../partials/navbarlink";
 import { enumerate, getKeysFromObject } from "../../utils/function";
-import { getComponentsDocsAsync } from "../../core/imports/components";
-import { CuiDocsComponents } from "../../statics/ComponentsDocs/base";
+import { DOCTYPE_COMPONENTS, getComponentsDocsAsync, getDocsModule } from "../../core/imports/components";
+import { CuiDocsComponents } from "../../statics/base";
 
 export interface CuiDocsNavigationProps {
     class?: string;
     shouldClose?: boolean;
     sort?: boolean;
     filter?: string;
+    type?: string;
 }
 
 export function CuiDocsNavigation(props: CuiDocsNavigationProps) {
@@ -36,7 +37,7 @@ export function CuiDocsNavigation(props: CuiDocsNavigationProps) {
     }
 
     React.useEffect(() => {
-        getComponentsDocsAsync().then((components) => {
+        getDocsModule(props.type ?? DOCTYPE_COMPONENTS).then((components) => {
             setItems(props.sort && true ? sortAndPrepare(components) : prepare(components))
         }, (e) => {
             setError(e.message);

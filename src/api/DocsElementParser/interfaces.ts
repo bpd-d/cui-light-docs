@@ -10,6 +10,7 @@ export interface ParserNode {
     text?: string;
     attributes?: ParserNodeAttribute;
     children?: ParserNode[];
+    click?: string;
 
 }
 

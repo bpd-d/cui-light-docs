@@ -2,6 +2,7 @@ import * as React from "react";
 import { PreJsNode, PreNode } from "../../components/partials/pre";
 import { GLOBAL_COUNTER } from "../../statics/common";
 import { ITextParser, ParserNode } from "./interfaces";
+import callbackHandler from "../../statics/Callbacks/index";
 
 // export class HTMLElementParser implements ITextParser<HTMLElement> {
 
@@ -61,6 +62,7 @@ export class ReactParser implements ITextParser<any> {
         let children: any[] = undefined;
         let classes = node.classes ?? [];
         let attributes = node.attributes ?? {};
+        let callback = undefined;
         if (node.text) {
 
             children = [node.text];
@@ -74,10 +76,17 @@ export class ReactParser implements ITextParser<any> {
         if (node.styleClass) {
             classes.push(node.styleClass)
         }
+
+        if (node.click) {
+            callback = () => {
+                callbackHandler.call(node.click)
+            }
+        }
         return React.createElement(node.tag, {
             className: classes.join(" "),
             id: node.id,
             key: node.tag + level + GLOBAL_COUNTER.next().value,
+            onClick: callback ? callback : undefined,
             ...attributes
         }, children)
     }

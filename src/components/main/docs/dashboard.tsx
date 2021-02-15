@@ -12,8 +12,8 @@ export default function CuiDocsDashboard() {
     const items: CuiDocsDashboardItem[] = [
         { title: "Commons", icon: "dashboard_common", uri: "/", description: "Read about basics of cUI usage" },
         { title: "Components", icon: "dashboard_component", uri: "/docs/components/introduction", description: "Get deatails about CSS and JS components" },
-        { title: "API", icon: "dashboard_api", uri: "/", description: "Learn how to integrate cUI with other packages in your project" },
-        { title: "Plugins", icon: "overview_plugins", uri: "/", description: "Get details about plugins available in the cUI package" },
+        { title: "API", icon: "dashboard_api", uri: "/docs/api/introduction", description: "Learn how to integrate cUI with other packages in your project" },
+        { title: "Plugins", icon: "overview_plugins", uri: "/docs/plugins/introduction", description: "Get details about plugins available in the cUI package" },
     ]
 
     function onIconClick(uri: string) {

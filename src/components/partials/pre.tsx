@@ -85,7 +85,7 @@ function AttributesNode(props: AttributesNodeProps) {
 // JS related
 
 function createJsTextNode(node: ParserNode, level: number) {
-    return <span><span className={level > 0 && "cui-indent-" + level}>{node.text}</span></span>;
+    return <span><span className={level > 0 ? "cui-indent-" + level : ""}>{node.text}</span></span>;
 }
 
 function createJsFunctionNode(props: preProps) { 

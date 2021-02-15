@@ -22,6 +22,10 @@ export interface TabbedPreviewProps {
     node: ParserNode;
 }
 
+export interface SimplePreviewProps {
+    element: JSX.Element;
+}
+
 export function CodePreviewAside(props: CodePreviewProps) {
     return (
         <div className="cui-flex-grid cui-child-width-1-1 cui-child-width-1-2--s">
@@ -37,6 +41,14 @@ export function JsCodePreview(props: JsCodePrevieProps) {
     return (
         <div className="cui-code cui-format cui-line-counter">
             {props.js}
+        </div>
+    )
+}
+
+export function SimplePreview(props: SimplePreviewProps) {
+    return (
+        <div className="cui-flex-center">
+            {props.element}
         </div>
     )
 }
@@ -70,6 +82,13 @@ export function CodePreviewTabbed(props: CodePreviewProps) {
     )
 }
 
+export function Preview(props: JsCodePrevieProps) {
+    return (
+        <div className="cui-code cui-format cui-line-counter">
+            {props.js}
+        </div>
+    )
+}
 
 export function ExamplePreview(props: CodePreviewProps, type: CuiPreviewType) {
 
@@ -101,4 +120,10 @@ export function GetTabbedPreviewWithJs(node: ParserNode, js: string, height?: st
         js: <div>{js}</div>,
         height: height
     }, 'tabbed')
+}
+
+export function GetPreivewWithoutCode(node: ParserNode) {
+    return SimplePreview({
+        element: new ElementGenerator(new ReactParser()).build(node),
+    })
 }

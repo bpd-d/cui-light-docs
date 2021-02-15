@@ -4,5 +4,6 @@ export interface CuiDocsNavigationProps {
     shouldClose?: boolean;
     sort?: boolean;
     filter?: string;
+    type?: string;
 }
 export declare function CuiDocsNavigation(props: CuiDocsNavigationProps): JSX.Element;
