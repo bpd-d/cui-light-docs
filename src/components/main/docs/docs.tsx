@@ -5,7 +5,7 @@ import { CuiDocsNavigation } from "../../docs/CuiDocsNavigation";
 import { CuiDocsAside } from "../../docs/CuiDocsAside";
 import { addRecentItem } from "../../../api/state/actions";
 import { ClearableInput } from "../../partials/forms/ClearableInput";
-import { getComponentsDocsAsync, getDocsModule } from "../../../core/imports/components";
+import { getDocsModule, getDocsTask } from "../../../core/imports/components";
 import { CuiDocsComponentNotFound, CuiDocsContentPane } from "./base";
 import { CuiReducerAction } from "../../../api/interfaces/reducers";
 
@@ -84,9 +84,8 @@ export default function DocsComponent(args: DocsProps) {
     }
 
     React.useEffect(() => {
-        console.log(type);
-        getDocsModule(type).then((cuiComponents) => {
-            if (!cuiComponents) {
+        getDocsTask.call(type).then((cuiComponents) => {
+            if (!cuiComponents || !id) {
                 dispatch(setError("Module not found"))
             }
             let component = cuiComponents[id];

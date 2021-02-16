@@ -25,7 +25,11 @@ export const CuiDocsToastScript: DocsScript = {
         {
             name: "Implementation",
             description: <>To call for toast use cUI event bus. Emit event <span className="style-class">toast</span> with message to be displayed in element: </>,
-            example: getJsCodePreview(launchExample)
+            example: getJsCodePreview(launchExample),
+            hint: {
+                title: "Important",
+                content: "You can call only one toast at the time. If there is any toast showing on the screen, new calls will be ignored!"
+            }
         },
     ]
 }

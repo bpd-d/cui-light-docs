@@ -5,6 +5,7 @@ import { CuiDocsNavigation } from "../docs/CuiDocsNavigation";
 import { ROUTES } from "../../routes";
 import { useHistoryWrapper } from "../hooks/historyWrapper";
 import { is } from "bpd-toolkit/dist/esm/index";
+import { DOCTYPE_COMPONENTS, DOCTYPE_PLUGINS } from "../../core/imports/components";
 
 export interface OffCanvasProps {
 }
@@ -61,7 +62,9 @@ export function OffCanvas() {
                     </ul>
                     <div className="cui-flex-grow cui-overflow-y-auto cui-width-1-1">
                         <h3 className="cui-h3 cui-sticky cui-background-default cui-layer-top">Components</h3>
-                        <CuiDocsNavigation shouldClose={true} sort={true} />
+                        <CuiDocsNavigation shouldClose={true} sort={true} type={DOCTYPE_COMPONENTS} />
+                        <h3 className="cui-h3 cui-sticky cui-background-default cui-layer-top">Plugins</h3>
+                        <CuiDocsNavigation shouldClose={true} sort={true} type={DOCTYPE_PLUGINS} />
                     </div>
 
                 </div>

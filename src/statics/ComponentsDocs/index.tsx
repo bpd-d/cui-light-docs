@@ -1,5 +1,4 @@
 import { AccordionDocsScript } from "./accordion";
-import { CuiDocsAlertScript } from "./alert";
 import { CuiDocsAnimationScript } from "./animation";
 import { CuiDocsBackgroundScript } from "./background";
 import { CuiDocsComponentBadge } from "./badge";
@@ -30,7 +29,6 @@ import { Introduction } from "./intro";
 import { CuiDocsLinkScript } from "./link";
 import { CuiDocsListScript } from "./list";
 import { CuiDocsNavbarScript } from "./navbar";
-import { CuiDocsNotificationScript } from "./notification";
 import { CuiDocsOffcanvas } from "./offcanvas";
 import { CuiDocsOffsetScript } from "./offset";
 import { CuiDocsOpenScript } from "./open";
@@ -72,7 +70,6 @@ const cuiComponents: CuiDocsComponents = {
     "background": { name: "Background", uri: "/docs/components/background", description: "Gives some basic styling to backgroun image", script: CuiDocsBackgroundScript },
     "spaces": { name: "Spaces", uri: "/docs/components/spaces", description: "Add some space to the components", script: CuiDocsSpacesScript },
     "dialog": { name: "Dialog", uri: "/docs/components/dialog", description: "Creates modal dialog", script: CuiDocsDialogScript },
-    "alert": { name: "Alert", uri: "/docs/components/alert", description: "Easy to use, interactive dialog", script: CuiDocsAlertScript },
     "animation": { name: "Animation", uri: "/docs/components/animation", description: "Add some animations to components", script: CuiDocsAnimationScript },
     "overlay": { name: "Overlay", uri: "/docs/components/overlay", description: "Creates simple overlay on elements", script: CuiDocsOverlayScript },
     "cover": { name: "Cover", uri: "/docs/components/cover", description: "Creates element that cover whole viewport", script: CuiDocsCoverScript },
@@ -117,8 +114,7 @@ const cuiComponents: CuiDocsComponents = {
     "infobox": { name: "Info box", uri: "/docs/components/infobox", description: "Highligts informations in a small box", script: CuiDocsInfoBoxScript },
     'hover': { name: "Hover", uri: "/docs/components/hover", description: "Highlights hovered element", script: CuiDocsHoverScript },
     'border': { name: "Border", uri: "/docs/components/border", description: "Adds border to page element", script: CuiDocsBorderScript },
-    'interactions': { name: "Interactions", uri: "/docs/components/interactions", description: "Controls user interactions with component", script: CuiDocsInteractionsScript },
-    'notification': { name: "Notification", uri: "/docs/components/notification", description: "Adds support for notification to library", script: CuiDocsNotificationScript }
+    'interactions': { name: "Interactions", uri: "/docs/components/interactions", description: "Controls user interactions with component", script: CuiDocsInteractionsScript }
 }
 
 export default cuiComponents;

@@ -1,7 +1,7 @@
 import * as React from "react";
 import { NavbarLink } from "../partials/navbarlink";
 import { enumerate, getKeysFromObject } from "../../utils/function";
-import { DOCTYPE_COMPONENTS, getComponentsDocsAsync, getDocsModule } from "../../core/imports/components";
+import { DOCTYPE_COMPONENTS, getDocsTask } from "../../core/imports/components";
 import { CuiDocsComponents } from "../../statics/base";
 
 export interface CuiDocsNavigationProps {
@@ -37,7 +37,7 @@ export function CuiDocsNavigation(props: CuiDocsNavigationProps) {
     }
 
     React.useEffect(() => {
-        getDocsModule(props.type ?? DOCTYPE_COMPONENTS).then((components) => {
+        getDocsTask.call(props.type ?? DOCTYPE_COMPONENTS).then((components) => {
             setItems(props.sort && true ? sortAndPrepare(components) : prepare(components))
         }, (e) => {
             setError(e.message);

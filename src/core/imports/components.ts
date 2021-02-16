@@ -1,4 +1,5 @@
 import { CuiDocsComponents } from "src/statics/base";
+import Task from '../../../node_modules/bpd-toolkit/dist/esm/task';
 
 // export function getComponentsDocs(onResolve?: (module: CuiDocsComponents) => void, onError?: (e: Error) => void) {
 //     import("../../statics/ComponentsDocs/index").then((module) => {
@@ -41,3 +42,5 @@ export async function getDocsModule(docType: string): Promise<CuiDocsComponents 
     }
     return null;
 }
+
+export const getDocsTask: Task<string, CuiDocsComponents | null> = new Task<string, CuiDocsComponents | null>(getDocsModule);
