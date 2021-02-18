@@ -5,33 +5,75 @@ import { GetTabbedPreview } from "../../components/preview/preview";
 
 const jsonElementData: ParserNode =
 {
-    tag: "div",
-    classes: ["cui-card", 'cui-default'],
+    tag: 'div',
     children: [
         {
-            tag: 'div',
-            classes: ['cui-card-header'],
+            tag: "div",
+            classes: ["cui-card", 'cui-default'],
             children: [
-                { tag: "span", text: "Title", classes: ["cui-card-title"] }
+                {
+                    tag: 'div',
+                    classes: ['cui-card-header'],
+                    children: [
+                        { tag: "span", text: "Title", classes: ["cui-card-title"] }
+                    ]
+                },
+                {
+                    tag: "div",
+                    classes: ["cui-card-body"],
+                    children: [
+                        { tag: "span", text: "Card body" }
+                    ]
+                },
+                {
+                    tag: "div",
+                    classes: ["cui-card-footer cui-flex cui-right"],
+                    children: [
+                        { tag: "button", styleClass: "cui-button cui-margin-small-right", text: "Cancel" },
+                        { tag: "button", styleClass: "cui-button cui-accent", text: "Ok" }
+                    ]
+                }
             ]
         },
         {
             tag: "div",
-            classes: ["cui-card-body"],
+            classes: ["cui-card", 'cui-default', 'cui-margin-top',],
             children: [
-                { tag: "span", text: "Card body" }
+                {
+                    tag: "div",
+                    classes: ["cui-card-body"],
+                    children: [
+                        { tag: "span", text: "Card body" }
+                    ]
+                },
             ]
         },
         {
             tag: "div",
-            classes: ["cui-card-footer cui-flex cui-right"],
+            classes: ["cui-card", 'cui-default', 'cui-margin-top', "cui-card-body"],
             children: [
-                { tag: "button", styleClass: "cui-button cui-margin-small-right", text: "Cancel" },
-                { tag: "button", styleClass: "cui-button cui-accent", text: "Ok" }
+                {
+                    tag: "div",
+                    classes: ["cui-card-body"],
+                    children: [
+                        { tag: "span", text: "Card body" }
+                    ]
+                },
+                {
+                    tag: "div",
+                    classes: ["cui-card-footer cui-flex cui-right"],
+                    children: [
+                        { tag: "button", styleClass: "cui-button cui-margin-small-right", text: "Cancel" },
+                        { tag: "button", styleClass: "cui-button cui-accent", text: "Ok" }
+                    ]
+                }
             ]
         }
     ]
 }
+
+
+
 
 const stylingExample: ParserNode = {
     tag: "div",
@@ -251,7 +293,7 @@ export const CuiDocsCardScript: DocsScript = {
             name: "Usage",
             description: (<>Card wraps data around space with header and footer. To use this component add cui-card to div.
             By default, if there is a single element inside of card, some styling is applied. Add class cui-default to style component with border and shadow, see below: </>),
-            example: GetTabbedPreview(jsonElementData)
+            example: GetTabbedPreview(jsonElementData, "400px")
         },
         {
             name: "Styles",
@@ -276,7 +318,7 @@ export const CuiDocsCardScript: DocsScript = {
         {
             name: "Aside content",
             description: (<>There is an option to create aside card with image filling up a part of card and content the rest: </>),
-            example: GetTabbedPreview(asideCardExample)
+            example: GetTabbedPreview(asideCardExample, "300px")
         },
         {
             name: "CSS options",

@@ -51,21 +51,19 @@ export function OffCanvas() {
                 <a href="#" className="cui-icon" cui-icon="close" cui-close=""></a>
             </div>
             <div className="cui-card-body cui-flex-grow cui-overflow-hidden cui-width-1-1">
-                <div className="cui-width-1-1 cui-height-1-1 cui-flex cui-flex-direction-column cui-nowrap">
-                    <h3 className="cui-h3 cui-width-1-1">Menu</h3>
-                    <ul className="cui-list cui-interactive  cui-width-1-1">
+                <div className="cui-width-1-1 cui-height-1-1 cui-overflow-y-auto">
+                    <OffcanvasHeader text="Menu" />
+                    <ul className="cui-list cui-interactive cui-width-1-1">
                         <li><NavbarLink url={ROUTES['home'].uri} name={ROUTES['home'].name} shouldClose={true} /></li>
                         <li><NavbarLink url={ROUTES['overview'].uri} name={ROUTES['overview'].name} shouldClose={true} /></li>
                         <li><NavbarLink url={ROUTES['docs'].uri} name={ROUTES['docs'].name} shouldClose={true} /></li>
                         <li><NavbarLink url={ROUTES['icons'].uri} name={ROUTES['icons'].name} shouldClose={true} /></li>
                         <li><NavbarLink url={ROUTES['about'].uri} name={ROUTES['about'].name} shouldClose={true} /></li>
                     </ul>
-                    <div className="cui-flex-grow cui-overflow-y-auto cui-width-1-1">
-                        <h3 className="cui-h3 cui-sticky cui-background-default cui-layer-top">Components</h3>
-                        <CuiDocsNavigation shouldClose={true} sort={true} type={DOCTYPE_COMPONENTS} />
-                        <h3 className="cui-h3 cui-sticky cui-background-default cui-layer-top">Plugins</h3>
-                        <CuiDocsNavigation shouldClose={true} sort={true} type={DOCTYPE_PLUGINS} />
-                    </div>
+                    <OffcanvasHeader text="Components" />
+                    <CuiDocsNavigation shouldClose={true} sort={true} type={DOCTYPE_COMPONENTS} />
+                    <OffcanvasHeader text="Plugins" />
+                    <CuiDocsNavigation shouldClose={true} sort={true} type={DOCTYPE_PLUGINS} />
 
                 </div>
             </div>
@@ -74,4 +72,11 @@ export function OffCanvas() {
             </div>
         </div>
     </div>
+}
+
+export interface OffcanvasHeaderProps {
+    text: string
+}
+export function OffcanvasHeader(props: OffcanvasHeaderProps) {
+    return <h3 className="cui-h3 cui-sticky cui-background-default cui-layer-top">{props.text}</h3>;
 }

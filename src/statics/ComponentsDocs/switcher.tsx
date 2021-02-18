@@ -24,9 +24,10 @@ function createIndLi(...cls: string[]): ParserNode {
 
     }
 }
-function createLi(text: string): ParserNode {
+function createLi(text: string, modifier?: string): ParserNode {
     return {
         tag: "li",
+        classes: modifier ? [modifier] : undefined,
         children: [
             {
                 tag: "a",
@@ -124,6 +125,60 @@ const thirdExample: ParserNode = {
     ],
 }
 
+const tabOptionsExample: ParserNode = {
+    tag: "div",
+    children: [
+        {
+            tag: "h4",
+            classes: ["cui-h4"],
+            text: "Underline"
+        },
+        {
+            tag: "ul",
+            classes: ["cui-tab", 'cui-underline'],
+            attributes: {
+                "id": "switcher-test-03"
+            },
+            children: [
+                createLi("Item 1", 'cui-active'),
+                createLi("Item 2"),
+            ]
+        },
+        {
+            tag: "h4",
+            classes: ["cui-h4"],
+            text: "Side/underline"
+        },
+        {
+            tag: "ul",
+            classes: ["cui-tab", 'cui-underline', 'cui-tab-side', 'cui-margin-top'],
+            attributes: {
+                "id": "switcher-test-04"
+            },
+            children: [
+                createLi("Item 1", 'cui-active'),
+                createLi("Item 2"),
+            ]
+        },
+        {
+            tag: "h4",
+            classes: ["cui-h4"],
+            text: "Side reverse/underline"
+        },
+        {
+            tag: "ul",
+            classes: ["cui-tab", 'cui-underline', 'cui-tab-side-reverse', 'cui-margin-top'],
+            attributes: {
+                "id": "switcher-test-05"
+            },
+            children: [
+                createLi("Item 1", 'cui-active'),
+                createLi("Item 2"),
+            ]
+        },
+    ]
+}
+
 export const CuiDocsSwitcherScript: DocsScript = {
     sections: [
         {
@@ -140,6 +195,17 @@ export const CuiDocsSwitcherScript: DocsScript = {
             Other switcher, simpler option, is a common button with attribute <span className="style-class">cui-switcher</span>.
             There are also indicators available as elliptical simple shapes:</>,
             example: GetTabbedPreview(thirdExample, "150px")
+        },
+        {
+            name: "Tab options",
+            description: <>Default tab stying looks like the one showed on the first example. Tab comes with several options:</>,
+            list: [
+                { name: "cui-underline", description: "When this class is added, list elements get styled with interactive line placed at the bottom" },
+                { name: "cui-tab-side", description: "Changes tab direction from horizontal to vertical. When mixed with underline, line is placed on the right side" },
+                { name: "cui-tab-side-reverse", description: "Changes tab direction from horizontal to vertical. When mixed with underline, line is placed on the left side" },
+
+            ],
+            example: GetTabbedPreview(tabOptionsExample, "400px")
         },
         {
             name: "Events",

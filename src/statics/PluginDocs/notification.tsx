@@ -76,6 +76,11 @@ export const CuiDocsNotificationScript: DocsScript = {
                 { name: "actions", description: "List of actions with callback put on notification footer" },
             ],
             example: getJsCodePreview(firstExample)
+        },
+        {
+            name: "Events",
+            description: <>For each showed notifiaction, plugin emits an event <span className="style-class">notified</span> with the same data as received in received notify event.
+            Additionally it adds field <span className="style-element">dissmissed</span> which holds information whether notification was closed by the user or automatically. Field type is boolean. It is set to true when user clicks close or action, false otherwise.</>
         }
     ]
 }

@@ -38,6 +38,7 @@ const backgroundPositionExample: ParserNode = {
 const backgroundColorExample: ParserNode = {
     tag: "div",
     children: [
+        getChildBackground("App", "cui-background-app"),
         getChildBackground("Default", "cui-background-default"),
         getChildBackground("Shade", "cui-background-shade"),
         getChildBackground("Accent", "cui-background-accent"),
@@ -69,6 +70,7 @@ export const CuiDocsBackgroundScript: DocsScript = {
             name: "Colors",
             description: "There are some classes available which change default element background color to one of signal or accent shade colors:",
             list: [
+                { name: "cui-background-app", description: "Sets default light/dark application background color" },
                 { name: "cui-background-default", description: "Sets default light/dark component background color" },
                 { name: "cui-background-shade", description: "Sets shade light/dark component background color" },
                 { name: "cui-background-accent", description: "Sets accent light/dark component background color" },
