@@ -49,7 +49,7 @@ export function Navbar(props: NavbarProps) {
                 </ul>
             </div>
 
-            <ul className="cui-navbar-right cui-visible--m">
+            <ul className="cui-navbar-right cui-unhidden--m">
                 <li><NavbarLink class="cui-navbar-item" url={ROUTES['home'].uri} name={ROUTES['home'].name} /></li>
                 <li><NavbarLink class="cui-navbar-item" url={ROUTES['overview'].uri} name={ROUTES['overview'].name} /></li>
                 <li><NavbarLink class="cui-navbar-item" url={ROUTES['docs'].uri} name={ROUTES['docs'].name} /></li>
