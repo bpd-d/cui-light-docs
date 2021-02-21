@@ -9,13 +9,13 @@ import { RecentState, STATE_RECENT } from "../api/state/state";
 import { RecentItem } from "../api/services/models";
 import { getLastRecentItem, getRecentItems } from "../api/state/filters";
 import { loadRecentsFromService } from "../api/state/actions";
-import { SearchDialog } from "./search/SearchDialog";
 import { CUI_LIGHT_VERSION } from "cui-light-app/dist/esm/index";
 import { CUI_STYLES_VERSION } from "cui-styles/index";
 import { CUI_ICONS_VERSION } from "bpd-cui-icons/esm/index";
 import { IsLoading } from "./base/IsLoading";
 import { ROUTES } from "../routes";
 import Home from "./main/home";
+import { GestureHandler } from "../api/services/gesture";
 
 
 const CuiDocsDashboard = React.lazy(() => import('./main/docs/dashboard'));
@@ -69,11 +69,14 @@ function AppContent(props: AppProps) {
 
     React.useEffect(() => {
         const subscribctionId = BpdStateManager.subscribeToState(STATE_RECENT, onGlobalStateUpdate);
+        const gestureHandler = new GestureHandler();
+        gestureHandler.init();
         loadRecentsFromService();
         return () => {
             if (subscribctionId) {
                 BpdStateManager.unsubscribeFromState(STATE_RECENT, subscribctionId)
             }
+            gestureHandler.destroy();
         }
     }, [state.isReady])
     if (!state.isReady) {
