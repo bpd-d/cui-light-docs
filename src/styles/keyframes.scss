@@ -1,4 +1,21 @@
 @mixin definitions {
+    @keyframes hopIn {
+        0% {
+            opacity  : 0;
+            transform: scale(0);
+        }
+
+        80% {
+            opacity  : 1;
+            transform: scale(1.2);
+        }
+
+        100% {
+            opacity  : 1;
+            transform: scale(1);
+        }
+    }
+
     @keyframes fadeIn {
         0% {
             opacity: 0;

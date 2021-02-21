@@ -97,9 +97,11 @@ export function CuiIconPackBuilderCard(props: CuiIconPackBuilderCardProps) {
         return "cui-card cui-cursor-pointer cui-margin-small " + (isSelected ? "cui-accent" : "cui-default");
     }
     return (<div className={getClass(props.item.selected)} onClick={onSelect}>
-        <div className="cui-flex cui-nowrap">
-            <span cui-icon={props.item.name}></span>
-            <span className="cui-margin-left cui-overflow-hidden">{props.item.name}</span>
+        <div className="cui-card-body">
+            <div className="cui-flex cui-nowrap">
+                <span cui-icon={props.item.name}></span>
+                <span className="cui-margin-left cui-overflow-hidden">{props.item.name}</span>
+            </div>
         </div>
     </div>);
 }
