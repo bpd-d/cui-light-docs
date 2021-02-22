@@ -6,17 +6,15 @@ export interface CuiDocsAsideProps {
 }
 export function CuiDocsAside(props: CuiDocsAsideProps) {
     return (<div className="cui-unhidden--l cui-animation-fade-in cui-animation-delay">
-        {props.sections && props.sections.length > 0 && <div className="cui-card cui-default cui-sticky aside-card">
+        {props.sections && props.sections.length > 0 && <div className="cui-card cui-flat cui-sticky aside-card">
             <div className="cui-card-header">
                 <span className="cui-card-title">Sections</span>
             </div>
-            <div className="cui-card-body">
-                <ul className="cui-list">
-                    {props.sections && props.sections.map((item: string, index: number) => {
-                        return (<li key={index} className="cui-overflow-hidden"><a href={"#" + getHeaderId(index)} className="cui-link cui-text-truncate--l cui-width-1-1">{item}</a></li>)
-                    })}
-                </ul>
-            </div>
+            <ul className="cui-list cui-interactive">
+                {props.sections && props.sections.map((item: string, index: number) => {
+                    return (<li key={index} className="cui-overflow-hidden"><a href={"#" + getHeaderId(index)} className="cui-text-truncate--l cui-width-1-1">{item}</a></li>)
+                })}
+            </ul>
         </div>}
     </div>);
 }

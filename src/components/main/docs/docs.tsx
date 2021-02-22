@@ -105,7 +105,7 @@ export default function DocsComponent(args: DocsProps) {
     return (
         <div className="cui-container layout-docs">
             <div className="cui-unhidden--l">
-                <div className="cui-flex cui-right">
+                <div className="cui-flex">
                     <div className="layout-docs-navigation cui-padding-small">
                         <div className="cui-flex cui-middle">
                             <ClearableInput value={state.search} />
