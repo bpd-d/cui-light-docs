@@ -1,4 +1,4 @@
-import { calcWindowSize2 } from '../../../node_modules/cui-light-app/dist/esm/core/utils/functions';
+import { calcWindowSize } from '../../../node_modules/cui-light-app/dist/esm/core/utils/functions';
 
 export class GestureHandler {
     #resizeEvenId: string | null;
@@ -17,7 +17,7 @@ export class GestureHandler {
         this.#gestureEventId = window.$cui.on("gesture-left", this.onGestureLeft.bind(this))
         this.#gestureEventId = window.$cui.on("gesture-right", this.onGestureRight.bind(this))
 
-        this.#size = calcWindowSize2(window.innerWidth);
+        this.#size = calcWindowSize(window.innerWidth);
     }
 
     destroy() {
