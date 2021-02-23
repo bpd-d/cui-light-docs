@@ -6,6 +6,7 @@ export interface CuiDocsComponentDef {
     description: string;
     illustration?: string;
     script?: DocsScript;
+    tags?: string[];
 }
 
 export interface CuiDocsComponents {
