@@ -14,7 +14,7 @@ export function CuiDocsContentPane(props: CuiDocsContentPaneProps) {
     }
     return (<article className="cui-padding-small">
         <DocsHeader title={props.component.name} description={props.component.description} illustration={props.component.illustration} />
-        <CuiDocsPage script={props.component.script} pageName={props.component.name} />
+        <CuiDocsPage script={props.component.script} pageName={props.component.name} keywords={props.component.tags} />
     </article>)
 }
 

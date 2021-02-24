@@ -19,7 +19,12 @@ export interface ScriptSection {
 }
 export interface CuiDocsPageProps {
     script: DocsScript;
+    keywords?: string[];
     pageName: string;
 }
 export declare function CuiDocsPage(props: CuiDocsPageProps): JSX.Element;
+export interface DocsScriptKeywordsProps {
+    keywords?: string[];
+}
+export declare function DocsScriptKeywords(props: DocsScriptKeywordsProps): JSX.Element;
 export declare function CuiDocsUnderConstruction(): JSX.Element;
