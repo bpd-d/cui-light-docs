@@ -204,7 +204,8 @@ const topCardExample: ParserNode = {
                     classes: ["docs-card-image-style"],
                     attributes: {
                         alt: "pic",
-                        src: "/assets/images/pic.jpg"
+                        src: "/assets/images/pic.jpg",
+                        loading: 'lazy'
                     }
                 }
             ]
@@ -252,7 +253,8 @@ const asideCardExample: ParserNode = {
                     classes: ["docs-card-image-style-aside"],
                     attributes: {
                         alt: "pic",
-                        src: "/assets/images/pic.jpg"
+                        src: "/assets/images/pic.jpg",
+                        loading: 'lazy'
                     }
                 }
             ]

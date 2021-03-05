@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   inkscape:version="1.0.2 (e86c870879, 2021-01-15, custom)"
+   id="svg8"
+   version="1.1"
+   viewBox="0 0 1280 720"
+   height="720"
+   width="1280"
+   sodipodi:docname="open_graph_image.svg">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     inkscape:showpageshadow="false"
+     units="px"
+     showgrid="false"
+     inkscape:document-rotation="0"
+     inkscape:current-layer="layer1"
+     inkscape:document-units="px"
+     inkscape:cy="298.06338"
+     inkscape:cx="778.13975"
+     inkscape:zoom="0.35"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     borderopacity="1.0"
+     bordercolor="#666666"
+     pagecolor="#ffffff"
+     id="base"
+     inkscape:window-width="1368"
+     inkscape:window-height="849"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="layer1"
+     inkscape:groupmode="layer"
+     inkscape:label="Layer 1">
+    <path
+       id="path845-9"
+       style="fill:none;stroke:#000000;stroke-width:20;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.955645;paint-order:fill markers stroke"
+       d="M 802.80745,541.2294 A 228.45079,228.28571 0 0 1 663.88966,588.28571 228.45079,228.28571 0 0 1 435.43887,360 228.45079,228.28571 0 0 1 663.88966,131.71429 a 228.45079,228.28571 0 0 1 138.9194,47.05755"
+       class="outer-ring" />
+    <path
+       id="path909"
+       style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#1a1a1a;stroke-width:20;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate;stop-color:#000000"
+       d="m 768.10877,275.93601 v 130.89501 c 0,49.27423 -37.71293,88.59324 -84.97434,88.59324 v 0 c -47.26151,0 -84.9743,-39.31901 -84.9743,-88.59324 V 275.93601"
+       class="u" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:20;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 834.01259,276.54591 V 493.57143"
+       id="path911"
+       class="i" />
+    <path
+       id="path834-6"
+       style="fill:none;stroke:#000000;stroke-width:15;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.955645;paint-order:fill markers stroke"
+       d="m 849.02213,216.59945 a 15.009547,14.999998 0 0 1 -15.00954,15 15.009547,14.999998 0 0 1 -15.00955,-15 15.009547,14.999998 0 0 1 15.00955,-15.00001 15.009547,14.999998 0 0 1 15.00954,15.00001 z"
+       class="dot" />
+  </g>
+</svg>
