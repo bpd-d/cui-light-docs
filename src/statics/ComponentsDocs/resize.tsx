@@ -15,9 +15,9 @@ function create(attr: string): ParserNode {
 }
 
 
-const firstExample: ParserNode = create(`mode:simple;default:.cui-background-shade;s:.cui-background-accent;m:.cui-background-secondary;l:.cui-background-success;xl:.cui-background-error`);
-const secondExample: ParserNode = create(`mode:smart;default:.cui-background-shade;s:.cui-background-accent;m:.cui-background-secondary;l:.cui-background-success;xl:.cui-background-error`);
-const thirdExample: ParserNode = create(`delay:500;mode:simple;default:.cui-background-shade;s:.cui-background-accent;m:.cui-background-secondary;l:.cui-background-success;xl:.cui-background-error`);
+const firstExample: ParserNode = create(`mode:simple;default:.cui-background-shade;small:.cui-background-accent;medium:.cui-background-secondary;large:.cui-background-success;xlarge:.cui-background-error`);
+const secondExample: ParserNode = create(`mode:smart;default:.cui-background-shade;small:.cui-background-accent;medium:.cui-background-secondary;large:.cui-background-success;xlarge:.cui-background-error`);
+const thirdExample: ParserNode = create(`delay:500;mode:simple;default:.cui-background-shade;small:.cui-background-accent;medium:.cui-background-secondary;large:.cui-background-success;xlarge:.cui-background-error`);
 export const CuiDocsResizeScript: DocsScript = {
     sections: [
         {

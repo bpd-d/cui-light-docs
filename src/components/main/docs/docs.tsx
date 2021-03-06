@@ -84,11 +84,11 @@ export default function DocsComponent(args: DocsProps) {
     }
 
     React.useEffect(() => {
-        getDocsTask.call(type).then((cuiComponents) => {
-            if (!cuiComponents || !id) {
+        getDocsTask.call(type).then((docsSections) => {
+            if (!docsSections || !id) {
                 dispatch(setError("Module not found"))
             }
-            let component = cuiComponents[id];
+            let component = docsSections[id];
             if (component) {
                 dispatch(setComponent(component));
                 addRecentItem(component.name, component.uri)
@@ -107,10 +107,7 @@ export default function DocsComponent(args: DocsProps) {
             <div className="cui-unhidden--l">
                 <div className="cui-flex">
                     <div className="layout-docs-navigation cui-padding-small">
-                        <div className="cui-flex cui-middle">
-                            <ClearableInput value={state.search} />
-                        </div>
-                        <h3 className="cui-h3">Components</h3>
+                        <h3 className="cui-h3 cui-text-capital">{type}</h3>
                         <CuiDocsNavigation sort={true} type={type} /></div>
                 </div>
             </div>

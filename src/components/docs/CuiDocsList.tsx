@@ -11,11 +11,6 @@ export interface CuiDocsListProps {
 }
 
 export function CuiDocsList(props: CuiDocsListProps) {
-    function onItemClick(value: string) {
-        copyText(value).then(() => {
-
-        })
-    }
     return (<ul className="cui-list cui-bullet">
         {props && props.items && props.items.map((item: CuiListItem, index: number) => {
             return <li key={index}>
