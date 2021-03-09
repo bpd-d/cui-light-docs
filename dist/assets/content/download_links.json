@@ -1,0 +1,11 @@
+{
+    "styles-github-dist": "https://github.com/bpd-d/cui-styles/tree/master/dist",
+    "styles-github-src": "https://github.com/bpd-d/cui-styles/tree/master/src",
+    "styles-cdn-dist": "https://unpkg.com/cui-styles@0.3.10/dist/cui-styles.css",
+    "cdn": "https://unpkg.com/",
+    "js-github-dist": "https://github.com/bpd-d/cui-light-app/tree/master/dist",
+    "js-github-src": "https://github.com/bpd-d/cui-light-app/tree/master/src",
+    "js-github-src-esm": "https://github.com/bpd-d/cui-light-app/tree/master/dist/esm",
+    "js-cdn-dist": "https://unpkg.com/cui-light-app@latest/dist/index.js",
+    "js-cdn-dist-min": "https://unpkg.com/cui-light-app@latest/dist/index.min.js"
+}

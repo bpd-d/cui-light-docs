@@ -139,7 +139,7 @@ $prefix : 'cui' !default;
     .home-main-container {
         height: calc(100vh - 60px);
         background:
-            radial-gradient(circle, variables.$component-background-accent-muted 12%, transparent 40%),
+            radial-gradient(variables.$component-background-accent-muted 10%, transparent 40%),
             linear-gradient(0deg, variables.$component-background-secondary-muted 0%, variables.$component-background-accent-muted 60%, variables.$component-background-accent 100%);
 
 

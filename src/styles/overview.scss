@@ -3,7 +3,8 @@
 @mixin definitions {
     .overview-icon {
         path {
-            opacity: 0;
+            opacity     : 0;
+            stroke-width: 2px;
         }
 
         &[cui-icon="overview_dark_mode_2"] {
