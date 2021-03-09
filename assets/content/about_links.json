@@ -1,0 +1,5 @@
+{
+    "bpd-toolkit": "https://github.com/bpd-d/bpd-toolkit",
+    "bpd-storage": "https://github.com/bpd-d/bpd-storage",
+    "bpd-state-manager": "https://github.com/bpd-d/bpd-state-manager"
+}

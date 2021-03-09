@@ -39,6 +39,16 @@ function DownloadPageContent() {
             <p>cUI Light project provides two another ways of intergating it with other projects. Since it is written in <b>Typescript</b> it allows to import users raw *.ts files into project. They can be imported from folder src (Github and NPM): <DownloadPageLink url={links['js-github-src']} name="Github" /> or via command: <span className="cui-text-bold cui-text-accent">npm install cui-light-app --save-dev</span></p>
             <p>For those who want to use compiled version, ESM files are in the folder dist/esm: <DownloadPageLink url={links['js-github-src-esm']} name="Github" />. They all contain TS declaration files so they also can be freely used with Typescript.</p>
         </div>
+        <div className="cui-section">
+            <h2 className="cui-h2">Icons</h2>
+            <p>All icons are merged in single file, you can download common and ESM version of it from Github: <DownloadPageLink url={links['icons-github-common']} name="common" /> and <DownloadPageLink url={links['icons-github-esm']} name="esm" />.</p>
+            <p>If you want to attach them to HTML, use CDN service, see example: <DownloadPageLink url={links['icons-cdn-common']} name="common" /> and <DownloadPageLink url={links['icons-cdn-esm']} name="esm" />.</p>
+            <p>If you want to attach them to project use NPM: <span className="cui-text-bold cui-accent"> npm install bpd-cui-icons --save-dev</span></p>
+        </div>
+        <div className="cui-hint cui-warning cui-margin-top">
+            <div className="cui-hint-title">Warning</div>
+            <div className="cui-hint-body"><p>Check our page for latest package version before copying any of CDN examples. They were created as examples and may not point to latest version of the package.</p></div>
+        </div>
     </>
 }
 
